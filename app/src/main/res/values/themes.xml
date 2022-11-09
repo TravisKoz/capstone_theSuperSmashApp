@@ -12,5 +12,12 @@
     <!-- Status bar color. -->
     <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     <!-- Customize your theme here. -->
+    <item name="android:itemTextAppearance">@style/OptionsMenuTheme</item>
+    <item name="android:itemBackground">@color/white</item>
+  </style>
+
+  <style name="OptionsMenuTheme" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+    <item name="android:textColor">#238300</item>
+    <item name="android:textSize">15sp</item>
   </style>
 </resources>

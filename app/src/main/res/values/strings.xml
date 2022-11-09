@@ -1,3 +1,7 @@
 <resources>
-  <string name="app_name">capstone_theSuperSmashApp</string>
+    <string name="app_name">capstone_theSuperSmashApp</string>
+    <string name="appTitleLabel">The Super Smash App</string>
+    <string name="timer_label">Timer</string>
+    <string name="fighters_label">Fighters</string>
+    <string name="notes_label">Notes</string>
 </resources>
