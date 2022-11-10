@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     // Populate the options menu
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         Intent intent;
 
         switch (item.getItemId()) {

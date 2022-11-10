@@ -5,7 +5,7 @@
     <item
         android:title=""
         app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_more"
+        android:icon="@drawable/ic_baseline_menu"
         >
 
         <menu>
@@ -34,6 +34,5 @@
                 />
         </menu>
     </item>
-
 
 </menu>
