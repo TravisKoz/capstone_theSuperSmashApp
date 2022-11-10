@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/boxing_glove.xml" value="0.2525" />
+        <entry key="app/src/main/res/drawable/button_timer_custom.xml" value="0.1043975830078125" />
+        <entry key="app/src/main/res/drawable/button_timer_default.xml" value="0.13" />
+        <entry key="app/src/main/res/drawable/custom_button.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_boxing_glove.xml" value="0.13" />
+        <entry key="app/src/main/res/drawable/ic_baseline_menu.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_more.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_note.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_timer.xml" value="0.13" />
