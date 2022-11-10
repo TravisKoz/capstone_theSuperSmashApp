@@ -20,7 +20,7 @@ public class SuperSmashDataWorker {
     private void insertBattleNote(String heading, String body) {
         ContentValues values = new ContentValues();
         values.put(BattleNoteEntry.COLUMN_HEADING, heading);
-        values.put(BattleNoteEntry.COLUMN_HEADING, body);
+        values.put(BattleNoteEntry.COLUMN_BODY, body);
 
         long newRowId = mDb.insert(BattleNoteEntry.TABLE_NAME, null, values);
     }
