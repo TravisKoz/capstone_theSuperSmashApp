@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 
 // Allows us to crate an update our database

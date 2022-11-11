@@ -16,12 +16,13 @@
         <activity
           android:name=".BattleNoteActivity"
           android:exported="false"
-          android:label="My Battle Notes
-"          android:parentActivityName=".NotesActivity"/>
+          android:label="My Battle Note
+"         android:parentActivityName=".NotesActivity"/>
         <activity
           android:name=".NotesActivity"
           android:exported="false"
           android:label="Battle Notes"
+          android:parentActivityName=".MainActivity"
           android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
         <activity
           android:name=".FightersActivity"

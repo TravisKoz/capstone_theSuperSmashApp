@@ -17,7 +17,7 @@ public class DataManager {
     private List<BattleNote> mBattleNotes = new ArrayList<>();
 
     // Set a reference to our new instance.
-    public  static DataManager getInstance() {
+    public static DataManager getInstance() {
         if (ourInstance == null) {
             ourInstance = new DataManager();
         }

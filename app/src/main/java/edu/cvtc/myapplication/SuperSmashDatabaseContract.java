@@ -6,7 +6,8 @@ import android.provider.BaseColumns;
 //in the creation of our database tables
 public final class SuperSmashDatabaseContract {
 
-    private SuperSmashDatabaseContract() {}
+    private SuperSmashDatabaseContract() {
+    }
 
     // The BaseColumns class allows us to automatically add an ID to each
     // of our tables.  An ID will be used to select individual records and/or
@@ -14,11 +15,11 @@ public final class SuperSmashDatabaseContract {
     public static final class BattleNoteEntry implements BaseColumns {
         // Constants holding our table and field names.
         public static final String
-        TABLE_NAME = "battle_notes";
+                TABLE_NAME = "battle_notes";
         public static final String
-        COLUMN_HEADING = "heading";
+                COLUMN_HEADING = "heading";
         public static final String
-        COLUMN_BODY = "body";
+                COLUMN_BODY = "body";
 
         // Constants holding our values for the index name and values based on
         // the heading.

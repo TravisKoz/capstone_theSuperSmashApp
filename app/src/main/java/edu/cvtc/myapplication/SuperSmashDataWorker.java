@@ -3,6 +3,7 @@ package edu.cvtc.myapplication;
 import android.content.ContentValues;
 
 import android.database.sqlite.SQLiteDatabase;
+
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 
 // The class helps create our database. This class will

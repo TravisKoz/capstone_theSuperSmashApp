@@ -12,12 +12,12 @@ public class BattleNote implements Parcelable {
     private int mId;
 
     // Overloaded Constructors
-    public BattleNote (String heading, String body) {
+    public BattleNote(String heading, String body) {
         mHeading = heading;
         mBody = body;
     }
 
-    public BattleNote (int id, String heading, String body) {
+    public BattleNote(int id, String heading, String body) {
         mId = id;
         mHeading = heading;
         mBody = body;
