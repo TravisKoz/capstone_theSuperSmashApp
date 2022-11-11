@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="edu.cvtc.myapplication" >
+  xmlns:tools="http://schemas.android.com/tools"
+  package="edu.cvtc.myapplication">
 
     <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/appTitleLabel"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Capstone_theSuperSmashApp"
-        tools:targetApi="31" >
+      android:allowBackup="true"
+      android:dataExtractionRules="@xml/data_extraction_rules"
+      android:fullBackupContent="@xml/backup_rules"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/appTitleLabel"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/Theme.Capstone_theSuperSmashApp"
+      tools:targetApi="31">
         <activity
-            android:name=".NotesActivity"
-            android:exported="false"
-            android:label="Battle Notes"
-            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
+          android:name=".BattleNoteActivity"
+          android:exported="false"
+          android:label="My Battle Notes
+"          android:parentActivityName=".NotesActivity"/>
         <activity
-            android:name=".FightersActivity"
-            android:exported="false"
-            android:label="Fighters List"
-            android:parentActivityName=".MainActivity" />
+          android:name=".NotesActivity"
+          android:exported="false"
+          android:label="Battle Notes"
+          android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
         <activity
-            android:name=".TimerActivity"
-            android:exported="false"
-            android:label="Timer"
-            android:parentActivityName=".MainActivity" />
+          android:name=".FightersActivity"
+          android:exported="false"
+          android:label="Fighters List"
+          android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+          android:name=".TimerActivity"
+          android:exported="false"
+          android:label="Timer"
+          android:parentActivityName=".MainActivity" />
+        <activity
+          android:name=".MainActivity"
+          android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
