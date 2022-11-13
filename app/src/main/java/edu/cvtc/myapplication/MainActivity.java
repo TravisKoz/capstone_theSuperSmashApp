@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, NotesActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.tracker_access:
+                intent = new Intent(MainActivity.this, WinLoseTrackerActivity.class);
+                startActivity(intent);
+                return true;
             default:
         }
 

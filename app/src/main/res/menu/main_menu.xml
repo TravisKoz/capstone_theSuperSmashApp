@@ -5,9 +5,7 @@
     <item
         android:title=""
         app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_menu"
-        >
-
+        android:icon="@drawable/ic_baseline_menu">
         <menu>
             <item
                 android:id="@+id/timer_access"
@@ -32,6 +30,15 @@
                 app:showAsAction="never"
                 android:icon="@drawable/ic_baseline_note"
                 />
+            <item
+                android:id="@+id/tracker_access"
+                android:orderInCategory="50"
+                android:title="@string/tracker_label"
+                app:showAsAction="never"
+                android:icon="@drawable/ic_baseline_tracker"
+                />
+
+
         </menu>
     </item>
 
