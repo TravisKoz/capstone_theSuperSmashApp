@@ -4,6 +4,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@color/black"
   tools:context=".BattleNoteActivity">
 
   <EditText
@@ -14,10 +15,16 @@
     android:layout_marginTop="16dp"
     android:layout_marginEnd="8dp"
     android:ems="10"
-    android:gravity="start|top"
     android:hint="@string/hint_note_heading"
     android:importantForAutofill="no"
     android:inputType="textMultiLine"
+    android:textAlignment="center"
+    android:textSize="36sp"
+    android:fontFamily="casual"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    android:backgroundTint="@color/red"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +37,11 @@
     android:ems="10"
     android:gravity="start|top"
     android:hint="@string/hint_note_body"
+    android:fontFamily="casual"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    android:backgroundTint="@color/red"
     android:importantForAutofill="no"
     android:inputType="textMultiLine"
     app:layout_constraintEnd_toEndOf="@id/text_note_heading"
