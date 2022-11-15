@@ -55,5 +55,6 @@ public class SuperSmashDataWorker {
                 "Fireball", "Cape", "Super Jump Punch", "F.L.U.D.D");
         insertFighter("Link", "link", "The Legend of Zelda", "zelda_series",
                 "Hero's Bow", "Boomerang", "Spin Attack", "Remote Bomb");
+
     }
 }
