@@ -16,11 +16,15 @@
         <entry key="app/src/main/res/drawable/ic_baseline_tracker.xml" value="0.173" />
         <entry key="app/src/main/res/drawable/military_tech-48px.xml" value="0.1455" />
         <entry key="app/src/main/res/layout/activity_battle_note.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_fighter.xml" value="0.2859375" />
         <entry key="app/src/main/res/layout/activity_fighters.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/layout/activity_timer.xml" value="0.2564814814814815" />
         <entry key="app/src/main/res/layout/activity_win_lose_tracker.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/layout/content_fighter.xml" value="0.396875" />
+        <entry key="app/src/main/res/layout/content_fighters.xml" value="0.2859375" />
         <entry key="app/src/main/res/layout/content_notes.xml" value="0.4119791666666667" />
+        <entry key="app/src/main/res/layout/fighter_list.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/note_list.xml" value="0.20677083333333332" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/menu/menu_battle_note.xml" value="0.14114583333333333" />
