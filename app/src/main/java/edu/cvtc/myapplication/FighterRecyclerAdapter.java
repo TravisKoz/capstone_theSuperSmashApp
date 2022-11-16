@@ -68,6 +68,39 @@ public class FighterRecyclerAdapter extends
             case ("Pokemon"):
                 holder.mFighterFranchise.setImageResource(R.drawable.pokemon_series);
                 break;
+            case ("EarthBound"):
+                holder.mFighterFranchise.setImageResource(R.drawable.earth_bound_series);
+                break;
+            case ("F-Zero"):
+                holder.mFighterFranchise.setImageResource(R.drawable.f_zero_series);
+                break;
+            case ("Ice Climbers"):
+                holder.mFighterFranchise.setImageResource(R.drawable.ice_climbers_series);
+                break;
+            case ("Fire Emblem"):
+                holder.mFighterFranchise.setImageResource(R.drawable.fire_emblem_series);
+                break;
+            case ("Game & Watch"):
+                holder.mFighterFranchise.setImageResource(R.drawable.game_watch_series);
+                break;
+            case ("Kid Icarus"):
+                holder.mFighterFranchise.setImageResource(R.drawable.kid_icarus_series);
+                break;
+            case ("Wario"):
+                holder.mFighterFranchise.setImageResource(R.drawable.wario_series);
+                break;
+            case ("Metal Gear"):
+                holder.mFighterFranchise.setImageResource(R.drawable.metal_gear_series);
+                break;
+            case ("Sonic"):
+                holder.mFighterFranchise.setImageResource(R.drawable.sonic_series);
+                break;
+            case ("Pikmin"):
+                holder.mFighterFranchise.setImageResource(R.drawable.pikmin_series);
+                break;
+
+
+
             default:
                 holder.mFighterFranchise.setImageResource(R.drawable.super_smash);
         }

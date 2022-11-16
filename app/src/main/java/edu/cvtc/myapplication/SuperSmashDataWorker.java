@@ -85,5 +85,135 @@ public class SuperSmashDataWorker {
         insertFighter("Pikachu", "Pokemon", "Thunder Jolt",
                 "Skull Bash", "Thunder", "Quick Attack");
 
+        // Luigi
+        insertFighter("Luigi", "Super Mario", "Fireball",
+                "Green Missile", "Luigi Cyclone", "Super Jump Punch");
+
+        // Captain Falcon
+        insertFighter("Captain Falcon", "F-Zero", "Falcon Punch",
+                "Raptor Boost", "Falcon Kick", "Falcon Dive");
+
+        // Jigglypuff
+        insertFighter("Jigglypuff", "Pokemon", "Rollout",
+                "Pound", "Rest", "Sing");
+
+        // Peach
+        insertFighter("Peach", "Super Mario", "Toad",
+                "Peach Bomber", "Vegetable", "Peach Parasol");
+
+        // Daisy
+        insertFighter("Daisy", "Super Mario", "Toad",
+                "Daisy Bomber", "Vegetable", "Daisy Parasol");
+
+        // Bowser
+        insertFighter("Bowser", "Super Mario", "Fire Breath",
+                "Flying Slam", "Bowser Bomb", "Whirling Fortress");
+
+        // Ice Climbers
+        insertFighter("Ice Climbers", "Ice Climbers", "Ice Shot",
+                "Squall Hammer", "Blizzard", "Belay");
+
+        // Sheik
+        insertFighter("Sheik", "The Legend of Zelda", "Needle Storm",
+                "Burst Grenade", "Bouncing Fish", "Vanish");
+
+        // Zelda
+        insertFighter("Zelda", "The Legend of Zelda", "Nayru's Love",
+                "Din's Fire", "Phantom Slash", "Farore's Wind");
+
+        // Dr. Mario
+        insertFighter("Dr. Mario", "Super Mario", "Megavitamins",
+                "Super Sheet", "Dr. Tornado", "Super Jump Punch");
+
+        // Pichu
+        insertFighter("Pichu", "Pokemon", "Thunder Jolt",
+                "Skull Bash", "Thunder", "Agility");
+        // Falco
+        insertFighter("Falco", "Star Fox", "Blaster",
+                "Falco Phantasm", "Reflector", "Firebird");
+
+        // Marth
+        insertFighter("Marth", "Fire Emblem", "Shield Breaker",
+                "Dancing Blade", "Counter", "Dolphin Slash");
+
+        // Marth
+        insertFighter("Lucina", "Fire Emblem", "Shield Breaker",
+                "Dancing Blade", "Counter", "Dolphin Slash");
+
+        // Young Link
+        insertFighter("Young Link", "The Legend of Zelda", "Fire Arrow",
+                "Boomerang", "Bomb", "Spin Attack");
+
+        // Ganondorf
+        insertFighter("Ganondorf" , "The Legend of Zelda", "Warlock Punch",
+                "Flame Choke", "Wizard's Foot", "Dark Dive");
+
+        // Mewtwo
+        insertFighter("Mewtwo" , "Pokemon", "Shadow Ball",
+                "Confusion", "Disable", "Teleport");
+
+        // Roy
+        insertFighter("Roy" , "Fire Emblem", "Flare Blade",
+                "Double-Edge Dance", "Counter", "Blazer");
+
+        // Chrome
+        insertFighter("Chrome" , "Fire Emblem", "Flare Blade",
+                "Double-Edge Dance", "Counter", "Soaring Slash");
+
+        // Mr. Game & Watch
+        insertFighter("Mr. Game & Watch" , "Game & Watch", "Chef",
+                "Judge", "Oil Panic", "Fire");
+
+        // Meta Knight
+        insertFighter("Meta Knight" , "Kirby", "Mach Tornado",
+                "Drill Rush", "Dimensional Cape", "Shuttle Loop");
+
+        // Pit
+        insertFighter("Pit" , "Kid Icarus", "Palutena Bow",
+                "Upperdash Arm", "Guardian Orbitars", "Power of Flight");
+
+        // Dark Pit
+        insertFighter("Dark Pit" , "Kid Icarus", "Silver Bow",
+                "Electroshock Arm", "Guardian Orbitars", "Power of Flight");
+
+        // Zero Suit Samus
+        insertFighter("Zero Suit Samus" , "Metroid", "Paralyzer",
+                "Plasma Whip", "Flip Jump", "Boost Kick");
+
+        // Wario
+        insertFighter("Wario" , "Wario", "Chomp",
+                "Wario Bike", "Wario Waft", "Corkscrew");
+
+        // Snake
+        insertFighter("Snake" , "Metal Gear", "Hand Grenade",
+                "Remote Missile", "C4", "Cypher");
+
+        // Ike
+        insertFighter("Ike" , "Fire Emblem", "Eruption",
+                "Quick Draw", "Counter", "Aether");
+
+
+        // Diddy Kong
+        insertFighter("Diddy Kong" , "Donkey Kong", "Peanut Popgun",
+                "Monkey Flip", "Banana Peel", "Rocketbarrel Boost");
+
+        // Lucas
+        insertFighter("Lucas" , "EarthBound", "PK Freeze",
+                "PK Fire", "PSI Magnet", "PK Thunder");
+
+        // Sonic
+        insertFighter("Sonic" , "Sonic", "Homing Attack",
+                "Spin Dash", "Spin Charge", "Spring Jump");
+
+        // King Dedede
+        insertFighter("King Dedede" , "Kirby", "Inhale",
+                "Gordo Throw", "Jet Hammer", "Super Dedede Jump");
+
+        // Olimar
+        insertFighter("Olimar" , "Pikmin", "Pikmin Pluck",
+                "Pikmin Throw", "Pikmin Order", "Winged Pikmin");
+
+
+
     }
 }

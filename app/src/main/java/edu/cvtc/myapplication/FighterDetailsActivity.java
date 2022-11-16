@@ -176,6 +176,36 @@ public class FighterDetailsActivity extends AppCompatActivity {
             case ("Pokemon"):
                 mFighterSeriesSymbol.setImageResource(R.drawable.pokemon_series);
                 break;
+            case ("EarthBound"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.earth_bound_series);
+                break;
+            case ("F-Zero"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.f_zero_series);
+                break;
+            case ("Ice Climbers"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.ice_climbers_series);
+                break;
+            case ("Fire Emblem"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.fire_emblem_series);
+                break;
+            case ("Game & Watch"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.game_watch_series);
+                break;
+            case ("Kid Icarus"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.kid_icarus_series);
+                break;
+            case ("Wario"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.wario_series);
+                break;
+            case ("Metal Gear"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.metal_gear_series);
+                break;
+            case ("Sonic"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.sonic_series);
+                break;
+            case ("Pikmin"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.pikmin_series);
+                break;
             default:
                 mFighterSeriesSymbol.setImageResource(R.drawable.super_smash);
         }
@@ -183,33 +213,134 @@ public class FighterDetailsActivity extends AppCompatActivity {
 
     private void setFighterImage(String name) {
         switch (name) {
-            case ("Mario") :
+            case ("Mario"):
                 mFighterImage.setImageResource(R.drawable.mario);
                 break;
-            case ("Donkey Kong") :
+            case ("Donkey Kong"):
                 mFighterImage.setImageResource(R.drawable.donkey_kong);
                 break;
-            case ("Link") :
+            case ("Link"):
                 mFighterImage.setImageResource(R.drawable.link);
                 break;
-            case ("Samus") :
+            case ("Samus"):
                 mFighterImage.setImageResource(R.drawable.samus);
                 break;
-            case ("Dark Samus") :
+            case ("Dark Samus"):
                 mFighterImage.setImageResource(R.drawable.dark_samus);
                 break;
-            case ("Yoshi") :
+            case ("Yoshi"):
                 mFighterImage.setImageResource(R.drawable.yoshi);
                 break;
-            case ("Kirby") :
+            case ("Kirby"):
                 mFighterImage.setImageResource(R.drawable.kirby);
                 break;
-            case ("Fox") :
+            case ("Fox"):
                 mFighterImage.setImageResource(R.drawable.fox);
                 break;
-            case ("Pikachu") :
+            case ("Pikachu"):
                 mFighterImage.setImageResource(R.drawable.pikachu);
                 break;
+            case ("Luigi"):
+                mFighterImage.setImageResource(R.drawable.luigi);
+                break;
+            case ("Ness"):
+                mFighterImage.setImageResource(R.drawable.ness);
+                break;
+            case ("Captain Falcon"):
+                mFighterImage.setImageResource(R.drawable.captain_falcon);
+                break;
+            case ("Jigglypuff"):
+                mFighterImage.setImageResource(R.drawable.jigglypuff);
+                break;
+            case ("Peach"):
+                mFighterImage.setImageResource(R.drawable.peach);
+                break;
+            case ("Daisy"):
+                mFighterImage.setImageResource(R.drawable.daisy);
+                break;
+            case ("Bowser"):
+                mFighterImage.setImageResource(R.drawable.bowser);
+                break;
+            case ("Ice Climbers"):
+                mFighterImage.setImageResource(R.drawable.ice_climbers);
+                break;
+            case ("Sheik"):
+                mFighterImage.setImageResource(R.drawable.sheik);
+                break;
+            case ("Zelda"):
+                mFighterImage.setImageResource(R.drawable.zelda);
+                break;
+            case ("Dr. Mario"):
+                mFighterImage.setImageResource(R.drawable.dr_mario);
+                break;
+            case ("Pichu"):
+                mFighterImage.setImageResource(R.drawable.pichu);
+                break;
+            case ("Falco"):
+                mFighterImage.setImageResource(R.drawable.falco);
+                break;
+            case ("Marth"):
+                mFighterImage.setImageResource(R.drawable.marth);
+                break;
+            case ("Lucina"):
+                mFighterImage.setImageResource(R.drawable.lucina);
+                break;
+            case ("Young Link"):
+                mFighterImage.setImageResource(R.drawable.young_link);
+                break;
+            case ("Ganondorf"):
+                mFighterImage.setImageResource(R.drawable.ganondorf);
+                break;
+            case ("Mewtwo"):
+                mFighterImage.setImageResource(R.drawable.mewtwo);
+                break;
+            case ("Roy"):
+                mFighterImage.setImageResource(R.drawable.roy);
+                break;
+            case ("Chrome"):
+                mFighterImage.setImageResource(R.drawable.chrome);
+                break;
+            case ("Mr. Game & Watch"):
+                mFighterImage.setImageResource(R.drawable.mr_game_and_watch);
+                break;
+            case ("Meta Knight"):
+                mFighterImage.setImageResource(R.drawable.meta_knight);
+                break;
+            case ("Pit"):
+                mFighterImage.setImageResource(R.drawable.pit);
+                break;
+            case ("Dark Pit"):
+                mFighterImage.setImageResource(R.drawable.dark_pit);
+                break;
+            case ("Zero Suit Samus"):
+                mFighterImage.setImageResource(R.drawable.zero_suit_samus);
+                break;
+            case ("Wario"):
+                mFighterImage.setImageResource(R.drawable.wario);
+                break;
+            case ("Snake"):
+                mFighterImage.setImageResource(R.drawable.snake);
+                break;
+            case ("Ike"):
+                mFighterImage.setImageResource(R.drawable.ike);
+                break;
+            case ("Diddy Kong"):
+                mFighterImage.setImageResource(R.drawable.diddy_kong);
+                break;
+            case ("Lucas"):
+                mFighterImage.setImageResource(R.drawable.lucas);
+                break;
+            case ("Sonic"):
+                mFighterImage.setImageResource(R.drawable.sonic);
+                break;
+            case ("King Dedede"):
+                mFighterImage.setImageResource(R.drawable.king_dedede);
+                break;
+            case ("Olimar"):
+                mFighterImage.setImageResource(R.drawable.olimar);
+                break;
+
+
             default:
                 mFighterImage.setImageResource(R.drawable.super_smash);
         }
@@ -221,13 +352,3 @@ public class FighterDetailsActivity extends AppCompatActivity {
         super.onDestroy();
     }
 }
-
-
-
-  //  private String mName;
-    //private String mFranchise;
-    //private String mSpecialNeutral;
-    //private String mSpecialSide;
-    //private String mSpecialDown;
-    //private String mSpecialUp;
-    //private int mId;

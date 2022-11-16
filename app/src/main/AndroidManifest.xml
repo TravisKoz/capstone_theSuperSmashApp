@@ -16,7 +16,7 @@
         <activity
           android:name=".FighterDetailsActivity"
           android:parentActivityName=".FightersActivity"
-          android:label="Fighter Details"
+          android:label="A New Challenger Appears"
           android:exported="false" />
         <activity
           android:name=".ControlsActivity"
