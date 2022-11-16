@@ -37,8 +37,6 @@
                 app:showAsAction="never"
                 android:icon="@drawable/ic_baseline_tracker"
                 />
-
-
         </menu>
     </item>
 

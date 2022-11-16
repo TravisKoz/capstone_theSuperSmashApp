@@ -16,6 +16,10 @@
     <item name="android:itemBackground">@color/white</item>
   </style>
 
+  <style name="OptionsMenuTheme." parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
+    <item name="color">@color/red</item>
+  </style>
+
   <style name="OptionsMenuTheme" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
     <item name="android:textColor">@color/red</item>
     <item name="android:textSize">15sp</item>

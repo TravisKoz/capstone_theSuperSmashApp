@@ -25,4 +25,7 @@
   <string name="fighter_name_text">Fighter</string>
   <string name="game_series_symbol">Game series symbol</string>
 
+  <string name="pause_text">Pause</string>
+  <string name="start_text">Start</string>
+
 </resources>
