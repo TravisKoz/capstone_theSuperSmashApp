@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 
 // This class is used to communicate with the database.
 // We we use it to load and save information to the database
@@ -15,6 +16,7 @@ public class DataManager {
     // Member Attributes
     private static DataManager ourInstance = null;
     private List<BattleNote> mBattleNotes = new ArrayList<>();
+    private List<Fighter> mFighters = new ArrayList<>();
 
     // Set a reference to our new instance.
     public static DataManager getInstance() {
@@ -27,6 +29,11 @@ public class DataManager {
     // Returns a list of our battle notes.
     public List<BattleNote> getBattleNotes() {
         return mBattleNotes;
+    }
+
+    // Returns a list of our fighters()
+    public List<Fighter> getFighters() {
+        return mFighters;
     }
 
     private static void loadBattleNotesFromDatabase(Cursor cursor) {
@@ -87,6 +94,100 @@ public class DataManager {
 
         // Call the method to load our array list.
         loadBattleNotesFromDatabase(battleNoteCursor);
+    }
+
+    private static void loadFightersFromDatabase(Cursor cursor) {
+        // Retrieve the field positions in your database.
+        // The positions of fields may change over time as the database grows, so
+        // you want to use your constants to reference where those positions are in
+        // the table.
+        int listNamePosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_NAME);
+        int listImagePosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_IMAGE);
+        int listFranchisePosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_FRANCHISE);
+        int listFranchiseSymbolPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_FRANCHISE_SYMBOL);
+        int listSpecialNeutralPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_SPECIAL_NEUTRAL);
+        int listSpecialSidePosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_SPECIAL_SIDE);
+        int listSpecialDownPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_SPECIAL_DOWN);
+        int listSpecialUpPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_SPECIAL_UP);
+        int idPosition =
+                cursor.getColumnIndex(FighterEntry._ID);
+
+        // Create an instance of your DataManager and use the DataManager
+        // to clear any information from the array list.
+        DataManager dm = getInstance();
+        dm.mFighters.clear();
+
+        // Loop through the cursor rows and add new fighter objects to
+        // our array list.
+        while (cursor.moveToNext()) {
+            String listName =
+                    cursor.getString(listNamePosition);
+            String listImage =
+                    cursor.getString(listImagePosition);
+            String listFranchise =
+                    cursor.getString(listFranchisePosition);
+            String listFranchiseSymbol =
+                    cursor.getString(listFranchiseSymbolPosition);
+            String listSpecialNeutral =
+                    cursor.getString(listSpecialNeutralPosition);
+            String listSpecialSide =
+                    cursor.getString(listSpecialSidePosition);
+            String listSpecialDown =
+                    cursor.getString(listSpecialDownPosition);
+            String listSpecialUp =
+                    cursor.getString(listSpecialUpPosition);
+            int id = cursor.getInt(idPosition);
+
+            Fighter list = new Fighter(id, listName, listImage, listFranchise, listFranchiseSymbol,
+                                        listSpecialNeutral, listSpecialSide, listSpecialDown, listSpecialUp);
+            dm.mFighters.add(list);
+        }
+
+        // Close the cursor (to prevent memory leaks)
+        cursor.close();
+    }
+
+    public static void getFightersFromDatabase(SuperSmashOpenHelper dbHelper) {
+        // Open our database in read mode.
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        // Create a list columns we want to return.
+        String[] fighterColumns = {
+                FighterEntry.COLUMN_NAME,
+                FighterEntry.COLUMN_IMAGE,
+                FighterEntry.COLUMN_FRANCHISE,
+                FighterEntry.COLUMN_FRANCHISE_SYMBOL,
+                FighterEntry.COLUMN_SPECIAL_NEUTRAL,
+                FighterEntry.COLUMN_SPECIAL_SIDE,
+                FighterEntry.COLUMN_SPECIAL_DOWN,
+                FighterEntry.COLUMN_SPECIAL_UP,
+                FighterEntry._ID
+        };
+
+        // Create an order by field for sorting purposes.
+        String fighterOrderBy = FighterEntry.COLUMN_NAME;
+
+        // Populate our cursor with the results of the query.
+        final Cursor fighterCursor = db.query(FighterEntry.TABLE_NAME,
+                fighterColumns,
+                null, null, null, null,
+                fighterOrderBy);
+
+        // Call the method to load our array list
+        loadFightersFromDatabase(fighterCursor);
+    }
+
+    // Don't think I new this
+    public void removeFighter(int index) {
+        mFighters.remove(index);
     }
 
     public int createNewBattleNote() {

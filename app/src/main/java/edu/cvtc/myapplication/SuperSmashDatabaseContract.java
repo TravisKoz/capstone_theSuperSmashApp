@@ -72,12 +72,12 @@ public final class SuperSmashDatabaseContract {
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
                         COLUMN_NAME + " TEXT NOT NULL, " +
-                        COLUMN_IMAGE + " TEXT), " +
-                        COLUMN_FRANCHISE + " TEXT), " +
-                        COLUMN_FRANCHISE_SYMBOL + " TEXT), " +
-                        COLUMN_SPECIAL_NEUTRAL + " TEXT), " +
-                        COLUMN_SPECIAL_SIDE + " TEXT), " +
-                        COLUMN_SPECIAL_DOWN + " TEXT), " +
+                        COLUMN_IMAGE + " TEXT, " +
+                        COLUMN_FRANCHISE + " TEXT, " +
+                        COLUMN_FRANCHISE_SYMBOL + " TEXT, " +
+                        COLUMN_SPECIAL_NEUTRAL + " TEXT, " +
+                        COLUMN_SPECIAL_SIDE + " TEXT, " +
+                        COLUMN_SPECIAL_DOWN + " TEXT, " +
                         COLUMN_SPECIAL_UP + " TEXT)";
     }
 }

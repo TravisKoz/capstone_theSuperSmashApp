@@ -50,11 +50,10 @@ public class SuperSmashDataWorker {
     }
 
     // Method Used to populate out database with initial Fighters data.
-    private void insertFighters() {
+    public void insertFighters() {
         insertFighter("Mario", "mario", "Mario", "mario_series",
                 "Fireball", "Cape", "Super Jump Punch", "F.L.U.D.D");
         insertFighter("Link", "link", "The Legend of Zelda", "zelda_series",
                 "Hero's Bow", "Boomerang", "Spin Attack", "Remote Bomb");
-
     }
 }
