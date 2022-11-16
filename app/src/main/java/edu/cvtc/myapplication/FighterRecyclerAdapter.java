@@ -2,6 +2,7 @@ package edu.cvtc.myapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,7 +72,7 @@ public class FighterRecyclerAdapter extends
                 holder.mFighterFranchise.setImageResource(R.drawable.super_smash);
         }
 
-        holder.mCurrentPosition = position;
+        holder.mId = fighter.getId();
 
     }
 
@@ -84,12 +85,21 @@ public class FighterRecyclerAdapter extends
         // Member variables for inner class
         public final TextView mFighterName;
         public final ImageView mFighterFranchise;
-        public int mCurrentPosition;
+        public int mId;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mFighterName = (TextView) itemView.findViewById(R.id.fighter_name);
             mFighterFranchise = (ImageView) itemView.findViewById(R.id.game_symbol_image);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext, FighterDetailsActivity.class);
+                    intent.putExtra(FighterDetailsActivity.FIGHTER_ID, mId);
+                    mContext.startActivity(intent);
+                }
+            });
         }
     }
 }

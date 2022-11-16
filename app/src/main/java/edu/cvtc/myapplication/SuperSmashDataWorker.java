@@ -49,23 +49,40 @@ public class SuperSmashDataWorker {
 
     // Method used to populate our database with initial Fighters data.
     public void insertFighters() {
+        // Mario
         insertFighter("Mario", "Super Mario", "Fireball",
                 "Cape", "Super Jump Punch", "F.L.U.D.D");
+
+        // Donkey Kong
         insertFighter("Donkey Kong", "Donkey Kong","Giant Punch",
                 "Headbutt", "Hand Slap", "Spinning Kong");
+
+        // Link
         insertFighter("Link", "The Legend of Zelda", "Bow and Arrows",
-                "Boomerang", "Spin Attack", "Remote Bomb");
+                "Boomerang", "Remote Bomb", "Spin Attack");
+
+        // Samus
         insertFighter("Samus", "Metroid", "Charge Shot",
                 "Missile", "Bomb", "Screw Attack");
-        insertFighter("Dark Samus ", "Metroid", "Charge Shot",
+
+        // Dark Samus
+        insertFighter("Dark Samus", "Metroid", "Charge Shot",
                 "Missile", "Bomb", "Screw Attack");
-        insertFighter("Yoshi ", "Yoshi", "Egg Lay",
+
+        // Yoshi
+        insertFighter("Yoshi", "Yoshi", "Egg Lay",
                 "Egg Roll", "Egg Bomb", "Screw Throw");
-        insertFighter("Kirby ", "Kirby", "Inhale",
+
+        // Kirby
+        insertFighter("Kirby", "Kirby", "Inhale",
                 "Hammer Flip", "Stone", "Final Cutter");
-        insertFighter("Fox ", "Star Fox", "Blaster",
+
+        // Fox
+        insertFighter("Fox", "Star Fox", "Blaster",
                 "Fox Illusion", "Reflector", "Fire Fox");
-        insertFighter("Pikachu ", "Pokemon", "Thunder Jolt",
+
+        // Pikachu
+        insertFighter("Pikachu", "Pokemon", "Thunder Jolt",
                 "Skull Bash", "Thunder", "Quick Attack");
 
     }

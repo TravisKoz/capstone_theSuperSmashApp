@@ -39,7 +39,7 @@
         android:textStyle="bold"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:fontFamily="casual"
+        android:fontFamily="@font/smashfont"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/game_symbol_image"
         app:layout_constraintTop_toTopOf="@id/game_symbol_image" />
