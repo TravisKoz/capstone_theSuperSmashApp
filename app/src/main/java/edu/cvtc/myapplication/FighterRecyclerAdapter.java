@@ -44,7 +44,7 @@ public class FighterRecyclerAdapter extends
         switch (fighter.getFranchise()) {
 
             case ("Super Mario"):
-                holder.mFighterFranchise.setImageResource(R.drawable.mairo_series);
+                holder.mFighterFranchise.setImageResource(R.drawable.mario_series);
                 break;
             case ("Donkey Kong"):
                 holder.mFighterFranchise.setImageResource(R.drawable.donkey_kong_series);

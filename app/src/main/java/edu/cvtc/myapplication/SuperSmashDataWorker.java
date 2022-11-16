@@ -68,7 +68,5 @@ public class SuperSmashDataWorker {
         insertFighter("Pikachu ", "Pokemon", "Thunder Jolt",
                 "Skull Bash", "Thunder", "Quick Attack");
 
-
-
     }
 }
