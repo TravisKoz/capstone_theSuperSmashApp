@@ -41,20 +41,37 @@ public class FighterRecyclerAdapter extends
         Fighter fighter = mFighters.get(position);
         holder.mFighterName.setText(fighter.getName());
 
-        switch (fighter.getFranchiseSymbol()) {
+        switch (fighter.getFranchise()) {
 
-            case ("mario_series"):
+            case ("Super Mario"):
                 holder.mFighterFranchise.setImageResource(R.drawable.mairo_series);
                 break;
-            case ("zelda_series"):
+            case ("Donkey Kong"):
+                holder.mFighterFranchise.setImageResource(R.drawable.donkey_kong_series);
+                break;
+            case ("The Legend of Zelda"):
                 holder.mFighterFranchise.setImageResource(R.drawable.zelda_series);
                 break;
+            case ("Metroid"):
+                holder.mFighterFranchise.setImageResource(R.drawable.metroid_series);
+                break;
+            case ("Yoshi"):
+                holder.mFighterFranchise.setImageResource(R.drawable.yoshi_series);
+                break;
+            case ("Kirby"):
+                holder.mFighterFranchise.setImageResource(R.drawable.kirby_series);
+                break;
+            case ("Star Fox"):
+                holder.mFighterFranchise.setImageResource(R.drawable.star_fox_series);
+                break;
+            case ("Pokemon"):
+                holder.mFighterFranchise.setImageResource(R.drawable.pokemon_series);
+                break;
             default:
-                holder.mFighterFranchise.setImageResource((R.drawable.super_smash));
+                holder.mFighterFranchise.setImageResource(R.drawable.super_smash);
         }
 
         holder.mCurrentPosition = position;
-
 
     }
 

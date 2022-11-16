@@ -46,11 +46,7 @@ public final class SuperSmashDatabaseContract {
         public static final String
                 COLUMN_NAME = "name";
         public static final String
-                COLUMN_IMAGE = "image";
-        public static final String
                 COLUMN_FRANCHISE = "franchise";
-        public static final String
-                COLUMN_FRANCHISE_SYMBOL = "franchise_symbol";
         public static final String
                 COLUMN_SPECIAL_NEUTRAL = "special_neutral";
         public static final String
@@ -72,9 +68,7 @@ public final class SuperSmashDatabaseContract {
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY, " +
                         COLUMN_NAME + " TEXT NOT NULL, " +
-                        COLUMN_IMAGE + " TEXT, " +
                         COLUMN_FRANCHISE + " TEXT, " +
-                        COLUMN_FRANCHISE_SYMBOL + " TEXT, " +
                         COLUMN_SPECIAL_NEUTRAL + " TEXT, " +
                         COLUMN_SPECIAL_SIDE + " TEXT, " +
                         COLUMN_SPECIAL_DOWN + " TEXT, " +

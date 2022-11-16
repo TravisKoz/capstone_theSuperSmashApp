@@ -9,9 +9,7 @@ public class Fighter implements Parcelable {
 
     // Member Attributes
     private String mName;
-    private String mImage;
     private String mFranchise;
-    private String mFranchiseSymbol;
     private String mSpecialNeutral;
     private String mSpecialSide;
     private String mSpecialDown;
@@ -20,25 +18,21 @@ public class Fighter implements Parcelable {
 
 
     // Overloaded Constructors
-    public Fighter (String name, String image, String franchise, String franchiseSymbol,
-                    String specialNeutral, String specialSide, String specialDown, String specialUp) {
+    public Fighter (String name, String franchise, String specialNeutral,
+                    String specialSide, String specialDown, String specialUp) {
         mName = name;
-        mImage = image;
         mFranchise = franchise;
-        mFranchiseSymbol = franchiseSymbol;
         mSpecialNeutral = specialNeutral;
         mSpecialSide = specialSide;
         mSpecialDown = specialDown;
         mSpecialUp = specialUp;
     }
 
-    public Fighter (int id, String name, String image, String franchise, String franchiseSymbol,
-                    String specialNeutral, String specialSide, String specialDown, String specialUp) {
+    public Fighter (int id, String name, String franchise, String specialNeutral,
+                    String specialSide, String specialDown, String specialUp) {
         mId = id;
         mName = name;
-        mImage = image;
         mFranchise = franchise;
-        mFranchiseSymbol = franchiseSymbol;
         mSpecialNeutral = specialNeutral;
         mSpecialSide = specialSide;
         mSpecialDown = specialDown;
@@ -58,29 +52,12 @@ public class Fighter implements Parcelable {
         mName = name;
     }
 
-
-    public String getImage() {
-        return mImage;
-    }
-
-    public void setImage(String image) {
-        mImage = image;
-    }
-
     public String getFranchise() {
         return mFranchise;
     }
 
     public void setFranchise(String franchise) {
         mFranchise = franchise;
-    }
-
-    public String getFranchiseSymbol() {
-        return mFranchiseSymbol;
-    }
-
-    public void setFranchiseSymbol(String franchiseSymbol) {
-        mFranchiseSymbol = franchiseSymbol;
     }
 
     public String getSpecialNeutral() {
@@ -117,8 +94,8 @@ public class Fighter implements Parcelable {
 
     // Returns a concatenated heading and body.
     private String getCompareKey() {
-        return mName + "|" + mImage + "|" + mFranchise + "|" +
-                mFranchiseSymbol + "|" + mSpecialNeutral + "|" + mSpecialSide + "|" +
+        return mName + "|" + mFranchise + "|" +
+                mSpecialNeutral + "|" + mSpecialSide + "|" +
                 mSpecialDown + "|" + mSpecialUp;
     }
 
@@ -144,9 +121,7 @@ public class Fighter implements Parcelable {
 
     protected Fighter(Parcel parcel) {
         setName(parcel.readString());
-        setImage(parcel.readString());
         setFranchise(parcel.readString());
-        setFranchiseSymbol(parcel.readString());
         setSpecialNeutral(parcel.readString());
         setSpecialSide(parcel.readString());
         setSpecialDown(parcel.readString());
@@ -173,9 +148,7 @@ public class Fighter implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int flags) {
         parcel.writeString(mName);
-        parcel.writeString(mImage);
         parcel.writeString(mFranchise);
-        parcel.writeString(mFranchiseSymbol);
         parcel.writeString(mSpecialNeutral);
         parcel.writeString(mSpecialSide);
         parcel.writeString(mSpecialDown);

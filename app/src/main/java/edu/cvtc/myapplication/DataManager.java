@@ -103,12 +103,8 @@ public class DataManager {
         // the table.
         int listNamePosition =
                 cursor.getColumnIndex(FighterEntry.COLUMN_NAME);
-        int listImagePosition =
-                cursor.getColumnIndex(FighterEntry.COLUMN_IMAGE);
         int listFranchisePosition =
                 cursor.getColumnIndex(FighterEntry.COLUMN_FRANCHISE);
-        int listFranchiseSymbolPosition =
-                cursor.getColumnIndex(FighterEntry.COLUMN_FRANCHISE_SYMBOL);
         int listSpecialNeutralPosition =
                 cursor.getColumnIndex(FighterEntry.COLUMN_SPECIAL_NEUTRAL);
         int listSpecialSidePosition =
@@ -130,12 +126,8 @@ public class DataManager {
         while (cursor.moveToNext()) {
             String listName =
                     cursor.getString(listNamePosition);
-            String listImage =
-                    cursor.getString(listImagePosition);
             String listFranchise =
                     cursor.getString(listFranchisePosition);
-            String listFranchiseSymbol =
-                    cursor.getString(listFranchiseSymbolPosition);
             String listSpecialNeutral =
                     cursor.getString(listSpecialNeutralPosition);
             String listSpecialSide =
@@ -146,8 +138,8 @@ public class DataManager {
                     cursor.getString(listSpecialUpPosition);
             int id = cursor.getInt(idPosition);
 
-            Fighter list = new Fighter(id, listName, listImage, listFranchise, listFranchiseSymbol,
-                                        listSpecialNeutral, listSpecialSide, listSpecialDown, listSpecialUp);
+            Fighter list = new Fighter(id, listName, listFranchise, listSpecialNeutral,
+                    listSpecialSide, listSpecialDown, listSpecialUp);
             dm.mFighters.add(list);
         }
 
@@ -162,9 +154,7 @@ public class DataManager {
         // Create a list columns we want to return.
         String[] fighterColumns = {
                 FighterEntry.COLUMN_NAME,
-                FighterEntry.COLUMN_IMAGE,
                 FighterEntry.COLUMN_FRANCHISE,
-                FighterEntry.COLUMN_FRANCHISE_SYMBOL,
                 FighterEntry.COLUMN_SPECIAL_NEUTRAL,
                 FighterEntry.COLUMN_SPECIAL_SIDE,
                 FighterEntry.COLUMN_SPECIAL_DOWN,
@@ -185,7 +175,7 @@ public class DataManager {
         loadFightersFromDatabase(fighterCursor);
     }
 
-    // Don't think I new this
+    // Don't think I need this
     public void removeFighter(int index) {
         mFighters.remove(index);
     }

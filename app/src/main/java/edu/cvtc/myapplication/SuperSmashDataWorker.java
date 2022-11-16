@@ -33,14 +33,12 @@ public class SuperSmashDataWorker {
         insertBattleNote("Note 2", "My Message");
     }
 
-    private void insertFighter(String name, String image, String franchise, String franchiseSymbol,
-                               String specialNeutral, String specialSide, String specialDown,
+    private void insertFighter(String name, String franchise, String specialNeutral,
+                               String specialSide, String specialDown,
                                String specialUp) {
         ContentValues values = new ContentValues();
         values.put(FighterEntry.COLUMN_NAME, name);
-        values.put(FighterEntry.COLUMN_IMAGE, image);
         values.put(FighterEntry.COLUMN_FRANCHISE, franchise);
-        values.put(FighterEntry.COLUMN_FRANCHISE_SYMBOL, franchiseSymbol);
         values.put(FighterEntry.COLUMN_SPECIAL_NEUTRAL, specialNeutral);
         values.put(FighterEntry.COLUMN_SPECIAL_SIDE, specialSide);
         values.put(FighterEntry.COLUMN_SPECIAL_DOWN, specialDown);
@@ -49,11 +47,28 @@ public class SuperSmashDataWorker {
         long newRowId = mDb.insert(FighterEntry.TABLE_NAME, null, values);
     }
 
-    // Method Used to populate out database with initial Fighters data.
+    // Method used to populate our database with initial Fighters data.
     public void insertFighters() {
-        insertFighter("Mario", "mario", "Mario", "mario_series",
-                "Fireball", "Cape", "Super Jump Punch", "F.L.U.D.D");
-        insertFighter("Link", "link", "The Legend of Zelda", "zelda_series",
-                "Hero's Bow", "Boomerang", "Spin Attack", "Remote Bomb");
+        insertFighter("Mario", "Super Mario", "Fireball",
+                "Cape", "Super Jump Punch", "F.L.U.D.D");
+        insertFighter("Donkey Kong", "Donkey Kong","Giant Punch",
+                "Headbutt", "Hand Slap", "Spinning Kong");
+        insertFighter("Link", "The Legend of Zelda", "Bow and Arrows",
+                "Boomerang", "Spin Attack", "Remote Bomb");
+        insertFighter("Samus", "Metroid", "Charge Shot",
+                "Missile", "Bomb", "Screw Attack");
+        insertFighter("Dark Samus ", "Metroid", "Charge Shot",
+                "Missile", "Bomb", "Screw Attack");
+        insertFighter("Yoshi ", "Yoshi", "Egg Lay",
+                "Egg Roll", "Egg Bomb", "Screw Throw");
+        insertFighter("Kirby ", "Kirby", "Inhale",
+                "Hammer Flip", "Stone", "Final Cutter");
+        insertFighter("Fox ", "Star Fox", "Blaster",
+                "Fox Illusion", "Reflector", "Fire Fox");
+        insertFighter("Pikachu ", "Pokemon", "Thunder Jolt",
+                "Skull Bash", "Thunder", "Quick Attack");
+
+
+
     }
 }
