@@ -27,12 +27,8 @@ public class TimerActivity extends AppCompatActivity {
 
     // Constants
     private long mEndTime;
-    private long mStartTimeInMillis;
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
-    private long mNewStartTime = mTimeLeftInMillis;
-
-    private long pauseOffSet;
-
+    private long mStartTimeInMillis = mTimeLeftInMillis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +43,17 @@ public class TimerActivity extends AppCompatActivity {
         m8MinBtn = findViewById(R.id.btn8min);
 
         // Event listener that Calls the pauseTimer or startTimer methods
+        mStartPauseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                if (mTimerRunning) {
+                    pauseTimer();
+                } else {
+                    startTimer();
+                }
+            }
+        });
 
         mResetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,39 +65,30 @@ public class TimerActivity extends AppCompatActivity {
         m5MinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mNewStartTime = START_TIME_IN_MILLIS * 5;
-                mTimeLeftInMillis = mNewStartTime;
+                mStartTimeInMillis = START_TIME_IN_MILLIS * 5;
+                mTimeLeftInMillis = mStartTimeInMillis;
                 updateCountDownText();
+                updateButtons();
             }
 
         });
         m2MinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mNewStartTime = START_TIME_IN_MILLIS * 2;
-                mTimeLeftInMillis = mNewStartTime;
+                mStartTimeInMillis = START_TIME_IN_MILLIS * 2;
+                mTimeLeftInMillis = mStartTimeInMillis;
                 updateCountDownText();
+                updateButtons();
             }
 
         });
         m8MinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mNewStartTime = START_TIME_IN_MILLIS * 8;
-                mTimeLeftInMillis = mNewStartTime;
+                mStartTimeInMillis = START_TIME_IN_MILLIS * 8;
+                mTimeLeftInMillis = mStartTimeInMillis;
                 updateCountDownText();
-            }
-
-        });
-        mStartPauseBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if (mTimerRunning) {
-                    pauseTimer();
-                } else {
-                    startTimer();
-                }
+                updateButtons();
             }
         });
         updateCountDownText();
@@ -106,12 +103,13 @@ public class TimerActivity extends AppCompatActivity {
                 mTimeLeftInMillis = millisUntilFinished;
 
                 updateCountDownText();
+                updateButtons();
             }
 
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                //updateButtons();
+                updateButtons();
             }
         }.start();
 
@@ -120,7 +118,7 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     private void resetTimer() {
-        mTimeLeftInMillis = mNewStartTime;
+        mTimeLeftInMillis = mStartTimeInMillis;
         updateCountDownText();
         updateButtons();
     }
@@ -134,7 +132,6 @@ public class TimerActivity extends AppCompatActivity {
 
             mStartPauseBtn.setText(R.string.pause_text);
         } else {
-           // mResetBtn.setVisibility(View.VISIBLE);
             m5MinBtn.setVisibility(View.VISIBLE);
             m2MinBtn.setVisibility(View.VISIBLE);
             m8MinBtn.setVisibility(View.VISIBLE);
@@ -143,19 +140,23 @@ public class TimerActivity extends AppCompatActivity {
             mStartPauseBtn.setText(R.string.start_text);
 
             if (mTimeLeftInMillis < 1000) {
-               // mStartPauseBtn.setVisibility(View.INVISIBLE);
+                mStartPauseBtn.setVisibility(View.INVISIBLE);
+                m5MinBtn.setVisibility(View.VISIBLE);
+                m2MinBtn.setVisibility(View.VISIBLE);
+                m8MinBtn.setVisibility(View.VISIBLE);
+                mResetBtn.setVisibility(View.VISIBLE);
 
             } else {
                 mStartPauseBtn.setVisibility(View.VISIBLE);
             }
 
-            // Updated reset button visibility
-            if (mTimeLeftInMillis < START_TIME_IN_MILLIS) {
+            // Updated reset button visibility if the value when reset
+            // is equal to start time value
+            if (mTimeLeftInMillis < mStartTimeInMillis) {
                 mResetBtn.setVisibility(View.VISIBLE);
             } else {
-               // mResetBtn.setVisibility(View.INVISIBLE);
+                mResetBtn.setVisibility(View.INVISIBLE);
             }
-
         }
     }
 
