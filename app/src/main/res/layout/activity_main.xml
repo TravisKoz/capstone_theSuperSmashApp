@@ -16,9 +16,9 @@
         android:text="Super Smash App"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/welcomeImage"
         app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/welcomeImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -28,12 +28,12 @@
         android:text="Click the screen or use the navigation menu in the corner to continue"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/welcomeImage"
         app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/welcomeImage" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/welcomeImage"
         android:layout_width="279dp"
         android:layout_height="222dp"
         android:adjustViewBounds="true"
