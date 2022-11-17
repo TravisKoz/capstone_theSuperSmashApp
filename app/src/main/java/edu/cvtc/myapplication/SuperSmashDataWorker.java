@@ -213,6 +213,79 @@ public class SuperSmashDataWorker {
         insertFighter("Olimar" , "Pikmin", "Pikmin Pluck",
                 "Pikmin Throw", "Pikmin Order", "Winged Pikmin");
 
+        // Lucario
+        insertFighter("Lucario" , "Pokemon", "Aura Sphere",
+                "Force Palm", "Double Team", "Extreme Speed");
+
+        // R.O.B.
+        insertFighter("R.O.B." , "R.O.B.", "Robo Beam",
+                "Arm Rotor", "Gyro", "Robo Burner");
+
+        // Toon Link
+        insertFighter("Toon Link" , "The Legend of Zelda", "Hero's Box",
+                "Boomerang", "Bomb", "Spin Attack");
+
+        // Wolf
+        insertFighter("Wolf" , "Star Fox", "Blaster",
+                "Wolf Flash", "Reflector", "Fire Wolf");
+
+        // Villager
+        insertFighter("Villager" , "Animal Crossing", "Pocket",
+                "Lloid Rocket", "Timber", "Balloon Trip");
+
+        // Mega Man
+        insertFighter("Mega Man" , "Mega Man", "Metal Blade",
+                "Crash Bomber", "Leaf Shield", "Rush Coil");
+
+        // Wii Fit Trainer
+        insertFighter("Wii Fit Trainer" , "Wii Fit", "Sun Salutation",
+                "Header", "Deep Breathing", "Super Hoop");
+
+        // Rosalina & Luma
+        insertFighter("Rosalina & Luma" , "Super Mario", "Luma Shot",
+                "Star Bits", "Gravitational Pull", "Launch Star");
+
+        // Little Mac
+        insertFighter("Little Mac" , "Punch-Out!!", "Straight Lunge",
+                "Jolt Haymaker", "Slip Counter", "Rising Uppercut");
+
+
+        // Greninja
+        insertFighter("Greninja" , "Pokemon", "Water Shuriken",
+                "Shadow Sneak", "Substitute", "Hydro Pump");
+
+        // Palutena
+        insertFighter("Palutena" , "Kid Icarus", "Autoreticle",
+                "Explosive Flame", "Counter/Reflect Barrier", "Warp");
+
+
+        // PAC-MAN
+        insertFighter("PAC-MAN" , "PAC-MAN", "Bonus Fruit",
+                "Power Pellet", "Fire Hydrant", "Pac-Jump");
+
+        // Robin
+        insertFighter("Robin" , "Fire Emblem", "Thunder",
+                "Arcfire", "Nosferatu", "Elwind");
+
+        // Shulk
+        insertFighter("Shulk" , "Xenoblade Chronicles", "Monado Arts",
+                "Back Slash", "Vision", "Air Slash");
+
+        // Bowser Jr.
+        insertFighter("Bowser Jr." , "Super Mario", "Clown Cannon",
+                "Clown Kart Dash", "Mechakoopa", "Abandon Ship");
+
+        // Duck Hunt
+        insertFighter("Duck Hunt" , "Duck Hunt", "Trick Shot",
+                "Clay Shooting", "Wild Gunman", "Duck Jump");
+
+        // Ryu
+        insertFighter("Ryu" , "Street Fighter", "Hadoken",
+                "Tatsumaki Senpukyaku", "Focus Attack", "Shoryuken");
+
+        // Ken
+        insertFighter("Ken" , "Street Fighter", "Hadoken",
+                "Tatsumaki Senpukyaku", "Focus Attack", "Flaming Shoryuken");
 
 
     }

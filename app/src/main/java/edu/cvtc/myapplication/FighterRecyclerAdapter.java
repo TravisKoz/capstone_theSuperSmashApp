@@ -98,9 +98,33 @@ public class FighterRecyclerAdapter extends
             case ("Pikmin"):
                 holder.mFighterFranchise.setImageResource(R.drawable.pikmin_series);
                 break;
-
-
-
+            case ("R.O.B."):
+                holder.mFighterFranchise.setImageResource(R.drawable.rob_series);
+                break;
+            case ("Animal Crossing"):
+                holder.mFighterFranchise.setImageResource(R.drawable.animal_crossing_series);
+                break;
+            case ("Mega Man"):
+                holder.mFighterFranchise.setImageResource(R.drawable.mega_man_series);
+                break;
+            case ("Wii Fit"):
+                holder.mFighterFranchise.setImageResource(R.drawable.wii_fit_series);
+                break;
+            case ("Punch-Out!!"):
+                holder.mFighterFranchise.setImageResource(R.drawable.punchout_series);
+                break;
+            case ("PAC-MAN"):
+                holder.mFighterFranchise.setImageResource(R.drawable.pac_man_series);
+                break;
+            case ("Xenoblade Chronicles"):
+                holder.mFighterFranchise.setImageResource(R.drawable.xenoblade_chronicles_series);
+                break;
+            case ("Duck Hunt"):
+                holder.mFighterFranchise.setImageResource(R.drawable.duck_hunt_series);
+                break;
+            case ("Street Fighter"):
+                holder.mFighterFranchise.setImageResource(R.drawable.street_fighter_series);
+                break;
             default:
                 holder.mFighterFranchise.setImageResource(R.drawable.super_smash);
         }

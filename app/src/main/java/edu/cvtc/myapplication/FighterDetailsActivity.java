@@ -206,6 +206,33 @@ public class FighterDetailsActivity extends AppCompatActivity {
             case ("Pikmin"):
                 mFighterSeriesSymbol.setImageResource(R.drawable.pikmin_series);
                 break;
+            case ("R.O.B."):
+                mFighterSeriesSymbol.setImageResource(R.drawable.rob_series);
+                break;
+            case ("Animal Crossing"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.animal_crossing_series);
+                break;
+            case ("Mega Man"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.mega_man_series);
+                break;
+            case ("Wii Fit"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.wii_fit_series);
+                break;
+            case ("Punch-Out!!"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.punchout_series);
+                break;
+            case ("PAC-MAN"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.pac_man_series);
+                break;
+            case ("Xenoblade Chronicles"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.xenoblade_chronicles_series);
+                break;
+            case ("Duck Hunt"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.duck_hunt_series);
+                break;
+            case ("Street Fighter"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.street_fighter_series);
+                break;
             default:
                 mFighterSeriesSymbol.setImageResource(R.drawable.super_smash);
         }
@@ -339,7 +366,60 @@ public class FighterDetailsActivity extends AppCompatActivity {
             case ("Olimar"):
                 mFighterImage.setImageResource(R.drawable.olimar);
                 break;
-
+            case ("Lucario"):
+                mFighterImage.setImageResource(R.drawable.lucario);
+                break;
+            case ("R.O.B."):
+                mFighterImage.setImageResource(R.drawable.rob);
+                break;
+            case ("Toon Link"):
+                mFighterImage.setImageResource(R.drawable.toon_link);
+                break;
+            case ("Wolf"):
+                mFighterImage.setImageResource(R.drawable.wolf);
+                break;
+            case ("Villager"):
+                mFighterImage.setImageResource(R.drawable.villager);
+                break;
+            case ("Mega Man"):
+                mFighterImage.setImageResource(R.drawable.mega_man);
+                break;
+            case ("Wii Fit Trainer"):
+                mFighterImage.setImageResource(R.drawable.wii_fit_trainer);
+                break;
+            case ("Rosalina & Luma"):
+                mFighterImage.setImageResource(R.drawable.rosalina_and_luma);
+                break;
+            case ("Little Mac"):
+                mFighterImage.setImageResource(R.drawable.little_mac);
+                break;
+            case ("Greninja"):
+                mFighterImage.setImageResource(R.drawable.greninja);
+                break;
+            case ("Palutena"):
+                mFighterImage.setImageResource(R.drawable.palutena);
+                break;
+            case ("PAC-MAN"):
+                mFighterImage.setImageResource(R.drawable.pac_man);
+                break;
+            case ("Robin"):
+                mFighterImage.setImageResource(R.drawable.robin);
+                break;
+            case ("Shulk"):
+                mFighterImage.setImageResource(R.drawable.shulk);
+                break;
+            case ("Bowser Jr."):
+                mFighterImage.setImageResource(R.drawable.bowser_jr);
+                break;
+            case ("Duck Hunt"):
+                mFighterImage.setImageResource(R.drawable.duck_hunt);
+                break;
+            case ("Ryu"):
+                mFighterImage.setImageResource(R.drawable.ryu);
+                break;
+            case ("Ken"):
+                mFighterImage.setImageResource(R.drawable.ken);
+                break;
 
             default:
                 mFighterImage.setImageResource(R.drawable.super_smash);
