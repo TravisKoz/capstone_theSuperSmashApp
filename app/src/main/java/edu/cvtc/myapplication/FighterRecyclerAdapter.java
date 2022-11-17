@@ -125,6 +125,42 @@ public class FighterRecyclerAdapter extends
             case ("Street Fighter"):
                 holder.mFighterFranchise.setImageResource(R.drawable.street_fighter_series);
                 break;
+            case ("Final Fantasy"):
+                holder.mFighterFranchise.setImageResource(R.drawable.final_fantasy_series);
+                break;
+            case ("Bayonetta"):
+                holder.mFighterFranchise.setImageResource(R.drawable.bayonetta_series);
+                break;
+            case ("Splatoon"):
+                holder.mFighterFranchise.setImageResource(R.drawable.splatoon_series);
+                break;
+            case ("Castlevania"):
+                holder.mFighterFranchise.setImageResource(R.drawable.castlevania_series);
+                break;
+            case ("Persona"):
+                holder.mFighterFranchise.setImageResource(R.drawable.persona_series);
+                break;
+            case ("Fatal Fury"):
+                holder.mFighterFranchise.setImageResource(R.drawable.fatal_fury_series);
+                break;
+            case ("Dragon Quest"):
+                holder.mFighterFranchise.setImageResource(R.drawable.dragon_quest_series);
+                break;
+            case ("Banjo-Kazooie"):
+                holder.mFighterFranchise.setImageResource(R.drawable.banjo_kazooie_series);
+                break;
+            case ("ARMS"):
+                holder.mFighterFranchise.setImageResource(R.drawable.arms_series);
+                break;
+            case ("Minecraft"):
+                holder.mFighterFranchise.setImageResource(R.drawable.minecraft_series);
+                break;
+            case ("Tekken"):
+                holder.mFighterFranchise.setImageResource(R.drawable.tekken_series);
+                break;
+            case ("Kingdom Hearts"):
+                holder.mFighterFranchise.setImageResource(R.drawable.kingdom_hearts_series);
+                break;
             default:
                 holder.mFighterFranchise.setImageResource(R.drawable.super_smash);
         }

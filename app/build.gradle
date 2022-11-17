@@ -28,6 +28,13 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res/drawables/fighters', 'src/main/res/drawables/series', 'src/main/res/drawables/moves'
+            }
+        }
+    }
 }
 
 dependencies {

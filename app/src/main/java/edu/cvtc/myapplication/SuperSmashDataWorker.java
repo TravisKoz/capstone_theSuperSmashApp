@@ -287,6 +287,113 @@ public class SuperSmashDataWorker {
         insertFighter("Ken" , "Street Fighter", "Hadoken",
                 "Tatsumaki Senpukyaku", "Focus Attack", "Flaming Shoryuken");
 
+        // Cloud
+        insertFighter("Cloud" , "Final Fantasy", "Blade Beam",
+                "Cross Clash", "Limit Charge / Finishing Touch", "Climhazzard");
+
+        // Corrin
+        insertFighter("Corrin" , "Fire Emblem", "Dragon Fang Shot",
+                "Dragon Lunge", "Counter Surge", "Dragon Ascent");
+
+        // Bayonetta
+        insertFighter("Bayonetta" , "Bayonetta", "Bullet Climax",
+                "Heel Slide / After Burner Kick", "Witch Time", "Witch Twist");
+
+        // Inkling
+        insertFighter("Inkling" , "Splatoon", "Splattershot",
+                "Splat Roller", "Splat Bomb", "Super Jump");
+
+        // Ridley
+        insertFighter("Ridley" , "Metroid", "Plasma Breath",
+                "Space Pirate Rush", "Skewer", "Wing Blitz");
+
+        // Simon
+        insertFighter("Simon" , "Castlevania", "Axe",
+                "Cross", "Holy Water", "Uppercut");
+
+        // Richter
+        insertFighter("Ritcher" , "Castlevania", "Axe",
+                "Cross", "Holy Water", "Uppercut");
+
+        // King K. Rool
+        insertFighter("King K. Rool" , "Donkey Kong", "Blunderbuss",
+                "Crownerang", "Gut Check", "Propellerpack");
+
+        // Isabelle
+        insertFighter("Isabelle" , "Animal Crossing", "Pocket",
+                "Fishing Rod", "Lloid Trap", "Balloon Trip");
+
+
+        // Incineroar
+        insertFighter("Incineroar", "Pokemon", "Darkest Lariat",
+                "Alolan Whip", "Revenge", "Cross Chop");
+
+        // Piranha Plant
+        insertFighter("Piranha Plant", "Super Mario", "Ptooie",
+                "Poison Breath", "Long-Stem Strike", "Piranhacopter");
+
+        // Joker
+        insertFighter("Joker", "Persona", "Gun / Gun Special",
+                "Eiha / Eigaon", "Rebel's Guard / Tetrakarn / Makarakarn", "Grappling Hook / Wings of Rebellion");
+
+
+        // Hero
+        insertFighter("Hero", "Dragon Quest", "Frizz/Fizzle/Kafrizz",
+                "Zap/Zapple/Kazap", "Command Selection", "Woosh/Swoosh/Kaswoosh");
+
+        // Banjo & Kazooie
+        insertFighter("Banjo & Kazooie", "Banjo-Kazooie", "Egg Firing / Breegull Blaster",
+                "Wonderwing", "Rear Egg", "Shock Spring Jump");
+
+        // Terry
+        insertFighter("Terry", "Fatal Fury", "Power Wave",
+                "Burning Knuckle", "Power Dunk", "Rising Tackle");
+
+
+        // Byleth
+        insertFighter("Byleth", "Fire Emblem", "Failnaught",
+                "Areadbhar", "Aymr", "Sword of the Creator");
+
+        // Min Min
+        insertFighter("Min Min", "ARMS", "Punch",
+                "Punch", "ARMS Change", "ARMS JUMP / ARM HOOK");
+
+        // Ivysaur
+        insertFighter("Ivysaur", "Pokemon", "Bullet Seed",
+                "Razor Leaf", "Pokemon Change", "Vine Whip");
+
+
+        // Charizard
+        insertFighter("Charizard", "Pokemon", "Flamethrower",
+                "Flare Blitz", "Pokemon Change", "Fly");
+
+        // Squirtle
+        insertFighter("Squirtle", "Pokemon", "Water Gun",
+                "Withdraw", "Pokemon Change", "Waterfall");
+
+        // Steve
+        insertFighter("Steve", "Minecraft", "Mine / Craft / Create Block",
+                "Minecart", "TNT", "Elytra");
+
+        // Sephiroth
+        insertFighter("Sephiroth", "Final Fantasy", "Flare/Megaflare/Gigaflare",
+                "Shadow Flare", "Scintilla", "Blade Dash / Octaslash");
+
+        // Pyra
+        insertFighter("Prya", "Xenoblade Chronicles", "Flame Nova",
+                "Blazing End", "Swap to Mythra", "Prominence Revolt");
+
+        // Mythra
+        insertFighter("Mythra", "Xenoblade Chronicles", "Lightning Buster",
+                "Photon Edge", "Swap to Pyra", "Ray of Punishment / Chroma Dust");
+
+        // Kazuya
+        insertFighter("Kazuya", "Tekken", "Devil Baster",
+                "Devil Fist", "Heaven's Door", "Devil Wings");
+
+        // Sora
+        insertFighter("Sora", "Kingdom Hearts", "Magic",
+                "Sonic Blade", "Counterattack", "Aerial Sweep");
 
     }
 }

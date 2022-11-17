@@ -233,6 +233,43 @@ public class FighterDetailsActivity extends AppCompatActivity {
             case ("Street Fighter"):
                 mFighterSeriesSymbol.setImageResource(R.drawable.street_fighter_series);
                 break;
+            case ("Final Fantasy"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.final_fantasy_series);
+                break;
+            case ("Bayonetta"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.bayonetta_series);
+                break;
+            case ("Splatoon"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.splatoon_series);
+                break;
+            case ("Castlevania"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.castlevania_series);
+                break;
+            case ("Persona"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.persona_series);
+                break;
+            case ("Dragon Quest"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.dragon_quest_series);
+                break;
+            case ("Banjo-Kazooie"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.banjo_kazooie_series);
+                break;
+            case ("Fatal Fury"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.fatal_fury_series);
+                break;
+            case ("ARMS"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.arms_series);
+                break;
+            case ("Minecraft"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.minecraft_series);
+                break;
+            case ("Tekken"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.tekken_series);
+                break;
+            case ("Kingdom Hearts"):
+                mFighterSeriesSymbol.setImageResource(R.drawable.kingdom_hearts_series);
+                break;
+
             default:
                 mFighterSeriesSymbol.setImageResource(R.drawable.super_smash);
         }
@@ -420,7 +457,84 @@ public class FighterDetailsActivity extends AppCompatActivity {
             case ("Ken"):
                 mFighterImage.setImageResource(R.drawable.ken);
                 break;
-
+            case ("Cloud"):
+                mFighterImage.setImageResource(R.drawable.cloud);
+                break;
+            case ("Corrin"):
+                mFighterImage.setImageResource(R.drawable.corrin);
+                break;
+            case ("Bayonetta"):
+                mFighterImage.setImageResource(R.drawable.bayonetta);
+                break;
+            case ("Inkling"):
+                mFighterImage.setImageResource(R.drawable.inkling);
+                break;
+            case ("Ridley"):
+                mFighterImage.setImageResource(R.drawable.ridley);
+                break;
+            case ("Simon"):
+                mFighterImage.setImageResource(R.drawable.simon);
+                break;
+            case ("Richter"):
+                mFighterImage.setImageResource(R.drawable.richter);
+                break;
+            case ("King K. Rool"):
+                mFighterImage.setImageResource(R.drawable.king_k_rool);
+                break;
+            case ("Isabelle"):
+                mFighterImage.setImageResource(R.drawable.isabelle);
+                break;
+            case ("Incineroar"):
+                mFighterImage.setImageResource(R.drawable.incineroar);
+                break;
+            case ("Piranha Plant"):
+                mFighterImage.setImageResource(R.drawable.piranha_plant);
+                break;
+            case ("Joker"):
+                mFighterImage.setImageResource(R.drawable.joker);
+                break;
+            case ("Hero"):
+                mFighterImage.setImageResource(R.drawable.hero);
+                break;
+            case ("Banjo & Kazooie"):
+                mFighterImage.setImageResource(R.drawable.banjo_kazooie);
+                break;
+            case ("Terry"):
+                mFighterImage.setImageResource(R.drawable.terry);
+                break;
+            case ("Byleth"):
+                mFighterImage.setImageResource(R.drawable.byleth);
+                break;
+            case ("Min Min"):
+                mFighterImage.setImageResource(R.drawable.min_min);
+                break;
+            case ("Ivysaur"):
+                mFighterImage.setImageResource(R.drawable.ivysaur);
+                break;
+            case ("Charizard"):
+                mFighterImage.setImageResource(R.drawable.charizard);
+                break;
+            case ("Squirtle"):
+                mFighterImage.setImageResource(R.drawable.squirtle);
+                break;
+            case ("Steve"):
+                mFighterImage.setImageResource(R.drawable.steve);
+                break;
+            case ("Sephiroth"):
+                mFighterImage.setImageResource(R.drawable.sephiroth);
+                break;
+            case ("Pyra"):
+                mFighterImage.setImageResource(R.drawable.pyra);
+                break;
+            case ("Mythra"):
+                mFighterImage.setImageResource(R.drawable.mythra);
+                break;
+            case ("Kazuya"):
+                mFighterImage.setImageResource(R.drawable.kazuya);
+                break;
+            case ("Sora"):
+                mFighterImage.setImageResource(R.drawable.sora);
+                break;
             default:
                 mFighterImage.setImageResource(R.drawable.super_smash);
         }
