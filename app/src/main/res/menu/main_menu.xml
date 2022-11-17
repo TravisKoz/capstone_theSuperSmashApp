@@ -37,6 +37,13 @@
                 app:showAsAction="never"
                 android:icon="@drawable/ic_baseline_tracker"
                 />
+            <item
+                android:id="@+id/controls_access"
+                android:orderInCategory="45"
+                android:title="Controls"
+                app:showAsAction="never"
+                android:icon="@drawable/ic_baseline_controler"
+                />
         </menu>
     </item>
 

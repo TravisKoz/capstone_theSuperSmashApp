@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
     // Creates a option Menu
@@ -49,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.tracker_access:
                 intent = new Intent(MainActivity.this, WinLoseTrackerActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.controls_access:
+                intent = new Intent(MainActivity.this, ControlsActivity.class);
                 startActivity(intent);
                 return true;
             default:

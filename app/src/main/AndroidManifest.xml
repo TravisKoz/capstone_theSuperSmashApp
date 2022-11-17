@@ -20,7 +20,9 @@
           android:exported="false" />
         <activity
           android:name=".ControlsActivity"
-          android:exported="false" />
+          android:exported="false"
+            android:label="Controls"
+            android:parentActivityName=".MainActivity" />
         <activity
           android:name=".FightersActivity"
           android:exported="false"
