@@ -14,22 +14,34 @@ public class Fighter implements Parcelable {
     private String mSpecialSide;
     private String mSpecialDown;
     private String mSpecialUp;
+    private String mNeutralDescription;
+    private String mSideDescription;
+    private String mDownDescription;
+    private String mUpDescription;
     private int mId;
 
 
     // Overloaded Constructors
     public Fighter (String name, String franchise, String specialNeutral,
-                    String specialSide, String specialDown, String specialUp) {
+                    String specialSide, String specialDown, String specialUp,
+                    String neutralDescription, String sideDescription, String downDescription,
+                    String upDescription) {
         mName = name;
         mFranchise = franchise;
         mSpecialNeutral = specialNeutral;
         mSpecialSide = specialSide;
         mSpecialDown = specialDown;
         mSpecialUp = specialUp;
+        mNeutralDescription = neutralDescription;
+        mSideDescription = sideDescription;
+        mDownDescription = downDescription;
+        mUpDescription = upDescription;
     }
 
     public Fighter (int id, String name, String franchise, String specialNeutral,
-                    String specialSide, String specialDown, String specialUp) {
+                    String specialSide, String specialDown, String specialUp,
+                    String neutralDescription, String sideDescription, String downDescription,
+                    String upDescription) {
         mId = id;
         mName = name;
         mFranchise = franchise;
@@ -37,6 +49,10 @@ public class Fighter implements Parcelable {
         mSpecialSide = specialSide;
         mSpecialDown = specialDown;
         mSpecialUp = specialUp;
+        mNeutralDescription = neutralDescription;
+        mSideDescription = sideDescription;
+        mDownDescription = downDescription;
+        mUpDescription = upDescription;
     }
 
     // Getters and Setters
@@ -92,11 +108,45 @@ public class Fighter implements Parcelable {
         mSpecialUp =  specialUp;
     }
 
+    public String getNeutralDescription() {
+        return mNeutralDescription;
+    }
+
+    public void setNeutralDescription(String neutralDescription) {
+        mNeutralDescription =  neutralDescription;
+    }
+
+    public String getSideDescription() {
+        return mSideDescription;
+    }
+
+    public void setSideDescription(String sideDescription) {
+        mSideDescription =  sideDescription;
+    }
+
+    public String getDownDescription() {
+        return mDownDescription;
+    }
+
+    public void setDownDescription(String downDescription) {
+        mDownDescription =  downDescription;
+    }
+
+    public String getUpDescription() {
+        return mUpDescription;
+    }
+
+    public void setUpDescription(String upDescription) {
+        mUpDescription =  upDescription;
+    }
+
     // Returns a concatenated heading and body.
     private String getCompareKey() {
         return mName + "|" + mFranchise + "|" +
                 mSpecialNeutral + "|" + mSpecialSide + "|" +
-                mSpecialDown + "|" + mSpecialUp;
+                mSpecialDown + "|" + mSpecialUp + "|" + mNeutralDescription
+                + "|" + mSideDescription+ "|" + mDownDescription
+                + "|" + mUpDescription;
     }
 
     // Used to prevent duplicate fighters in the database
@@ -126,6 +176,11 @@ public class Fighter implements Parcelable {
         setSpecialSide(parcel.readString());
         setSpecialDown(parcel.readString());
         setSpecialUp(parcel.readString());
+        setNeutralDescription(parcel.readString());
+        setSideDescription(parcel.readString());
+        setDownDescription(parcel.readString());
+        setUpDescription(parcel.readString());
+
     }
 
     public static final Creator<Fighter> CREATOR = new Creator<Fighter>() {
@@ -153,5 +208,9 @@ public class Fighter implements Parcelable {
         parcel.writeString(mSpecialSide);
         parcel.writeString(mSpecialDown);
         parcel.writeString(mSpecialUp);
+        parcel.writeString(mNeutralDescription);
+        parcel.writeString(mSideDescription);
+        parcel.writeString(mDownDescription);
+        parcel.writeString(mUpDescription);
     }
 }

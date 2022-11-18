@@ -113,6 +113,14 @@ public class DataManager {
                 cursor.getColumnIndex(FighterEntry.COLUMN_SPECIAL_DOWN);
         int listSpecialUpPosition =
                 cursor.getColumnIndex(FighterEntry.COLUMN_SPECIAL_UP);
+        int listNeutralDescriptionPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_NEUTRAL_DESCRIPTION);
+        int listSideDescriptionPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_SIDE_DESCRIPTION);
+        int listDownDescriptionPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_DOWN_DESCRIPTION);
+        int listUpDescriptionPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_UP_DESCRIPTION);
         int idPosition =
                 cursor.getColumnIndex(FighterEntry._ID);
 
@@ -136,10 +144,19 @@ public class DataManager {
                     cursor.getString(listSpecialDownPosition);
             String listSpecialUp =
                     cursor.getString(listSpecialUpPosition);
+            String listNeutralDescription =
+                    cursor.getString(listNeutralDescriptionPosition);
+            String listSideDescription =
+                    cursor.getString(listSideDescriptionPosition);
+            String listDownDescription =
+                    cursor.getString(listDownDescriptionPosition);
+            String listUpDescription =
+                    cursor.getString(listUpDescriptionPosition);
             int id = cursor.getInt(idPosition);
 
             Fighter list = new Fighter(id, listName, listFranchise, listSpecialNeutral,
-                    listSpecialSide, listSpecialDown, listSpecialUp);
+                    listSpecialSide, listSpecialDown, listSpecialUp, listNeutralDescription,
+                    listSideDescription, listDownDescription, listUpDescription);
             dm.mFighters.add(list);
         }
 
@@ -159,6 +176,10 @@ public class DataManager {
                 FighterEntry.COLUMN_SPECIAL_SIDE,
                 FighterEntry.COLUMN_SPECIAL_DOWN,
                 FighterEntry.COLUMN_SPECIAL_UP,
+                FighterEntry.COLUMN_NEUTRAL_DESCRIPTION,
+                FighterEntry.COLUMN_SIDE_DESCRIPTION,
+                FighterEntry.COLUMN_DOWN_DESCRIPTION,
+                FighterEntry.COLUMN_UP_DESCRIPTION,
                 FighterEntry._ID
         };
 

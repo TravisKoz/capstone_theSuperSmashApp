@@ -55,6 +55,14 @@ public final class SuperSmashDatabaseContract {
                 COLUMN_SPECIAL_DOWN = "special_down";
         public static final String
                 COLUMN_SPECIAL_UP = "special_up";
+        public static final String
+                COLUMN_NEUTRAL_DESCRIPTION = "neutral_description";
+        public static final String
+                COLUMN_SIDE_DESCRIPTION = "side_description";
+        public static final String
+                COLUMN_DOWN_DESCRIPTION = "down_description";
+        public static final String
+                COLUMN_UP_DESCRIPTION = "up_description";
 
         // Constants holding our values for the index name and values based on
         // the heading.
@@ -72,6 +80,10 @@ public final class SuperSmashDatabaseContract {
                         COLUMN_SPECIAL_NEUTRAL + " TEXT, " +
                         COLUMN_SPECIAL_SIDE + " TEXT, " +
                         COLUMN_SPECIAL_DOWN + " TEXT, " +
-                        COLUMN_SPECIAL_UP + " TEXT)";
+                        COLUMN_SPECIAL_UP + " TEXT, " +
+                        COLUMN_NEUTRAL_DESCRIPTION + " TEXT, " +
+                        COLUMN_SIDE_DESCRIPTION + " TEXT, " +
+                        COLUMN_DOWN_DESCRIPTION + " TEXT, " +
+                        COLUMN_UP_DESCRIPTION + " TEXT)";
     }
 }
