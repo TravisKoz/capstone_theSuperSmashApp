@@ -162,13 +162,13 @@
 
                 <TextView
                     android:id="@+id/control_text_desc4"
-                    android:textColor="@color/white"
                     android:layout_width="290dp"
                     android:layout_height="36dp"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:text="Shield/Guard: A bubble that blocks all attacks. It shrinks when hit, becoming less effective. Likely causing a shield-poke."
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -201,13 +201,13 @@
 
                 <TextView
                     android:id="@+id/control_text_desc5"
-                    android:textColor="@color/white"
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:text="Spot-dodge"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -279,6 +279,45 @@
 
                 <TextView
                     android:id="@+id/control_text_desc7"
+                    android:textColor="@color/white"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Crouch"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/control_row8"
+                android:background="?attr/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/control_text8"
+                    android:textColor="@color/white"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Control stick ↓"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/control_text_desc8"
                     android:textColor="@color/white"
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"

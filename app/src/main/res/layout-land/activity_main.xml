@@ -12,7 +12,7 @@
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="80dp"
         android:fontFamily="@font/smashfont"
         android:text="Super Smash App"
         android:textSize="34sp"
@@ -35,9 +35,9 @@
 
     <ImageView
         android:id="@+id/welcomeImage"
-        android:layout_width="315dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="279dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="8dp"
 
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
