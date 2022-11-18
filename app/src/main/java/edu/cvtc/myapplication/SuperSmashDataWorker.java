@@ -63,7 +63,7 @@ public class SuperSmashDataWorker {
                 "Hits repeatedly with a rising punch.");
 
         // Donkey Kong
-        insertFighter("Donkey Kong", "Donkey Kong","Giant Punch",
+        insertFighter("Donkey Kong", "Donkey Kong", "Giant Punch",
                 "Headbutt", "Hand Slap", "Spinning Kong",
                 "Charges up a punch that can keep charging after dodging or shielding.",
                 "Buries opponents when they’re hit on the ground. Can’t be interrupted by weaker attacks.",
@@ -107,14 +107,14 @@ public class SuperSmashDataWorker {
         insertFighter("Kirby", "Kirby", "Inhale",
                 "Hammer Flip", "Stone", "Final Cutter",
                 "Inhales opponents. Can then copy opponent's ability or spit them out as a star.",
-        "Delivers a powerful hammer attack that can launch foes. Dangerous when fully charged.",
+                "Delivers a powerful hammer attack that can launch foes. Dangerous when fully charged.",
                 "Turns into a heavy object and plummets downward, taking no damage while transformed.",
                 "Jumps high into the air, striking on the way up and on the way down. Creates a shock wave when landing.");
 
         // Fox
         insertFighter("Fox", "Star Fox", "Blaster",
-                "Fox Illusion", "Reflector", "Fire Fox", "" +
-                        "Fires lasers that deal damage but don't knock opponents back. Pressing repeatedly fires rapidly.",
+                "Fox Illusion", "Reflector", "Fire Fox",
+                "Fires lasers that deal damage but don't knock opponents back. Pressing repeatedly fires rapidly.",
                 "Dashes at high speed through opponents. Vulnerable to opponents shielding against the attack.",
                 "Shields and reflects projectiles, upping their speed and power.",
                 "Rockets skyward while engulfed in flames. Can change the direction while charging.");
@@ -212,7 +212,7 @@ public class SuperSmashDataWorker {
                 "Skull Bash", "Thunder", "Agility",
                 "Sends a ball of electricity bouncing across the stage. The ball is faster than Pikachu's!",
                 "Charges up a flying headbutt that when fully charged does more damage than Pikachu's.",
-        "Calls down thunder from above to hurt nearby opponents. However, Pichu also takes a small amount of damage.",
+                "Calls down thunder from above to hurt nearby opponents. However, Pichu also takes a small amount of damage.",
                 "Moves at high speed! The direction can be changed once, and it travels a bit farther than Pikachu's.");
 
         // Falco
@@ -235,7 +235,7 @@ public class SuperSmashDataWorker {
         insertFighter("Lucina", "Fire Emblem", "Shield Breaker",
                 "Dancing Blade", "Counter", "Dolphin Slash",
                 "Stabs with such precision that her fully charged attack can destroy a shield.",
-        "Slashes opponents up to four times, with repeated button presses. Tilting up and down can change each attack.",
+                "Slashes opponents up to four times, with repeated button presses. Tilting up and down can change each attack.",
                 "Prepares for an attack and strikes back if hit. The power depends on the enemy's attack.",
                 "Strikes upward as she rises into the air. Deals the most damage at the start.");
 
@@ -248,7 +248,7 @@ public class SuperSmashDataWorker {
                 "Spins with his blade outstretched. Can be charged if used on the ground, and acts as a jump if used midair.");
 
         // Ganondorf
-        insertFighter("Ganondorf" , "The Legend of Zelda", "Warlock Punch",
+        insertFighter("Ganondorf", "The Legend of Zelda", "Warlock Punch",
                 "Flame Choke", "Wizard's Foot", "Dark Dive",
                 "Channels dark energy into a devastating punch. Difficult to interrupt.",
                 "Rushes forward to grab an enemy. Grabbed enemies are thrown straight down.",
@@ -256,7 +256,7 @@ public class SuperSmashDataWorker {
                 "Leaps upward and grabs opponents, electrocuting and launching them. It cannot be blocked by a shield.");
 
         // Mewtwo
-        insertFighter("Mewtwo" , "Pokemon", "Shadow Ball",
+        insertFighter("Mewtwo", "Pokemon", "Shadow Ball",
                 "Confusion", "Disable", "Teleport",
                 "Fires an energy projectile. Charging it for longer increases its damage and launch power.",
                 "Uses psychic energy to topple an opponent in front. It can also reflect projectiles.",
@@ -264,7 +264,7 @@ public class SuperSmashDataWorker {
                 "Warps instantly to another location. Directional input determines the destination.");
 
         // Roy
-        insertFighter("Roy" , "Fire Emblem", "Flare Blade",
+        insertFighter("Roy", "Fire Emblem", "Flare Blade",
                 "Double-Edge Dance", "Counter", "Blazer",
                 "Slashes downward with a flaming sword so powerfully that he can even damage himself.",
                 "Slashes opponents up to four times, with repeated button presses. Tilting up or down can change each attack.",
@@ -272,7 +272,7 @@ public class SuperSmashDataWorker {
                 "Jumps into the air with a slash wrapped in flames. The jump angle can be altered.");
 
         // Chrome
-        insertFighter("Chrome" , "Fire Emblem", "Flare Blade",
+        insertFighter("Chrome", "Fire Emblem", "Flare Blade",
                 "Double-Edge Dance", "Counter", "Soaring Slash",
                 "Swings his sword to the ground with such force that even he is not spared damage when fully charged.",
                 "tSlashes opponents up to four times, with repeated button presses. Tilting up or down can change each attack.",
@@ -280,7 +280,7 @@ public class SuperSmashDataWorker {
                 "Jumps upward and then slashes down while twirling. Drops straight down and launches opponents on the ground.");
 
         // Mr. Game & Watch
-        insertFighter("Mr. Game & Watch" , "Game & Watch", "Chef",
+        insertFighter("Mr. Game & Watch", "Game & Watch", "Chef",
                 "Judge", "Oil Panic", "Fire",
                 "Flings inedible food from a frying pan. Up to five things can be flung with repeated button presses.",
                 "Swings his hammer. The power changes depending on the number displayed.",
@@ -288,7 +288,7 @@ public class SuperSmashDataWorker {
                 "Launches into the air and opens a parachute, allowing him to glide down.");
 
         // Meta Knight
-        insertFighter("Meta Knight" , "Kirby", "Mach Tornado",
+        insertFighter("Meta Knight", "Kirby", "Mach Tornado",
                 "Drill Rush", "Dimensional Cape", "Shuttle Loop",
                 "Twirls and hits enemies to launch them. Repeated button presses can change the direction or cause him to float.",
                 "Spins into opponents with his sword. The angle can be changed a bit.",
@@ -296,7 +296,7 @@ public class SuperSmashDataWorker {
                 "Flies into the air, strikes, then strikes again after a loop. Enemies hit by this move are launched upward.");
 
         // Pit
-        insertFighter("Pit" , "Kid Icarus", "Palutena Bow",
+        insertFighter("Pit", "Kid Icarus", "Palutena Bow",
                 "Upperdash Arm", "Guardian Orbitars", "Power of Flight",
                 "Fires a guidable arrow. While charging, the bow can be aimed straight up.",
                 "Dashes forward and uppercuts opponents. Can deflect projectiles.",
@@ -304,7 +304,7 @@ public class SuperSmashDataWorker {
                 "Flies high through the air. The flight angle can be changed while charging.");
 
         // Dark Pit
-        insertFighter("Dark Pit" , "Kid Icarus", "Silver Bow",
+        insertFighter("Dark Pit", "Kid Icarus", "Silver Bow",
                 "Electroshock Arm", "Guardian Orbitars", "Power of Flight",
                 "Fires an arrow of darkness. Stronger than Pit's arrows, but they don't curve as much.",
                 "Charges forward with a weapon that launches foes diagonally upward.",
@@ -312,7 +312,7 @@ public class SuperSmashDataWorker {
                 "Soars on shining black wings in any upward direction.");
 
         // Zero Suit Samus
-        insertFighter("Zero Suit Samus" , "Metroid", "Paralyzer",
+        insertFighter("Zero Suit Samus", "Metroid", "Paralyzer",
                 "Plasma Whip", "Flip Jump", "Boost Kick",
                 "Fires an energy blast that stuns enemies. A max charge increases range, power, and stun duration.",
                 "Attacks foes with an energy whip. Can also be used to grab on to edges.",
@@ -320,7 +320,7 @@ public class SuperSmashDataWorker {
                 "Raises into the air, striking multiple times, and then finishes with a spinning kick.");
 
         // Wario
-        insertFighter("Wario" , "Wario", "Chomp",
+        insertFighter("Wario", "Wario", "Chomp",
                 "Wario Bike", "Wario Waft", "Corkscrew",
                 "Eats enemies, projectiles, and items with a big, toothy bite.",
                 "Rides around on a bike and crashes into enemies. Takes some time to recharge.",
@@ -328,7 +328,7 @@ public class SuperSmashDataWorker {
                 "Jumps while spinning, hitting opponents multiple times.");
 
         // Snake
-        insertFighter("Snake" , "Metal Gear", "Hand Grenade",
+        insertFighter("Snake", "Metal Gear", "Hand Grenade",
                 "Remote Missile", "C4", "Cypher",
                 "Throws a grenade that detonates after a short time. Holding the button can delay the grenade toss.",
                 "Shoots a missile that flies forward. The direction can be adjusted while it flies.",
@@ -336,7 +336,7 @@ public class SuperSmashDataWorker {
                 "Grabs on to a Cypher and flies up into the air to avoid attacks. Pressing down causes Snake to let go.");
 
         // Ike
-        insertFighter("Ike" , "Fire Emblem", "Eruption",
+        insertFighter("Ike", "Fire Emblem", "Eruption",
                 "Quick Draw", "Counter", "Aether",
                 "Plunges his sword into the ground, triggering a fiery burst. Suffers damage by his own hand when fully charged.",
                 "Lunges forward and slashes at any foe in his path. Can be charged.",
@@ -345,7 +345,7 @@ public class SuperSmashDataWorker {
 
 
         // Diddy Kong
-        insertFighter("Diddy Kong" , "Donkey Kong", "Peanut Popgun",
+        insertFighter("Diddy Kong", "Donkey Kong", "Peanut Popgun",
                 "Monkey Flip", "Banana Peel", "Rocketbarrel Boost",
                 "Fires peanuts, shell and all. If charged for too long, it'll blow up in his face!",
                 "Leaps forward and grabs whomever he contacts. A second button press causes him to kick.",
@@ -353,7 +353,7 @@ public class SuperSmashDataWorker {
                 "Rockets through the air and tackles opponents. Can be charged for extra distance.");
 
         // Lucas
-        insertFighter("Lucas" , "EarthBound", "PK Freeze",
+        insertFighter("Lucas", "EarthBound", "PK Freeze",
                 "PK Fire", "PSI Magnet", "PK Thunder",
                 "Launches a projectile that freezes enemies. The projectile's path can be controlled.",
                 "Fires light that explodes when it hits, erupting into a column of flame that launches enemies.",
@@ -361,7 +361,7 @@ public class SuperSmashDataWorker {
                 "Fires a steerable ball of lighting. Sends Lucas flying if he hits himself.");
 
         // Sonic
-        insertFighter("Sonic" , "Sonic", "Homing Attack",
+        insertFighter("Sonic", "Sonic", "Homing Attack",
                 "Spin Dash", "Spin Charge", "Spring Jump",
                 "Leaps into the air, then homes in on the nearest fighter if one is close enough.",
                 "Rolls forward at high speed. Can be charged, redirected, and linked to other attacks.",
@@ -369,7 +369,7 @@ public class SuperSmashDataWorker {
                 "Creates a spring and leaps up high. The spring sticks around if used on the ground.");
 
         // King Dedede
-        insertFighter("King Dedede" , "Kirby", "Inhale",
+        insertFighter("King Dedede", "Kirby", "Inhale",
                 "Gordo Throw", "Jet Hammer", "Super Dedede Jump",
                 "Inhales opponents and spits them out as stars.",
                 "Throws a Gordo. The Gordo can be hit back if attacked by an opponent with the right timing.",
@@ -377,7 +377,7 @@ public class SuperSmashDataWorker {
                 "Jumps up high and then crashes downward. Can be canceled by tilting up.");
 
         // Olimar
-        insertFighter("Olimar" , "Pikmin", "Pikmin Pluck",
+        insertFighter("Olimar", "Pikmin", "Pikmin Pluck",
                 "Pikmin Throw", "Pikmin Order", "Winged Pikmin",
                 "Plucks a maximum of three Pikmin in this order: red, yellow, blue, white, purple.",
                 "Throws Pikmin. Most Pikmin stick to opponents, but Purple Pikmin slam them.",
@@ -385,15 +385,15 @@ public class SuperSmashDataWorker {
                 "Summons Winged Pikmin to fly him around. Less effective if laden with Pikmin.");
 
         // Lucario
-        insertFighter("Lucario" , "Pokemon", "Aura Sphere",
+        insertFighter("Lucario", "Pokemon", "Aura Sphere",
                 "Force Palm", "Double Team", "Extreme Speed",
-               "Charges a ball of energy that can damage foes even while powering up. Pressing again launches it.",
+                "Charges a ball of energy that can damage foes even while powering up. Pressing again launches it.",
                 "Unleashes concentrated energy with a powerful punch. Grabs enemies if they're close enough.",
                 "Prepares for an incoming attack, and counterattacks with a sliding kick if struck.",
                 "Dashes through the air and attacks at the end. Can swerve midflight with directional input.");
 
         // R.O.B.
-        insertFighter("R.O.B." , "R.O.B.", "Robo Beam",
+        insertFighter("R.O.B.", "R.O.B.", "Robo Beam",
                 "Arm Rotor", "Gyro", "Robo Burner",
                 "Fires a laser beam, but only when the LED on its head is flashing. It can bounce off the floor.",
                 "Hops forward with an arm-spinning attack. Can also reflect projectiles.",
@@ -401,7 +401,7 @@ public class SuperSmashDataWorker {
                 "Flies into the air or hovers with its thrusters. Can also attack while airborne.");
 
         // Toon Link
-        insertFighter("Toon Link" , "The Legend of Zelda", "Hero's Box",
+        insertFighter("Toon Link", "The Legend of Zelda", "Hero's Box",
                 "Boomerang", "Bomb", "Spin Attack",
                 "Fires an arrow from his bow. It can be charged up for more power and range.",
                 "Deals damage on its way out and on its way back. Can be thrown diagonally.",
@@ -409,7 +409,7 @@ public class SuperSmashDataWorker {
                 "Spins with his sword. Can hit opponents more than once and can be charged.");
 
         // Wolf
-        insertFighter("Wolf" , "Star Fox", "Blaster",
+        insertFighter("Wolf", "Star Fox", "Blaster",
                 "Wolf Flash", "Reflector", "Fire Wolf",
                 "Fires his Blaster quickly, or attacks close opponents with the claw-like blade on the Blaster.",
                 "Jumps upward diagonally and attacks nearby opponents. Has a meteor effect against airborne enemies if timed right.",
@@ -417,7 +417,7 @@ public class SuperSmashDataWorker {
                 "Unleashes a jump kick that hits multiple times. Directional input can change the direction of the jump.");
 
         // Villager
-        insertFighter("Villager" , "Animal Crossing", "Pocket",
+        insertFighter("Villager", "Animal Crossing", "Pocket",
                 "Lloid Rocket", "Timber", "Balloon Trip",
                 "Pockets an item or projectile to use later. A second button press takes it back out.",
                 "Fires Lloid forward like a rocket. Lloid can be ridden if the button is held.",
@@ -425,7 +425,7 @@ public class SuperSmashDataWorker {
                 "Dons a balloon hat and flies around. Great maneuverability, but the balloons can be popped.");
 
         // Mega Man
-        insertFighter("Mega Man" , "Mega Man", "Metal Blade",
+        insertFighter("Mega Man", "Mega Man", "Metal Blade",
                 "Crash Bomber", "Leaf Shield", "Rush Coil",
                 "Throws Metal Man's spinning saw, which goes through foes. The direction it travels can be chosen.",
                 "Fires Crash Man's bomb, which attaches to any opponent in its path and explodes.",
@@ -433,7 +433,7 @@ public class SuperSmashDataWorker {
                 "Summons his faithful dog, Rush, to propel him to new heights.");
 
         // Wii Fit Trainer
-        insertFighter("Wii Fit Trainer" , "Wii Fit", "Sun Salutation",
+        insertFighter("Wii Fit Trainer", "Wii Fit", "Sun Salutation",
                 "Header", "Deep Breathing", "Super Hoop",
                 "Charges a ball of energy. A second button press launches it. Heals slightly when fully charged.",
                 "Heads a soccer ball at opponents. A second button press heads the soccer ball early.",
@@ -441,7 +441,7 @@ public class SuperSmashDataWorker {
                 "Gyrates into the air, striking opponents. Floating is possible with rapid button presses.");
 
         // Rosalina & Luma
-        insertFighter("Rosalina & Luma" , "Super Mario", "Luma Shot",
+        insertFighter("Rosalina & Luma", "Super Mario", "Luma Shot",
                 "Star Bits", "Gravitational Pull", "Launch Star",
                 "Flings Luma forward. A second button press calls Luma back. Can be charged.",
                 "Commands Luma to fire three Star Bits forward. Works at any range.",
@@ -449,7 +449,7 @@ public class SuperSmashDataWorker {
                 "Flies into the air at an angle. The angle can be adjusted with left or right directional input.");
 
         // Little Mac
-        insertFighter("Little Mac" , "Punch-Out!!", "Straight Lunge",
+        insertFighter("Little Mac", "Punch-Out!!", "Straight Lunge",
                 "Jolt Haymaker", "Slip Counter", "Rising Uppercut",
                 "Blasts forward with a powerful punch. One button press begins the charge and a second unleashes the strike.",
                 "Waits for his opponent to attack, and then counters with an uppercut.",
@@ -458,7 +458,7 @@ public class SuperSmashDataWorker {
 
 
         // Greninja
-        insertFighter("Greninja" , "Pokemon", "Water Shuriken",
+        insertFighter("Greninja", "Pokemon", "Water Shuriken",
                 "Shadow Sneak", "Substitute", "Hydro Pump",
                 "Fires a shuriken of water straight ahead. Charging it up makes the shuriken grow!",
                 "Sends a shadow along the ground. When the button's released, it warps to that point and strikes!",
@@ -466,7 +466,7 @@ public class SuperSmashDataWorker {
                 "Fires a powerful water jet, propelling itself in whichever direction the stick is tilted.");
 
         // Palutena
-        insertFighter("Palutena" , "Kid Icarus", "Autoreticle",
+        insertFighter("Palutena", "Kid Icarus", "Autoreticle",
                 "Explosive Flame", "Counter/Reflect Barrier", "Warp",
                 "Fires energy blasts from her staff directly at opponents in front of her.",
                 "Sets off an explosion a distance away. The stick can be flicked to make it go even farther.",
@@ -475,7 +475,7 @@ public class SuperSmashDataWorker {
 
 
         // PAC-MAN
-        insertFighter("PAC-MAN" , "PAC-MAN", "Bonus Fruit",
+        insertFighter("PAC-MAN", "PAC-MAN", "Bonus Fruit",
                 "Power Pellet", "Fire Hydrant", "Pac-Jump",
                 "Summons a variety of fruit to throw at his foes. Some of it seems a little less edible, though...",
                 "Summons a row of Pac-Dots ending in a Power Pellet, and sends himself on a retro dash.",
@@ -483,15 +483,15 @@ public class SuperSmashDataWorker {
                 "Bounces high into the air with a trampoline that sticks around for a little while.");
 
         // Robin
-        insertFighter("Robin" , "Fire Emblem", "Thunder",
+        insertFighter("Robin", "Fire Emblem", "Thunder",
                 "Arcfire", "Nosferatu", "Elwind",
                 "Unleashes lightning magic that can be charged to cast Elthunder, Arcthunder, and Thoron.",
-                "Casts a spell to throw a ball of fire. When it hits, it triggers a pillar of flame." ,
+                "Casts a spell to throw a ball of fire. When it hits, it triggers a pillar of flame.",
                 "Conjures a dark curse that steals the life force of enemies.",
                 "Casts wind magic downward, dealing damage and boosting into the air twice.");
 
         // Shulk
-        insertFighter("Shulk" , "Xenoblade Chronicles", "Monado Arts",
+        insertFighter("Shulk", "Xenoblade Chronicles", "Monado Arts",
                 "Back Slash", "Vision", "Air Slash",
                 "Switches Arts—each has a different advantage. Can be switched by holding or pressing repeatedly.",
                 "Leaps forward and delivers a powerful slash. Deals massive damage to an enemy attacked from behind.",
@@ -499,7 +499,7 @@ public class SuperSmashDataWorker {
                 "Lifts enemies into the air with a rising slash. Can be followed up with a midair strike.");
 
         // Bowser Jr.
-        insertFighter("Bowser Jr." , "Super Mario", "Clown Cannon",
+        insertFighter("Bowser Jr.", "Super Mario", "Clown Cannon",
                 "Clown Kart Dash", "Mechakoopa", "Abandon Ship",
                 "Fires a slow, heavy cannonball. Can be charged to boost the cannonball's speed and power.",
                 "Transforms the Junior Clown Car into a kart that speeds forward. Changing directions spins the kart.",
@@ -507,7 +507,7 @@ public class SuperSmashDataWorker {
                 "Ejects from the Junior Clown Car just before it explodes. He can attack while he falls.");
 
         // Duck Hunt
-        insertFighter("Duck Hunt" , "Duck Hunt", "Trick Shot",
+        insertFighter("Duck Hunt", "Duck Hunt", "Trick Shot",
                 "Clay Shooting", "Wild Gunman", "Duck Jump",
                 "Kicks an explosive can. Additional button presses shoot it, bouncing it forward and boosting its power.",
                 "Tosses a clay pigeon, which breaks apart into damaging shards when shot. A second button press shoots.",
@@ -563,7 +563,7 @@ public class SuperSmashDataWorker {
                 "Transforms into a squid and jumps straight up. Tilting left or right can change the angle a little.");
 
         // Ridley
-        insertFighter("Ridley" , "Metroid", "Plasma Breath",
+        insertFighter("Ridley", "Metroid", "Plasma Breath",
                 "Space Pirate Rush", "Skewer", "Wing Blitz",
                 "Spits out balls of plasma in a curve. Can be charged to shoot a stream of plasma balls.",
                 "Smashes an opponent into the ground then drags them along. Tilting up or pressing attack throws them forward.",
@@ -571,7 +571,7 @@ public class SuperSmashDataWorker {
                 "Charges up and rises into the air with force. The path can be adjusted with directional input.");
 
         // Simon
-        insertFighter("Simon" , "Castlevania", "Axe",
+        insertFighter("Simon", "Castlevania", "Axe",
                 "Cross", "Holy Water", "Uppercut",
                 "Throws an axe that curves and passes through obstacles. Tilting left or right while it arcs changes the distance.",
                 "Throws a cross like a boomerang. The power and distance changes if the control stick is flicked.",
@@ -579,7 +579,7 @@ public class SuperSmashDataWorker {
                 "Performs an uppercut while rising up high. Lands multiple blows if it hits the moment he leaves the ground.");
 
         // Richter
-        insertFighter("Ritcher" , "Castlevania", "Axe",
+        insertFighter("Ritcher", "Castlevania", "Axe",
                 "Cross", "Holy Water", "Uppercut",
                 "Throws an axe that curves and passes through obstacles. Tilting left or right while it arcs changes the distance.",
                 "Throws a cross like a boomerang. The power and distance changes if the control stick is flicked.",
@@ -587,7 +587,7 @@ public class SuperSmashDataWorker {
                 "Performs an uppercut while rising up high. Lands multiple blows if it hits the moment he leaves the ground.");
 
         // King K. Rool
-        insertFighter("King K. Rool" , "Donkey Kong", "Blunderbuss",
+        insertFighter("King K. Rool", "Donkey Kong", "Blunderbuss",
                 "Crownerang", "Gut Check", "Propellerpack",
                 "Fires an iron ball from his gun. The button can be held to suck the iron ball (or opponents) back in.",
                 "Throws his crown like it's a boomerang. Can't be thrown again until it is picked up.",
@@ -595,7 +595,7 @@ public class SuperSmashDataWorker {
                 "Rises up into the air wearing a propeller, damaging any opponents caught in the attack.");
 
         // Isabelle
-        insertFighter("Isabelle" , "Animal Crossing", "Pocket",
+        insertFighter("Isabelle", "Animal Crossing", "Pocket",
                 "Fishing Rod", "Lloid Trap", "Balloon Trip",
                 "Pockets an item or projectile to use later. Pressing the button again takes it back out.",
                 "Hooks an opponent and throws them forward. Tilting up or down throws the opponent in that direction.",
