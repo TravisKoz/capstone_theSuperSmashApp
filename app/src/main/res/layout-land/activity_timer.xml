@@ -4,20 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/bgimageday"
     tools:context=".TimerActivity">
-<!--    android:background="@drawable/bgimageday"-->
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="1421dp"
-        android:layout_height="1280dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bgimageday" />
 
     <Button
         android:id="@+id/btn5min"
@@ -118,8 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/count_down_timer" />
-
-    <!--    android:onClick="popTimerPicker"-->
+<!--    android:onClick="popTimerPicker"-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

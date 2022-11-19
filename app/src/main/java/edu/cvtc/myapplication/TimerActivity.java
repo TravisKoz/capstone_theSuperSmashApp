@@ -3,6 +3,8 @@ package edu.cvtc.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.TimePickerDialog;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -21,9 +24,12 @@ public class TimerActivity extends AppCompatActivity {
     private TextView mCountDownTextV;
     private Button mStartPauseBtn;
     private Button mResetBtn;
+    private Button mPickTimeBtn;
     private Button m5MinBtn;
     private Button m2MinBtn;
     private Button m8MinBtn;
+
+    int minute, second;
 
     private boolean mTimerRunning;
     private CountDownTimer mCountDownTimer;
@@ -43,6 +49,7 @@ public class TimerActivity extends AppCompatActivity {
         mCountDownTextV = findViewById(R.id.count_down_timer);
         mStartPauseBtn = findViewById(R.id.btnStart);
         mResetBtn = findViewById(R.id.btnReset);
+        mPickTimeBtn = findViewById(R.id.btn_pick_time);
         m5MinBtn = findViewById(R.id.btn5min);
         m2MinBtn = findViewById(R.id.btn2min);
         m8MinBtn = findViewById(R.id.btn8min);
@@ -96,8 +103,41 @@ public class TimerActivity extends AppCompatActivity {
                 updateButtons();
             }
         });
+
+        mPickTimeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mStartTimeInMillis = START_TIME_IN_MILLIS / 12;
+                mTimeLeftInMillis = mStartTimeInMillis;
+                updateCountDownText();
+                updateButtons();
+            }
+        });
+
         updateCountDownText();
     }
+
+//    public void popTimerPicker(View view) {
+//        TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+//            @Override
+//            public void onTimeSet(TimePicker timePicker, int selectedMinute, int selectedSecond) {
+//                minute = selectedMinute;
+//                second = selectedSecond;
+//
+//                String timeLeftFormatted;
+//                timeLeftFormatted = String.format(Locale.getDefault(),
+//                        "%02d:%02d", minute, second);
+//
+//                mCountDownTextV.setText(timeLeftFormatted);
+//                //updateCountDownText();
+//                updateButtons();
+//            }
+//        };
+//
+//        int style = AlertDialog.THEME_HOLO_DARK;
+//        TimePickerDialog timePickerDialog = new TimePickerDialog(this, style, onTimeSetListener, minute, second, false);
+//        timePickerDialog.show();
+//    }
 
     private void startTimer() {
         mEndTime = System.currentTimeMillis() + mTimeLeftInMillis;
@@ -129,7 +169,7 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     private void updateButtons() {
-        if(mTimerRunning) {
+        if (mTimerRunning) {
             mResetBtn.setVisibility(View.INVISIBLE);
             m5MinBtn.setVisibility(View.INVISIBLE);
             m2MinBtn.setVisibility(View.INVISIBLE);
@@ -212,5 +252,8 @@ public class TimerActivity extends AppCompatActivity {
             startTimer();
         }
     }
+
+
+
 
 }
