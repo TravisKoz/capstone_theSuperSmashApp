@@ -84,13 +84,13 @@
 
                 <TextView
                     android:id="@+id/control_text_desc2"
-                    android:textColor="@color/white"
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Jump, double jump"
+                    android:layout_marginTop="25dp"
+                    android:text="Jump, double jump, or footstool if close enough to opponent and currently in the air"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -129,7 +129,7 @@
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="20dp"
-                    android:text="Crouch"
+                    android:text="Crouch, fast-fall in the air"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -226,27 +226,28 @@
 
                 <TextView
                     android:id="@+id/control_text6"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
                     android:text="Shield button + Control stick ←/→"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc6"
-                    android:textColor="@color/white"
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Roll - You are immune to damage only in the middle of the animation as you move left or right. Becomes stale with frequent use."
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Roll - You are immune to damage only in the middle of the animation as you move left or right. Becomes stale with frequent use. There are punish windows at the beginning and end that grow when stale. \n\nDirectional Airdodge - similar to roll, but can go in 8 directions. (cannot perform any actions until the character falls a set distance after the input)"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -318,6 +319,45 @@
 
                 <TextView
                     android:id="@+id/control_text_desc8"
+                    android:textColor="@color/white"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Crouch"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/control_row9"
+                android:background="?attr/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/control_text9"
+                    android:textColor="@color/white"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Control stick ↓"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/control_text_desc9"
                     android:textColor="@color/white"
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"

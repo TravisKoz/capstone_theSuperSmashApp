@@ -6,6 +6,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:clickable="true"
+  android:background="@color/black"
   tools:context=".MainActivity">
 
     <TextView
@@ -16,6 +17,7 @@
         android:fontFamily="@font/smashfont"
         android:text="Super Smash App"
         android:textSize="34sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/welcomeImage"
         app:layout_constraintHorizontal_bias="0.511"
@@ -28,6 +30,7 @@
         android:layout_marginBottom="32dp"
         android:text="Click the screen or use the navigation menu in the corner to continue"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/welcomeImage"
         app:layout_constraintHorizontal_bias="0.444"
@@ -38,10 +41,9 @@
         android:layout_width="315dp"
         android:layout_height="250dp"
         android:layout_marginTop="80dp"
-
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/super_smash" />
+        app:srcCompat="@drawable/super_smash_white" />
 </androidx.constraintlayout.widget.ConstraintLayout>

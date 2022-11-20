@@ -547,10 +547,6 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 break;
             case ("Banjo & Kazooie"):
                 mFighterImage.setImageResource(R.drawable.banjo_kazooie);
-                Glide.with(this).load(R.drawable.banjo_neutral).into(mFighterNeutralImage);
-                Glide.with(this).load(R.drawable.banjo_side).into(mFighterSideImage);
-                Glide.with(this).load(R.drawable.banjo_down).into(mFighterDownImage);
-                Glide.with(this).load(R.drawable.banjo_up).into(mFighterUpImage);
                 break;
             case ("Terry"):
                 mFighterImage.setImageResource(R.drawable.terry);
