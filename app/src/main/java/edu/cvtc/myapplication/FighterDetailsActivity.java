@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 
 public class FighterDetailsActivity extends AppCompatActivity {
@@ -48,6 +50,10 @@ public class FighterDetailsActivity extends AppCompatActivity {
     private TextView mFighterSideDescription;
     private TextView mFighterDownDescription;
     private TextView mFighterUpDescription;
+    private ImageView mFighterNeutralImage;
+    private ImageView mFighterSideImage;
+    private ImageView mFighterDownImage;
+    private ImageView mFighterUpImage;
     private SuperSmashOpenHelper mDbOpenHelper;
     private Cursor mFighterCursor;
 
@@ -88,8 +94,14 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 findViewById(R.id.down_b_description);
         mFighterUpDescription =
                 findViewById(R.id.up_b_description);
-
-        
+        mFighterNeutralImage =
+                findViewById(R.id.neutral_b_image);
+        mFighterSideImage =
+                findViewById(R.id.side_b_image);
+        mFighterDownImage =
+                findViewById(R.id.down_b_image);
+        mFighterUpImage =
+                findViewById(R.id.up_b_image);
         loadFighterData();
     }
 
@@ -535,6 +547,10 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 break;
             case ("Banjo & Kazooie"):
                 mFighterImage.setImageResource(R.drawable.banjo_kazooie);
+                Glide.with(this).load(R.drawable.banjo_neutral).into(mFighterNeutralImage);
+                Glide.with(this).load(R.drawable.banjo_side).into(mFighterSideImage);
+                Glide.with(this).load(R.drawable.banjo_down).into(mFighterDownImage);
+                Glide.with(this).load(R.drawable.banjo_up).into(mFighterUpImage);
                 break;
             case ("Terry"):
                 mFighterImage.setImageResource(R.drawable.terry);

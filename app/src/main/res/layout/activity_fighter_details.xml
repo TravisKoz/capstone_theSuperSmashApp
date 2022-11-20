@@ -110,6 +110,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+      <ImageView
+        android:id="@+id/neutral_b_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/neutral_b_description" />
+
       <TextView
         android:id="@+id/side_b"
         android:layout_width="match_parent"
@@ -124,7 +132,7 @@
         android:textStyle="bold"
         android:background="@color/red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/neutral_b_description" />
+        app:layout_constraintTop_toBottomOf="@id/neutral_b_image" />
 
       <TextView
         android:id="@+id/side_b_move"
@@ -151,6 +159,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+      <ImageView
+        android:id="@+id/side_b_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/side_b_description" />
+
       <TextView
         android:id="@+id/down_b"
         android:layout_width="match_parent"
@@ -165,7 +181,7 @@
         android:textStyle="bold"
         android:background="@color/red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/side_b_description" />
+        app:layout_constraintTop_toBottomOf="@id/side_b_image" />
 
       <TextView
         android:id="@+id/down_b_move"
@@ -192,6 +208,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+      <ImageView
+        android:id="@+id/down_b_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/down_b_description" />
+
       <TextView
         android:id="@+id/up_b"
         android:layout_width="match_parent"
@@ -206,7 +230,7 @@
         android:textStyle="bold"
         android:background="@color/red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/down_b_description" />
+        app:layout_constraintTop_toBottomOf="@id/down_b_image" />
 
       <TextView
         android:id="@+id/up_b_move"
@@ -232,6 +256,14 @@
         app:layout_constraintTop_toBottomOf="@id/up_b_move"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+      <ImageView
+        android:id="@+id/up_b_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/up_b_description" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
