@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, ControlsActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.menu_access:
+                intent = new Intent(MainActivity.this, MainMenuActivity.class);
+                startActivity(intent);
+                return true;
             default:
         }
 

@@ -1,31 +1,31 @@
 <resources>
-  <string name="app_name">capstone_theSuperSmashApp</string>
-  <string name="appTitleLabel">The Super Smash App</string>
-  <string name="timer_label">Timer</string>
-  <string name="fighters_label">Fighters</string>
-  <string name="notes_label">Notes</string>
-  <string name="title_activity_notes">NotesActivity</string>
-  <string name="tracker_label">Win/Lose</string>
+    <string name="app_name">capstone_theSuperSmashApp</string>
+    <string name="appTitleLabel">The Super Smash App</string>
+    <string name="timer_label">Timer</string>
+    <string name="fighters_label">Fighters</string>
+    <string name="notes_label">Notes</string>
+    <string name="title_activity_notes">NotesActivity</string>
+    <string name="tracker_label">Win/Lose</string>
 
-  <string name="note_heading_text">Heading</string>
-  <string name="menu_cancel_text">Cancel</string>
-  <string name="hint_note_heading">Enter Note Heading:</string>
-  <string name="hint_note_body">Enter Message:</string>
-  <string name="title_activity_fighter">FighterActivity</string>
+    <string name="note_heading_text">Heading</string>
+    <string name="menu_cancel_text">Cancel</string>
+    <string name="hint_note_heading">Enter Note Heading:</string>
+    <string name="hint_note_body">Enter Message:</string>
+    <string name="title_activity_fighter">FighterActivity</string>
 
-  <string name="previous">Previous</string>
+    <string name="previous">Previous</string>
 
-  <string name="title_activity_fighters">Challengers Approaching
+    <string name="title_activity_fighters">Challengers Approaching
 </string>
-  <string name="fighter_name_text">Fighter</string>
-  <string name="game_series_symbol">Game series symbol</string>
+    <string name="fighter_name_text">Fighter</string>
+    <string name="game_series_symbol">Game series symbol</string>
 
-  <string name="pause_text">Pause</string>
-  <string name="start_text">Start</string>
-  <string name="neutral_b"><u>Neutral Special</u></string>
-  <string name="move_name_text">Move Name:</string>
-  <string name="side_b_text"><u>Side Special</u></string>
-  <string name="down_b_text"><u>Down Special</u></string>
-  <string name="up_b_text"><u>Up Special</u></string>
+    <string name="pause_text">Pause</string>
+    <string name="start_text">Start</string>
+    <string name="neutral_b"><u>Neutral Special</u></string>
+    <string name="move_name_text">Move Name:</string>
+    <string name="side_b_text"><u>Side Special</u></string>
+    <string name="down_b_text"><u>Down Special</u></string>
+    <string name="up_b_text"><u>Up Special</u></string>
 
 </resources>

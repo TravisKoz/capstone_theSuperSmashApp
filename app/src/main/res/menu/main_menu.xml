@@ -44,6 +44,13 @@
                 app:showAsAction="never"
                 android:icon="@drawable/ic_baseline_controler"
                 />
+            <item
+                android:id="@+id/menu_access"
+                android:orderInCategory="45"
+                android:title="Menu"
+                app:showAsAction="never"
+                android:icon="@drawable/ic_baseline_more"
+                />
         </menu>
     </item>
 
