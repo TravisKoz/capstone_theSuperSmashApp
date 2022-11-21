@@ -27,7 +27,7 @@
   <string name="side_b_text"><u>Side Special</u></string>
   <string name="down_b_text"><u>Down Special</u></string>
   <string name="up_b_text"><u>Up Special</u></string>
-    <string name="control1_text">Control stick ← or →</string>
+  <string name="control1_text">Control stick ← or →</string>
   <string name="control1_desc_text">Walk or run if you flick the stick</string>
   <string name="control2_text">Control stick ↑ or X/Y button</string>
   <string name="control2_desc_text">Jump, double jump, or footstool if close enough to opponent and currently in the air</string>
