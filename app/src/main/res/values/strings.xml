@@ -26,6 +26,10 @@
   <string name="move_name_text">Move Name:</string>
   <string name="side_b_text"><u>Side Special</u></string>
   <string name="down_b_text"><u>Down Special</u></string>
+  <string name="final_smash"><u>Final Smash</u></string>
+
+  <string name="colon">%1$s:</string>
+
   <string name="up_b_text"><u>Up Special</u></string>
   <string name="control1_text">Control stick ← or →</string>
   <string name="control1_desc_text">Walk or run if you flick the stick</string>
@@ -47,10 +51,15 @@
   <string name="control9_desc_text">Tilt attack - Stronger than jab with emphasis on direction chosen. Good for combos and quick punish options</string>
   <string name="control10_text">Simultaneous stick ←/→/↑/↓ + Attack button</string>
   <string name="control10_desc_text">Smash attack - Kill move. Similar to tilt attack, but with more startup time and much more knockback potential</string>
-  <string name="control11_text">No-direction←/→/↑/↓ + Special button</string>
+  <string name="control11_text">No-direction/←/→/↑/↓ + Special button</string>
   <string name="control11_desc_text">Special attack - Signature moves of your character. With certain exceptions, there are 4 per character.\n\nThese can be anything and are a prime example for showing what a character has to offer in terms of strategic options and playstyles.</string>
   <string name="control12_text">Grab button or Shield button + Attack button</string>
   <string name="control12_desc_text">Grab - Core staple of any fighting game. It goes through shield and allows you to either pummel or throw your opponent in one of 4 directions you input while holding them.</string>
+  <string name="move_description">Move Description</string>
+  <string name="series_name">Series Name</string>
+  <string name="fighter_name">Fighter Name</string>
+  <string name="image_of_fighter">Image of fighter.</string>
+  <string name="franchise_symbol">Fighter\'s game franchise symbol.</string>
 
 
 </resources>

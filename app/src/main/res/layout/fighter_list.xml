@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fighter_name_text"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="17dp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textAlignment="textStart"

@@ -121,6 +121,10 @@ public class DataManager {
                 cursor.getColumnIndex(FighterEntry.COLUMN_DOWN_DESCRIPTION);
         int listUpDescriptionPosition =
                 cursor.getColumnIndex(FighterEntry.COLUMN_UP_DESCRIPTION);
+        int listFinalSmashPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_FINAL_SMASH);
+        int listFinalSmashDescriptionPosition =
+                cursor.getColumnIndex(FighterEntry.COLUMN_FINAL_DESCRIPTION);
         int idPosition =
                 cursor.getColumnIndex(FighterEntry._ID);
 
@@ -152,11 +156,16 @@ public class DataManager {
                     cursor.getString(listDownDescriptionPosition);
             String listUpDescription =
                     cursor.getString(listUpDescriptionPosition);
+            String listFinalSmash =
+                    cursor.getString(listFinalSmashPosition);
+            String listFinalSmashDescription =
+                    cursor.getString(listFinalSmashDescriptionPosition);
             int id = cursor.getInt(idPosition);
 
             Fighter list = new Fighter(id, listName, listFranchise, listSpecialNeutral,
                     listSpecialSide, listSpecialDown, listSpecialUp, listNeutralDescription,
-                    listSideDescription, listDownDescription, listUpDescription);
+                    listSideDescription, listDownDescription, listUpDescription, listFinalSmash,
+                    listFinalSmashDescription);
             dm.mFighters.add(list);
         }
 
@@ -180,6 +189,8 @@ public class DataManager {
                 FighterEntry.COLUMN_SIDE_DESCRIPTION,
                 FighterEntry.COLUMN_DOWN_DESCRIPTION,
                 FighterEntry.COLUMN_UP_DESCRIPTION,
+                FighterEntry.COLUMN_FINAL_SMASH,
+                FighterEntry.COLUMN_FINAL_DESCRIPTION,
                 FighterEntry._ID
         };
 

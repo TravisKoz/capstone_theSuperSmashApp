@@ -29,7 +29,6 @@ public class FighterRecyclerAdapter extends
         mLayoutInflater = LayoutInflater.from(context);
     }
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

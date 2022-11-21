@@ -18,14 +18,16 @@ public class Fighter implements Parcelable {
     private String mSideDescription;
     private String mDownDescription;
     private String mUpDescription;
+    private String mFinalSmash;
+    private String mFinalSmashDescription;
     private int mId;
 
 
     // Overloaded Constructors
-    public Fighter (String name, String franchise, String specialNeutral,
-                    String specialSide, String specialDown, String specialUp,
-                    String neutralDescription, String sideDescription, String downDescription,
-                    String upDescription) {
+    public Fighter(String name, String franchise, String specialNeutral,
+                   String specialSide, String specialDown, String specialUp,
+                   String neutralDescription, String sideDescription, String downDescription,
+                   String upDescription, String finalSmash, String finalSmashDescription) {
         mName = name;
         mFranchise = franchise;
         mSpecialNeutral = specialNeutral;
@@ -36,12 +38,14 @@ public class Fighter implements Parcelable {
         mSideDescription = sideDescription;
         mDownDescription = downDescription;
         mUpDescription = upDescription;
+        mFinalSmash = finalSmash;
+        mFinalSmashDescription = finalSmashDescription;
     }
 
-    public Fighter (int id, String name, String franchise, String specialNeutral,
-                    String specialSide, String specialDown, String specialUp,
-                    String neutralDescription, String sideDescription, String downDescription,
-                    String upDescription) {
+    public Fighter(int id, String name, String franchise, String specialNeutral,
+                   String specialSide, String specialDown, String specialUp,
+                   String neutralDescription, String sideDescription, String downDescription,
+                   String upDescription, String finalSmash, String finalSmashDescription) {
         mId = id;
         mName = name;
         mFranchise = franchise;
@@ -53,6 +57,8 @@ public class Fighter implements Parcelable {
         mSideDescription = sideDescription;
         mDownDescription = downDescription;
         mUpDescription = upDescription;
+        mFinalSmash = finalSmash;
+        mFinalSmashDescription = finalSmashDescription;
     }
 
     // Getters and Setters
@@ -105,7 +111,7 @@ public class Fighter implements Parcelable {
     }
 
     public void setSpecialUp(String specialUp) {
-        mSpecialUp =  specialUp;
+        mSpecialUp = specialUp;
     }
 
     public String getNeutralDescription() {
@@ -113,7 +119,7 @@ public class Fighter implements Parcelable {
     }
 
     public void setNeutralDescription(String neutralDescription) {
-        mNeutralDescription =  neutralDescription;
+        mNeutralDescription = neutralDescription;
     }
 
     public String getSideDescription() {
@@ -121,7 +127,7 @@ public class Fighter implements Parcelable {
     }
 
     public void setSideDescription(String sideDescription) {
-        mSideDescription =  sideDescription;
+        mSideDescription = sideDescription;
     }
 
     public String getDownDescription() {
@@ -129,7 +135,7 @@ public class Fighter implements Parcelable {
     }
 
     public void setDownDescription(String downDescription) {
-        mDownDescription =  downDescription;
+        mDownDescription = downDescription;
     }
 
     public String getUpDescription() {
@@ -137,16 +143,32 @@ public class Fighter implements Parcelable {
     }
 
     public void setUpDescription(String upDescription) {
-        mUpDescription =  upDescription;
+        mUpDescription = upDescription;
     }
 
-    // Returns a concatenated heading and body.
+    public void setFinalSmash(String finalSmash) {
+        mFinalSmash = finalSmash;
+    }
+
+    public String getFinalSmash() {
+        return mFinalSmash;
+    }
+
+    public void setFinalSmashDescription(String finalSmashDescription) {
+        mFinalSmashDescription = finalSmashDescription;
+    }
+
+    public String getFinalSmashDescription() {
+        return mFinalSmashDescription;
+    }
+
+    // Returns a concatenated string.
     private String getCompareKey() {
         return mName + "|" + mFranchise + "|" +
                 mSpecialNeutral + "|" + mSpecialSide + "|" +
                 mSpecialDown + "|" + mSpecialUp + "|" + mNeutralDescription
-                + "|" + mSideDescription+ "|" + mDownDescription
-                + "|" + mUpDescription;
+                + "|" + mSideDescription + "|" + mDownDescription
+                + "|" + mUpDescription + mFinalSmash + mFinalSmashDescription;
     }
 
     // Used to prevent duplicate fighters in the database
@@ -180,7 +202,8 @@ public class Fighter implements Parcelable {
         setSideDescription(parcel.readString());
         setDownDescription(parcel.readString());
         setUpDescription(parcel.readString());
-
+        setFinalSmash(parcel.readString());
+        setFinalSmashDescription(parcel.readString());
     }
 
     public static final Creator<Fighter> CREATOR = new Creator<Fighter>() {
@@ -212,5 +235,7 @@ public class Fighter implements Parcelable {
         parcel.writeString(mSideDescription);
         parcel.writeString(mDownDescription);
         parcel.writeString(mUpDescription);
+        parcel.writeString(mFinalSmash);
+        parcel.writeString(mFinalSmashDescription);
     }
 }

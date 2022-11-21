@@ -22,7 +22,8 @@ public class FighterDetailsActivity extends AppCompatActivity {
 
     // Initialize new Fighter to empty
     private Fighter mFighter = new Fighter(0, "", "", "",
-            "", "", "", "", "", "", "");
+            "", "", "", "", "", "",
+            "", "", "");
 
     // Member Variables
     private int mFighterID;
@@ -36,6 +37,8 @@ public class FighterDetailsActivity extends AppCompatActivity {
     private int mFighterSideDescriptionPosition;
     private int mFighterDownDescriptionPosition;
     private int mFighterUpDescriptionPosition;
+    private int mFighterFinalSmashPosition;
+    private int mFighterFinalSmashDescriptionPosition;
 
     // Member objects
     private TextView mFighterName;
@@ -50,13 +53,10 @@ public class FighterDetailsActivity extends AppCompatActivity {
     private TextView mFighterSideDescription;
     private TextView mFighterDownDescription;
     private TextView mFighterUpDescription;
-    private ImageView mFighterNeutralImage;
-    private ImageView mFighterSideImage;
-    private ImageView mFighterDownImage;
-    private ImageView mFighterUpImage;
+    private TextView mFighterFinalSmash;
+    private TextView mFighterFinalSmashDescription;
     private SuperSmashOpenHelper mDbOpenHelper;
     private Cursor mFighterCursor;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,14 +94,10 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 findViewById(R.id.down_b_description);
         mFighterUpDescription =
                 findViewById(R.id.up_b_description);
-        mFighterNeutralImage =
-                findViewById(R.id.neutral_b_image);
-        mFighterSideImage =
-                findViewById(R.id.side_b_image);
-        mFighterDownImage =
-                findViewById(R.id.down_b_image);
-        mFighterUpImage =
-                findViewById(R.id.up_b_image);
+        mFighterFinalSmash =
+                findViewById(R.id.final_smash_name);
+        mFighterFinalSmashDescription =
+                findViewById(R.id.final_smash_description);
         loadFighterData();
     }
 
@@ -127,7 +123,9 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 FighterEntry.COLUMN_NEUTRAL_DESCRIPTION,
                 FighterEntry.COLUMN_SIDE_DESCRIPTION,
                 FighterEntry.COLUMN_DOWN_DESCRIPTION,
-                FighterEntry.COLUMN_UP_DESCRIPTION
+                FighterEntry.COLUMN_UP_DESCRIPTION,
+                FighterEntry.COLUMN_FINAL_SMASH,
+                FighterEntry.COLUMN_FINAL_DESCRIPTION
         };
 
         // Fill our cursor with the information we have provided
@@ -156,6 +154,10 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 mFighterCursor.getColumnIndex(FighterEntry.COLUMN_DOWN_DESCRIPTION);
         mFighterUpDescriptionPosition =
                 mFighterCursor.getColumnIndex(FighterEntry.COLUMN_UP_DESCRIPTION);
+        mFighterFinalSmashPosition =
+                mFighterCursor.getColumnIndex(FighterEntry.COLUMN_FINAL_SMASH);
+        mFighterFinalSmashDescriptionPosition =
+                mFighterCursor.getColumnIndex(FighterEntry.COLUMN_FINAL_DESCRIPTION);
 
         // Make sure that we have moved to the correct record.
         // The cursor will not have populate any of the
@@ -179,18 +181,22 @@ public class FighterDetailsActivity extends AppCompatActivity {
         String fighterSideDescription = mFighterCursor.getString(mFighterSideDescriptionPosition);
         String fighterDownDescription = mFighterCursor.getString(mFighterDownDescriptionPosition);
         String fighterUpDescription = mFighterCursor.getString(mFighterUpDescriptionPosition);
+        String fighterFinalSmash = mFighterCursor.getString(mFighterFinalSmashPosition);
+        String fighterFinalSmashDescription = mFighterCursor.getString(mFighterFinalSmashDescriptionPosition);
 
         // Use information to populate layout TextViews
         mFighterName.setText(fighterName);
         mFighterSeries.setText(fighterSeries);
-        mFighterNeutralSpecial.setText(fighterNeutralSpecial + ":");
-        mFighterSideSpecial.setText(fighterSideSpecial + ":");
-        mFighterDownSpecial.setText(fighterDownSpecial + ":");
-        mFighterUpSpecial.setText(fighterUpSpecial + ":");
+        mFighterNeutralSpecial.setText(getString(R.string.colon, fighterNeutralSpecial));
+        mFighterSideSpecial.setText(getString(R.string.colon, fighterSideSpecial));
+        mFighterDownSpecial.setText(getString(R.string.colon, fighterDownSpecial));
+        mFighterUpSpecial.setText(getString(R.string.colon, fighterUpSpecial));
         mFighterNeutralDescription.setText(fighterNeutralDescription);
         mFighterSideDescription.setText(fighterSideDescription);
         mFighterDownDescription.setText(fighterDownDescription);
         mFighterUpDescription.setText(fighterUpDescription);
+        mFighterFinalSmash.setText(getString(R.string.colon, fighterFinalSmash));
+        mFighterFinalSmashDescription.setText(fighterFinalSmashDescription);
 
         // Use information to populate layoutImageViews
         setFighterImage(fighterName);
@@ -410,7 +416,7 @@ public class FighterDetailsActivity extends AppCompatActivity {
             case ("Roy"):
                 mFighterImage.setImageResource(R.drawable.roy);
                 break;
-            case ("Chrome"):
+            case ("Chrom"):
                 mFighterImage.setImageResource(R.drawable.chrome);
                 break;
             case ("Mr. Game & Watch"):

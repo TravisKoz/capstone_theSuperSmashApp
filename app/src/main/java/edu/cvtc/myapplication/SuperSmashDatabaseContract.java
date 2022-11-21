@@ -63,9 +63,13 @@ public final class SuperSmashDatabaseContract {
                 COLUMN_DOWN_DESCRIPTION = "down_description";
         public static final String
                 COLUMN_UP_DESCRIPTION = "up_description";
+        public static final String
+                COLUMN_FINAL_SMASH = "final_smash";
+        public static final String
+                COLUMN_FINAL_DESCRIPTION = "final_description";
 
         // Constants holding our values for the index name and values based on
-        // the heading.
+        // the fighter name.
         public static final String INDEX1 = TABLE_NAME + "_index1";
         public static final String SQL_CREATE_INDEX1 =
                 "CREATE INDEX " + INDEX1 + " ON " + TABLE_NAME +
@@ -84,6 +88,8 @@ public final class SuperSmashDatabaseContract {
                         COLUMN_NEUTRAL_DESCRIPTION + " TEXT, " +
                         COLUMN_SIDE_DESCRIPTION + " TEXT, " +
                         COLUMN_DOWN_DESCRIPTION + " TEXT, " +
-                        COLUMN_UP_DESCRIPTION + " TEXT)";
+                        COLUMN_UP_DESCRIPTION + " TEXT, " +
+                        COLUMN_FINAL_SMASH + " TEXT, " +
+                        COLUMN_FINAL_DESCRIPTION + " TEXT)";
     }
 }
