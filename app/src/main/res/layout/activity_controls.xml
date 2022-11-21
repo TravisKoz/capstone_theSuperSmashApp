@@ -8,51 +8,52 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TableLayout
             android:id="@+id/control_table"
-            android:background="@color/black"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp">
+            android:layout_marginLeft="5dp"
+            android:background="@color/black">
 
             <TableRow
                 android:id="@+id/control_row1"
-                android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text1"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Control stick ← or →"
+                    android:text="@string/control1_text"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc1"
-                    android:textColor="@color/white"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Walk or run if you flick the stick"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/control1_desc_text"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -61,35 +62,35 @@
 
             <TableRow
                 android:id="@+id/control_row2"
-                android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text2"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Control stick ↑ or X/Y button"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/control2_text"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc2"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="25dp"
-                    android:text="Jump, double jump, or footstool if close enough to opponent and currently in the air"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/control2_desc_text"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
@@ -100,36 +101,36 @@
 
             <TableRow
                 android:id="@+id/control_row3"
-                android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text3"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Control stick ↓"
+                    android:text="@string/control3_text"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc3"
-                    android:textColor="@color/white"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Crouch, fast-fall in the air"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/control3_desc_text"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -139,35 +140,35 @@
 
             <TableRow
                 android:id="@+id/control_row4"
-                android:background="?attr/colorPrimary"
                 android:layout_width="300dp"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text4"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Shield Button"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/control4_text"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc4"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="36dp"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
-                    android:text="Shield/Guard: A bubble that blocks all attacks. It shrinks when hit, becoming less effective. Likely causing a shield-poke."
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/control4_desc_text"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
@@ -178,35 +179,35 @@
 
             <TableRow
                 android:id="@+id/control_row5"
-                android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text5"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Shield button + Control stick ↓"
+                    android:text="@string/control5_text"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc5"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="40dp"
-                    android:text="Spot-dodge"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/control5_desc_text"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
@@ -217,12 +218,12 @@
 
             <TableRow
                 android:id="@+id/control_row6"
-                android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text6"
@@ -230,9 +231,9 @@
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="60dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Shield button + Control stick ←/→"
+                    android:text="@string/control6_text"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
@@ -240,13 +241,13 @@
 
                 <TextView
                     android:id="@+id/control_text_desc6"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Roll - You are immune to damage only in the middle of the animation as you move left or right. Becomes stale with frequent use. There are punish windows at the beginning and end that grow when stale. \n\nDirectional Airdodge - similar to roll, but can go in 8 directions. (cannot perform any actions until the character falls a set distance after the input)"
+                    android:text="@string/control6_desc_text"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
@@ -257,36 +258,37 @@
 
             <TableRow
                 android:id="@+id/control_row7"
-                android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text7"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Control stick ↓"
+                    android:text="@string/control7_text"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc7"
-                    android:textColor="@color/white"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Crouch"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/control7_desc_text"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -296,36 +298,36 @@
 
             <TableRow
                 android:id="@+id/control_row8"
-                android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
 
                 <TextView
                     android:id="@+id/control_text8"
-                    android:textColor="@color/white"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Control stick ↓"
+                    android:text="@string/control8_desc"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/control_text_desc8"
-                    android:textColor="@color/white"
-                    android:layout_width="290dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="20dp"
-                    android:text="Crouch"
+                    android:text="@string/control8_desc_text"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
@@ -335,6 +337,123 @@
 
             <TableRow
                 android:id="@+id/control_row9"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/control_text9"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/control9_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/control_text_desc9"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/control9_desc_text"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/control_row10"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/control_text10"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/control10_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/control_text_desc10"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/control10_desc_text"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/control_row11"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/control_text11"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/control11_text"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/control_text_desc11"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/control11_desc_text"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/control_row12"
                 android:background="?attr/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="301dp"
@@ -343,28 +462,29 @@
                 android:layout_marginBottom="5dp">
 
                 <TextView
-                    android:id="@+id/control_text9"
-                    android:textColor="@color/white"
+                    android:id="@+id/control_text12"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Control stick ↓"
+                    android:text="@string/control12_text"
                     android:textAlignment="center"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/control_text_desc9"
-                    android:textColor="@color/white"
-                    android:layout_width="290dp"
+                    android:id="@+id/control_text_desc12"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Crouch"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/control12_desc_text"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/control_text1"
                     app:layout_constraintStart_toEndOf="@+id/control_text1"
                     app:layout_constraintTop_toTopOf="@+id/control_text1" />
