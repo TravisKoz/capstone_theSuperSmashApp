@@ -60,6 +60,20 @@
   <string name="fighter_name">Fighter Name</string>
   <string name="image_of_fighter">Image of fighter.</string>
   <string name="franchise_symbol">Fighter\'s game franchise symbol.</string>
+  <string name="stage_legality_desc_text">Neutral stages may be chosen in any game of a set, including the first game. These are also referred to as starter stages (not to be confused with the term for stages that do not need to be unlocked to be used in-game). \n\nCounterpick stages may be chosen only after the first game of a set, such as games 2 and 3 of a best-of-3 set. Stages in this category tend to give a slight, though not overwhelming, advantage for certain characters over others, such that it would not be fair to include them in the neutral list. These stages may often (though not always) be chosen for counterpicking purposes, hence the name of the category.</string>
+  <string name="starter_category_text">Starter</string>
+  <string name="counterpick_or_starter_category_text">Counterpick/Starter</string>
+  <string name="counterpick_category_text">Counterpick</string>
+  <string name="final_destination_content_desc">Final Destination</string>
+  <string name="battlefield_content_desc">Battlefield</string>
+  <string name="smashville_content_desc">Smashville</string>
+  <string name="town_and_city_content_desc">Town and City</string>
+  <string name="small_battlefield_content_desc">Small Battlefield</string>
+  <string name="lylat_cruise_content_desc">Lylat Cruise</string>
+  <string name="pokemon_stadium_2_content_desc">Pokemon Stadium 2</string>
+  <string name="kalos_pokemon_league_content_desc">Kalos Pokemon League</string>
+  <string name="yoshis_story_content_desc">Yoshi\'s Story</string>
+    <string name="hollow_bastion_content_desc">Hollow Bastion</string>
 
 
 </resources>

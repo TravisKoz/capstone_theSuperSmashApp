@@ -14,10 +14,13 @@
         android:theme="@style/Theme.Capstone_theSuperSmashApp"
         tools:targetApi="31">
         <activity
+            android:name=".LegalStageActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainMenuActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar"/>
+            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
         <activity
             android:name=".FighterDetailsActivity"
             android:exported="false"
