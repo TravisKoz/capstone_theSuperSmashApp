@@ -2,6 +2,7 @@ package edu.cvtc.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,14 +10,30 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+
+    ConstraintLayout constraintLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        constraintLayout = (ConstraintLayout) findViewById(R.id.welcome_page_click);
 
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMainMenuActivity();
+            }
+        });
+    }
+
+    private void openMainMenuActivity() {
+        Intent intent = new Intent(this, MainMenuActivity.class);
+        startActivity(intent);
     }
 
     // Creates a option Menu
@@ -51,10 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.controls_access:
                 intent = new Intent(MainActivity.this, ControlsActivity.class);
-                startActivity(intent);
-                return true;
-            case R.id.menu_access:
-                intent = new Intent(MainActivity.this, MainMenuActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.legal_stages_access:

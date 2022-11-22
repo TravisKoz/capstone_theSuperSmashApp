@@ -5,16 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity"
-    android:background="@drawable/cut_card_bg">
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/tv_menu_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USSB"
-        android:textSize="40sp"
-        android:textColor="@color/red"
-        android:layout_margin="12dp"/>
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/smashfont"
+        android:text="Super Smash App"
+        android:shadowColor="@color/white"
+        android:shadowDx="6"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:textSize="38sp"
+        android:textColor="@color/red"/>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -53,7 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fighters"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
@@ -63,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-
+            android:id="@+id/cv_legal_stages"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_row="0"
@@ -86,8 +95,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Artifacts"
-                    android:textSize="16sp"/>
+                    android:text="Stages"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -97,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-
+            android:id="@+id/cv_controls"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_row="1"
@@ -121,7 +131,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Controls"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -131,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-
+            android:id="@+id/cv_timer"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_row="1"
@@ -155,7 +166,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Timer"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -165,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-
+            android:id="@+id/cv_notes"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_row="2"
@@ -189,7 +201,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Notes"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -199,7 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-
+            android:id="@+id/cv_win_lose"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_row="2"
@@ -223,7 +236,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Win/Lose"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 

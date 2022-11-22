@@ -40,12 +40,6 @@
         android:orderInCategory="45"
         android:title="Controls"
         app:showAsAction="never" />
-      <item
-        android:id="@+id/menu_access"
-        android:icon="@drawable/ic_baseline_more"
-        android:orderInCategory="45"
-        android:title="Menu"
-        app:showAsAction="never" />
         <item
           android:id="@+id/legal_stages_access"
           android:icon="@drawable/ic_baseline_more"
