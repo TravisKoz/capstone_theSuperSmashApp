@@ -15,13 +15,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/stage_legality_desc"
-            android:layout_width="390dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/stage_legality_desc_text"
-            android:textColor="@color/white" />
+          android:id="@+id/stage_legality_desc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="10dp"
+          android:layout_marginTop="5dp"
+          android:text="@string/stage_legality_desc_text"
+          android:textColor="@color/white" />
     </TableRow>
 
     <ScrollView

@@ -5,8 +5,9 @@
       <map>
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout-land/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout-land/activity_main_landscape.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_controls.xml" value="0.25" />
+        <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_controls.xml" value="0.22333333333333336" />
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_fighters.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_legal_stage.xml" value="0.22333333333333336" />
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_main_landscape.xml" value="0.17916666666666667" />
         <entry key="app/src/main/res/drawable/boxing_glove.xml" value="0.2525" />
@@ -14,7 +15,6 @@
         <entry key="app/src/main/res/drawable/button_timer_default.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/button_timer_pressed.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/custom_button.xml" value="0.13" />
-        <entry key="app/src/main/res/drawable/cut_card_bg.xml" value="0.2665" />
         <entry key="app/src/main/res/drawable/ic_baseline_boxing_glove.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_more.xml" value="0.13" />
@@ -22,17 +22,14 @@
         <entry key="app/src/main/res/drawable/ic_baseline_timer.xml" value="0.13" />
         <entry key="app/src/main/res/drawable/ic_baseline_tracker.xml" value="0.173" />
         <entry key="app/src/main/res/drawable/military_tech-48px.xml" value="0.1455" />
-        <entry key="app/src/main/res/drawables/moves/drawable/ic_menu_test.xml" value="0.2665" />
-        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.12682291666666667" />
-        <entry key="app/src/main/res/layout-land/activity_main_menu.xml" value="0.5018798828125" />
-        <entry key="app/src/main/res/layout-land/activity_timer.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_battle_note.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_controls.xml" value="0.29345955249569705" />
         <entry key="app/src/main/res/layout/activity_fighter.xml" value="0.2859375" />
         <entry key="app/src/main/res/layout/activity_fighter_details.xml" value="0.3395554762620192" />
         <entry key="app/src/main/res/layout/activity_fighters.xml" value="0.30512820512820515" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14368229618778933" />
-        <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_timer.xml" value="0.3079452514648437" />
+        <entry key="app/src/main/res/layout/activity_legal_stage.xml" value="0.5290079752604167" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.27685185185185185" />
+        <entry key="app/src/main/res/layout/activity_timer.xml" value="0.2564814814814815" />
         <entry key="app/src/main/res/layout/activity_win_lose_tracker.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/layout/content_fighter.xml" value="0.396875" />
         <entry key="app/src/main/res/layout/content_fighters.xml" value="0.2859375" />
