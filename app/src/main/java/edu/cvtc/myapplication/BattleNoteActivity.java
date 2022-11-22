@@ -330,7 +330,11 @@ public class BattleNoteActivity extends AppCompatActivity implements
             }
         } else {
             // Save the data when leaving the activity.
-            saveCourse();
+            if (mTextBattleNoteHeading.getText().toString().equals("")) {
+                deleteBattleNoteFromDatabase();
+            } else {
+                saveCourse();
+            }
         }
     }
 }

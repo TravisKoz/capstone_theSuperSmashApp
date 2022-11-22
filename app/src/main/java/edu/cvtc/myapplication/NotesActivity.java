@@ -20,7 +20,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 
-
 import edu.cvtc.myapplication.databinding.ActivityNotesBinding;
 
 public class NotesActivity extends AppCompatActivity implements
