@@ -3,17 +3,12 @@ package edu.cvtc.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.app.TimePickerDialog;
-import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.TimePicker;
-import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -27,7 +22,7 @@ public class TimerActivity extends AppCompatActivity {
     private Button mPickTimeBtn;
     private Button m5MinBtn;
     private Button m2MinBtn;
-    private Button m8MinBtn;
+    private Button m1MinBtn;
 
     int minute, second;
 
@@ -52,7 +47,7 @@ public class TimerActivity extends AppCompatActivity {
         mPickTimeBtn = findViewById(R.id.btn_pick_time);
         m5MinBtn = findViewById(R.id.btn5min);
         m2MinBtn = findViewById(R.id.btn2min);
-        m8MinBtn = findViewById(R.id.btn8min);
+        m1MinBtn = findViewById(R.id.btn1min);
 
         // Event listener that Calls the pauseTimer or startTimer methods
         mStartPauseBtn.setOnClickListener(new View.OnClickListener() {
@@ -94,10 +89,10 @@ public class TimerActivity extends AppCompatActivity {
             }
 
         });
-        m8MinBtn.setOnClickListener(new View.OnClickListener() {
+        m1MinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mStartTimeInMillis = START_TIME_IN_MILLIS * 8;
+                mStartTimeInMillis = START_TIME_IN_MILLIS;
                 mTimeLeftInMillis = mStartTimeInMillis;
                 updateCountDownText();
                 updateButtons();
@@ -173,13 +168,13 @@ public class TimerActivity extends AppCompatActivity {
             mResetBtn.setVisibility(View.INVISIBLE);
             m5MinBtn.setVisibility(View.INVISIBLE);
             m2MinBtn.setVisibility(View.INVISIBLE);
-            m8MinBtn.setVisibility(View.INVISIBLE);
+            m1MinBtn.setVisibility(View.INVISIBLE);
 
             mStartPauseBtn.setText(R.string.pause_text);
         } else {
             m5MinBtn.setVisibility(View.VISIBLE);
             m2MinBtn.setVisibility(View.VISIBLE);
-            m8MinBtn.setVisibility(View.VISIBLE);
+            m1MinBtn.setVisibility(View.VISIBLE);
             mResetBtn.setVisibility(View.VISIBLE);
 
             mStartPauseBtn.setText(R.string.start_text);
@@ -188,7 +183,7 @@ public class TimerActivity extends AppCompatActivity {
                 mStartPauseBtn.setVisibility(View.INVISIBLE);
                 m5MinBtn.setVisibility(View.VISIBLE);
                 m2MinBtn.setVisibility(View.VISIBLE);
-                m8MinBtn.setVisibility(View.VISIBLE);
+                m1MinBtn.setVisibility(View.VISIBLE);
                 mResetBtn.setVisibility(View.VISIBLE);
 
             } else {

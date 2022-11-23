@@ -42,7 +42,7 @@
         app:showAsAction="never" />
         <item
           android:id="@+id/legal_stages_access"
-          android:icon="@drawable/ic_baseline_more"
+          android:icon="@drawable/ic_baseline_stage"
           android:orderInCategory="46"
           android:title="Legal Stages"
           app:showAsAction="never" />

@@ -23,12 +23,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn2min"
+        android:id="@+id/btn1min"
+        android:text="1 min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:background="@drawable/custom_button"
-        android:text="2 min"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -36,12 +36,13 @@
         app:layout_constraintTop_toTopOf="@+id/btn5min" />
 
     <Button
-        android:id="@+id/btn8min"
+        android:id="@+id/btn2min"
+        android:text="2 min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:background="@drawable/custom_button"
-        android:text="8 min"
+
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -87,10 +88,10 @@
         android:shadowColor="@color/black"
         android:shadowDx="10"
         android:shadowDy="5"
-        android:shadowRadius="30"
+        android:shadowRadius="3"
         android:text="00:00"
         android:textColor="@color/white"
-        android:textSize="80sp"
+        android:textSize="100sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

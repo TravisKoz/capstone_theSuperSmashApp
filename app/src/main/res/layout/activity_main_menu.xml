@@ -6,44 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity"
     android:background="@color/black">
+<!--    android:background="@drawable/bg_ssbu_portrait"-->
 
     <TextView
         android:id="@+id/tv_menu_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/smashfont"
         android:text="Super Smash App"
-        android:shadowColor="@color/white"
-        android:shadowDx="6"
-        android:shadowDy="3"
-        android:shadowRadius="1"
         android:textSize="38sp"
-        android:textColor="@color/red"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"/>
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tv_menu_title"
         android:layout_marginTop="20dp"
-        android:layout_margin="10dp"
+        android:layout_margin="23dp"
         android:columnCount="2"
         android:rowCount="3">
 
         <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill"
-        android:id="@+id/cv_fighters"
-        android:layout_columnWeight="1"
-        android:layout_rowWeight="1"
-        android:layout_row="0"
-        android:layout_column="0"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:id="@+id/cv_fighters"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="0"
+            android:layout_column="0"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            android:backgroundTint="@color/red"
             app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -54,15 +53,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_menu_test"/>
+                android:layout_width="90dp"
+                android:layout_height="80dp"
+                android:src="@drawable/iv_fighters_bowser_image"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fighters"
+                android:textColor="@color/white"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:fontFamily="@font/smashfont"/>
 
         </LinearLayout>
 
@@ -79,7 +80,8 @@
             android:layout_column="1"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/red">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -97,7 +99,9 @@
                     android:layout_height="wrap_content"
                     android:text="Stages"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/smashfont"/>
 
             </LinearLayout>
 
@@ -114,7 +118,8 @@
             android:layout_column="0"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/red">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -124,15 +129,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu_test"/>
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/iv_controls_image2"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Controls"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/smashfont"/>
 
             </LinearLayout>
 
@@ -149,7 +156,8 @@
             android:layout_column="1"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/red">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -159,15 +167,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu_test"/>
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/iv_timer_image"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Timer"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/smashfont"/>
 
             </LinearLayout>
 
@@ -184,7 +194,8 @@
             android:layout_column="0"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/red">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -194,15 +205,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu_test"/>
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/iv_notes_image"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Notes"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/smashfont"/>
 
             </LinearLayout>
 
@@ -219,7 +232,8 @@
             android:layout_column="1"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/red">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -229,15 +243,17 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu_test"/>
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/iv_winlose_image"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Win/Lose"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/smashfont"/>
 
             </LinearLayout>
 
