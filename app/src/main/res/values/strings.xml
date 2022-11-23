@@ -76,4 +76,19 @@
     <string name="hollow_bastion_content_desc">Hollow Bastion</string>
 
 
+
+
+<string-array name="fighters_spinner">
+  <item>Mario</item>
+  <item>Donkey Kong</item>
+  <item>Link</item>
+  <item>Samus</item>
+  <item>Yoshi</item>
+  <item>Kirby</item>
+  <item>Fox</item>
+  <item>Pikachu</item>
+</string-array>
+
+
+
 </resources>

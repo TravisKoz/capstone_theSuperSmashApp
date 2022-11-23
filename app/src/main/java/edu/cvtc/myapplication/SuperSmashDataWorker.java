@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.TrackerEntry;
 
 // The class helps create our database. This class will
 // establish a connection to our database and insert
@@ -28,10 +29,34 @@ public class SuperSmashDataWorker {
         long newRowId = mDb.insert(BattleNoteEntry.TABLE_NAME, null, values);
     }
 
-    // Method used to populate our database with initial Battle Notes data.
+    // Method used to populate our database with initial TRACKER data.
     public void insertBattleNotes() {
         insertBattleNote("Note 1", "My Message");
         insertBattleNote("Note 2", "Another Message");
+    }
+
+    // Method that inserts a single fighter into the database.
+    private void insertTracker(String fighter, int wins, int losses) {
+        ContentValues values = new ContentValues();
+        values.put(TrackerEntry.COLUMN_FIGHTER, fighter);
+        values.put(TrackerEntry.COLUMN_WINS, wins);
+        values.put(TrackerEntry.COLUMN_LOSSES, losses);
+
+        long newRowId = mDb.insert(TrackerEntry.TABLE_NAME, null, values);
+    }
+
+    // Method used to populate our database with initial Battle Notes data.
+    public void insertTrackers() {
+        insertTracker("Mario", 0, 0);
+        insertTracker("Donkey Kong", 0, 0);
+        insertTracker("Mario", 0, 0);
+        insertTracker("Link", 0, 0);
+        insertTracker("Samus", 0, 0);
+        insertTracker("Yoshi", 0, 0);
+        insertTracker("Kirby", 0, 0);
+        insertTracker("Fox", 0, 0);
+        insertTracker("Pikachu", 0, 0);
+
     }
 
     // Method that inserts a single fighter into the database
@@ -143,8 +168,8 @@ public class SuperSmashDataWorker {
 
         // Pikachu
         insertFighter("Pikachu", "Pokemon", "Thunder Jolt",
-                "Skull Bash", "Thunder", "Quick Attack", "" +
-                        "Sends a ball of electricity bouncing along the stage.",
+                "Skull Bash", "Thunder", "Quick Attack",
+                "Sends a ball of electricity bouncing along the stage.",
                 "Charges up a flying headbutt.",
                 "Calls down a lightning strike that deals more damage to opponents if the bolt hits Pikachu.",
                 "Attacks quickly in any direction. Can change direction midmove to move a second time.",
@@ -370,8 +395,7 @@ public class SuperSmashDataWorker {
                 "Vanishes, teleports in any direction, and then attacks reappearing.",
                 "Flies into the air, strikes, then strikes again after a loop. Enemies hit by this move are launched upward.",
                 "Darkness Illusion",
-                "Meta Knight raises his sword, emitting a blast of electricity. If he hits an opponent, he multiplies himself to attack and launch the opponent. If no one is hit, the move won't do anything."
-        );
+                "Meta Knight raises his sword, emitting a blast of electricity. If he hits an opponent, he multiplies himself to attack and launch the opponent. If no one is hit, the move won't do anything.");
 
 
         // Pit

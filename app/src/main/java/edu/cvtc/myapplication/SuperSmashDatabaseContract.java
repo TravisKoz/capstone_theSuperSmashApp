@@ -92,4 +92,32 @@ public final class SuperSmashDatabaseContract {
                         COLUMN_FINAL_SMASH + " TEXT, " +
                         COLUMN_FINAL_DESCRIPTION + " TEXT)";
     }
+
+    public static final class TrackerEntry implements BaseColumns {
+        // Constants holding our table and field names
+        public static final String
+            TABLE_NAME = "tracker";
+        public static final String
+            COLUMN_FIGHTER = "fighter";
+        public static final String
+            COLUMN_WINS = "wins";
+        public static final String
+            COLUMN_LOSSES = "losses";
+
+        // Constants holding our values for the index name and values based on
+        // the fighter name.
+        public static final String INDEX1 = TABLE_NAME + "_index1";
+        public static final String SQL_CREATE_INDEX1 =
+                "CREATE INDEX " + INDEX1 + " ON " + TABLE_NAME +
+                        "(" + COLUMN_FIGHTER + ")";
+
+        // Constant to create the table using the table name, fields, and id.
+        public static final String SQL_CREATE_TABLE =
+                "CREATE TABLE " + TABLE_NAME + " (" +
+                        _ID + " INTEGER PRIMARY KEY, " +
+                        COLUMN_FIGHTER + " TEXT NOT NULL, " +
+                        COLUMN_WINS + " INTEGER, " +
+                        COLUMN_LOSSES + " INTEGER)";
+    }
+
 }

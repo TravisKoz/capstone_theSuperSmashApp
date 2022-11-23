@@ -15,6 +15,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     ConstraintLayout constraintLayout;
+    private SuperSmashOpenHelper mDbOpenHelper;
 
 
     @Override
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         constraintLayout = (ConstraintLayout) findViewById(R.id.welcome_page_click);
+
+        mDbOpenHelper = new SuperSmashOpenHelper(this);
 
         constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,5 +81,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        mDbOpenHelper.close();
+        super.onDestroy();
     }
 }
