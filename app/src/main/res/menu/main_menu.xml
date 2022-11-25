@@ -38,13 +38,13 @@
         android:id="@+id/controls_access"
         android:icon="@drawable/ic_baseline_controler"
         android:orderInCategory="45"
-        android:title="Controls"
+        android:title="@string/controls_tx"
         app:showAsAction="never" />
         <item
           android:id="@+id/legal_stages_access"
           android:icon="@drawable/ic_baseline_stage"
           android:orderInCategory="46"
-          android:title="Legal Stages"
+          android:title="@string/stages_tx"
           app:showAsAction="never" />
     </menu>
   </item>

@@ -12,7 +12,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class MainActivity extends AppCompatActivity {
+
+    Timer mTimer;
 
     ConstraintLayout constraintLayout;
     private SuperSmashOpenHelper mDbOpenHelper;
@@ -23,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         constraintLayout = (ConstraintLayout) findViewById(R.id.welcome_page_click);
+        mTimer = new Timer();
+
+        mTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                openMainMenuActivity();
+                //finish();
+            }
+        }, 3000);
 
         mDbOpenHelper = new SuperSmashOpenHelper(this);
 

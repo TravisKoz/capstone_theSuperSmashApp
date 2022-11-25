@@ -21,6 +21,7 @@ public class WinLoseTrackerActivity extends AppCompatActivity implements Adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 R.layout.spinner_fighters, getResources().getStringArray(R.array.fighters_spinner));
 
+
         // Create the spinner
         Spinner spinner = findViewById(R.id.fighters_spinner);
         if (spinner != null) {
