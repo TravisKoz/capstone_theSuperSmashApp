@@ -21,11 +21,12 @@ import edu.cvtc.myapplication.SuperSmashDatabaseContract.TrackerEntry;
 
 public class WinLoseTrackerActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    // Set up global member variables
+    // Set up global member objects.
     private TextView mWinCount;
     private TextView mLossCount;
     private TextView mWinPercentage;
     private ImageView mFighterImage;
+    private ImageView mFighterHeadImage;
     private Spinner mSpinner;
     private SuperSmashOpenHelper mDbOpenHelper;
 
@@ -43,6 +44,7 @@ public class WinLoseTrackerActivity extends AppCompatActivity implements Adapter
 
         // Get reference to our fighter ImageView
         mFighterImage = findViewById(R.id.fighter_tracker_image);
+        mFighterHeadImage = findViewById(R.id.fighter_head_image);
 
         // Create references to our Buttons
         Button incrementWinButton = findViewById(R.id.win_button);
@@ -230,10 +232,17 @@ public class WinLoseTrackerActivity extends AppCompatActivity implements Adapter
         String imageResource = selectedFighter.replace(" ", "_").replace(".","")
                 .replace("&", "and").replace("-", "_").toLowerCase();
 
-        // Gets the resourceID for our selected fighter.
-        int resourceID = this.getResources().getIdentifier(imageResource, "drawable", this.getPackageName());
+        String headResource = imageResource + "_head";
 
-        // Changes the displayed fighter based on our resourceID.
-        mFighterImage.setImageResource(resourceID);
+        // Gets the resourceID for our selected fighter's image.
+        int imageResourceID = this.getResources().getIdentifier(imageResource, "drawable", this.getPackageName());
+
+
+        // Gets the resourceID for our selected fighter's head image
+        int headImageResourceID = this.getResources().getIdentifier(headResource, "drawable", this.getPackageName());
+
+        // Changes the displayed fighter's image and fighter's head image based on our resourceIDs.
+        mFighterImage.setImageResource(imageResourceID);
+        mFighterHeadImage.setImageResource(headImageResourceID);
     }
 }

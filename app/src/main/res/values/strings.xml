@@ -87,6 +87,7 @@
   <string name="start_tx">Start</string>
   <string name="reset_tx">Reset</string>
   <string name="_00_00_tx">00:00</string>
+  <string name="fighter_head_icon">Fighter\'s Head Icon</string>
 
 
   <string-array name="fighters_spinner">
@@ -173,20 +174,6 @@
   <item>Pyra &amp; Mythra</item>
   <item>Kazuya</item>
   <item>Sora</item>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </string-array>
 
 

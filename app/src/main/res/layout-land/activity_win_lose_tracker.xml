@@ -32,6 +32,16 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/fighters_spinner" />
 
+  <ImageView
+    android:id="@+id/fighter_head_image"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_height="50dp"
+    android:src="@drawable/samus_head"
+    android:contentDescription="@string/fighter_head_icon"
+    app:layout_constraintStart_toEndOf="@id/fighter_tracker_image"
+    app:layout_constraintTop_toBottomOf="@id/loss_number" />
+
   <TextView
     android:id="@+id/win_text"
     android:layout_width="wrap_content"
