@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 
 public class FighterDetailsActivity extends AppCompatActivity {
@@ -417,7 +415,7 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 mFighterImage.setImageResource(R.drawable.roy);
                 break;
             case ("Chrom"):
-                mFighterImage.setImageResource(R.drawable.chrome);
+                mFighterImage.setImageResource(R.drawable.chrom);
                 break;
             case ("Mr. Game & Watch"):
                 mFighterImage.setImageResource(R.drawable.mr_game_and_watch);
@@ -552,7 +550,7 @@ public class FighterDetailsActivity extends AppCompatActivity {
                 mFighterImage.setImageResource(R.drawable.hero);
                 break;
             case ("Banjo & Kazooie"):
-                mFighterImage.setImageResource(R.drawable.banjo_kazooie);
+                mFighterImage.setImageResource(R.drawable.banjo_and_kazooie);
                 break;
             case ("Terry"):
                 mFighterImage.setImageResource(R.drawable.terry);

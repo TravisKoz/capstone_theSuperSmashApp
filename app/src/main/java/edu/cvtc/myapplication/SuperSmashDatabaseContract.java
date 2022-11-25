@@ -119,5 +119,4 @@ public final class SuperSmashDatabaseContract {
                         COLUMN_WINS + " INTEGER, " +
                         COLUMN_LOSSES + " INTEGER)";
     }
-
 }

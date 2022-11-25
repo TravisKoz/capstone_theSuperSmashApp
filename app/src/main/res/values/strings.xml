@@ -76,17 +76,104 @@
     <string name="hollow_bastion_content_desc">Hollow Bastion</string>
 
 
-
-
 <string-array name="fighters_spinner">
   <item>Mario</item>
   <item>Donkey Kong</item>
   <item>Link</item>
   <item>Samus</item>
+  <item>Dark Samus</item>
   <item>Yoshi</item>
   <item>Kirby</item>
   <item>Fox</item>
   <item>Pikachu</item>
+  <item>Luigi</item>
+  <item>Ness</item>
+  <item>Captain Falcon</item>
+  <item>Jigglypuff</item>
+  <item>Peach</item>
+  <item>Daisy</item>
+  <item>Bowser</item>
+  <item>Ice Climbers</item>
+  <item>Sheik</item>
+  <item>Zelda</item>
+  <item>Dr. Mario</item>
+  <item>Pichu</item>
+  <item>Falco</item>
+  <item>Marth</item>
+  <item>Lucina</item>
+  <item>Young Link</item>
+  <item>Ganondorf</item>
+  <item>Mewtwo</item>
+  <item>Roy</item>
+  <item>Chrom</item>
+  <item>Mr. Game &amp; Watch</item>
+  <item>Meta Knight</item>
+  <item>Pit</item>
+  <item>Dark Pit</item>
+  <item>Zero Suit Samus</item>
+  <item>Wario</item>
+  <item>Snake</item>
+  <item>Ike</item>
+  <item>Diddy Kong</item>
+  <item>Lucas</item>
+  <item>Sonic</item>
+  <item>King Dedede</item>
+  <item>Olimar</item>
+  <item>Lucario</item>
+  <item>R.O.B.</item>
+  <item>Toon Link</item>
+  <item>Wolf</item>
+  <item>Villager</item>
+  <item>Mega Man</item>
+  <item>Wii Fit Trainer</item>
+  <item>Rosalina &amp; Luma</item>
+  <item>Little Mac</item>
+  <item>Greninja</item>
+  <item>Palutena</item>
+  <item>PAC-MAN</item>
+  <item>Robin</item>
+  <item>Shulk</item>
+  <item>Bowser Jr.</item>
+  <item>Duck Hunt</item>
+  <item>Ryu</item>
+  <item>Ken</item>
+  <item>Cloud</item>
+  <item>Corrin</item>
+  <item>Bayonetta</item>
+  <item>Inkling</item>
+  <item>Ridley</item>
+  <item>Simon</item>
+  <item>Richter</item>
+  <item>King K. Rool</item>
+  <item>Isabelle</item>
+  <item>Incineroar</item>
+  <item>Piranha Plant</item>
+  <item>Joker</item>
+  <item>Hero</item>
+  <item>Banjo &amp; Kazooie</item>
+  <item>Terry</item>
+  <item>Byleth</item>
+  <item>Min Min</item>
+  <item>Pokemon Trainer</item>
+  <item>Steve</item>
+  <item>Sephiroth</item>
+  <item>Pyra &amp; Mythra</item>
+  <item>Kazuya</item>
+  <item>Sora</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </string-array>
 
 

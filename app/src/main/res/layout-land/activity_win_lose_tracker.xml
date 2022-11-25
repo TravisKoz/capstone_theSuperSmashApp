@@ -1,19 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".WinLoseTrackerActivity">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/black"
+  tools:context=".WinLoseTrackerActivity">
 
+  <Spinner
+    android:id="@+id/fighters_spinner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:backgroundTint="@color/white"
+    android:entries="@array/fighters_spinner"
+    android:minHeight="48dp"
+    android:padding="10dp"
+    android:spinnerMode="dialog"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
   <ImageView
-    android:id="@+id/imageview"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
+    android:id="@+id/fighter_tracker_image"
+    android:layout_width="169dp"
+    android:layout_height="234dp"
+    android:contentDescription="@string/image_of_fighter"
+    android:foregroundGravity="center"
+    android:src="@drawable/samus"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/fighters_spinner" />
+
+  <TextView
+    android:id="@+id/win_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="15dp"
+    android:fontFamily="@font/smashfont"
+    android:text="Wins"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/win_number"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="36dp"
+    android:layout_marginTop="15dp"
+    android:fontFamily="@font/smashfont"
+    android:text="5"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/win_text" />
+
+  <TextView
+    android:id="@+id/loss_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="10dp"
+    android:fontFamily="@font/smashfont"
+    android:text="Losses"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/loss_number"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="56dp"
+    android:fontFamily="@font/smashfont"
+    android:text="5"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/loss_text" />
+
+  <TextView
+    android:id="@+id/win_loss_percentage_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="30dp"
+    android:fontFamily="@font/smashfont"
+    android:text="Win %"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/win_number" />
+
+  <TextView
+    android:id="@+id/win_loss_percentage_number"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="15dp"
+    android:fontFamily="@font/smashfont"
+    android:text="0.00%"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/win_loss_percentage_text" />
+
+  <Button
+    android:id="@+id/win_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_button"
+    android:text="Win"
+    android:textColor="@color/white"
+    android:textSize="26sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+    android:id="@+id/reset_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_button"
+    android:text="Reset"
+    android:textColor="@color/white"
+    android:textSize="26sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/loss_button"
+    app:layout_constraintStart_toEndOf="@id/win_button" />
+
+  <Button
+    android:id="@+id/loss_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_button"
+    android:text="Loss"
+    android:textColor="@color/white"
+    android:textSize="26sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
