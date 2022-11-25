@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity"
     android:background="@color/black">
-<!--    android:background="@drawable/bg_ssbu_portrait"-->
 
     <TextView
         android:id="@+id/tv_menu_title"
@@ -17,7 +16,7 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/smashfont"
-        android:text="Super Smash App"
+        android:text="@string/super_smash_app_title"
         android:textSize="38sp"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"/>
@@ -59,7 +58,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fighters"
+                android:text="@string/fighters_tx"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -91,13 +90,13 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu_test"/>
+                    android:layout_width="90dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/iv_stage_image"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stages"
+                    android:text="@string/stages_tx"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -135,7 +134,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Controls"
+                    android:text="@string/controls_tx"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -173,7 +172,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timer"
+                    android:text="@string/timer_tx"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -211,7 +210,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notes"
+                    android:text="@string/notes_tx"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -249,7 +248,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Win/Lose"
+                    android:text="@string/win_lose_tx"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
@@ -259,10 +258,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
-
-
     </GridLayout>
-
 
 </RelativeLayout>

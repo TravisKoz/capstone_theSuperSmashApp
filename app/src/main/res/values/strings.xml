@@ -74,9 +74,22 @@
   <string name="kalos_pokemon_league_content_desc">Kalos Pokemon League</string>
   <string name="yoshis_story_content_desc">Yoshi\'s Story</string>
     <string name="hollow_bastion_content_desc">Hollow Bastion</string>
+    <string name="super_smash_app_title">Super Smash App</string>
+  <string name="fighters_tx">Fighters</string>
+  <string name="stages_tx">Stages</string>
+  <string name="controls_tx">Controls</string>
+  <string name="timer_tx">Timer</string>
+  <string name="notes_tx">Notes</string>
+  <string name="win_lose_tx">Win/Lose</string>
+  <string name="_5_min_tx">5 min</string>
+  <string name="_1_min_tx">1 min</string>
+  <string name="_2_min_tx">2 min</string>
+  <string name="start_tx">Start</string>
+  <string name="reset_tx">Reset</string>
+  <string name="_00_00_tx">00:00</string>
 
 
-<string-array name="fighters_spinner">
+  <string-array name="fighters_spinner">
   <item>Mario</item>
   <item>Donkey Kong</item>
   <item>Link</item>
