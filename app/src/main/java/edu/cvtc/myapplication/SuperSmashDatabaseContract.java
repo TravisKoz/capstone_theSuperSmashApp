@@ -67,6 +67,10 @@ public final class SuperSmashDatabaseContract {
                 COLUMN_FINAL_SMASH = "final_smash";
         public static final String
                 COLUMN_FINAL_DESCRIPTION = "final_description";
+        public static final String
+                COLUMN_CATEGORY = "category";
+        public static final String
+                COLUMN_ARCHETYPE = "archetype";
 
         // Constants holding our values for the index name and values based on
         // the fighter name.
@@ -90,7 +94,9 @@ public final class SuperSmashDatabaseContract {
                         COLUMN_DOWN_DESCRIPTION + " TEXT, " +
                         COLUMN_UP_DESCRIPTION + " TEXT, " +
                         COLUMN_FINAL_SMASH + " TEXT, " +
-                        COLUMN_FINAL_DESCRIPTION + " TEXT)";
+                        COLUMN_FINAL_DESCRIPTION + " TEXT, " +
+                        COLUMN_CATEGORY + " TEXT, " +
+                        COLUMN_ARCHETYPE + " TEXT)";
     }
 
     public static final class TrackerEntry implements BaseColumns {

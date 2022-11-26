@@ -165,7 +165,7 @@ public class DataManager {
             Fighter list = new Fighter(id, listName, listFranchise, listSpecialNeutral,
                     listSpecialSide, listSpecialDown, listSpecialUp, listNeutralDescription,
                     listSideDescription, listDownDescription, listUpDescription, listFinalSmash,
-                    listFinalSmashDescription);
+                    listFinalSmashDescription, null, null);
             dm.mFighters.add(list);
         }
 

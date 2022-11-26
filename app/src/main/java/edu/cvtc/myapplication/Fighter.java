@@ -20,6 +20,8 @@ public class Fighter implements Parcelable {
     private String mUpDescription;
     private String mFinalSmash;
     private String mFinalSmashDescription;
+    private String mCategory;
+    private String mArchetype;
     private int mId;
 
 
@@ -27,7 +29,8 @@ public class Fighter implements Parcelable {
     public Fighter(String name, String franchise, String specialNeutral,
                    String specialSide, String specialDown, String specialUp,
                    String neutralDescription, String sideDescription, String downDescription,
-                   String upDescription, String finalSmash, String finalSmashDescription) {
+                   String upDescription, String finalSmash, String finalSmashDescription,
+                   String category, String archetype) {
         mName = name;
         mFranchise = franchise;
         mSpecialNeutral = specialNeutral;
@@ -40,12 +43,15 @@ public class Fighter implements Parcelable {
         mUpDescription = upDescription;
         mFinalSmash = finalSmash;
         mFinalSmashDescription = finalSmashDescription;
+        mCategory = category;
+        mArchetype = archetype;
     }
 
     public Fighter(int id, String name, String franchise, String specialNeutral,
                    String specialSide, String specialDown, String specialUp,
                    String neutralDescription, String sideDescription, String downDescription,
-                   String upDescription, String finalSmash, String finalSmashDescription) {
+                   String upDescription, String finalSmash, String finalSmashDescription,
+                   String category, String archetype) {
         mId = id;
         mName = name;
         mFranchise = franchise;
@@ -59,6 +65,8 @@ public class Fighter implements Parcelable {
         mUpDescription = upDescription;
         mFinalSmash = finalSmash;
         mFinalSmashDescription = finalSmashDescription;
+        mCategory = category;
+        mArchetype = archetype;
     }
 
     // Getters and Setters
@@ -162,13 +170,33 @@ public class Fighter implements Parcelable {
         return mFinalSmashDescription;
     }
 
+    public String getCategory() {
+        return mCategory;
+    }
+
+    public void setCategory(String category) {
+        mCategory = category;
+    }
+
+    public String getArchetype() {
+        return mArchetype;
+    }
+
+    public void setArchetype(String archetype) {
+        mCategory = archetype;
+    }
+
+
+
+
     // Returns a concatenated string.
     private String getCompareKey() {
         return mName + "|" + mFranchise + "|" +
                 mSpecialNeutral + "|" + mSpecialSide + "|" +
-                mSpecialDown + "|" + mSpecialUp + "|" + mNeutralDescription
-                + "|" + mSideDescription + "|" + mDownDescription
-                + "|" + mUpDescription + mFinalSmash + mFinalSmashDescription;
+                mSpecialDown + "|" + mSpecialUp + "|" + mNeutralDescription +
+                "|" + mSideDescription + "|" + mDownDescription +
+                "|" + mUpDescription + "|" + mFinalSmash + "|" + mFinalSmashDescription +
+                "|" + mCategory + "|" + mArchetype;
     }
 
     // Used to prevent duplicate fighters in the database
@@ -204,6 +232,8 @@ public class Fighter implements Parcelable {
         setUpDescription(parcel.readString());
         setFinalSmash(parcel.readString());
         setFinalSmashDescription(parcel.readString());
+        setCategory(parcel.readString());
+        setArchetype(parcel.readString());
     }
 
     public static final Creator<Fighter> CREATOR = new Creator<Fighter>() {
@@ -237,5 +267,7 @@ public class Fighter implements Parcelable {
         parcel.writeString(mUpDescription);
         parcel.writeString(mFinalSmash);
         parcel.writeString(mFinalSmashDescription);
+        parcel.writeString(mCategory);
+        parcel.writeString(mArchetype);
     }
 }

@@ -18,11 +18,6 @@ public class FighterDetailsActivity extends AppCompatActivity {
             "edu.cvtc.myapplication.FIGHTER_ID";
     public static final int ID_NOT_SET = -1;
 
-    // Initialize new Fighter to empty
-    private Fighter mFighter = new Fighter(0, "", "", "",
-            "", "", "", "", "", "",
-            "", "", "");
-
     // Member Variables
     private int mFighterID;
     private int mFighterNamePosition;

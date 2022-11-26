@@ -45,7 +45,7 @@ public class SuperSmashDataWorker {
         long newRowId = mDb.insert(TrackerEntry.TABLE_NAME, null, values);
     }
 
-    // Method used to populate our database with initial Battle Notes data.
+    // Method used to populate our database with initial Tracker data.
     public void insertTrackers() {
         insertTracker("Mario", 0, 0);
         insertTracker("Donkey Kong", 0, 0);
@@ -140,7 +140,8 @@ public class SuperSmashDataWorker {
                                String specialSide, String specialDown,
                                String specialUp, String neutralDescription, String sideDescription,
                                String downDescription, String upDescription,
-                               String finalSmash, String finalSmashDescription) {
+                               String finalSmash, String finalSmashDescription,
+                               String category, String archetype) {
         ContentValues values = new ContentValues();
         values.put(FighterEntry.COLUMN_NAME, name);
         values.put(FighterEntry.COLUMN_FRANCHISE, franchise);
@@ -156,6 +157,8 @@ public class SuperSmashDataWorker {
         values.put(FighterEntry.COLUMN_UP_DESCRIPTION, upDescription);
         values.put(FighterEntry.COLUMN_FINAL_SMASH, finalSmash);
         values.put(FighterEntry.COLUMN_FINAL_DESCRIPTION, finalSmashDescription);
+        values.put(FighterEntry.COLUMN_CATEGORY, category);
+        values.put(FighterEntry.COLUMN_ARCHETYPE, archetype);
 
         long newRowId = mDb.insert(FighterEntry.TABLE_NAME, null, values);
     }
@@ -170,7 +173,8 @@ public class SuperSmashDataWorker {
                 "Blasts opponents with water. Can charge and aim at an angle.",
                 "Hits repeatedly with a rising punch.",
                 "Mario Finale",
-                "Mario unleashes a devastating torrent of fire in the direction he is facing. The attack covers a wide range and travels far, so it’s best to fire this after you jump.");
+                "Mario unleashes a devastating torrent of fire in the direction he is facing. The attack covers a wide range and travels far, so it’s best to fire this after you jump.",
+                "Hybrid", "Balanced");
 
         // Donkey Kong
         insertFighter("Donkey Kong", "Donkey Kong", "Giant Punch",
@@ -180,7 +184,8 @@ public class SuperSmashDataWorker {
                 "Sends out shock waves by slapping the ground, sending foes into the air. Has a meteor effect when airborne.",
                 "Spins with a whirlwind of punches. Can shift left or right while airborne and forward while grounded.",
                 "Jungle Rush",
-                "Donkey Kong pummels opponents with a flurry of punches before launching them with a finishing uppercut. If the first hit doesn't make contact, the whole attack fails, so make sure to get that hit in.");
+                "Donkey Kong pummels opponents with a flurry of punches before launching them with a finishing uppercut. If the first hit doesn't make contact, the whole attack fails, so make sure to get that hit in.",
+                "Close-range", "Grappler");
 
         // Link
         insertFighter("Link", "The Legend of Zelda", "Bow and Arrows",
@@ -190,7 +195,8 @@ public class SuperSmashDataWorker {
                 "Creates a remote bomb with the Sheikah Slate. Down special again detonates it.",
                 "Strikes opponents while spinning. Acts as a jump if used in midair.",
                 "Ancient Bow and Arrow",
-                "Link shoots an Ancient Arrow that flies straight ahead. If the arrow hits an opponent or the terrain, it explodes. You can only hit one fighter, but the explosion also launches nearby opponents.");
+                "Link shoots an Ancient Arrow that flies straight ahead. If the arrow hits an opponent or the terrain, it explodes. You can only hit one fighter, but the explosion also launches nearby opponents.",
+                "Long-range", "Zoner");
 
         // Samus
         insertFighter("Samus", "Metroid", "Charge Shot",
@@ -200,7 +206,8 @@ public class SuperSmashDataWorker {
                 "Drops a bomb in Morph Ball form. Flies upwards if hit by the explosion.",
                 "Hits opponents several times while spinning up into the air.",
                 "Zero Laser",
-                "Samus unleashes a massive, long-range beam. You can angle the beam up and down while firing. Fighters are drawn to the center, and the attack repeatedly hits any foes caught in its blast.");
+                "Samus unleashes a massive, long-range beam. You can angle the beam up and down while firing. Fighters are drawn to the center, and the attack repeatedly hits any foes caught in its blast.",
+                "Long-range", "Zoner");
 
         // Dark Samus
         insertFighter("Dark Samus", "Metroid", "Charge Shot",
@@ -210,7 +217,8 @@ public class SuperSmashDataWorker {
                 "Drops a bomb in Morph Ball form. Flies upwards if hit by the explosion.",
                 "Hits opponents several times while spinning up into the air.",
                 "Phazon Laser",
-                "Dark Samus unleashes a massive, long-range beam. You can angle the beam up and down while firing. Fighters are drawn to the center, and the attack repeatedly hits any foes caught in its blast.");
+                "Dark Samus unleashes a massive, long-range beam. You can angle the beam up and down while firing. Fighters are drawn to the center, and the attack repeatedly hits any foes caught in its blast.",
+                "Long-range", "Zoner");
 
         // Yoshi
         insertFighter("Yoshi", "Yoshi", "Egg Lay",
@@ -220,7 +228,8 @@ public class SuperSmashDataWorker {
                 "Jumps up quickly and slams into the ground, shooting stars out left and right.",
                 "Lobs an egg. Can set the angle of the throw with directional inputs.",
                 "Stampede!",
-                "Yoshi knocks down opponents with a tackle. Then, Yoshis of various colors appear and send the opponent flying! The first tackle can affect up to three opponents, but be sure not to KO yourself if you miss everyone.");
+                "Yoshi knocks down opponents with a tackle. Then, Yoshis of various colors appear and send the opponent flying! The first tackle can affect up to three opponents, but be sure not to KO yourself if you miss everyone.",
+                "Close-range", "Balanced");
 
         // Kirby
         insertFighter("Kirby", "Kirby", "Inhale",
@@ -230,7 +239,8 @@ public class SuperSmashDataWorker {
                 "Turns into a heavy object and plummets downward, taking no damage while transformed.",
                 "Jumps high into the air, striking on the way up and on the way down. Creates a shock wave when landing.",
                 "Ultra Sword",
-                "Kirby swings a sword that's waaaaay bigger than he is. Make sure the first swing connects with an opponent, or nothing else happens!");
+                "Kirby swings a sword that's waaaaay bigger than he is. Make sure the first swing connects with an opponent, or nothing else happens!",
+                "Close-range", "Balanced");
 
         // Fox
         insertFighter("Fox", "Star Fox", "Blaster",
@@ -240,7 +250,8 @@ public class SuperSmashDataWorker {
                 "Shields and reflects projectiles, upping their speed and power.",
                 "Rockets skyward while engulfed in flames. Can change the direction while charging.",
                 "Team Star Fox",
-                "Fox uses a targeting reticle to lock on to any opponents right in front of him. If he acquires a target, the Star Fox team shows up and unleashes a formation attack.");
+                "Fox uses a targeting reticle to lock on to any opponents right in front of him. If he acquires a target, the Star Fox team shows up and unleashes a formation attack.",
+                "Close-range", "Rushdown");
 
         // Pikachu
         insertFighter("Pikachu", "Pokemon", "Thunder Jolt",
@@ -250,7 +261,8 @@ public class SuperSmashDataWorker {
                 "Calls down a lightning strike that deals more damage to opponents if the bolt hits Pikachu.",
                 "Attacks quickly in any direction. Can change direction midmove to move a second time.",
                 "Volt Tackle",
-                "Pikachu turns into a ball of electricity that darts all over the stage. If an opponent gets caught in this attack, they'll be constantly hit. Finally, Pikachu unleashes a powerful spark with high launch power.");
+                "Pikachu turns into a ball of electricity that darts all over the stage. If an opponent gets caught in this attack, they'll be constantly hit. Finally, Pikachu unleashes a powerful spark with high launch power.",
+                "Hybrid", "Balanced");
 
         // Luigi
         insertFighter("Luigi", "Super Mario", "Fireball",
@@ -260,7 +272,8 @@ public class SuperSmashDataWorker {
                 "Spins at high speed, catching opponents in the attack. Repeated presses cause him to float and move a bit.",
                 "Punches up into the air with the strongest blows at the start of the attack.",
                 "Poltergust G-00",
-                "Luigi vacuums enemies with hurricane-force suction. Enemies caught by this attack are damaged and fired diagonally upward, potentially soaring right off the screen! If you suck up an item, it becomes a projectile.");
+                "Luigi vacuums enemies with hurricane-force suction. Enemies caught by this attack are damaged and fired diagonally upward, potentially soaring right off the screen! If you suck up an item, it becomes a projectile.",
+                "Hybrid", "Balanced");
 
         // Ness
         insertFighter("Ness", "EarthBound", "PK Flash",
@@ -270,7 +283,8 @@ public class SuperSmashDataWorker {
                 "Absorbs energy-based projectiles and weak explosions to heal damage.",
                 "Fires a steerable ball of lighting. Sends Ness flying if he hits himself.",
                 "PK Starstorm",
-                "With the help of Kumatora and Boney, Lucas calls down a shower of meteors that damage any foes they hit. The meteors fall faster as time passes. The meteors' trajectory can be adjusted slightly with left or right input.");
+                "With the help of Kumatora and Boney, Lucas calls down a shower of meteors that damage any foes they hit. The meteors fall faster as time passes. The meteors' trajectory can be adjusted slightly with left or right input.",
+                "Hybrid", "Balanced");
 
 
         // Captain Falcon
@@ -281,7 +295,8 @@ public class SuperSmashDataWorker {
                 "Slides forward with a flaming kick while on the ground and a diagonal kick in the air.",
                 "Jumps up to grab foes then explodes to send them flying.",
                 "Blue Falcon",
-                "The Blue Falcon races directly in front of the Captain, striking opponents and launching them to a race track where he can run them down.");
+                "The Blue Falcon races directly in front of the Captain, striking opponents and launching them to a race track where he can run them down.",
+                "Close-range", "Rushdown");
 
         // Jigglypuff
         insertFighter("Jigglypuff", "Pokemon", "Rollout",
@@ -291,7 +306,8 @@ public class SuperSmashDataWorker {
                 "Takes a well-earned nap that unleashes hidden power when touching a foe.",
                 "Sings a soothing song that makes nearby opponents extremely drowsy.",
                 "Puff Up",
-                "Jigglypuff puffs itself up until it takes over the majority of the stage, then it rapidly deflates, launching nearby opponents. It's super effective on small stages.");
+                "Jigglypuff puffs itself up until it takes over the majority of the stage, then it rapidly deflates, launching nearby opponents. It's super effective on small stages.",
+                "Close-range", "Grappler");
 
         // Peach
         insertFighter("Peach", "Super Mario", "Toad",
@@ -301,7 +317,8 @@ public class SuperSmashDataWorker {
                 "Plucks a veggie while on the ground. The veggie's power depends on its mood.",
                 "Jumps high into the air and opens her parasol. Keeping it open allows her to slowly float downward.",
                 "Peach Blossom",
-                "Giant peaches descend from above, and nearby fighters fall asleep. The closer a fighter is to Peach, the longer they stay snoozing, giving Peach plenty of time to launch foes or recover health by eating the giant peaches.");
+                "Giant peaches descend from above, and nearby fighters fall asleep. The closer a fighter is to Peach, the longer they stay snoozing, giving Peach plenty of time to launch foes or recover health by eating the giant peaches.",
+                "Hybrid", "Balanced");
 
         // Daisy
         insertFighter("Daisy", "Super Mario", "Toad",
@@ -311,7 +328,8 @@ public class SuperSmashDataWorker {
                 "Plucks a veggie while on the ground. The veggie's power depends on its mood.",
                 "Jumps high into the air and opens her parasol. Keeping it open allows her to slowly float downward.",
                 "Daisy Blossom",
-                "Giant daisies float down from above, and nearby fighters fall asleep. The closer a fighter is to Daisy, the longer they stay snoozing, giving Daisy plenty of time to launch foes or recover health by smelling the daisies.");
+                "Giant daisies float down from above, and nearby fighters fall asleep. The closer a fighter is to Daisy, the longer they stay snoozing, giving Daisy plenty of time to launch foes or recover health by smelling the daisies.",
+                "Hybrid", "Balanced");
 
         // Bowser
         insertFighter("Bowser", "Super Mario", "Fire Breath",
@@ -321,7 +339,8 @@ public class SuperSmashDataWorker {
                 "Butt-stomps enemies. On the ground, he can lift opponents with his horns.",
                 "Ducks inside his shell and spins. Can be moved sideways while spinning.",
                 "Giga Bowser Punch",
-                "Bowser transforms into the gigantic Giga Bowser. Aim carefully and unleash a ferocious punch. If an opponent has already taken a lot of damage when they're hit, they are KO'd instantly.");
+                "Bowser transforms into the gigantic Giga Bowser. Aim carefully and unleash a ferocious punch. If an opponent has already taken a lot of damage when they're hit, they are KO'd instantly.",
+                "Close-range", "Grappler");
 
         // Ice Climbers
         insertFighter("Ice Climbers", "Ice Climbers", "Ice Shot",
@@ -331,7 +350,8 @@ public class SuperSmashDataWorker {
                 "Unleash an icy flurry that may freeze foes. On an already frozen foe, this prolongs their freeze.",
                 "Nana pulls on the rope that Popo throws, and the two work together to jump up high.",
                 "Iceberg",
-                "A huge iceberg emerges in the center of the stage. Opponents are hit each time they touch it. You can control the iceberg with left or right inputs. You also move as normal, so be wary of self-destructing.");
+                "A huge iceberg emerges in the center of the stage. Opponents are hit each time they touch it. You can control the iceberg with left or right inputs. You also move as normal, so be wary of self-destructing.",
+                "Hybrid", "Balanced");
 
         // Sheik
         insertFighter("Sheik", "The Legend of Zelda", "Needle Storm",
@@ -341,7 +361,8 @@ public class SuperSmashDataWorker {
                 "Flips through the air and strikes foes with her heel. If the kick lands, she bounces back.",
                 "Throws a bomb to the ground and warps in any direction. Deals some damage.",
                 "Sheikah Dance",
-                "Sheik charges forward and strikes an opponent in her path. Upon being hit, the opponent is surrounded by darkness, and Sheik unleashes multiple quick attacks. The final attack can strike other opponents as well.\n");
+                "Sheik charges forward and strikes an opponent in her path. Upon being hit, the opponent is surrounded by darkness, and Sheik unleashes multiple quick attacks. The final attack can strike other opponents as well.",
+                "Hybrid", "Rushdown");
 
         // Zelda
         insertFighter("Zelda", "The Legend of Zelda", "Nayru's Love",
@@ -351,7 +372,8 @@ public class SuperSmashDataWorker {
                 "Assembles a phantom, then sends it charging forward. The timing of the button press determines its attack.",
                 "Teleports herself in any direction. Deals damage when disappearing and reappearing.",
                 "Triforce of Wisdom",
-                "Zelda uses the Triforce of Wisdom against an opponent, damaging and launching them. If the opponent has 100% damage or more, they are sealed away (and KO'd) instead of being launched.");
+                "Zelda uses the Triforce of Wisdom against an opponent, damaging and launching them. If the opponent has 100% damage or more, they are sealed away (and KO'd) instead of being launched.",
+                "Long-range", "Zoner");
 
         // Dr. Mario
         insertFighter("Dr. Mario", "Super Mario", "Megavitamins",
@@ -361,7 +383,8 @@ public class SuperSmashDataWorker {
                 "Spins rapidly. He can move sideways while spinning and even rise, with repeated button presses!",
                 "Hits repeatedly with a rising punch that, while lacking coins, is extra powerful at the start of the jump.",
                 "Doctor Finale",
-                "Dr. Mario lets loose a pair of giant vitamin capsules that spirals through the air, pushing opponents away. The attack covers a wide area and travels far, so it's best to unleash this after jumping.\n");
+                "Dr. Mario lets loose a pair of giant vitamin capsules that spirals through the air, pushing opponents away. The attack covers a wide area and travels far, so it's best to unleash this after jumping.",
+                "Hybrid", "Balanced");
 
         // Pichu
         insertFighter("Pichu", "Pokemon", "Thunder Jolt",
@@ -371,7 +394,8 @@ public class SuperSmashDataWorker {
                 "Calls down thunder from above to hurt nearby opponents. However, Pichu also takes a small amount of damage.",
                 "Moves at high speed! The direction can be changed once, and it travels a bit farther than Pikachu's.",
                 "Volt Tackle,",
-                "Pichu turns into a ball of electricity that darts around at high speed. If an opponent gets caught in this attack, they'll be constantly hit. Pichu also takes damage from this attack.");
+                "Pichu turns into a ball of electricity that darts around at high speed. If an opponent gets caught in this attack, they'll be constantly hit. Pichu also takes damage from this attack.",
+                "Close-range", "Rushdown");
 
         // Falco
         insertFighter("Falco", "Star Fox", "Blaster",
@@ -381,7 +405,8 @@ public class SuperSmashDataWorker {
                 "Kicks out an energy shield that reflects projectiles and deals damage.",
                 "Wraps himself in flame, and dashes through the air in the direction the control stick is titled.",
                 "Team Star Fox",
-                "Falco uses a targeting reticle to lock on to any opponents right in front of him. If he acquires a target, a team of Arwings shows up and fires at will.");
+                "Falco uses a targeting reticle to lock on to any opponents right in front of him. If he acquires a target, a team of Arwings shows up and fires at will.",
+                "Close-range", "Rushdown");
 
         // Marth
         insertFighter("Marth", "Fire Emblem", "Shield Breaker",
@@ -391,7 +416,8 @@ public class SuperSmashDataWorker {
                 "Prepares for an attack and strikes back if hit. The power depends on the enemy's attack.",
                 "Strikes upward as he rises into the air. Deals the most damage at the start.",
                 "Critical Hit",
-                "Marth dashes forward and strikes. If the attack connects, it has the potential to be a one-hit KO. Marth dashes forward a long distance, so there's a risk that you can self-destruct, but you can press the button again to stop.");
+                "Marth dashes forward and strikes. If the attack connects, it has the potential to be a one-hit KO. Marth dashes forward a long distance, so there's a risk that you can self-destruct, but you can press the button again to stop.",
+                "Close-range", "Spacing");
 
         // Lucina
         insertFighter("Lucina", "Fire Emblem", "Shield Breaker",
@@ -401,7 +427,8 @@ public class SuperSmashDataWorker {
                 "Prepares for an attack and strikes back if hit. The power depends on the enemy's attack.",
                 "Strikes upward as she rises into the air. Deals the most damage at the start.",
                 "Critical Hit",
-                "Lucina dashes forward and strikes. If the attack connects, it has the potential to be a one-hit KO. Lucina dashes forward a long distance, so there's a risk that you can self-destruct, but you can press the button again to stop.");
+                "Lucina dashes forward and strikes. If the attack connects, it has the potential to be a one-hit KO. Lucina dashes forward a long distance, so there's a risk that you can self-destruct, but you can press the button again to stop.",
+                "Close-range", "Spacing");
 
         // Young Link
         insertFighter("Young Link", "The Legend of Zelda", "Fire Arrow",
@@ -411,7 +438,8 @@ public class SuperSmashDataWorker {
                 "Pulls out a throwable bomb that explodes on impact or when the fuse runs out.",
                 "Spins with his blade outstretched. Can be charged if used on the ground, and acts as a jump if used midair.",
                 "Triforce Slash",
-                "Young Link dashes forward to seal an opponent in the Triforce. He then strikes them repeatedly before launching them. The initial strike must hit in order for Young Link to begin his sealing combo.");
+                "Young Link dashes forward to seal an opponent in the Triforce. He then strikes them repeatedly before launching them. The initial strike must hit in order for Young Link to begin his sealing combo.",
+                "Hybrid", "Balanced");
 
         // Ganondorf
         insertFighter("Ganondorf", "The Legend of Zelda", "Warlock Punch",
@@ -421,7 +449,8 @@ public class SuperSmashDataWorker {
                 "Propels forward with a kick charged by dark power. In the air, he plunges diagonally downward.",
                 "Leaps upward and grabs opponents, electrocuting and launching them. It cannot be blocked by a shield.",
                 "Ganon, The Demon King",
-                "Ganondorf transforms into a boar-like beast, stuns nearby opponents with his gigantic blades, and then charges forward with full force to the edge of the stage. This move can hit all opponents in Ganondorf's line of attack.");
+                "Ganondorf transforms into a boar-like beast, stuns nearby opponents with his gigantic blades, and then charges forward with full force to the edge of the stage. This move can hit all opponents in Ganondorf's line of attack.",
+                "Close-range", "Grappler");
 
         // Mewtwo
         insertFighter("Mewtwo", "Pokemon", "Shadow Ball",
@@ -431,7 +460,8 @@ public class SuperSmashDataWorker {
                 "Makes eye contact with an enemy to stun them. Ineffective when airborne or not facing an opponent.",
                 "Warps instantly to another location. Directional input determines the destination.",
                 "Psystrike",
-                "Mewtwo Mega Evolves into Mega Mewtwo Y and fires a projectile that freezes and launches every foe it hits. This move travels through landscapes and opponents, making it easy to hit multiple opponents.");
+                "Mewtwo Mega Evolves into Mega Mewtwo Y and fires a projectile that freezes and launches every foe it hits. This move travels through landscapes and opponents, making it easy to hit multiple opponents.",
+                "Hybrid", "Balanced");
 
         // Roy
         insertFighter("Roy", "Fire Emblem", "Flare Blade",
@@ -441,7 +471,8 @@ public class SuperSmashDataWorker {
                 "Readies himself and turns aside any attack, sending it back against his foe, with greater force.",
                 "Jumps into the air with a slash wrapped in flames. The jump angle can be altered.",
                 "Critical Hit",
-                "Roy swings his blade around to catch enemies, and then brings the sword down to finish them off in a blast of fire. The initial swing not only hits opponents in front of Roy, but also those behind him.");
+                "Roy swings his blade around to catch enemies, and then brings the sword down to finish them off in a blast of fire. The initial swing not only hits opponents in front of Roy, but also those behind him.",
+                "Close-range", "Rushdown");
 
         // Chrom
         insertFighter("Chrom", "Fire Emblem", "Flare Blade",
@@ -451,7 +482,8 @@ public class SuperSmashDataWorker {
                 "Adopts a stance and counterattacks with greater force than the received attack.",
                 "Jumps upward and then slashes down while twirling. Drops straight down and launches opponents on the ground.",
                 "Awakening Aether",
-                "Chrom quickly charges forward, slashes upward, then swings his blade diagonally to launch opponents upward. If the first hit misses, the move doesn't activate. If it hits, the move can hit multiple opponents.");
+                "Chrom quickly charges forward, slashes upward, then swings his blade diagonally to launch opponents upward. If the first hit misses, the move doesn't activate. If it hits, the move can hit multiple opponents.",
+                "Close-range", "Rushdown");
 
         // Mr. Game & Watch
         insertFighter("Mr. Game & Watch", "Game & Watch", "Chef",
@@ -461,7 +493,8 @@ public class SuperSmashDataWorker {
                 "Collects projectiles in a bucket, or reflects projectiles he cannot collect. Tosses oil when the bucket is full!",
                 "Launches into the air and opens a parachute, allowing him to glide down.",
                 "Octopus",
-                "Mr. Game & Watch turns into a giant octopus, grabbing anyone he touches and dragging them off-screen. Button inputs control his four tentacles, which stretch and shrink. The octopus can also be moved up and down with the stick.");
+                "Mr. Game & Watch turns into a giant octopus, grabbing anyone he touches and dragging them off-screen. Button inputs control his four tentacles, which stretch and shrink. The octopus can also be moved up and down with the stick.",
+                "Hybrid", "Balanced");
 
         // Meta Knight
         insertFighter("Meta Knight", "Kirby", "Mach Tornado",
@@ -471,7 +504,8 @@ public class SuperSmashDataWorker {
                 "Vanishes, teleports in any direction, and then attacks reappearing.",
                 "Flies into the air, strikes, then strikes again after a loop. Enemies hit by this move are launched upward.",
                 "Darkness Illusion",
-                "Meta Knight raises his sword, emitting a blast of electricity. If he hits an opponent, he multiplies himself to attack and launch the opponent. If no one is hit, the move won't do anything.");
+                "Meta Knight raises his sword, emitting a blast of electricity. If he hits an opponent, he multiplies himself to attack and launch the opponent. If no one is hit, the move won't do anything.",
+                "Close-range", "Rushdown");
 
 
         // Pit
@@ -482,7 +516,8 @@ public class SuperSmashDataWorker {
                 "Shields his front and back and reflects projectiles, but he's vulnerable from above.",
                 "Flies high through the air. The flight angle can be changed while charging.",
                 "Lightning Chariot",
-                "Pit boards the Lightning Chariot and targets opponents with a targeting reticle before charging forward and launching any opponents he hits.");
+                "Pit boards the Lightning Chariot and targets opponents with a targeting reticle before charging forward and launching any opponents he hits.",
+                "Hybrid", "Balanced");
 
         // Dark Pit
         insertFighter("Dark Pit", "Kid Icarus", "Silver Bow",
@@ -492,7 +527,8 @@ public class SuperSmashDataWorker {
                 "Shields his front and back and reflects projectiles, but he's vulnerable from above.",
                 "Soars on shining black wings in any upward direction.",
                 "Dark Pitt Staff",
-                "Dark Pit uses his staff to launch opponents with a high-speed horizontal blast that goes straight through obstacles. It can hit multiple foes in a row, but only the first feels its full force.");
+                "Dark Pit uses his staff to launch opponents with a high-speed horizontal blast that goes straight through obstacles. It can hit multiple foes in a row, but only the first feels its full force.",
+                "Hybrid", "Balanced");
 
         // Zero Suit Samus
         insertFighter("Zero Suit Samus", "Metroid", "Paralyzer",
@@ -502,7 +538,8 @@ public class SuperSmashDataWorker {
                 "Flips through the air and buries opponents into the ground if she lands on them.",
                 "Raises into the air, striking multiple times, and then finishes with a spinning kick.",
                 "Zero Laser",
-                "Zero Suit Samus leaps to her Gunship and, donning her Power Suit, takes aim using a targeting reticle. Once fired, the laser hits consecutively and deals major damage. It finishes with one last energy blast that launches opponents.");
+                "Zero Suit Samus leaps to her Gunship and, donning her Power Suit, takes aim using a targeting reticle. Once fired, the laser hits consecutively and deals major damage. It finishes with one last energy blast that launches opponents.",
+                "Close-range", "Rushdown");
 
         // Wario
         insertFighter("Wario", "Wario", "Chomp",
@@ -512,7 +549,8 @@ public class SuperSmashDataWorker {
                 "Releases noxious gas from his rear end. It, uh ...\"charges\" automatically.",
                 "Jumps while spinning, hitting opponents multiple times.",
                 "Wario-Man",
-                "Wario wolfs down garlic and delivers a headbutt. Any foes hit by the headbutt are forced to deal with multiple Wario-Men's striking fists of justice. Finally, Wario-Man launches the foes with carefully stored flatulence. After transforming into Wario Man, he splits himself into copies that attack all at once. The final fart isn't affected by the charge of his down-special fart.");
+                "Wario wolfs down garlic and delivers a headbutt. Any foes hit by the headbutt are forced to deal with multiple Wario-Men's striking fists of justice. Finally, Wario-Man launches the foes with carefully stored flatulence. After transforming into Wario Man, he splits himself into copies that attack all at once. The final fart isn't affected by the charge of his down-special fart.",
+                "Close-range", "Balanced");
 
         // Snake
         insertFighter("Snake", "Metal Gear", "Hand Grenade",
@@ -522,7 +560,8 @@ public class SuperSmashDataWorker {
                 "Plants an explosive on the ground or directly on an opponent. Using down special again sets it off.",
                 "Grabs on to a Cypher and flies up into the air to avoid attacks. Pressing down causes Snake to let go.",
                 "Covering Fire",
-                "Snake calls for reinforcements, and then uses a targeting reticle to lock on to foes up to five times. Missiles are launched at the targets. If you don't lock on anyone, the missiles fly toward the reticle's last location.");
+                "Snake calls for reinforcements, and then uses a targeting reticle to lock on to foes up to five times. Missiles are launched at the targets. If you don't lock on anyone, the missiles fly toward the reticle's last location.",
+                "Long-range", "Zoner");
 
         // Ike
         insertFighter("Ike", "Fire Emblem", "Eruption",
@@ -532,7 +571,8 @@ public class SuperSmashDataWorker {
                 "Blocks and counters an attack. The strength of the opponent's strike decides the strength of the counter.",
                 "Throws his sword upward, jumps to grab it, and then swings it on the way down.",
                 "Great Aether",
-                "Ike knocks his foes into the air and then strikes them repeatedly. Finally, he slams them down to the ground with a single powerful blow. The first strike lacks reach, but it can hit multiple opponents.");
+                "Ike knocks his foes into the air and then strikes them repeatedly. Finally, he slams them down to the ground with a single powerful blow. The first strike lacks reach, but it can hit multiple opponents.",
+                "Close-range", "Spacing");
 
         // Diddy Kong
         insertFighter("Diddy Kong", "Donkey Kong", "Peanut Popgun",
@@ -542,7 +582,8 @@ public class SuperSmashDataWorker {
                 "Throws a banana peel behind himself to trip foes. Only one peel can exist at a time.",
                 "Rockets through the air and tackles opponents. Can be charged for extra distance.",
                 "Hyper Rocketbarrel",
-                "Diddy Kong multiplies himself and flies around the stage. He sometimes targets an opponent and charges at them. At the end of the attack, Diddy Kong charges at the opponent he damaged the most to launch them.");
+                "Diddy Kong multiplies himself and flies around the stage. He sometimes targets an opponent and charges at them. At the end of the attack, Diddy Kong charges at the opponent he damaged the most to launch them.",
+                "Hybrid", "Rushdown");
 
         // Lucas
         insertFighter("Lucas", "EarthBound", "PK Freeze",
@@ -552,7 +593,8 @@ public class SuperSmashDataWorker {
                 "Absorbs energy-based projectiles and weak explosions. Activates faster and heals more than Ness's.",
                 "Fires a steerable ball of lighting. Sends Lucas flying if he hits himself.",
                 "PK Starstorm",
-                "With the help of Kumatora and Boney, Lucas calls down a shower of meteors that damage any foes they hit. The meteors fall faster as time passes. The meteors' trajectory can be adjusted slightly with left or right input.");
+                "With the help of Kumatora and Boney, Lucas calls down a shower of meteors that damage any foes they hit. The meteors fall faster as time passes. The meteors' trajectory can be adjusted slightly with left or right input.",
+                "Hybrid", "Balanced");
 
         // Sonic
         insertFighter("Sonic", "Sonic", "Homing Attack",
@@ -562,7 +604,8 @@ public class SuperSmashDataWorker {
                 "Dashes forward rapidly. Can be powered up by repeatedly pressing the special-move button.",
                 "Creates a spring and leaps up high. The spring sticks around if used on the ground.",
                 "Super Sonic",
-                "Sonic uses the Chaos Emeralds to turn into Super Sonic and then dashes left and right, crossing through the stage at supersonic speed. You can adjust the angle at which Sonic moves through the air slightly up or down.");
+                "Sonic uses the Chaos Emeralds to turn into Super Sonic and then dashes left and right, crossing through the stage at supersonic speed. You can adjust the angle at which Sonic moves through the air slightly up or down.",
+                "Close-range", "Rushdown");
 
         // King Dedede
         insertFighter("King Dedede", "Kirby", "Inhale",
@@ -572,7 +615,8 @@ public class SuperSmashDataWorker {
                 "Charges up his hammer for a mighty blow. Can move while charging but takes damage if charged too long.",
                 "Jumps up high and then crashes downward. Can be canceled by tilting up.",
                 "Dede-Rush",
-                "Dedede slams an opponent into a chain-link cage with his hammer before unleashing missiles. He then transforms into Masked Dedede and launches the opponent. If you miss the first swing, the move doesn't activate.");
+                "Dedede slams an opponent into a chain-link cage with his hammer before unleashing missiles. He then transforms into Masked Dedede and launches the opponent. If you miss the first swing, the move doesn't activate.",
+                "Hybrid", "Balanced");
 
         // Olimar
         insertFighter("Olimar", "Pikmin", "Pikmin Pluck",
@@ -582,7 +626,8 @@ public class SuperSmashDataWorker {
                 "Blows his whistle to recall Pikmin and change their order.",
                 "Summons Winged Pikmin to fly him around. Less effective if laden with Pikmin.",
                 "End of Day",
-                "Olimar boards a ship and flies off, leaving his foes at the mercy of the indigenous creatures. The ship's return can be controlled with left and right. Upon landing, it explodes and launches nearby foes.");
+                "Olimar boards a ship and flies off, leaving his foes at the mercy of the indigenous creatures. The ship's return can be controlled with left and right. Upon landing, it explodes and launches nearby foes.",
+                "Long-range", "Zoner");
 
         // Lucario
         insertFighter("Lucario", "Pokemon", "Aura Sphere",
@@ -592,7 +637,8 @@ public class SuperSmashDataWorker {
                 "Prepares for an incoming attack, and counterattacks with a sliding kick if struck.",
                 "Dashes through the air and attacks at the end. Can swerve midflight with directional input.",
                 "Aura Storm",
-                "Lucario Mega evolves into Mega Lucario and jumps straight up. Then Lucario fires Aura straight down. The angle of the Aura can be adjusted left or right. Aim for opponents to deal the most damage you can.");
+                "Lucario Mega evolves into Mega Lucario and jumps straight up. Then Lucario fires Aura straight down. The angle of the Aura can be adjusted left or right. Aim for opponents to deal the most damage you can.",
+                "Hybrid", "Balanced");
 
         // R.O.B.
         insertFighter("R.O.B.", "R.O.B.", "Robo Beam",
@@ -602,7 +648,8 @@ public class SuperSmashDataWorker {
                 "Fires a spinning top. Only one can be on the stage at a time. Can be charged.",
                 "Flies into the air or hovers with its thrusters. Can also attack while airborne.",
                 "Guided Robo Beam",
-                "R.O.B. automatically lock on to multiple opponents, then fires homing lasers at them. Finish the attack by shooting a giant beam that hits multiple targets. The angle of the beam can be adjusted up or down.");
+                "R.O.B. automatically lock on to multiple opponents, then fires homing lasers at them. Finish the attack by shooting a giant beam that hits multiple targets. The angle of the beam can be adjusted up or down.",
+                "Hybrid", "Balanced");
 
         // Toon Link
         insertFighter("Toon Link", "The Legend of Zelda", "Hero's Box",
@@ -612,7 +659,8 @@ public class SuperSmashDataWorker {
                 "Pulls out a throwable bomb. It'll explode after a while or when it hits something.",
                 "Spins with his sword. Can hit opponents more than once and can be charged.",
                 "Triforce Slash",
-                "Toon Link charges forward and traps his foes in the Triforce. Then Toon Link strikes at foes repeatedly and launches them. Time the initial attack well, because missing the first slash leaves Toon Link hanging.");
+                "Toon Link charges forward and traps his foes in the Triforce. Then Toon Link strikes at foes repeatedly and launches them. Time the initial attack well, because missing the first slash leaves Toon Link hanging.",
+                "Hybrid", "Balanced");
 
         // Wolf
         insertFighter("Wolf", "Star Fox", "Blaster",
@@ -622,7 +670,8 @@ public class SuperSmashDataWorker {
                 "Reflects projectiles with a shield. Takes longer than the version Fox uses, but it has greater power.",
                 "Unleashes a jump kick that hits multiple times. Directional input can change the direction of the jump.",
                 "Team Star Wolf",
-                "Wolf displays a targeting reticle in front of himself, which can lock on to opponents. If Wolf catches an opponent in the attack his team shows up and aids him firing on the target.");
+                "Wolf displays a targeting reticle in front of himself, which can lock on to opponents. If Wolf catches an opponent in the attack his team shows up and aids him firing on the target.",
+                "Close-range", "Rushdown");
 
         // Villager
         insertFighter("Villager", "Animal Crossing", "Pocket",
@@ -632,7 +681,8 @@ public class SuperSmashDataWorker {
                 "Plants a seed, waters it, and chops the tree down. Each step has a different effect on foes.",
                 "Dons a balloon hat and flies around. Great maneuverability, but the balloons can be popped.",
                 "Dream Home",
-                "Tom Nook and his gang rush in to build a totally affordable and reliable house for you. Then the house explodes, sending nearby opponents flying.");
+                "Tom Nook and his gang rush in to build a totally affordable and reliable house for you. Then the house explodes, sending nearby opponents flying.",
+                "Long-range", "Zoner");
 
         // Mega Man
         insertFighter("Mega Man", "Mega Man", "Metal Blade",
@@ -642,7 +692,8 @@ public class SuperSmashDataWorker {
                 "Fires Wood Man's leaves, which can be used to protect himself if the button is held.",
                 "Summons his faithful dog, Rush, to propel him to new heights.",
                 "Mega Legends",
-                "Mega Man fires a Black Hole Bomb forward and draws in opponents. Anyone pulled in faces several generations of Mega Man, as well as Proto Man and Bass, who all fire their Busters in unison.");
+                "Mega Man fires a Black Hole Bomb forward and draws in opponents. Anyone pulled in faces several generations of Mega Man, as well as Proto Man and Bass, who all fire their Busters in unison.",
+                "Long-range", "Zoner");
 
         // Wii Fit Trainer
         insertFighter("Wii Fit Trainer", "Wii Fit", "Sun Salutation",
@@ -652,7 +703,8 @@ public class SuperSmashDataWorker {
                 "Inhales deeply. Can heal, boost movement, and increase launch power with good timing.",
                 "Gyrates into the air, striking opponents. Floating is possible with rapid button presses.",
                 "Wii Fit",
-                "Wii Fit Trainer sends an army of yoga pose silhouettes flying out. These silhouettes grow in size and push foes away, even off the stage! Foes that are close when this move begins may be hit multiple times in a row.");
+                "Wii Fit Trainer sends an army of yoga pose silhouettes flying out. These silhouettes grow in size and push foes away, even off the stage! Foes that are close when this move begins may be hit multiple times in a row.",
+                "Long-range", "Zoner");
 
         // Rosalina & Luma
         insertFighter("Rosalina & Luma", "Super Mario", "Luma Shot",
@@ -662,7 +714,8 @@ public class SuperSmashDataWorker {
                 "Draws items and projectiles safely toward her. While being drawn in, they can damage foes.",
                 "Flies into the air at an angle. The angle can be adjusted with left or right directional input.",
                 "Grand Star",
-                "A Grand Star shoots out stars while also pulling in opponents that are hit. In the end, the Grand Star explodes. Rosalina and Luma can freely move around during the Final Smash, giving them a chance to land extra attacks.");
+                "A Grand Star shoots out stars while also pulling in opponents that are hit. In the end, the Grand Star explodes. Rosalina and Luma can freely move around during the Final Smash, giving them a chance to land extra attacks.",
+                "Hybrid", "Balanced");
 
         // Little Mac
         insertFighter("Little Mac", "Punch-Out!!", "Straight Lunge",
@@ -672,7 +725,8 @@ public class SuperSmashDataWorker {
                 "Leaps forward, dodging low attacks and delivering a punch. A second press unleashes the punch early.",
                 "Punches upward while twisting into the air. Hits opponents multiple times.",
                 "Giga Mac Rush",
-                "Little Mac transforms into Giga Mac and charges forward. If he strikes an opponent, he unleashes a flurry of punches, finishing with a powerful uppercut. If the initial blow misses, he transforms back into Little Mac.");
+                "Little Mac transforms into Giga Mac and charges forward. If he strikes an opponent, he unleashes a flurry of punches, finishing with a powerful uppercut. If the initial blow misses, he transforms back into Little Mac.",
+                "Close-range", "Rushdown");
 
         // Greninja
         insertFighter("Greninja", "Pokemon", "Water Shuriken",
@@ -682,7 +736,8 @@ public class SuperSmashDataWorker {
                 "Evades an incoming enemy attack by summoning a substitute and then counterattacking.",
                 "Fires a powerful water jet, propelling itself in whichever direction the stick is tilted.",
                 "Secret Ninja Attack",
-                "Greninja uses Mat Block to flip foes into the air before striking them repeatedly and smacking them back down to the ground. The Mat Block doesn't have much range, so make use of Greninja's speed to get in close to opponents.");
+                "Greninja uses Mat Block to flip foes into the air before striking them repeatedly and smacking them back down to the ground. The Mat Block doesn't have much range, so make use of Greninja's speed to get in close to opponents.",
+                "Close-range", "Rushdown");
 
         // Palutena
         insertFighter("Palutena", "Kid Icarus", "Autoreticle",
@@ -692,7 +747,8 @@ public class SuperSmashDataWorker {
                 "Counters physical attacks and reflects projectiles.",
                 "Teleports in any direction. Can't attack or be attacked while warping.",
                 "Black Hole Laser",
-                "Palutena creates a black hole to pull in foes before unleashing a wide laser beam to damage and launch them. The beam deals more damage to fighters caught in the black hole.");
+                "Palutena creates a black hole to pull in foes before unleashing a wide laser beam to damage and launch them. The beam deals more damage to fighters caught in the black hole.",
+                "Hybrid", "Balanced");
 
 
         // PAC-MAN
@@ -703,7 +759,8 @@ public class SuperSmashDataWorker {
                 "Summons a fire hydrant that shoots powerful jets of water, pushing nearby fighters.",
                 "Bounces high into the air with a trampoline that sticks around for a little while.",
                 "Super Pac-Man",
-                "PAC-MAN grows giant and moves across the screen at high speed. You can adjust the direction a bit with each crossing. The landscape doesn't affect this giant PAC-MAN, and foes he chomps are launched.\n");
+                "PAC-MAN grows giant and moves across the screen at high speed. You can adjust the direction a bit with each crossing. The landscape doesn't affect this giant PAC-MAN, and foes he chomps are launched.",
+                "Hybrid", "Balanced");
 
         // Robin
         insertFighter("Robin", "Fire Emblem", "Thunder",
@@ -713,7 +770,8 @@ public class SuperSmashDataWorker {
                 "Conjures a dark curse that steals the life force of enemies.",
                 "Casts wind magic downward, dealing damage and boosting into the air twice.",
                 "Pair Up",
-                "Chrom dashes forward, and if he lands a hit, Robin joins him for a combination of attacks and launches the foe. After the attack, the Levin Sword and each tome are fully charged. Make sure to hit a foe with the initial dash.");
+                "Chrom dashes forward, and if he lands a hit, Robin joins him for a combination of attacks and launches the foe. After the attack, the Levin Sword and each tome are fully charged. Make sure to hit a foe with the initial dash.",
+                "Long-range", "Zoner");
 
         // Shulk
         insertFighter("Shulk", "Xenoblade Chronicles", "Monado Arts",
@@ -723,7 +781,8 @@ public class SuperSmashDataWorker {
                 "Evades an incoming enemy attack and delivers a swift counterattack.",
                 "Lifts enemies into the air with a rising slash. Can be followed up with a midair strike.",
                 "Chain Attack",
-                "Shulk unleashes a bright circle of light in front of him and calls upon his friends to help unleash a combo attack that deals damage to anyone caught in the light. The damage done depends on which of the Monado Arts is active.");
+                "Shulk unleashes a bright circle of light in front of him and calls upon his friends to help unleash a combo attack that deals damage to anyone caught in the light. The damage done depends on which of the Monado Arts is active.",
+                "Close-range", "Spacing");
 
         // Bowser Jr.
         insertFighter("Bowser Jr.", "Super Mario", "Clown Cannon",
@@ -733,7 +792,8 @@ public class SuperSmashDataWorker {
                 "Deploys a Mechakoopa that explodes if thrown, attacked, or just left alone.",
                 "Ejects from the Junior Clown Car just before it explodes. He can attack while he falls.",
                 "Shadow Mario Paint",
-                "Bowser Jr. becomes Shadow Mario in order to deal damage by painting a giant X on the screen. He is able to move during his Final Smash, allowing him to pull off follow-up attacks on his opponents.");
+                "Bowser Jr. becomes Shadow Mario in order to deal damage by painting a giant X on the screen. He is able to move during his Final Smash, allowing him to pull off follow-up attacks on his opponents.",
+                "Hybrid", "Zoner");
 
         // Duck Hunt
         insertFighter("Duck Hunt", "Duck Hunt", "Trick Shot",
@@ -743,7 +803,8 @@ public class SuperSmashDataWorker {
                 "Calls one of five gunmen who each have a different style. They can be defeated.",
                 "Flies into the air with nostalgic flapping sound. Can attack or dodge after a short time.",
                 "NES Zapper Posse",
-                "A flock of ducks flies by, and any opponents hit by them are set up for five gunmen to fire at. If the ducks don't hit anyone, nothing at all happens.");
+                "A flock of ducks flies by, and any opponents hit by them are set up for five gunmen to fire at. If the ducks don't hit anyone, nothing at all happens.",
+                "Long-range", "Zoner");
 
         // Ryu
         insertFighter("Ryu", "Street Fighter", "Hadoken",
@@ -753,7 +814,8 @@ public class SuperSmashDataWorker {
                 "Focuses, allowing himself to soak up one attack. The longer the charge, the longer the enemy is stunned.",
                 "Jumps with a powerful uppercut, which is strongest at the start. Power and speed increased if held.",
                 "Shin Shoryuken / Shinku Hadoken",
-                "Ryu unleashes a Shinku Hadoken that penetrates through the stage, allowing it to hit multiple opponents and deal serious damage. If Ryu is close to an enemy, he uses a Shin Shoryuken uppercut attack instead.");
+                "Ryu unleashes a Shinku Hadoken that penetrates through the stage, allowing it to hit multiple opponents and deal serious damage. If Ryu is close to an enemy, he uses a Shin Shoryuken uppercut attack instead.",
+                "Close-range", "Rushdown");
 
         // Ken
         insertFighter("Ken", "Street Fighter", "Hadoken",
@@ -763,7 +825,8 @@ public class SuperSmashDataWorker {
                 "Focuses, allowing himself to soak up one attack. If charged to the max the enemy's shield won't help them.",
                 "Ascends with a flaming uppercut when holding the button. Has more attack and horizontal-launch power than Ryu's.",
                 "Shippu Jinraikyaku / Shinryuken",
-                "Ken twirls and rises up with a Shinryuken, dealing damage to foes and tossing them into the air. If a foe is close to Ken, the attack becomes a Shippu Jinraikyaku, instead unleashing a flurry of kicks.");
+                "Ken twirls and rises up with a Shinryuken, dealing damage to foes and tossing them into the air. If a foe is close to Ken, the attack becomes a Shippu Jinraikyaku, instead unleashing a flurry of kicks.",
+                "Close-range", "Rushdown");
 
         // Cloud
         insertFighter("Cloud", "Final Fantasy", "Blade Beam",
@@ -773,7 +836,8 @@ public class SuperSmashDataWorker {
                 "Charges up the Limit Gauge. The Limit Break version launches opponents upward.",
                 "Thrusts his sword and then jumps into the air. Plunges with a high-speed cut if pressed again.",
                 "Omnislash / Omnislash Ver. 5",
-                "Cloud dashes forward and strikes foes. He then dashes upward and unleashes a flurry of swift slashes, finishing with a powerful blow that launches foes downward. Use it when the battle gets heated and try to hit several enemies.");
+                "Cloud dashes forward and strikes foes. He then dashes upward and unleashes a flurry of swift slashes, finishing with a powerful blow that launches foes downward. Use it when the battle gets heated and try to hit several enemies.",
+                "Close-range", "Spacing");
 
         // Corrin
         insertFighter("Corrin", "Fire Emblem", "Dragon Fang Shot",
@@ -783,7 +847,8 @@ public class SuperSmashDataWorker {
                 "Awaits an attack and punishes it by turning into a dragon, launching enemies with jets of water.",
                 "Flies into the air, dealing damage while climbing. The direction can be controlled somewhat.",
                 "Torrential Roar",
-                "Corrin creates two columns of light, one on each side. If the columns hit a foe, Corrin transforms into a dragon and unleashes a maelstrom that damages and launches. This move is great at hitting foes above you.");
+                "Corrin creates two columns of light, one on each side. If the columns hit a foe, Corrin transforms into a dragon and unleashes a maelstrom that damages and launches. This move is great at hitting foes above you.",
+                "Hybrid", "Spacing");
 
         // Bayonetta
         insertFighter("Bayonetta", "Bayonetta", "Bullet Climax",
@@ -793,7 +858,8 @@ public class SuperSmashDataWorker {
                 "Avoids an enemy attack and slows down time. The effect is reduced with repeated use.",
                 "Spins up into the air like a cyclone. A second twist is possible if combined with a midair jump.",
                 "Infernal Climax",
-                "Bayonetta enters Witch Time and attacks foes to fill up her magic gauge. If she fills the gauge, she summons the demon Gomorrah, who attacks up to three opponents. Keep pressing the button to increase Gomorrah's damage.");
+                "Bayonetta enters Witch Time and attacks foes to fill up her magic gauge. If she fills the gauge, she summons the demon Gomorrah, who attacks up to three opponents. Keep pressing the button to increase Gomorrah's damage.",
+                "Close-range", "Rushdown");
 
         // Inkling
         insertFighter("Inkling", "Splatoon", "Splattershot",
@@ -803,7 +869,8 @@ public class SuperSmashDataWorker {
                 "Throws a Splat Bomb, which explodes when it hits or after time passes. Holding the button tosses it farther.",
                 "Transforms into a squid and jumps straight up. Tilting left or right can change the angle a little.",
                 "Killer Wail",
-                "The Inkling sets up the Killer Wail, which fires a sonic blast. The beam damages and launches anyone caught in its path. The angle can be adjusted up or down. You can also move away from the beam and attack on your own.");
+                "The Inkling sets up the Killer Wail, which fires a sonic blast. The beam damages and launches anyone caught in its path. The angle can be adjusted up or down. You can also move away from the beam and attack on your own.",
+                "Hybrid", "Rushdown");
 
         // Ridley
         insertFighter("Ridley", "Metroid", "Plasma Breath",
@@ -813,7 +880,8 @@ public class SuperSmashDataWorker {
                 "Stabs forward with the sharp end of its tail. With the right positioning, this can be a debilitating blow!",
                 "Charges up and rises into the air with force. The path can be adjusted with directional input.",
                 "Plasma Scream",
-                "Ridley tackles foes, hurling them onto Samus's Gunship. He then fires a devastating plasma blast at them. This move can hit up to two opponents, and anyone hit who has 100% or more damage is instantly KO'd.");
+                "Ridley tackles foes, hurling them onto Samus's Gunship. He then fires a devastating plasma blast at them. This move can hit up to two opponents, and anyone hit who has 100% or more damage is instantly KO'd.",
+                "Close-range", "Grappler");
 
         // Simon
         insertFighter("Simon", "Castlevania", "Axe",
@@ -823,7 +891,8 @@ public class SuperSmashDataWorker {
                 "Throws a bottle of holy water diagonally downward. Pillars of fire erupt from where it lands.",
                 "Performs an uppercut while rising up high. Lands multiple blows if it hits the moment he leaves the ground.",
                 "Grand Cross",
-                "Simon traps nearby opponents in a coffin and repeatedly attacks them with crosses made of holy light. You can hit multiple opponents at the same time, so try to activate the move when opponents are clustered together.");
+                "Simon traps nearby opponents in a coffin and repeatedly attacks them with crosses made of holy light. You can hit multiple opponents at the same time, so try to activate the move when opponents are clustered together.",
+                "Long-range", "Zoner");
 
         // Richter
         insertFighter("Ritcher", "Castlevania", "Axe",
@@ -833,7 +902,8 @@ public class SuperSmashDataWorker {
                 "Throws a bottle of holy water diagonally downward. Pillars of fire erupt from where it lands.",
                 "Performs an uppercut while rising up high. Lands multiple blows if it hits the moment he leaves the ground.",
                 "Grand Cross",
-                "Richter traps nearby opponents in a coffin and repeatedly attacks them with crosses made of holy light. You can hit multiple opponents at the same time, so try to activate the move when opponents are clustered together.");
+                "Richter traps nearby opponents in a coffin and repeatedly attacks them with crosses made of holy light. You can hit multiple opponents at the same time, so try to activate the move when opponents are clustered together.",
+                "Long-range", "Zoner");
 
         // King K. Rool
         insertFighter("King K. Rool", "Donkey Kong", "Blunderbuss",
@@ -843,7 +913,8 @@ public class SuperSmashDataWorker {
                 "Counterattacks with his belly. Can reflect projectiles, but it doesn't protect from behind.",
                 "Rises up into the air wearing a propeller, damaging any opponents caught in the attack.",
                 "Blast-o-Matic",
-                "King K. Rool charges forward. He then fires the Blast-o-Matic from his fortress, striking any fighters he hit with his first attack. This blast completely destroys Donkey Kong Island, dealing serious damage and launching fighters.");
+                "King K. Rool charges forward. He then fires the Blast-o-Matic from his fortress, striking any fighters he hit with his first attack. This blast completely destroys Donkey Kong Island, dealing serious damage and launching fighters.",
+                "Long-range", "Zoner");
 
         // Isabelle
         insertFighter("Isabelle", "Animal Crossing", "Pocket",
@@ -853,7 +924,8 @@ public class SuperSmashDataWorker {
                 "Buries Lloid in the ground. If touched by a foe, it rises up, dealing constant damage, and then explodes.",
                 "Flies around with balloons. Great maneuverability, but the balloons can be popped.",
                 "Dream Town Hall",
-                "Tom Nook and his gang show up to build a Town Hall. The move traps opponents, and then Town Hall explodes, launching those caught in the blast. If no one is caught in the initial attack nothing happens.");
+                "Tom Nook and his gang show up to build a Town Hall. The move traps opponents, and then Town Hall explodes, launching those caught in the blast. If no one is caught in the initial attack nothing happens.",
+                "Long-range", "Zoner");
 
 
         // Incineroar
@@ -864,7 +936,8 @@ public class SuperSmashDataWorker {
                 "Increases attack power by taking hits from opponents. The power is relative to the damage taken.",
                 "Jumps into the air, then dives down diagonally. Causes an explosion when landing that hits nearby opponents.",
                 "Max Malicious Moonsault",
-                "Incineroar grabs an opponent while engulfed in flames. It then repeatedly attacks the foe before slamming them back into a ring. Only one fighter can be grabbed, but the final blast deals damage to anyone nearby.");
+                "Incineroar grabs an opponent while engulfed in flames. It then repeatedly attacks the foe before slamming them back into a ring. Only one fighter can be grabbed, but the final blast deals damage to anyone nearby.",
+                "Close-range", "Grappler");
 
         // Piranha Plant
         insertFighter("Piranha Plant", "Super Mario", "Ptooie",
@@ -874,7 +947,8 @@ public class SuperSmashDataWorker {
                 "Withdraws into the pot and then pops out to bite opponents. The longer it's charged, the more range it has.",
                 "Spins leaves to fly. Can be moved left or right. Does damage if it makes contact.",
                 "Petey Piranha",
-                "Piranha Plant summons a giant Petey Piranha that moves left and right while swinging cages. Fighters hit by a cage will be trapped. In the end, Petey Piranha throws the cages downward, launching the fighters trapped inside.");
+                "Piranha Plant summons a giant Petey Piranha that moves left and right while swinging cages. Fighters hit by a cage will be trapped. In the end, Petey Piranha throws the cages downward, launching the fighters trapped inside.",
+                "Long-range", "Zoner");
 
         // Joker
         insertFighter("Joker", "Persona", "Gun / Gun Special",
@@ -884,7 +958,8 @@ public class SuperSmashDataWorker {
                 "Braces for an attack. If hit, charges the Rebellion Gauge. Press and hold to charge. While Arsene is active, counterattacks.",
                 "Throws a grappling hook to grab edges and opponents. While Arsene is active, flies upward using Arsene's wings.",
                 "All-Out Attack",
-                "Joker dashes forward to strike. You can reverse directions while moving. If it hits, the Phantom Thieves will execute an All-Out Attack on up to four opponents. KOs instantly if damage is high enough.");
+                "Joker dashes forward to strike. You can reverse directions while moving. If it hits, the Phantom Thieves will execute an All-Out Attack on up to four opponents. KOs instantly if damage is high enough.",
+                "Hybrid", "Zoner");
 
         // Hero
         insertFighter("Hero", "Dragon Quest", "Frizz/Fizzle/Kafrizz",
@@ -894,7 +969,8 @@ public class SuperSmashDataWorker {
                 "Opens a command window that you can choose a command from. You can cancel the window by jumping or shielding.",
                 "Summons a tornado to lift you upward. The wind will cut through surrounding enemies. You can rise up higher when charged.",
                 "Gigaslash",
-                "The hero swings his sword forward. If it hits an opponent, the hero calls upon the power of past protagonists. This attack can hit up to three fighters and will launch them all at the end of the move.");
+                "The hero swings his sword forward. If it hits an opponent, the hero calls upon the power of past protagonists. This attack can hit up to three fighters and will launch them all at the end of the move.",
+                "Long-range", "Balanced");
 
         // Banjo & Kazooie
         insertFighter("Banjo & Kazooie", "Banjo-Kazooie", "Egg Firing / Breegull Blaster",
@@ -904,8 +980,8 @@ public class SuperSmashDataWorker {
                 "Shoots a grenade egg diagonally upward in the direction Kazooie isn't facing. Make sure to face away from your target.",
                 "Jumps high into the air using a Shock Spring Pad. You can freely move and attack after jumping.",
                 "The Mighty Jinjonator",
-                "Banjo and Kazooie summon a statue from the ground. If it hits an opponent, the mighty Jinjonator will awaken and unleash high-speed strikes alongside other Jinjos to launch the opponent.");
-
+                "Banjo and Kazooie summon a statue from the ground. If it hits an opponent, the mighty Jinjonator will awaken and unleash high-speed strikes alongside other Jinjos to launch the opponent.",
+                "Hybrid", "Balanced");
 
         // Terry
         insertFighter("Terry", "Fatal Fury", "Power Wave",
@@ -915,7 +991,8 @@ public class SuperSmashDataWorker {
                 "Knock opponents into the air with a knee strike, then follow up with a diagonal downward punch.",
                 "Strike against airborne threats by rising up feet first. Tilt the stick left or right to move slightly.",
                 "Triple Wolf",
-                "A powerful triple combo that starts with Triple Geyser, continues with Power Dunk, and ends with Buster Wolf. Triple Geyser can damage multiple opponents, but only the first opponent it hits suffers the full combo.");
+                "A powerful triple combo that starts with Triple Geyser, continues with Power Dunk, and ends with Buster Wolf. Triple Geyser can damage multiple opponents, but only the first opponent it hits suffers the full combo.",
+                "Close-range", "Rushdown");
 
 
         // Byleth
@@ -926,7 +1003,8 @@ public class SuperSmashDataWorker {
                 "Charge up the axe, then swing down with great force. The move leaves you vulnerable, but it's a devastating blow if it connects.",
                 "Stretch the sword outward, jumping upward if it hits an opponent. You can use this attack to recover or dangle if you hit an edge.",
                 "Progenitor God Ruptured Heaven",
-                "Stretch out the sword, attacking in front of you. If it hits an opponent, Sothis will lend you her strength, allowing you to unleash a powerful attack with the Sword of the Creator. This attack can hit up to three opponents.");
+                "Stretch out the sword, attacking in front of you. If it hits an opponent, Sothis will lend you her strength, allowing you to unleash a powerful attack with the Sword of the Creator. This attack can hit up to three opponents.",
+                "Hybrid", "Spacing");
 
         // Min Min
         insertFighter("Min Min", "ARMS", "Punch",
@@ -936,7 +1014,8 @@ public class SuperSmashDataWorker {
                 "The right ARM will cycle, in order, through Ramram, Megawatt, and Dragon.",
                 "On the ground, the ARMS boost the jump. In the air, the ARMS extend upward to attack or to grab on to an edge.",
                 "ARMS Rush",
-                "One opponent will be caught up in an attack from the left ARM as it transforms into Dragon, and from numerous ARMS fighters who swoop in to deal damage and send the opponent flying.");
+                "One opponent will be caught up in an attack from the left ARM as it transforms into Dragon, and from numerous ARMS fighters who swoop in to deal damage and send the opponent flying.",
+                "Long-range", "Balanced");
 
         // Ivysaur
         insertFighter("Ivysaur", "Pokemon", "Bullet Seed",
@@ -946,7 +1025,8 @@ public class SuperSmashDataWorker {
                 "Switches to Charizard. Immune to damage initially, but become vulnerable if used repeatedly.",
                 "Attacks with vines like they're whips. The vines can also grab on to edges.",
                 "Triple Finish",
-                "Squirtle, Ivysaur, and Charizard perform a synchronized combo attack. The attack hits a wide range in front of the trio and deals damage to opponents caught in it, pushing them away.");
+                "Squirtle, Ivysaur, and Charizard perform a synchronized combo attack. The attack hits a wide range in front of the trio and deals damage to opponents caught in it, pushing them away.",
+                "Hybrid", "Balanced");
 
 
         // Charizard
@@ -957,7 +1037,8 @@ public class SuperSmashDataWorker {
                 "Switches to Squirtle. Immune to damage initially, but become vulnerable if used repeatedly.",
                 "Spirals into the sky. Can hit opponents multiple times while soaring upward.",
                 "Triple Finish",
-                "Squirtle, Ivysaur, and Charizard perform a synchronized combo attack. The attack hits a wide range in front of the trio and deals damage to opponents caught in it, pushing them away.");
+                "Squirtle, Ivysaur, and Charizard perform a synchronized combo attack. The attack hits a wide range in front of the trio and deals damage to opponents caught in it, pushing them away.",
+                "Hybrid", "Balanced");
 
         // Squirtle
         insertFighter("Squirtle", "Pokemon", "Water Gun",
@@ -967,7 +1048,8 @@ public class SuperSmashDataWorker {
                 "Switches to Ivysaur. Immune to damage initially, but become vulnerable if used repeatedly.",
                 "Rides a torrent of water, hitting opponents. Tilting left and right can adjust the rising angle.",
                 "Triple Finish",
-                "Squirtle, Ivysaur, and Charizard perform a synchronized combo attack. The attack hits a wide range in front of the trio and deals damage to opponents caught in it, pushing them away.");
+                "Squirtle, Ivysaur, and Charizard perform a synchronized combo attack. The attack hits a wide range in front of the trio and deals damage to opponents caught in it, pushing them away.",
+                "Hybrid", "Balanced");
 
         // Steve
         insertFighter("Steve", "Minecraft", "Mine / Craft / Create Block",
@@ -977,7 +1059,8 @@ public class SuperSmashDataWorker {
                 "Use several materials to create an explosive block. Hold the special-move button and left or right to use redstone and place a plate that can set off the block.",
                 "Equip an elytra, accelerate with a firework rocket, and glide through the air. Adjust the trajectory by inputting up and down.",
                 "House of Boom",
-                "Create a big piston that strikes out to one side. The piston can hit multiple opponents, but only one will be launched into a dark room that then explodes.");
+                "Create a big piston that strikes out to one side. The piston can hit multiple opponents, but only one will be launched into a dark room that then explodes.",
+                "Hybrid", "Balanced");
 
         // Sephiroth
         insertFighter("Sephiroth", "Final Fantasy", "Flare/Megaflare/Gigaflare",
@@ -987,7 +1070,8 @@ public class SuperSmashDataWorker {
                 "Create a barrier of light in front of you. After some time passes or the barrier is struck, it will change into a Scintilla attack.",
                 "Input a direction with the stick, and you'll slash in that direction. Hold down the attack button to strike eight times in a row.",
                 "Supernova",
-                "Swing the sword forward in a wide range. If it hits an opponent, Safer Sephiroth will appear and deal massive damage with a supernova explosion that can also sometimes inflict status effects. The first swing can hit up to three opponents.");
+                "Swing the sword forward in a wide range. If it hits an opponent, Safer Sephiroth will appear and deal massive damage with a supernova explosion that can also sometimes inflict status effects. The first swing can hit up to three opponents.",
+                "Hybrid", "Spacing");
 
         // Pyra
         insertFighter("Prya", "Xenoblade Chronicles", "Flame Nova",
@@ -997,7 +1081,8 @@ public class SuperSmashDataWorker {
                 "Swap to Mythra in the middle of the battle. Mythra is faster but less powerful.",
                 "Leap into the air and then drop quickly, stabbing downward. Upon landing, a pillar of fire will appear in front of you.",
                 "Burning Sword",
-                "Rex can hit multiple opponents with a huge pillar of fire, launching them away. This Final Smash deals less damage than Mythra's, but it has higher launch power and can more easily KO opponents.");
+                "Rex can hit multiple opponents with a huge pillar of fire, launching them away. This Final Smash deals less damage than Mythra's, but it has higher launch power and can more easily KO opponents.",
+                "Hybrid", "Rushdown");
 
         // Mythra
         insertFighter("Mythra", "Xenoblade Chronicles", "Lightning Buster",
@@ -1007,7 +1092,8 @@ public class SuperSmashDataWorker {
                 "Swap to Pyra in the middle of the battle. Pyra is slower but more powerful.",
                 "Jump with an overhead slash, and then follow up with a blast of light diagonally downward. Scatter the blast by pressing the button again before it fires.",
                 "Sacred Arrow",
-                "Rain down arrows from above at the opponent Rex strikes. This Final Smash has less launch power than Pyra's, but it deals high continuous damage in a wide area.");
+                "Rain down arrows from above at the opponent Rex strikes. This Final Smash has less launch power than Pyra's, but it deals high continuous damage in a wide area.",
+                "Hybrid", "Rushdown");
 
         // Kazuya
         insertFighter("Kazuya", "Tekken", "Devil Baster",
@@ -1017,7 +1103,8 @@ public class SuperSmashDataWorker {
                 "Grab the opponent in front of you and rise upward, then slam them to the ground. This attack ignores an opponent's shield.",
                 "Grow devil wings and rise upward. You can move slightly to the left or right. While you are rising, you can attack opponents with the claws on the wings.",
                 "Final Blaster",
-                "Unleash a long-ranged beam from the forehead. If the beam hits an opponent, more beams from the wings and chest will be unleashed, covering a wide range and damaging any foes they hit.");
+                "Unleash a long-ranged beam from the forehead. If the beam hits an opponent, more beams from the wings and chest will be unleashed, covering a wide range and damaging any foes they hit.",
+                "Close-range", "Rushdown");
 
         // Sora
         insertFighter("Sora", "Kingdom Hearts", "Magic",
@@ -1027,6 +1114,7 @@ public class SuperSmashDataWorker {
                 "You can enter up to two inputs while charging forward. Directional inputs send you that way, while the special-move button sends you toward opponents.",
                 "Rise up into the air while twirling. Move slightly left or right by inputting either direction. You can use a side special at the end of this move too!",
                 "Sealing the Keyhole",
-                "Hit opponents with a beam and launch them toward a Keyhole. Up to three opponents can be affected by the Keyhole, and if their damage is high enough, they'll be instantly KO'd.");
+                "Hit opponents with a beam and launch them toward a Keyhole. Up to three opponents can be affected by the Keyhole, and if their damage is high enough, they'll be instantly KO'd.",
+                "Hybrid", "Balanced");
     }
 }
