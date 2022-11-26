@@ -69,11 +69,19 @@ public class TimerActivity extends AppCompatActivity{
                     return;
                 }
 
+
                 long inputInMillis = Long.parseLong(numberEntered) * 60000;
 
                 // Check if number entered is Zero
                 if(inputInMillis == 0){
                     Toast.makeText(TimerActivity.this, "Please enter a positive number",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Check if number entered is Zero
+                if(inputInMillis > 1440 * 60000){
+                    Toast.makeText(TimerActivity.this, "Max time allow is 24 hours",
                             Toast.LENGTH_SHORT).show();
                     return;
                 }

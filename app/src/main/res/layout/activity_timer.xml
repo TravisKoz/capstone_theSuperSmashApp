@@ -97,7 +97,7 @@
         android:shadowRadius="3"
         android:text="@string/_00_00_tx"
         android:textColor="@color/white"
-        android:textSize="90sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
