@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 openMainMenuActivity();
                 //finish();
             }
-        }, 3000);
+        }, 1500); // Start the MainMenuActivity after 1.5 seconds the app is loaded
 
         mDbOpenHelper = new SuperSmashOpenHelper(this);
 

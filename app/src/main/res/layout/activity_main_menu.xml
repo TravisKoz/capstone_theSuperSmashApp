@@ -91,7 +91,7 @@
 
                 <ImageView
                     android:layout_width="90dp"
-                    android:layout_height="100dp"
+                    android:layout_height="90dp"
                     android:src="@drawable/iv_stage_image"/>
                 <TextView
                     android:layout_width="wrap_content"

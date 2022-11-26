@@ -7,12 +7,15 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
-public class TimerActivity extends AppCompatActivity {
+public class TimerActivity extends AppCompatActivity{
     private static final long START_TIME_IN_MILLIS = 60000;
 
     // Variables
@@ -23,6 +26,8 @@ public class TimerActivity extends AppCompatActivity {
     private Button m5MinBtn;
     private Button m2MinBtn;
     private Button m1MinBtn;
+    private EditText mEditTimeInput;
+    private Button mSetTimeBtn;
 
     int minute, second;
 
@@ -48,6 +53,37 @@ public class TimerActivity extends AppCompatActivity {
         m5MinBtn = findViewById(R.id.btn5min);
         m2MinBtn = findViewById(R.id.btn2min);
         m1MinBtn = findViewById(R.id.btn1min);
+        mEditTimeInput = findViewById(R.id.pick_time_et);
+        mSetTimeBtn = findViewById(R.id.btn_set_time);
+
+        // Set time
+        mSetTimeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String numberEntered = mEditTimeInput.getText().toString();
+
+                //Check if box is empty
+                if(numberEntered.length() == 0){
+                    Toast.makeText(TimerActivity.this, "Please enter your time in minutes",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                long inputInMillis = Long.parseLong(numberEntered) * 60000;
+
+                // Check if number entered is Zero
+                if(inputInMillis == 0){
+                    Toast.makeText(TimerActivity.this, "Please enter a positive number",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                // Takes the value entered to set the time
+                setTime(inputInMillis);
+                // Clear the edit textBox that receives the time entered
+                mEditTimeInput.setText("");
+
+            }
+        });
 
         // Event listener that Calls the pauseTimer or startTimer methods
         mStartPauseBtn.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +94,8 @@ public class TimerActivity extends AppCompatActivity {
                     pauseTimer();
                 } else {
                     startTimer();
+                    mSetTimeBtn.setVisibility(View.INVISIBLE);
+                    mEditTimeInput.setVisibility(View.INVISIBLE);
                 }
             }
         });
@@ -102,38 +140,34 @@ public class TimerActivity extends AppCompatActivity {
         mPickTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mStartTimeInMillis = START_TIME_IN_MILLIS / 12;
-                mTimeLeftInMillis = mStartTimeInMillis;
-                updateCountDownText();
-                updateButtons();
+                mSetTimeBtn.setVisibility(View.VISIBLE);
+                mEditTimeInput.setVisibility(View.VISIBLE);
             }
         });
 
         updateCountDownText();
     }
 
-//    public void popTimerPicker(View view) {
-//        TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
-//            @Override
-//            public void onTimeSet(TimePicker timePicker, int selectedMinute, int selectedSecond) {
-//                minute = selectedMinute;
-//                second = selectedSecond;
-//
-//                String timeLeftFormatted;
-//                timeLeftFormatted = String.format(Locale.getDefault(),
-//                        "%02d:%02d", minute, second);
-//
-//                mCountDownTextV.setText(timeLeftFormatted);
-//                //updateCountDownText();
-//                updateButtons();
-//            }
-//        };
-//
-//        int style = AlertDialog.THEME_HOLO_DARK;
-//        TimePickerDialog timePickerDialog = new TimePickerDialog(this, style, onTimeSetListener, minute, second, false);
-//        timePickerDialog.show();
-//    }
+    // Close the keyboard when number of minutes have been set
+    private void closeKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+    // Method that sets the time
+    private void setTime(long inputInMillis) {
+        mStartTimeInMillis = inputInMillis;
+        resetTimer();
+        closeKeyboard();
+        mSetTimeBtn.setVisibility(View.INVISIBLE);
+        mEditTimeInput.setVisibility(View.INVISIBLE);
 
+    }
+
+
+    // Function that starts the timer
     private void startTimer() {
         mEndTime = System.currentTimeMillis() + mTimeLeftInMillis;
 
@@ -157,18 +191,21 @@ public class TimerActivity extends AppCompatActivity {
         updateButtons();
     }
 
+    // Function that reset the timer
     private void resetTimer() {
         mTimeLeftInMillis = mStartTimeInMillis;
         updateCountDownText();
         updateButtons();
     }
 
+    // Function that update the buttons
     private void updateButtons() {
         if (mTimerRunning) {
             mResetBtn.setVisibility(View.INVISIBLE);
             m5MinBtn.setVisibility(View.INVISIBLE);
             m2MinBtn.setVisibility(View.INVISIBLE);
             m1MinBtn.setVisibility(View.INVISIBLE);
+            mPickTimeBtn.setVisibility(View.INVISIBLE);
 
             mStartPauseBtn.setText(R.string.pause_text);
         } else {
@@ -176,6 +213,7 @@ public class TimerActivity extends AppCompatActivity {
             m2MinBtn.setVisibility(View.VISIBLE);
             m1MinBtn.setVisibility(View.VISIBLE);
             mResetBtn.setVisibility(View.VISIBLE);
+            mPickTimeBtn.setVisibility(View.VISIBLE);
 
             mStartPauseBtn.setText(R.string.start_text);
 
@@ -185,6 +223,8 @@ public class TimerActivity extends AppCompatActivity {
                 m2MinBtn.setVisibility(View.VISIBLE);
                 m1MinBtn.setVisibility(View.VISIBLE);
                 mResetBtn.setVisibility(View.VISIBLE);
+                mPickTimeBtn.setVisibility(View.VISIBLE);
+
 
             } else {
                 mStartPauseBtn.setVisibility(View.VISIBLE);
@@ -200,6 +240,7 @@ public class TimerActivity extends AppCompatActivity {
         }
     }
 
+    // Function that update the count down text
     private void updateCountDownText() {
         // Local variables
         int hours = (int) (mTimeLeftInMillis / 1000) / 3600;
@@ -219,12 +260,15 @@ public class TimerActivity extends AppCompatActivity {
         mCountDownTextV.setText(timeLeftFormatted);
     }
 
+    // Function that cancel the timer
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
         updateButtons();
     }
 
+
+    // Save the instance state for get device rotate to landscape or portrait mode
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -233,6 +277,7 @@ public class TimerActivity extends AppCompatActivity {
         outState.putLong("endTime", mEndTime);
     }
 
+    // Restore the instance state for get device rotate to landscape or portrait mode
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
