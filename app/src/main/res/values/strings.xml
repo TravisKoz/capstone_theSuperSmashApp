@@ -1,181 +1,180 @@
 <resources>
-  <string name="app_name">capstone_theSuperSmashApp</string>
-  <string name="appTitleLabel">The Super Smash App</string>
-  <string name="timer_label">Timer</string>
-  <string name="fighters_label">Fighters</string>
-  <string name="notes_label">Notes</string>
-  <string name="title_activity_notes">NotesActivity</string>
-  <string name="tracker_label">Win/Lose</string>
+    <string name="app_name">capstone_theSuperSmashApp</string>
+    <string name="appTitleLabel">The Super Smash App</string>
+    <string name="timer_label">Timer</string>
+    <string name="fighters_label">Fighters</string>
+    <string name="notes_label">Notes</string>
+    <string name="title_activity_notes">NotesActivity</string>
+    <string name="tracker_label">Win/Lose</string>
 
-  <string name="note_heading_text">Heading</string>
-  <string name="menu_cancel_text">Cancel</string>
-  <string name="hint_note_heading">Enter Note Heading:</string>
-  <string name="hint_note_body">Enter Message:</string>
-  <string name="title_activity_fighter">FighterActivity</string>
+    <string name="note_heading_text">Heading</string>
+    <string name="menu_cancel_text">Cancel</string>
+    <string name="hint_note_heading">Enter Note Heading:</string>
+    <string name="hint_note_body">Enter Message:</string>
+    <string name="title_activity_fighter">FighterActivity</string>
 
-  <string name="previous">Previous</string>
+    <string name="previous">Previous</string>
 
-  <string name="title_activity_fighters">Challengers Approaching
+    <string name="title_activity_fighters">Challengers Approaching
 </string>
-  <string name="fighter_name_text">Fighter</string>
-  <string name="game_series_symbol">Game series symbol</string>
+    <string name="fighter_name_text">Fighter</string>
+    <string name="game_series_symbol">Game series symbol</string>
 
-  <string name="pause_text">Pause</string>
-  <string name="start_text">Start</string>
-  <string name="neutral_b"><u>Neutral Special</u></string>
-  <string name="move_name_text">Move Name:</string>
-  <string name="side_b_text"><u>Side Special</u></string>
-  <string name="down_b_text"><u>Down Special</u></string>
-  <string name="final_smash"><u>Final Smash</u></string>
+    <string name="pause_text">Pause</string>
+    <string name="start_text">Start</string>
+    <string name="neutral_b"><u>Neutral Special</u></string>
+    <string name="move_name_text">Move Name:</string>
+    <string name="side_b_text"><u>Side Special</u></string>
+    <string name="down_b_text"><u>Down Special</u></string>
+    <string name="final_smash"><u>Final Smash</u></string>
 
-  <string name="colon">%1$s:</string>
+    <string name="colon">%1$s:</string>
 
-  <string name="up_b_text"><u>Up Special</u></string>
-  <string name="control1_text">Control stick ← or →</string>
-  <string name="control1_desc_text">Walk or run if you flick the stick</string>
-  <string name="control2_text">Control stick ↑ or X/Y button</string>
-  <string name="control2_desc_text">Jump, double jump, or footstool if close enough to opponent and currently in the air</string>
-  <string name="control3_text">Control stick ↓</string>
-  <string name="control3_desc_text">Crouch, fast-fall in the air</string>
-  <string name="control4_text">Shield Button</string>
-  <string name="control4_desc_text">Shield/Guard: A bubble that blocks all attacks. It shrinks when hit, becoming less effective. Likely causing a shield-poke.</string>
-  <string name="control5_text">Shield button + Control stick ↓</string>
-  <string name="control5_desc_text">Spot-dodge - For a short moment evade any attacks or grabs, can be cancelled into attacks earlier than the animation ends</string>
-  <string name="control6_text">Shield button + Control stick ←/→</string>
-  <string name="control6_desc_text">Roll - You are immune to damage only in the middle of the animation as you move left or right. Becomes stale with frequent use. There are punish windows at the beginning and end that grow when stale. \n\nDirectional Airdodge - similar to roll, but can go in 8 directions. (cannot perform any actions until the character falls a set distance after the input)</string>
-  <string name="control7_text">Attack button</string>
-  <string name="control7_desc_text">Jab and jab combo with consecutive presses or holding the button, varies between characters</string>
-  <string name="control8_desc">While Control stick ←/→/↑/↓, Attack button</string>
-  <string name="control8_desc_text">Tilt attack - Stronger than jab with emphasis on direction chosen. Good for combos and quick punish options</string>
-  <string name="control9_text">While Control stick ←/→/↑/↓, Attack button</string>
-  <string name="control9_desc_text">Tilt attack - Stronger than jab with emphasis on direction chosen. Good for combos and quick punish options</string>
-  <string name="control10_text">Simultaneous stick ←/→/↑/↓ + Attack button</string>
-  <string name="control10_desc_text">Smash attack - Kill move. Similar to tilt attack, but with more startup time and much more knockback potential</string>
-  <string name="control11_text">No-direction/←/→/↑/↓ + Special button</string>
-  <string name="control11_desc_text">Special attack - Signature moves of your character. With certain exceptions, there are 4 per character.\n\nThese can be anything and are a prime example for showing what a character has to offer in terms of strategic options and playstyles.</string>
-  <string name="control12_text">Grab button or Shield button + Attack button</string>
-  <string name="control12_desc_text">Grab - Core staple of any fighting game. It goes through shield and allows you to either pummel or throw your opponent in one of 4 directions you input while holding them.</string>
-  <string name="move_description">Move Description</string>
-  <string name="series_name">Series Name</string>
-  <string name="fighter_name">Fighter Name</string>
-  <string name="image_of_fighter">Image of fighter.</string>
-  <string name="franchise_symbol">Fighter\'s game franchise symbol.</string>
-  <string name="stage_legality_desc_text">Neutral stages may be chosen in any game of a set, including the first game. These are also referred to as starter stages (not to be confused with the term for stages that do not need to be unlocked to be used in-game). \n\nCounterpick stages may be chosen only after the first game of a set, such as games 2 and 3 of a best-of-3 set. Stages in this category tend to give a slight, though not overwhelming, advantage for certain characters over others, such that it would not be fair to include them in the neutral list. These stages may often (though not always) be chosen for counterpicking purposes, hence the name of the category.</string>
-  <string name="starter_category_text">Starter</string>
-  <string name="counterpick_or_starter_category_text">Counterpick/Starter</string>
-  <string name="counterpick_category_text">Counterpick</string>
-  <string name="final_destination_content_desc">Final Destination</string>
-  <string name="battlefield_content_desc">Battlefield</string>
-  <string name="smashville_content_desc">Smashville</string>
-  <string name="town_and_city_content_desc">Town and City</string>
-  <string name="small_battlefield_content_desc">Small Battlefield</string>
-  <string name="lylat_cruise_content_desc">Lylat Cruise</string>
-  <string name="pokemon_stadium_2_content_desc">Pokemon Stadium 2</string>
-  <string name="kalos_pokemon_league_content_desc">Kalos Pokemon League</string>
-  <string name="yoshis_story_content_desc">Yoshi\'s Story</string>
+    <string name="up_b_text"><u>Up Special</u></string>
+    <string name="control1_text">Control stick ← or →</string>
+    <string name="control1_desc_text">Walk or run if you flick the stick</string>
+    <string name="control2_text">Control stick ↑ or X/Y button</string>
+    <string name="control2_desc_text">Jump, double jump, or footstool if close enough to opponent and currently in the air</string>
+    <string name="control3_text">Control stick ↓</string>
+    <string name="control3_desc_text">Crouch, fast-fall in the air</string>
+    <string name="control4_text">Shield Button</string>
+    <string name="control4_desc_text">Shield/Guard: A bubble that blocks all attacks. It shrinks when hit, becoming less effective. Likely causing a shield-poke.</string>
+    <string name="control5_text">Shield button + Control stick ↓</string>
+    <string name="control5_desc_text">Spot-dodge - For a short moment evade any attacks or grabs, can be cancelled into attacks earlier than the animation ends</string>
+    <string name="control6_text">Shield button + Control stick ←/→</string>
+    <string name="control6_desc_text">Roll - You are immune to damage only in the middle of the animation as you move left or right. Becomes stale with frequent use. There are punish windows at the beginning and end that grow when stale. \n\nDirectional Airdodge - similar to roll, but can go in 8 directions. (cannot perform any actions until the character falls a set distance after the input)</string>
+    <string name="control7_text">Attack button</string>
+    <string name="control7_desc_text">Jab and jab combo with consecutive presses or holding the button, varies between characters</string>
+    <string name="control8_desc">While Control stick ←/→/↑/↓, Attack button</string>
+    <string name="control8_desc_text">Tilt attack - Stronger than jab with emphasis on direction chosen. Good for combos and quick punish options</string>
+    <string name="control9_text">While Control stick ←/→/↑/↓, Attack button</string>
+    <string name="control9_desc_text">Tilt attack - Stronger than jab with emphasis on direction chosen. Good for combos and quick punish options</string>
+    <string name="control10_text">Simultaneous stick ←/→/↑/↓ + Attack button</string>
+    <string name="control10_desc_text">Smash attack - Kill move. Similar to tilt attack, but with more startup time and much more knockback potential</string>
+    <string name="control11_text">No-direction/←/→/↑/↓ + Special button</string>
+    <string name="control11_desc_text">Special attack - Signature moves of your character. With certain exceptions, there are 4 per character.\n\nThese can be anything and are a prime example for showing what a character has to offer in terms of strategic options and playstyles.</string>
+    <string name="control12_text">Grab button or Shield button + Attack button</string>
+    <string name="control12_desc_text">Grab - Core staple of any fighting game. It goes through shield and allows you to either pummel or throw your opponent in one of 4 directions you input while holding them.</string>
+    <string name="move_description">Move Description</string>
+    <string name="series_name">Series Name</string>
+    <string name="fighter_name">Fighter Name</string>
+    <string name="image_of_fighter">Image of fighter.</string>
+    <string name="franchise_symbol">Fighter\'s game franchise symbol.</string>
+    <string name="stage_legality_desc_text">Neutral stages may be chosen in any game of a set, including the first game. These are also referred to as starter stages (not to be confused with the term for stages that do not need to be unlocked to be used in-game). \n\nCounterpick stages may be chosen only after the first game of a set, such as games 2 and 3 of a best-of-3 set. Stages in this category tend to give a slight, though not overwhelming, advantage for certain characters over others, such that it would not be fair to include them in the neutral list. These stages may often (though not always) be chosen for counterpicking purposes, hence the name of the category.</string>
+    <string name="starter_category_text">Starter</string>
+    <string name="counterpick_or_starter_category_text">Counterpick/Starter</string>
+    <string name="counterpick_category_text">Counterpick</string>
+    <string name="final_destination_content_desc">Final Destination</string>
+    <string name="battlefield_content_desc">Battlefield</string>
+    <string name="smashville_content_desc">Smashville</string>
+    <string name="town_and_city_content_desc">Town and City</string>
+    <string name="small_battlefield_content_desc">Small Battlefield</string>
+    <string name="lylat_cruise_content_desc">Lylat Cruise</string>
+    <string name="pokemon_stadium_2_content_desc">Pokemon Stadium 2</string>
+    <string name="kalos_pokemon_league_content_desc">Kalos Pokemon League</string>
+    <string name="yoshis_story_content_desc">Yoshi\'s Story</string>
     <string name="hollow_bastion_content_desc">Hollow Bastion</string>
     <string name="super_smash_app_title">Super Smash App</string>
-  <string name="fighters_tx">Fighters</string>
-  <string name="stages_tx">Stages</string>
-  <string name="controls_tx">Controls</string>
-  <string name="timer_tx">Timer</string>
-  <string name="notes_tx">Notes</string>
-  <string name="win_lose_tx">Win/Lose</string>
-  <string name="_5_min_tx">5 min</string>
-  <string name="_1_min_tx">1 min</string>
-  <string name="_2_min_tx">2 min</string>
-  <string name="start_tx">Start</string>
-  <string name="reset_tx">Reset</string>
-  <string name="_00_00_tx">00:00</string>
-  <string name="fighter_head_icon">Fighter\'s Head Icon</string>
+    <string name="fighters_tx">Fighters</string>
+    <string name="stages_tx">Stages</string>
+    <string name="controls_tx">Controls</string>
+    <string name="timer_tx">Timer</string>
+    <string name="notes_tx">Notes</string>
+    <string name="win_lose_tx">Win/Lose</string>
+    <string name="_5_min_tx">5 min</string>
+    <string name="_1_min_tx">1 min</string>
+    <string name="_2_min_tx">2 min</string>
+    <string name="start_tx">Start</string>
+    <string name="reset_tx">Reset</string>
+    <string name="_00_00_tx">00:00</string>
+    <string name="fighter_head_icon">Fighter\'s Head Icon</string>
 
 
-  <string-array name="fighters_spinner">
-  <item>Mario</item>
-  <item>Donkey Kong</item>
-  <item>Link</item>
-  <item>Samus</item>
-  <item>Dark Samus</item>
-  <item>Yoshi</item>
-  <item>Kirby</item>
-  <item>Fox</item>
-  <item>Pikachu</item>
-  <item>Luigi</item>
-  <item>Ness</item>
-  <item>Captain Falcon</item>
-  <item>Jigglypuff</item>
-  <item>Peach</item>
-  <item>Daisy</item>
-  <item>Bowser</item>
-  <item>Ice Climbers</item>
-  <item>Sheik</item>
-  <item>Zelda</item>
-  <item>Dr. Mario</item>
-  <item>Pichu</item>
-  <item>Falco</item>
-  <item>Marth</item>
-  <item>Lucina</item>
-  <item>Young Link</item>
-  <item>Ganondorf</item>
-  <item>Mewtwo</item>
-  <item>Roy</item>
-  <item>Chrom</item>
-  <item>Mr. Game &amp; Watch</item>
-  <item>Meta Knight</item>
-  <item>Pit</item>
-  <item>Dark Pit</item>
-  <item>Zero Suit Samus</item>
-  <item>Wario</item>
-  <item>Snake</item>
-  <item>Ike</item>
-  <item>Diddy Kong</item>
-  <item>Lucas</item>
-  <item>Sonic</item>
-  <item>King Dedede</item>
-  <item>Olimar</item>
-  <item>Lucario</item>
-  <item>R.O.B.</item>
-  <item>Toon Link</item>
-  <item>Wolf</item>
-  <item>Villager</item>
-  <item>Mega Man</item>
-  <item>Wii Fit Trainer</item>
-  <item>Rosalina &amp; Luma</item>
-  <item>Little Mac</item>
-  <item>Greninja</item>
-  <item>Palutena</item>
-  <item>PAC-MAN</item>
-  <item>Robin</item>
-  <item>Shulk</item>
-  <item>Bowser Jr.</item>
-  <item>Duck Hunt</item>
-  <item>Ryu</item>
-  <item>Ken</item>
-  <item>Cloud</item>
-  <item>Corrin</item>
-  <item>Bayonetta</item>
-  <item>Inkling</item>
-  <item>Ridley</item>
-  <item>Simon</item>
-  <item>Richter</item>
-  <item>King K. Rool</item>
-  <item>Isabelle</item>
-  <item>Incineroar</item>
-  <item>Piranha Plant</item>
-  <item>Joker</item>
-  <item>Hero</item>
-  <item>Banjo &amp; Kazooie</item>
-  <item>Terry</item>
-  <item>Byleth</item>
-  <item>Min Min</item>
-  <item>Pokemon Trainer</item>
-  <item>Steve</item>
-  <item>Sephiroth</item>
-  <item>Pyra &amp; Mythra</item>
-  <item>Kazuya</item>
-  <item>Sora</item>
-</string-array>
-
+    <string-array name="fighters_spinner">
+        <item>Mario</item>
+        <item>Donkey Kong</item>
+        <item>Link</item>
+        <item>Samus</item>
+        <item>Dark Samus</item>
+        <item>Yoshi</item>
+        <item>Kirby</item>
+        <item>Fox</item>
+        <item>Pikachu</item>
+        <item>Luigi</item>
+        <item>Ness</item>
+        <item>Captain Falcon</item>
+        <item>Jigglypuff</item>
+        <item>Peach</item>
+        <item>Daisy</item>
+        <item>Bowser</item>
+        <item>Ice Climbers</item>
+        <item>Sheik</item>
+        <item>Zelda</item>
+        <item>Dr. Mario</item>
+        <item>Pichu</item>
+        <item>Falco</item>
+        <item>Marth</item>
+        <item>Lucina</item>
+        <item>Young Link</item>
+        <item>Ganondorf</item>
+        <item>Mewtwo</item>
+        <item>Roy</item>
+        <item>Chrom</item>
+        <item>Mr. Game &amp; Watch</item>
+        <item>Meta Knight</item>
+        <item>Pit</item>
+        <item>Dark Pit</item>
+        <item>Zero Suit Samus</item>
+        <item>Wario</item>
+        <item>Snake</item>
+        <item>Ike</item>
+        <item>Diddy Kong</item>
+        <item>Lucas</item>
+        <item>Sonic</item>
+        <item>King Dedede</item>
+        <item>Olimar</item>
+        <item>Lucario</item>
+        <item>R.O.B.</item>
+        <item>Toon Link</item>
+        <item>Wolf</item>
+        <item>Villager</item>
+        <item>Mega Man</item>
+        <item>Wii Fit Trainer</item>
+        <item>Rosalina &amp; Luma</item>
+        <item>Little Mac</item>
+        <item>Greninja</item>
+        <item>Palutena</item>
+        <item>PAC-MAN</item>
+        <item>Robin</item>
+        <item>Shulk</item>
+        <item>Bowser Jr.</item>
+        <item>Duck Hunt</item>
+        <item>Ryu</item>
+        <item>Ken</item>
+        <item>Cloud</item>
+        <item>Corrin</item>
+        <item>Bayonetta</item>
+        <item>Inkling</item>
+        <item>Ridley</item>
+        <item>Simon</item>
+        <item>Richter</item>
+        <item>King K. Rool</item>
+        <item>Isabelle</item>
+        <item>Incineroar</item>
+        <item>Piranha Plant</item>
+        <item>Joker</item>
+        <item>Hero</item>
+        <item>Banjo &amp; Kazooie</item>
+        <item>Terry</item>
+        <item>Byleth</item>
+        <item>Min Min</item>
+        <item>Pokemon Trainer</item>
+        <item>Steve</item>
+        <item>Sephiroth</item>
+        <item>Pyra &amp; Mythra</item>
+        <item>Kazuya</item>
+        <item>Sora</item>
+    </string-array>
 
 
 </resources>
