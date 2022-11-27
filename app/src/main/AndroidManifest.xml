@@ -45,7 +45,7 @@
         <activity
             android:name=".WinLoseTrackerActivity"
             android:exported="false"
-            android:label="Tracker"
+            android:label="Win Loss Tracker"
             android:parentActivityName=".MainMenuActivity" />
         <activity
             android:name=".BattleNoteActivity"

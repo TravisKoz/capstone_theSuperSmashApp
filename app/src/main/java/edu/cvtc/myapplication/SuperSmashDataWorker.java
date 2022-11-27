@@ -1074,7 +1074,7 @@ public class SuperSmashDataWorker {
                 "Hybrid", "Spacing");
 
         // Pyra
-        insertFighter("Prya", "Xenoblade Chronicles", "Flame Nova",
+        insertFighter("Pyra", "Xenoblade Chronicles", "Flame Nova",
                 "Blazing End", "Swap to Mythra", "Prominence Revolt",
                 "Launch nearby opponents with a sword that revolves around you. Hold down the button to increase the power of the sword and the number of times it orbits you.",
                 "Throw the sword forward and spin it at a new location. Flick the stick to throw it even farther.",
