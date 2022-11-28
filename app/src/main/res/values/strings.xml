@@ -22,11 +22,11 @@
 
     <string name="pause_text">Pause</string>
     <string name="start_text">Start</string>
-    <string name="neutral_b"><u>Neutral Special</u></string>
+    <string name="neutral_b">Neutral Special</string>
     <string name="move_name_text">Move Name:</string>
-    <string name="side_b_text"><u>Side Special</u></string>
-    <string name="down_b_text"><u>Down Special</u></string>
-    <string name="final_smash"><u>Final Smash</u></string>
+    <string name="side_b_text">Side Special</string>
+    <string name="down_b_text">Down Special</string>
+    <string name="final_smash">Final Smash</string>
 
     <string name="colon">%1$s:</string>
 

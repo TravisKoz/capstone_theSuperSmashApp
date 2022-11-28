@@ -894,7 +894,7 @@ public class SuperSmashDataWorker {
                 "Long-range", "Zoner");
 
         // Richter
-        insertFighter("Ritcher", "Castlevania", "Axe",
+        insertFighter("Richter", "Castlevania", "Axe",
                 "Cross", "Holy Water", "Uppercut",
                 "Throws an axe that curves and passes through obstacles. Tilting left or right while it arcs changes the distance.",
                 "Throws a cross like a boomerang. The power and distance changes if the control stick is flicked.",

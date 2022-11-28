@@ -44,13 +44,13 @@ public class FighterRecyclerAdapter extends
         switch (fighter.getFranchise()) {
 
             case ("Super Mario"):
-                holder.mFighterFranchise.setImageResource(R.drawable.mario_series);
+                holder.mFighterFranchise.setImageResource(R.drawable.super_mario_series);
                 break;
             case ("Donkey Kong"):
                 holder.mFighterFranchise.setImageResource(R.drawable.donkey_kong_series);
                 break;
             case ("The Legend of Zelda"):
-                holder.mFighterFranchise.setImageResource(R.drawable.zelda_series);
+                holder.mFighterFranchise.setImageResource(R.drawable.the_legend_of_zelda_series);
                 break;
             case ("Metroid"):
                 holder.mFighterFranchise.setImageResource(R.drawable.metroid_series);
@@ -68,7 +68,7 @@ public class FighterRecyclerAdapter extends
                 holder.mFighterFranchise.setImageResource(R.drawable.pokemon_series);
                 break;
             case ("EarthBound"):
-                holder.mFighterFranchise.setImageResource(R.drawable.earth_bound_series);
+                holder.mFighterFranchise.setImageResource(R.drawable.earthbound_series);
                 break;
             case ("F-Zero"):
                 holder.mFighterFranchise.setImageResource(R.drawable.f_zero_series);
@@ -80,7 +80,7 @@ public class FighterRecyclerAdapter extends
                 holder.mFighterFranchise.setImageResource(R.drawable.fire_emblem_series);
                 break;
             case ("Game & Watch"):
-                holder.mFighterFranchise.setImageResource(R.drawable.game_watch_series);
+                holder.mFighterFranchise.setImageResource(R.drawable.game_and_watch_series);
                 break;
             case ("Kid Icarus"):
                 holder.mFighterFranchise.setImageResource(R.drawable.kid_icarus_series);
@@ -110,7 +110,7 @@ public class FighterRecyclerAdapter extends
                 holder.mFighterFranchise.setImageResource(R.drawable.wii_fit_series);
                 break;
             case ("Punch-Out!!"):
-                holder.mFighterFranchise.setImageResource(R.drawable.punchout_series);
+                holder.mFighterFranchise.setImageResource(R.drawable.punch_out_series);
                 break;
             case ("PAC-MAN"):
                 holder.mFighterFranchise.setImageResource(R.drawable.pac_man_series);
