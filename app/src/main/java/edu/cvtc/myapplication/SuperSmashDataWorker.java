@@ -49,7 +49,6 @@ public class SuperSmashDataWorker {
     public void insertTrackers() {
         insertTracker("Mario", 0, 0);
         insertTracker("Donkey Kong", 0, 0);
-        insertTracker("Mario", 0, 0);
         insertTracker("Link", 0, 0);
         insertTracker("Samus", 0, 0);
         insertTracker("Dark Samus", 0, 0);
