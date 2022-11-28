@@ -19,13 +19,13 @@
         app:srcCompat="@drawable/bgimageday" />
 
     <Button
-        android:id="@+id/btn5min"
+        android:id="@+id/btn2min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_button"
         android:freezesText="false"
-        android:text="@string/_5_min_tx"
+        android:text="@string/_2_min_tx"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -44,11 +44,11 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn5min" />
+        app:layout_constraintTop_toTopOf="@+id/btn2min" />
 
     <Button
-        android:id="@+id/btn2min"
-        android:text="@string/_2_min_tx"
+        android:id="@+id/btn5min"
+        android:text="@string/_5_min_tx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
@@ -57,7 +57,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn5min" />
+        app:layout_constraintTop_toTopOf="@+id/btn2min" />
 
     <Button
         android:id="@+id/btnStart"
