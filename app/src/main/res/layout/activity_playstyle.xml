@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CCCC"
+    android:background="@color/black"
     android:padding="12dp"
     tools:context=".PlaystyleActivity">
 
@@ -15,8 +15,50 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:text="\t\tHere you will be presented with questions about the playstyles you enjoy most. In a matter of seconds, you'll know which character(s) suit you best."
+        android:textColor="@color/white"
+        android:text="\t\tOverwhelmed by the roster and not sure where to start? You've come to the right place. Here you will be presented with questions about the playstyles you enjoy most. In a matter of seconds, you'll know which character(s) suit you best."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+        android:textColor="@color/white"
+        android:text="\t\tDo you prefer to rush in and chase your opponent down, keep your distance and widdle them down with ranged attacks, or a healthy balance of both?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_close_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300dp"
+        android:text="I like to get in close and keep it that way"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_long_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I like to keep my distance and use a variety of projectiles"
+        app:layout_constraintBottom_toTopOf="@+id/btn_hybrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_close_range" />
+
+    <Button
+        android:id="@+id/btn_hybrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="205dp"
+        android:text="I like to have a mix so I have an answer for any situation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
