@@ -28,13 +28,13 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Click the screen or use the navigation menu in the corner to continue"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/welcomeImage"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="@+id/welcomeImage" />
+    <!--        android:text="Click the screen or use the navigation menu in the corner to continue"-->
 
     <ImageView
         android:id="@+id/welcomeImage"

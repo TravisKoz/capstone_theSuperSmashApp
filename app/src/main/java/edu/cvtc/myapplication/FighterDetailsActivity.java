@@ -180,15 +180,15 @@ public class FighterDetailsActivity extends AppCompatActivity {
         // Use information to populate layout TextViews
         mFighterName.setText(fighterName);
         mFighterSeries.setText(fighterSeries);
-        mFighterNeutralSpecial.setText(getString(R.string.colon, fighterNeutralSpecial));
-        mFighterSideSpecial.setText(getString(R.string.colon, fighterSideSpecial));
-        mFighterDownSpecial.setText(getString(R.string.colon, fighterDownSpecial));
-        mFighterUpSpecial.setText(getString(R.string.colon, fighterUpSpecial));
+        mFighterNeutralSpecial.setText(fighterNeutralSpecial);
+        mFighterSideSpecial.setText(fighterSideSpecial);
+        mFighterDownSpecial.setText(fighterDownSpecial);
+        mFighterUpSpecial.setText(fighterUpSpecial);
         mFighterNeutralDescription.setText(fighterNeutralDescription);
         mFighterSideDescription.setText(fighterSideDescription);
         mFighterDownDescription.setText(fighterDownDescription);
         mFighterUpDescription.setText(fighterUpDescription);
-        mFighterFinalSmash.setText(getString(R.string.colon, fighterFinalSmash));
+        mFighterFinalSmash.setText(fighterFinalSmash);
         mFighterFinalSmashDescription.setText(fighterFinalSmashDescription);
 
         // Formatted the passed in fighter's name String to match our image names convention.

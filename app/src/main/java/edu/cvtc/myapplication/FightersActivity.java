@@ -92,5 +92,4 @@ public class FightersActivity extends AppCompatActivity {
         View v = mRecyclerItems.getChildAt(0);
         top = (v == null) ? 0 : (v.getTop() - mRecyclerItems.getPaddingTop());
     }
-
 }

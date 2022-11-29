@@ -15,22 +15,21 @@
 
     <string name="previous">Previous</string>
 
-    <string name="title_activity_fighters">Challengers Approaching
-</string>
+    <string name="title_activity_fighters">Challengers Approaching</string>
     <string name="fighter_name_text">Fighter</string>
     <string name="game_series_symbol">Game series symbol</string>
 
     <string name="pause_text">Pause</string>
     <string name="start_text">Start</string>
     <string name="neutral_b">Neutral Special</string>
-    <string name="move_name_text">Move Name:</string>
+    <string name="move_name_text">Move Name</string>
     <string name="side_b_text">Side Special</string>
     <string name="down_b_text">Down Special</string>
     <string name="final_smash">Final Smash</string>
 
     <string name="colon">%1$s:</string>
 
-    <string name="up_b_text"><u>Up Special</u></string>
+    <string name="up_b_text">Up Special</string>
     <string name="control1_text">Control stick ← or →</string>
     <string name="control1_desc_text">Walk or run if you flick the stick</string>
     <string name="control2_text">Control stick ↑ or X/Y button</string>

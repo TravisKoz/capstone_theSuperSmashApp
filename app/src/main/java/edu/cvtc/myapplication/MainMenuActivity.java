@@ -17,7 +17,6 @@ public class MainMenuActivity extends AppCompatActivity {
     CardView cvControls;
     CardView cvWinLose;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,7 @@ public class MainMenuActivity extends AppCompatActivity {
         cvFighters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainMenuActivity.this, "Fighters", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainMenuActivity.this, "Fighters", Toast.LENGTH_SHORT).show();
                 openFightersActivity();
             }
         });
@@ -40,7 +39,7 @@ public class MainMenuActivity extends AppCompatActivity {
         cvTimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainMenuActivity.this, "Timer", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainMenuActivity.this, "Timer", Toast.LENGTH_SHORT).show();
                 openTimerActivity();
             }
         });
@@ -48,7 +47,7 @@ public class MainMenuActivity extends AppCompatActivity {
         cvNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainMenuActivity.this, "Notes", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainMenuActivity.this, "Notes", Toast.LENGTH_SHORT).show();
                 openNotesActivity();
             }
         });
@@ -56,7 +55,7 @@ public class MainMenuActivity extends AppCompatActivity {
         cvLegalStages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainMenuActivity.this, "Legal Stages", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainMenuActivity.this, "Legal Stages", Toast.LENGTH_SHORT).show();
                 openLegalStagesActivity();
             }
         });
@@ -64,7 +63,7 @@ public class MainMenuActivity extends AppCompatActivity {
         cvControls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainMenuActivity.this, "Controls", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainMenuActivity.this, "Controls", Toast.LENGTH_SHORT).show();
                 openControlsActivity();
             }
         });
@@ -72,7 +71,7 @@ public class MainMenuActivity extends AppCompatActivity {
         cvWinLose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainMenuActivity.this, "Win/Lose", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainMenuActivity.this, "Win/Lose", Toast.LENGTH_SHORT).show();
                 openWinLoseTrackerActivity();
             }
         });
