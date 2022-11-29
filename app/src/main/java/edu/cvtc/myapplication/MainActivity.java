@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout constraintLayout;
     private SuperSmashOpenHelper mDbOpenHelper;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.legal_stages_access:
                 intent = new Intent(MainActivity.this, LegalStageActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.play_style_access:
+                intent = new Intent(MainActivity.this, PlayStyleActivity.class);
                 startActivity(intent);
                 return true;
             default:

@@ -40,12 +40,18 @@
         android:orderInCategory="45"
         android:title="@string/controls_tx"
         app:showAsAction="never" />
-        <item
-          android:id="@+id/legal_stages_access"
-          android:icon="@drawable/ic_baseline_stage"
+      <item
+        android:id="@+id/legal_stages_access"
+        android:icon="@drawable/ic_baseline_stage"
+        android:orderInCategory="46"
+        android:title="@string/stages_tx"
+        app:showAsAction="never" />
+      <item
+          android:id="@+id/play_style_access"
+          android:icon="@drawable/ic_baseline_style_24"
           android:orderInCategory="46"
-          android:title="@string/stages_tx"
-          app:showAsAction="never" />
+          android:title="Play Style"
+          app:showAsAction="never"/>
     </menu>
   </item>
 

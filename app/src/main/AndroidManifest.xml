@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Capstone_theSuperSmashApp"
         tools:targetApi="31">
         <activity
-            android:name=".PlaystyleActivity"
+            android:name=".PlayStyleActivity"
             android:exported="false"
             android:parentActivityName=".MainMenuActivity"/>
         <activity
