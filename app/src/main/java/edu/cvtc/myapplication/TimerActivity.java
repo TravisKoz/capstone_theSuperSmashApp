@@ -202,6 +202,8 @@ public class TimerActivity extends AppCompatActivity{
     // Function that reset the timer
     private void resetTimer() {
         mTimeLeftInMillis = mStartTimeInMillis;
+        Toast.makeText(TimerActivity.this, "Time set to " + mStartTimeInMillis / 60000 + " minute(s)",
+                Toast.LENGTH_SHORT).show();
         updateCountDownText();
         updateButtons();
     }
