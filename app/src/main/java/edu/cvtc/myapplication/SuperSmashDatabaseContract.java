@@ -125,4 +125,31 @@ public final class SuperSmashDatabaseContract {
                         COLUMN_WINS + " INTEGER, " +
                         COLUMN_LOSSES + " INTEGER)";
     }
+
+    public static final class ItemEntry implements BaseColumns {
+        // Constants holding our table and field names
+        public static final String
+                TABLE_NAME = "item";
+        public static final String
+                COLUMN_NAME = "name";
+        public static final String
+                COLUMN_CATEGORY = "category";
+        public static final String
+                COLUMN_DESCRIPTION = "description";
+
+        // Constants holding our values for the index name and values based on
+        // the fighter name.
+        public static final String INDEX1 = TABLE_NAME + "_index1";
+        public static final String SQL_CREATE_INDEX1 =
+                "CREATE INDEX " + INDEX1 + " ON " + TABLE_NAME +
+                        "(" + COLUMN_NAME + ")";
+
+        // Constant to create the table using the table name, fields, and id.
+        public static final String SQL_CREATE_TABLE =
+                "CREATE TABLE " + TABLE_NAME + " (" +
+                        _ID + " INTEGER PRIMARY KEY, " +
+                        COLUMN_NAME + " TEXT NOT NULL, " +
+                        COLUMN_CATEGORY + " TEXT NOT NULL, " +
+                        COLUMN_DESCRIPTION + " TEXT NOT NULL)";
+    }
 }

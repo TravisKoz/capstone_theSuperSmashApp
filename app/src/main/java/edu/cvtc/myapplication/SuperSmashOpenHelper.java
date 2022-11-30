@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.TrackerEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
 
 // Allows us to crate an update our database
 public class SuperSmashOpenHelper extends SQLiteOpenHelper {
@@ -32,10 +33,14 @@ public class SuperSmashOpenHelper extends SQLiteOpenHelper {
         db.execSQL(TrackerEntry.SQL_CREATE_TABLE);
         db.execSQL(TrackerEntry.SQL_CREATE_INDEX1);
 
+        db.execSQL(ItemEntry.SQL_CREATE_TABLE);
+        db.execSQL(ItemEntry.SQL_CREATE_INDEX1);
+
         SuperSmashDataWorker worker = new SuperSmashDataWorker(db);
         worker.insertBattleNotes();
         worker.insertFighters();
         worker.insertTrackers();
+        worker.insertItems();
     }
 
     @Override

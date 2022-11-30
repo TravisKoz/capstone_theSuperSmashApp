@@ -94,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, PlayStyleActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.items_access:
+                intent = new Intent(MainActivity.this, ItemsActivity.class);
+                startActivity(intent);
+                return true;
             default:
         }
 

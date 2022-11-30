@@ -13,37 +13,35 @@
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
         android:fontFamily="@font/smashfont"
         android:text="Super Smash App"
-        android:textSize="34sp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/welcomeImage"
         app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="@+id/welcomeImage" />
+        app:layout_constraintStart_toStartOf="@+id/welcomeImage"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeImage" />
 
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Click the screen or use the navigation menu in the corner to continue"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/welcomeImage"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="@+id/welcomeImage" />
 
-    <ImageView
+<!--    <ImageView-->
+<!--        android:id="@+id/welcomeImage"-->
+<!--        android:layout_width="279dp"-->
+<!--        android:layout_height="222dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/super_smash_white" />-->
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/welcomeImage"
-        android:layout_width="279dp"
-        android:layout_height="222dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="360dp"
+        android:layout_height="220dp"
         android:adjustViewBounds="true"
+        android:src="@drawable/smash_logo_fire"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/super_smash_white" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

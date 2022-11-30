@@ -87,17 +87,17 @@
     <string name="reset_tx">Reset</string>
     <string name="_00_00_tx">00:00</string>
     <string name="fighter_head_icon">Fighter\'s Head Icon</string>
-  <string name="wins">Wins</string>
-  <string name="five">5</string>
-  <string name="losses">Losses</string>
-  <string name="win_percentage">Win %</string>
-  <string name="win">Win</string>
-  <string name="reset">Reset</string>
-  <string name="loss">Loss</string>
-  <string name="zero_percentage">0.00%</string>
+    <string name="wins">Wins</string>
+    <string name="five">5</string>
+    <string name="losses">Losses</string>
+    <string name="win_percentage">Win %</string>
+    <string name="win">Win</string>
+    <string name="reset">Reset</string>
+    <string name="loss">Loss</string>
+    <string name="zero_percentage">0.00%</string>
 
 
-  <string-array name="fighters_spinner">
+    <string-array name="fighters_spinner">
         <item>Mario</item>
         <item>Donkey Kong</item>
         <item>Link</item>

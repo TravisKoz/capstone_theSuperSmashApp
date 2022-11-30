@@ -52,7 +52,12 @@
           android:orderInCategory="46"
           android:title="Play Style"
           app:showAsAction="never"/>
+      <item
+          android:id="@+id/items_access"
+          android:icon="@drawable/ic_baseline_shield"
+          android:orderInCategory="46"
+          android:title="Items"
+          app:showAsAction="never"/>
     </menu>
   </item>
-
 </menu>

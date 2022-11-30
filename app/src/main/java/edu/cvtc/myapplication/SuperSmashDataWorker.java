@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.TrackerEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
 
 // The class helps create our database. This class will
 // establish a connection to our database and insert
@@ -1116,4 +1117,36 @@ public class SuperSmashDataWorker {
                 "Hit opponents with a beam and launch them toward a Keyhole. Up to three opponents can be affected by the Keyhole, and if their damage is high enough, they'll be instantly KO'd.",
                 "Hybrid", "Balanced");
     }
+
+
+    // Method that inserts a single item into the database
+    public void insertItem(String name, String category, String description) {
+        ContentValues values = new ContentValues();
+        values.put(ItemEntry.COLUMN_NAME, name);
+        values.put(ItemEntry.COLUMN_CATEGORY, category);
+        values.put(ItemEntry.COLUMN_DESCRIPTION, description);
+        long newRowId = mDb.insert(ItemEntry.TABLE_NAME, null, values);
+    }
+
+
+    // Method used to populate our database with initial Items data.
+    public void insertItems() {
+        // Carrying Items
+        // Barrel
+        insertItem("Barrel", "Carrying Items",
+                "Break this to make a collection of items appear. If it's knocked on its side, it will roll around.");
+
+
+        // Battering Items
+        // Beam Sword
+        insertItem("Beam Sword", "Battering Items",
+                "Attack with a beam sword. The stronger the attack, the longer the beam gets!");
+
+
+        // Shooting Items
+        // Banana Gun
+        insertItem("Banana Gun", "Shooting Items",
+                "The insides of the banana become a powerful bullet. After one shot, this item becomes a Banana Peel. Of course.");
+    }
+
 }

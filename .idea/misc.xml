@@ -44,6 +44,7 @@
         <entry key="app/src/main/res/layout/content_fighters.xml" value="0.2859375" />
         <entry key="app/src/main/res/layout/content_notes.xml" value="0.4119791666666667" />
         <entry key="app/src/main/res/layout/fighter_list.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/fragment_playstyle1.xml" value="0.232421875" />
         <entry key="app/src/main/res/layout/note_list.xml" value="0.20677083333333332" />
         <entry key="app/src/main/res/layout/pick_time_dialoge.xml" value="0.14661458333333333" />
         <entry key="app/src/main/res/layout/time_dialog.xml" value="0.15494791666666666" />
