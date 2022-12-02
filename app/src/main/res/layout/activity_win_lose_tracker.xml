@@ -16,7 +16,6 @@
     android:entries="@array/fighters_spinner"
     android:minHeight="48dp"
     android:padding="10dp"
-    android:spinnerMode="dialog"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent" />
