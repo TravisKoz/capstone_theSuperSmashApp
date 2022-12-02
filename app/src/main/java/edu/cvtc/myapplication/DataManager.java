@@ -8,6 +8,7 @@ import java.util.List;
 
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
 
 // This class is used to communicate with the database.
 // We we use it to load and save information to the database
@@ -17,6 +18,7 @@ public class DataManager {
     private static DataManager ourInstance = null;
     private List<BattleNote> mBattleNotes = new ArrayList<>();
     private List<Fighter> mFighters = new ArrayList<>();
+    private List<ItemSSB> mItems = new ArrayList<>();
 
     // Set a reference to our new instance.
     public static DataManager getInstance() {
@@ -34,6 +36,11 @@ public class DataManager {
     // Returns a list of our fighters()
     public List<Fighter> getFighters() {
         return mFighters;
+    }
+
+    // Returns a list of our items
+    public List<ItemSSB> getItems() {
+        return mItems;
     }
 
     private static void loadBattleNotesFromDatabase(Cursor cursor) {
@@ -223,5 +230,65 @@ public class DataManager {
 
     public void removeCourse(int index) {
         mBattleNotes.remove(index);
+    }
+
+    // Items
+    private static void loadItemsFromDatabase(Cursor cursor) {
+        // Retrieve the field positions in your database.
+        int listNamePosition =
+                cursor.getColumnIndex(ItemEntry.COLUMN_NAME);
+        int listCategoryPosition =
+                cursor.getColumnIndex(ItemEntry.COLUMN_CATEGORY);
+        int listDescriptionPosition =
+                cursor.getColumnIndex(ItemEntry.COLUMN_DESCRIPTION);
+        int idPosition =
+                cursor.getColumnIndex(ItemEntry._ID);
+
+        // Create an instance of your DataManager and use the DataManager
+        // to clear any information from the array list.
+        DataManager dm = getInstance();
+        dm.mItems.clear();
+
+        // Loop through the cursor rows and add new item objects to
+        // our array list.
+        while (cursor.moveToNext()) {
+            String listName =
+                    cursor.getString(listNamePosition);
+            String listCategory =
+                    cursor.getString(listCategoryPosition);
+            String listDescription =
+                    cursor.getString(listDescriptionPosition);
+            int id = cursor.getInt(idPosition);
+
+            ItemSSB list = new ItemSSB(listName, listCategory, listDescription, id);
+            dm.mItems.add(list);
+        }
+        // Close the cursor (to prevent memory leaks)
+        cursor.close();
+    }
+
+    public static void getItemsFromDatabase(SuperSmashOpenHelper dbHelper) {
+        // Open our database in read mode.
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        // Create a list columns we want to return.
+        String[] itemColumns = {
+                ItemEntry.COLUMN_NAME,
+                ItemEntry.COLUMN_CATEGORY,
+                ItemEntry.COLUMN_DESCRIPTION,
+                ItemEntry._ID
+        };
+
+        // Create an order by field for sorting purposes.
+        String itemOrderBy = ItemEntry.COLUMN_NAME;
+
+        // Populate our cursor with the results of the query.
+        final Cursor itemCursor = db.query(ItemEntry.TABLE_NAME,
+                itemColumns,
+                null, null, null, null,
+                itemOrderBy);
+
+        // Call the method to load our array list
+        loadItemsFromDatabase(itemCursor);
     }
 }

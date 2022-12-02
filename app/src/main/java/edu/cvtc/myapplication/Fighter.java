@@ -187,8 +187,6 @@ public class Fighter implements Parcelable {
     }
 
 
-
-
     // Returns a concatenated string.
     private String getCompareKey() {
         return mName + "|" + mFranchise + "|" +
