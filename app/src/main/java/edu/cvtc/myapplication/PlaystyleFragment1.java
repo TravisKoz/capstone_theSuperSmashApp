@@ -4,9 +4,13 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,6 +62,10 @@ public class PlaystyleFragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+//        /* Solution 1 */ ArrayList<Parcelable> fighters = savedInstanceState.getParcelableArrayList("fighterKey");
+//        /* Solution 2 */ List<Fighter> = bundle.getParcelableArrayList("fighterKey", fightersCategory);
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_playstyle1, container, false);
     }

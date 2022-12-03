@@ -58,7 +58,7 @@ public class FighterDetailsActivity extends AppCompatActivity {
 
         mDbOpenHelper = new SuperSmashOpenHelper(this);
 
-        // Get the inter passed into the activity
+        // Get the intent passed into the activity
         Intent intent = getIntent();
         mFighterID = intent.getIntExtra(FIGHTER_ID, ID_NOT_SET);
 

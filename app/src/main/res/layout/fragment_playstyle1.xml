@@ -55,6 +55,13 @@
         android:layout_marginBottom="20dp"
         android:text="I want to throw so many projectiles that it becomes a one-player game." />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:text="TextView" />
 
 
 </FrameLayout>
