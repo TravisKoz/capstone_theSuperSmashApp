@@ -16,12 +16,12 @@
         <activity
             android:name=".ItemDetailsActivity"
             android:exported="false"
-            android:label="Something"
+            android:label="Item Details"
             android:parentActivityName=".ItemsActivity"/>
         <activity
             android:name=".ItemsActivity"
             android:exported="false"
-            android:label="Items to use"
+            android:label="List Of SSB Items"
             android:parentActivityName=".MainMenuActivity"
             android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
         <activity

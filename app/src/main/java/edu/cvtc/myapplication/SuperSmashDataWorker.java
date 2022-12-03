@@ -1185,10 +1185,164 @@ public class SuperSmashDataWorker {
                 "Side smash attacks and side tilt attacks will make this item fire star-shaped projectiles.");
 
 
+        //               ----------------- Combining Items ----------------------
+        // Daybreak Parts
+        insertItem("Daybreak Parts", "Combining",
+                "Construct this huge weapon by collecting its three parts, then use its powerful beam attack!");
+         // Dragoon Parts
+        insertItem("Dragoon Parts", "Combining",
+                "Collect all three parts to assemble the Dragoon, and then unleash a powerful attack!");
+
+
+        //               ----------------- Effect Items ----------------------
+        // Special Flag
+        insertItem("Special Flag", "Effect",
+                "Hold this high and gain +1 KO (in a time battle) or +1 stock (in a stock battle).");
+        // Super Launch Star
+        insertItem("Super Launch Star", "Effect",
+                "Throw it to create a star-shaped gate which will launch fighters that enter it.");
+
+
+        //               ----------------- Exploding Items ----------------------
+        // Blast Box
+        insertItem("Blast Box", "Exploding",
+                "Watch outーif you do too much damage to this, it'll go BOOM! It'll blow up instantly if ignited, too!");
+        // Bomber
+        insertItem("Bomber", "Exploding",
+                "Hold it high to set it off. Enemies caught in the blast will take a ton of damage.");
+        // Fake Smash Ball
+        insertItem("Fake Smash Ball", "Exploding",
+                "This may look like a Smash Ball, but breaking it will cause it to explode in an X shape.");
+
+
+        //               ----------------- Gear Items ----------------------
+        // Back Shield
+        insertItem("Back Shield", "Gear",
+                "Pick this up and your back will be protected from attacks. A high amount of damage will destroy it.");
+        // Franklin Badge
+        insertItem("Franklin Badge", "Gear",
+                "If you wear this, it reflects all projectile attacks from your foes.");
+        // Rocket Belt
+        insertItem("Rocket Belt", "Gear",
+                "While wearing this, hold up or hold the jump button to fly straight up in the air. You'll refuel automatically on the ground.");
+        // Screw Attack
+        insertItem("Screw Attack", "Gear",
+                "Pick this up, and you'll be able to do Screw Attacks when you jump.");
+        // Super Leaf
+        insertItem("Super Leaf", "Gear",
+                "Hold up or hold the jump button while wearing this to hover with the help of a very fuzzy tail!");
+
+
+        //               ----------------- Helping Items ----------------------
+        // Assist Trophy
+        insertItem("Assist Trophy", "Helping",
+                "Call on different characters to help you fight! Some assist trophies can be KO'd, though...");
+        // Master Ball
+        insertItem("Master Ball", "Helping",
+                "Summon a Mythical or Legendary Pokémon! Much more valuable than a regular Poké Ball.");
+        // Poké Ball
+        insertItem("Poke Ball", "Helping",
+                "Summon a random Pokémon to team up with you against your foes!");
+
+
+        //               ----------------- Punching Items ----------------------
+        // Sandbag
+        insertItem("Sandbag", "Punching",
+                "Hit Sandbag to make items fall out! The more you hit it, the easier it will be to launch.");
+
+
+        //               ----------------- Recovery Items ----------------------
+        // Fairy Bottle
+        insertItem("Fairy Bottle", "Recovery",
+                "This item will only heal a fighter who has taken more than 100% damage. Don't throw it at a badly injured enemy!");
+        // Food
+        insertItem("Food", "Recovery",
+                "Eat some to heal a little damage! Different foods will heal for different amounts.");
+        // Healing Field
+        insertItem("Healing Field", "Recovery",
+                "This item will create a healing field on the ground. Stand on it to slowly heal.");
+        // Healing Sprout
+        insertItem("Healing Sprout", "Recovery",
+                "This item will slowly heal whomever it is stuck to. It can be transferred to another fighter through contact.");
+        // Heart Container
+        insertItem("Heart Container", "Recovery",
+                "This removes 100% damage from your counter! Grab it before your foes get to it!");
+        // Maxim Tomato
+        insertItem("Maxim Tomato", "Recovery",
+                "A tomato with a big M on it. When eaten, it will remove 50% damage from your counter.");
+
+
+        //               ----------------- Transforming Items ----------------------
+        // Bullet Bill
+        insertItem("Bullet Bill", "Transforming",
+                "Use this to turn into a Bullet Bill and charge in a straight lineーright through anyone in the way!");
+        // Bunny Hood
+        insertItem("Bunny Hood", "Transforming",
+                "Put this on to boost your speed and jumps greatly. \"What long ears it has! Will the power of the wild spring forth?\"");
+        // Lightning Bolt
+        insertItem("Lightning Bolt", "Transforming",
+                "Grab this to make the other fighters shrinkーunless it backfires and shrinks you!");
+        // Metal Box
+        insertItem("Metal Box", "Transforming",
+                "Turns you into metal. Light attacks won't make you flinch, and you'll be tough to launchーbut you'll fall faster.");
+        // Poison Mushroom
+        insertItem("Poison Mushroom", "Transforming",
+                "Running into one of these mushrooms shrinks you, making you less powerful and easier to launch.");
+        // Super Mushroom
+        insertItem("Super Mushroom", "Transforming",
+                "Touching this will make you giant, increasing your attack power and making you tough to launch.");
+        // Super Star
+        insertItem("Super Star", "Transforming",
+                "If you touch one of these, you'll be invincible for 10 seconds. Woot!");
+        // Superspicy Curry
+        insertItem("Superspicy Curry", "Transforming",
+                "A spiciness out of this world! You'll constantly breathe fire from your mouth!");
+        // Timer
+        insertItem("Timer", "Transforming",
+                "This item slows down everyone except the player who collects it...except when it backfires, of course.");
+        // Warp Star
+        insertItem("Warp Star", "Transforming",
+                "Sends you shooting up, then back down for a devastating attack. Aim your landing with left or right and adjust the timing with up or down.");
+
+
         //               ----------------- Shooting Items ----------------------
         // Banana Gun
         insertItem("Banana Gun", "Shooting",
                 "The insides of the banana become a powerful bullet. After one shot, this item becomes a Banana Peel. Of course.");
+        // Drill
+        insertItem("Drill", "Shooting",
+                "Fire this to send a drill bit shooting across the stage, pushing enemies out and away. You can then throw the base!");
+        // Fire Flower
+        insertItem("Fire Flower", "Shooting",
+                "Hold this out and bathe your foes in flame. The fire doesn't last forever, though, so don't waste it.");
+        // Gust Bellows
+        insertItem("Gust Bellows", "Shooting",
+                "Blow enemies away with this item. It's great for ruining someone's recovery, but it's easily blocked by shields.");
+        // Rage Blaster
+        insertItem("Rage Blaster", "Shooting",
+                "This item grows stronger if the user has taken lots of damage. A great way to make a comeback!");
+        // Ramblin' Evil Mushroom
+        insertItem("Ramblin' Evil Mushroom", "Shooting",
+                "Opponents hit with enough of these spores will grow a mushroom, reversing their left and right controls.");
+        // Ray Gun
+        insertItem("Ray Gun", "Shooting",
+                "Fires a fast-moving shot that can knock enemies backward and into the air. Land multiple blows to really break their spirit.");
+        // Staff
+        insertItem("Staff", "Shooting",
+                "This weapon fires a laser that deals more damage if the target is farther away.");
+        // Steel Diver
+        insertItem("Steel Diver", "Shooting",
+                "Give the torpedo a second and it'll shoot off at high speed. Quick, subtle, destructive.");
+        // Super Scope
+        insertItem("Super Scope", "Shooting",
+                "Fire rapidly by pressing the button quickly, or hold the button to charge up! The fully charged shot is powerful!");
+
+
+        //               ----------------- G** Items ----------------------
+        // Ban
+        insertItem("Ba", "Gear",
+                "come");
+
     }
 
 }
