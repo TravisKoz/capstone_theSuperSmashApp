@@ -2,6 +2,7 @@ package edu.cvtc.myapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +61,9 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //Start a new activity
+                    Intent intent = new Intent(mContext, ItemDetailsActivity.class);
+                    intent.putExtra(ItemDetailsActivity.ITEM_ID, mId);
+                    mContext.startActivity(intent);
                 }
             });
 

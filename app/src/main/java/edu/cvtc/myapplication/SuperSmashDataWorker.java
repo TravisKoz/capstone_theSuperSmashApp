@@ -1131,21 +1131,63 @@ public class SuperSmashDataWorker {
 
     // Method used to populate our database with initial Items data.
     public void insertItems() {
-        // Carrying Items
+        //               ----------------- Carrying Items ----------------------
         // Barrel
-        insertItem("Barrel", "Carrying Items",
+        insertItem("Barrel", "Carrying",
                 "Break this to make a collection of items appear. If it's knocked on its side, it will roll around.");
+        // Capsule
+        insertItem("Capsule", "Carrying",
+                "Break this to reveal the contents, or throw it at enemies to deal some damage.");
+        // Crate
+        insertItem("Crate", "Carrying",
+                "Break it to reveal a bunch of random items. Or throw it at opponents!");
+        // Grass
+        insertItem("Grass", "Carrying",
+                "Pluck this from the ground and some kind of item will appear.");
+        // Party Ball
+        insertItem("Party Ball", "Carrying",
+                "This ball will float up into the air, play a little tune, then release a bunch of items.");
+        // Rolling Crate
+        insertItem("Rolling Crate", "Carrying",
+                "It may look like a regular old box, but it isn't. It has wheels!");
 
 
-        // Battering Items
+        //               ----------------- Battering Items ----------------------
         // Beam Sword
-        insertItem("Beam Sword", "Battering Items",
+        insertItem("Beam Sword", "Battering",
                 "Attack with a beam sword. The stronger the attack, the longer the beam gets!");
+        // Death's Scythe
+        insertItem("Death's Scythe", "Battering",
+                "A tilt or smash attack with this brutal weapon will KO opponents who have high damage.");
+        // Fire Bar
+        insertItem("Fire Bar", "Battering",
+                "This weapon has a long reach, but it'll get shorter the more hits you land with it.");
+        // Golden Hammer
+        insertItem("Golden Hammer", "Battering",
+                "Attack quickly over and over and over. Press jump repeatedly to float through the air, too!");
+        // Hammer
+        insertItem("Hammer", "Battering",
+                "Once you start, you just can't stop swinging this item, even if the hammer's head pops off. Oops!");
+        // Home-Run Bat
+        insertItem("Home-Run Bat", "Battering",
+                "Use a side smash to send a foe flying for the fences. It's tricky to land, but it has lots of attack power!");
+        // Killing Edge
+        insertItem("Killing Edge", "Battering",
+                "If you attack when the sword glows, the damage and launch power will be doubled.");
+        // Lip's Stick
+        insertItem("Lip's Stick", "Battering",
+                "Attacking with this makes an energy-sapping flower bloom on your opponent's head!");
+        // Ore Club
+        insertItem("Ore Club", "Battering",
+                "Swing this to perform an incredibly strong attack. Side smash attacks will create a whirlwind effect.");
+        // Star Rod
+        insertItem("Star Rod", "Battering",
+                "Side smash attacks and side tilt attacks will make this item fire star-shaped projectiles.");
 
 
-        // Shooting Items
+        //               ----------------- Shooting Items ----------------------
         // Banana Gun
-        insertItem("Banana Gun", "Shooting Items",
+        insertItem("Banana Gun", "Shooting",
                 "The insides of the banana become a powerful bullet. After one shot, this item becomes a Banana Peel. Of course.");
     }
 

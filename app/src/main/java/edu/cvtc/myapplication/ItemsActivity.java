@@ -66,25 +66,25 @@ public class ItemsActivity extends AppCompatActivity {
         mRecyclerItemsView.setAdapter(mItemRecyclerAdapter);
     }
 
-//    @Override
-//    protected void onDestroy() {
-//        mDbOpenHelper.close();
-//        super.onDestroy();
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        index = mItemsLayoutManager.findFirstVisibleItemPosition();
-//        View view = mRecyclerItemsView.getChildAt(0);
-//        top = (view == null) ? 0 : (view.getTop() - mRecyclerItemsView.getPaddingTop());
-//    }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        if (index != -1) {
-//            mItemsLayoutManager.scrollToPositionWithOffset(index, top);
-//        }
-//    }
+    @Override
+    protected void onDestroy() {
+        mDbOpenHelper.close();
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        index = mItemsLayoutManager.findFirstVisibleItemPosition();
+        View view = mRecyclerItemsView.getChildAt(0);
+        top = (view == null) ? 0 : (view.getTop() - mRecyclerItemsView.getPaddingTop());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (index != -1) {
+            mItemsLayoutManager.scrollToPositionWithOffset(index, top);
+        }
+    }
 }
