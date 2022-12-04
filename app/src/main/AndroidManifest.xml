@@ -1,90 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="edu.cvtc.myapplication">
+  xmlns:tools="http://schemas.android.com/tools"
+  package="edu.cvtc.myapplication">
 
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/appTitleLabel"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Capstone_theSuperSmashApp"
-        tools:targetApi="31">
-        <activity
-            android:name=".ItemDetailsActivity"
-            android:exported="false"
-            android:label="Item Details"
-            android:parentActivityName=".ItemsActivity"/>
-        <activity
-            android:name=".ItemsActivity"
-            android:exported="false"
-            android:label="List Of SSB Items"
-            android:parentActivityName=".MainMenuActivity"
-            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
-        <activity
-            android:name=".PlayStyleActivity"
-            android:exported="false"
-            android:label="Play Style"
-            android:parentActivityName=".MainMenuActivity" />
-        <activity
-            android:name=".LegalStageActivity"
-            android:exported="false"
-            android:parentActivityName=".NotesActivity" />
-        <activity
-            android:name=".MainMenuActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
-        <activity
-            android:name=".FighterDetailsActivity"
-            android:exported="false"
-            android:label="A New Challenger Appears"
-            android:parentActivityName=".FightersActivity" />
-        <activity
-            android:name=".ControlsActivity"
-            android:exported="false"
-            android:label="Controls"
-            android:parentActivityName=".MainMenuActivity" />
-        <activity
-            android:name=".FightersActivity"
-            android:exported="false"
-            android:label="@string/title_activity_fighters"
-            android:parentActivityName=".NotesActivity"
-            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
-        <activity
-            android:name=".WinLoseTrackerActivity"
-            android:exported="false"
-            android:label="Win Loss Tracker"
-            android:parentActivityName=".MainMenuActivity" />
-        <activity
-            android:name=".BattleNoteActivity"
-            android:exported="false"
-            android:label="My Battle Note "
-            android:parentActivityName=".NotesActivity" />
-        <activity
-            android:name=".NotesActivity"
-            android:exported="false"
-            android:label="Battle Notes"
-            android:parentActivityName=".MainMenuActivity"
-            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
-        <activity
-            android:name=".TimerActivity"
-            android:exported="false"
-            android:label="Timer"
-            android:parentActivityName=".MainMenuActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <application
+    android:allowBackup="true"
+    android:dataExtractionRules="@xml/data_extraction_rules"
+    android:fullBackupContent="@xml/backup_rules"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/appTitleLabel"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.Capstone_theSuperSmashApp"
+    tools:targetApi="31">
+    <activity
+      android:name=".TrophyDetailsActivity"
+      android:exported="false" />
+    <activity
+      android:name=".TrophiesActivity"
+      android:exported="false"
+      android:label="@string/title_activity_trophies"
+      android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
+    <activity
+      android:name=".ItemDetailsActivity"
+      android:exported="false"
+      android:label="Item Details"
+      android:parentActivityName=".ItemsActivity" />
+    <activity
+      android:name=".ItemsActivity"
+      android:exported="false"
+      android:label="List Of SSB Items"
+      android:parentActivityName=".MainMenuActivity"
+      android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
+    <activity
+      android:name=".PlayStyleActivity"
+      android:exported="false"
+      android:label="Play Style"
+      android:parentActivityName=".MainMenuActivity" />
+    <activity
+      android:name=".LegalStageActivity"
+      android:exported="false"
+      android:parentActivityName=".NotesActivity" />
+    <activity
+      android:name=".MainMenuActivity"
+      android:exported="false"
+      android:parentActivityName=".MainActivity"
+      android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
+    <activity
+      android:name=".FighterDetailsActivity"
+      android:exported="false"
+      android:label="A New Challenger Appears"
+      android:parentActivityName=".FightersActivity" />
+    <activity
+      android:name=".ControlsActivity"
+      android:exported="false"
+      android:label="Controls"
+      android:parentActivityName=".MainMenuActivity" />
+    <activity
+      android:name=".FightersActivity"
+      android:exported="false"
+      android:label="@string/title_activity_fighters"
+      android:parentActivityName=".NotesActivity"
+      android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
+    <activity
+      android:name=".WinLoseTrackerActivity"
+      android:exported="false"
+      android:label="Win Loss Tracker"
+      android:parentActivityName=".MainMenuActivity" />
+    <activity
+      android:name=".BattleNoteActivity"
+      android:exported="false"
+      android:label="My Battle Note "
+      android:parentActivityName=".NotesActivity" />
+    <activity
+      android:name=".NotesActivity"
+      android:exported="false"
+      android:label="Battle Notes"
+      android:parentActivityName=".MainMenuActivity"
+      android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
+    <activity
+      android:name=".TimerActivity"
+      android:exported="false"
+      android:label="Timer"
+      android:parentActivityName=".MainMenuActivity"
+      android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" />
+    <activity
+      android:name=".MainActivity"
+      android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
 
 </manifest>

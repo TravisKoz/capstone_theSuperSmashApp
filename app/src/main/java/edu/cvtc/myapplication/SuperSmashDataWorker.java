@@ -8,6 +8,7 @@ import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.TrackerEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.AssistTrophyEntry;
 
 // The class helps create our database. This class will
 // establish a connection to our database and insert
@@ -1423,7 +1424,51 @@ public class SuperSmashDataWorker {
         // X Bomb
         insertItem("X Bomb", "Throwing",
                 "The blast from this bomb will go in four directions. It can go vertically and horizontally, or diagonally.");
+    }
+
+    // Method that inserts a single fighter into the database.
+    private void insertAssistTrophy(String name, String description) {
+        ContentValues values = new ContentValues();
+        values.put(AssistTrophyEntry.COLUMN_NAME, name);
+        values.put(AssistTrophyEntry.COLUMN_DESCRIPTION, description);
+
+        long newRowId = mDb.insert(AssistTrophyEntry.TABLE_NAME, null, values);
+    }
+
+    // Method used to populate our database with initial Tracker data.
+    public void insertAssistTrophies() {
+
+        // Akira
+        insertAssistTrophy("Akira",
+                "Akira Yuki is one of the main characters of the Virtua Fighter series. A master of the Hakkyoku-ken (Eight-Way Fist) style, his appearance in Super Smash Bros. Ultimate is patterned after the original game in the series, with a low polygon count giving him a \"blocky\" look.\n\n" +
+                "When summoned, Akira will run toward an opponent and attack them with moves like a forward palm strike and an elbow strike, as well as his signature moves like the Tetsuzanko (a body check) and the Renkantai (a double kick). He can also auto-guard. Before leaving the battlefield, he salutes the opponent and says his catch phrase, 「十年早いんだよ！」 (Jū'nen hayai'n da yo!, \"You are ten years too early!\"");
+
+        // Alucard
+        insertAssistTrophy("Alucard",
+                "Alucard is the son of Dracula who appears from the Castlevania series. A dhampir (son of Dracula with a human woman), Alucard opposes his father's crusade against humanity, having been taught by his mother, in her dying breath, not to hold grudges against humans. Having helped vampire hunter Trevor Belmont defeat Dracula once, Alucard awakens again, sensing a strange evil energy coming from his father's abode, and uncovers a plot to resurrect him.\n\n" +
+                "Alucard's appearance and moves take inspiration from his role as the protagonist in Castlevania: Symphony of the Night: he attacks using the Crissaegrim (also known as the Valmanway), transforms into a bat, and uses Mist Form to evade opponents' attacks.");
+
+        // Andross
+        insertAssistTrophy("Andross",
+                "Andross, the main villain from the Star Fox series appears from the Assist Trophy, and, floating in the background of a stage, inhales and spits forth a flurry of harmful polygons that damage characters. His appearance and attack are based on his depiction in the original SNES Star Fox.");
+
+        // Arcade Bunny
+        insertAssistTrophy("Arcade Bunny ",
+                "The Arcade Bunny is the host of the Nintendo 3DS game Nintendo Badge Arcade. After he is summoned, the crane from the original game appears at the top and begins to move left and right, dropping down periodically in an attempt to drag an opponent up, while the Arcade Bunny stands in the background. It can only do this three times, as indicated by the number on the crane which decreases by one after it descends. Once it is depleted, the Arcade Bunny and crane disappear.");
+
+        // Ashley
+        insertAssistTrophy("Ashley",
+                "Ashley creates a purple cloud when summoned, which causes opponents caught in it to move slower and take continuous damage, healing items to inflict damage, and other random effects.");
+
+        // Black Knight
+        insertAssistTrophy("Black Knight",
+                "The Black Knight is a recurring antagonist in Fire Emblem: Path of Radiance. The second-in-command to the Mad King Ashnard, this mysterious knight was the man responsible for murdering Ike's father, Greil, for which Ike embarks on a quest of vengeance parallel to the liberation of Tellius.\n\n" +
+                "When summoned, the Black Knight will walk slowly across the stage, striking any fighter that crosses his path. His attacks have a high launching potential, and he is immune to flinching when attacked.");
 
     }
+
+
+
+
 
 }
