@@ -1338,10 +1338,91 @@ public class SuperSmashDataWorker {
                 "Fire rapidly by pressing the button quickly, or hold the button to charge up! The fully charged shot is powerful!");
 
 
-        //               ----------------- G** Items ----------------------
-        // Ban
-        insertItem("Ba", "Gear",
-                "come");
+        //               ----------------- Throwing Items ----------------------
+        // Banana Peel
+        insertItem("Banana Peel", "Throwing",
+                "A classic comedy staple: if you step on one of these, you'll fall on your rump. It never gets old!");
+        // Beastball
+        insertItem("Beastball", "Throwing",
+                "Throw it, and it will disappear in the air then reappear near an opponent, covered in flames.");
+        // Beehive
+        insertItem("Beehive", "Throwing",
+                "A swarm of bees will emerge, mobbing a fighter and dealing damage to them bit by bit.");
+        // Beetle
+        insertItem("Beetle", "Throwing",
+                "Throw it toward an enemy and, if it hits, it'll grab on and drag them upward. The higher their damage, the harder it is to break free!");
+        // Black Hole
+        insertItem("Black Hole", "Throwing",
+                "Throw it to create a black hole that will draw in fighters and items.");
+        // Bob-omb
+        insertItem("Bob-omb", "Throwing",
+                "Despite its size, this bomb packs a serious punch. Left alone, it tends to get bored and wanders off...");
+        // Bombchu
+        insertItem("Bombchu", "Throwing",
+                "This little zippy bomb crawls on floors, walls, and ceilings. It'll go off if it hits someone or the fuse runs out.");
+        // Boomerang
+        insertItem("Boomerang", "Throwing",
+                "When thrown, this object eventually comes back to the thrower. Catch it to boost its power!");
+        // Boss Galaga
+        insertItem("Boss Galaga", "Throwing",
+                "This zippy item will try and capture opponents with a tractor beam and then carry them into space.");
+        // Bumper
+        insertItem("Bumper", "Throwing",
+                "A bumper can be placed in the air or on the ground. Anyone who touches it will be bounced like a pinball.");
+        // Cucco
+        insertItem("Cucco", "Throwing",
+                "Cuccos will wander around the stage, minding their own business. If you're heartless enough to attack one, you deserve what you get.");
+        // Deku Nut
+        insertItem("Deku Nut", "Throwing",
+                "This little nut explodes on impact, dazing fighters on the ground and launching those who are airborne.");
+        // Freezie
+        insertItem("Freezie", "Throwing",
+                "An item that slowly slides on the ground. If thrown, anyone hit by it will be frozen in ice for a time.");
+        // Gooey Bomb
+        insertItem("Gooey Bomb", "Throwing",
+                "This bomb goes off shortly after sticking to something. If that something is you, brush the bomb onto someone else! Fast!");
+        // Green Shell
+        insertItem("Green Shell", "Throwing",
+                "Attack or throw the Green Shell to send it sliding across the ground!");
+        // Hocotate Bomb
+        insertItem("Hocotate Bomb", "Throwing",
+                "This spaceship-turned-bomb will soar skyward, returning a short time later to blow up on its launch site.");
+        // Hothead
+        insertItem("Hothead", "Throwing",
+                "A fireball that grows when attacked. It will move around the stage, growing bigger from fire or electric attacks.");
+        // Killer Eye
+        insertItem("Killer Eye", "Throwing",
+                "A stationary cannon that shoots out damaging beams. You can change its direction by hitting it.");
+        // Motion-Sensor Bomb
+        insertItem("Motion-Sensor Bomb", "Throwing",
+                "Once placed on the battlefield, this small bomb will go off the moment anyone gets too close.");
+        // Mr. Saturn
+        insertItem("Mr. Saturn", "Throwing",
+                "Throwing Mr. Saturn won't deal much damage, but he'll annihilate any shield he hits.");
+        // Pitfall
+        insertItem("Pitfall", "Throwing",
+                "This creates a hidden pitfall, trapping anyone who steps on it in the ground, unable to move.");
+        // POW Block
+        insertItem("POW Block", "Throwing",
+                "Hit it or throw it to launch everyone on the ground into the air. It only has three uses, so POW wisely!");
+        // Smart Bomb
+        insertItem("Smart Bomb", "Throwing",
+                "A bomb that creates a massive explosion, hurting anyone caught in the blast. Unless it's a dud. Then nothing happens.");
+        // Smoke Ball
+        insertItem("Smoke Ball", "Throwing",
+                "After being thrown, this item will roll around on the ground or stick to opponents. The smoke makes it hard to see the battle.");
+        // Soccer Ball
+        insertItem("Soccer Ball", "Throwing",
+                "Give it a good kick, and watch the ball burst into flames! You can't pick it up, thoughーthat's a foul.");
+        // Spiny Shell
+        insertItem("Spiny Shell", "Throwing",
+                "If you throw this, it'll seek out the player with the highest score (that isn't you), then slam down and explode on them!");
+        // Unira
+        insertItem("Unira", "Throwing",
+                "It will reveal its dangerous spikes after being placed. It sticks to walls, too!");
+        // X Bomb
+        insertItem("X Bomb", "Throwing",
+                "The blast from this bomb will go in four directions. It can go vertically and horizontally, or diagonally.");
 
     }
 
