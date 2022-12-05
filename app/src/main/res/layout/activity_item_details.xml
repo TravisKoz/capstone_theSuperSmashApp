@@ -95,5 +95,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/details_item_category_title" />
 
+    <Button
+      android:id="@+id/view_trophies_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/custom_button"
+      android:text="@string/view_assist_trophies_text"
+      android:textSize="26sp"
+      android:fontFamily="@font/smashfont"
+      android:textColor="@color/white"
+      android:visibility="invisible"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/details_item_category" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

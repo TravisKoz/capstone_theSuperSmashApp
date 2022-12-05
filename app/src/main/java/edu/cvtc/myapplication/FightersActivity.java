@@ -24,8 +24,6 @@ public class FightersActivity extends AppCompatActivity {
     public static int index = -1;
     public static int top = -1;
 
-    private int lastFirstVisiblePosition;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +39,7 @@ public class FightersActivity extends AppCompatActivity {
 
         mDbOpenHelper = new SuperSmashOpenHelper(this);
 
-
-            initializeDisplayContent();
+        initializeDisplayContent();
     }
 
     private void initializeDisplayContent() {
@@ -74,6 +71,7 @@ public class FightersActivity extends AppCompatActivity {
         mDbOpenHelper.close();
         super.onDestroy();
     }
+
     @Override
     public void onResume() {
         super.onResume();

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +23,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private int mItemNamePosition;
     private int mItemCategoryPosition;
     private int mItemDescriptionPosition;
+    private boolean mIsAssistTrophy = false;
 
     // Member objects
     private TextView mItemName;
@@ -47,6 +50,25 @@ public class ItemDetailsActivity extends AppCompatActivity {
         mItemDescription = findViewById(R.id.details_item_description);
         mItemImage = findViewById(R.id.details_item_image);
         loadItemData();
+
+        if (mIsAssistTrophy) {
+
+            Button viewTrophies = findViewById(R.id.view_trophies_button);
+            viewTrophies.setVisibility(View.VISIBLE);
+
+
+            viewTrophies.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openTrophiesActivity();
+                }
+            });
+
+
+
+        }
+
+
     }
 
     private void loadItemData() {
@@ -106,11 +128,20 @@ public class ItemDetailsActivity extends AppCompatActivity {
                 this.getResources().getIdentifier(imageNameFormat, "drawable", this.getPackageName());
 
         mItemImage.setImageResource(imageResourceID);
+
+        if (itemName.equals("Assist Trophy")) {
+            mIsAssistTrophy = true;
+        }
     }
 
     @Override
     protected void onDestroy() {
         mDBOpenHelper.close();
         super.onDestroy();
+    }
+
+    private void openTrophiesActivity() {
+        Intent intent = new Intent(this, TrophiesActivity.class);
+        startActivity(intent);
     }
 }

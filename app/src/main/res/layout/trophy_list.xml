@@ -20,7 +20,7 @@
       android:layout_height="match_parent" >
 
       <ImageView
-        android:id="@+id/game_symbol"
+        android:id="@+id/assist_image"
         android:layout_width="46dp"
         android:layout_height="52dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:src="@drawable/super_smash" />
 
       <TextView
-        android:id="@+id/fighter_name"
+        android:id="@+id/assist_trophy_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/trophy_name_text"
@@ -41,8 +41,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:fontFamily="@font/smashfont"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/game_symbol"
-        app:layout_constraintTop_toTopOf="@id/game_symbol" />
+        app:layout_constraintStart_toEndOf="@id/assist_image"
+        app:layout_constraintTop_toTopOf="@id/assist_image" />
     </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.cardview.widget.CardView>
 </FrameLayout>

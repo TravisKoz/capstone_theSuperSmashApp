@@ -123,7 +123,6 @@ public class WinLoseTrackerActivity extends AppCompatActivity implements Adapter
         }
     }
 
-
     // This code runs whenever a fighter is selected from the spinner.
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {

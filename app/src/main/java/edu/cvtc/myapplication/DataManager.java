@@ -9,6 +9,7 @@ import java.util.List;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.AssistTrophyEntry;
 
 // This class is used to communicate with the database.
 // We we use it to load and save information to the database
@@ -19,6 +20,7 @@ public class DataManager {
     private List<BattleNote> mBattleNotes = new ArrayList<>();
     private List<Fighter> mFighters = new ArrayList<>();
     private List<ItemSSB> mItems = new ArrayList<>();
+    private List<AssistTrophy> mTrophies = new ArrayList<>();
 
     // Set a reference to our new instance.
     public static DataManager getInstance() {
@@ -33,7 +35,7 @@ public class DataManager {
         return mBattleNotes;
     }
 
-    // Returns a list of our fighters()
+    // Returns a list of our fighters
     public List<Fighter> getFighters() {
         return mFighters;
     }
@@ -41,6 +43,11 @@ public class DataManager {
     // Returns a list of our items
     public List<ItemSSB> getItems() {
         return mItems;
+    }
+
+    // Returns a list of our assist trophies()
+    public List<AssistTrophy> getTrophies() {
+        return mTrophies;
     }
 
     private static void loadBattleNotesFromDatabase(Cursor cursor) {
@@ -214,11 +221,6 @@ public class DataManager {
         loadFightersFromDatabase(fighterCursor);
     }
 
-    // Don't think I need this
-    public void removeFighter(int index) {
-        mFighters.remove(index);
-    }
-
     public int createNewBattleNote() {
         // Create an empty course object to use on your activity screen
         // when you want a "blank" record to show up. It will return the
@@ -290,5 +292,63 @@ public class DataManager {
 
         // Call the method to load our array list
         loadItemsFromDatabase(itemCursor);
+    }
+
+    private static void loadTrophiesFromDatabase(Cursor cursor) {
+        // Retrieve the field positions in your database.
+        // The positions of fields may change over time as the database grows, so
+        // you want to use your constants to reference where those positions are in
+        // the table.
+        int listNamePosition =
+                cursor.getColumnIndex(AssistTrophyEntry.COLUMN_NAME);
+        int listDescriptionPosition =
+                cursor.getColumnIndex(AssistTrophyEntry.COLUMN_DESCRIPTION);
+        int idPosition =
+                cursor.getColumnIndex(AssistTrophyEntry._ID);
+
+        // Create an instance of your DataManager and use the DataManager
+        // to clear any information from the array list.
+        DataManager dm = getInstance();
+        dm.mTrophies.clear();
+
+        // Loop through the cursor rows and add new fighter objects to
+        // our array list.
+        while (cursor.moveToNext()) {
+            String listName =
+                    cursor.getString(listNamePosition);
+            String listDescription =
+                    cursor.getString(listDescriptionPosition);
+            int id = cursor.getInt(idPosition);
+
+            AssistTrophy list = new AssistTrophy(id, listName, listDescription);
+            dm.mTrophies.add(list);
+        }
+
+        // Close the cursor (to prevent memory leaks)
+        cursor.close();
+    }
+
+    public static void getTrophiesFromDatabase(SuperSmashOpenHelper dbHelper) {
+        // Open our database in read mode.
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        // Create a list columns we want to return.
+        String[] trophyColumns = {
+                AssistTrophyEntry.COLUMN_NAME,
+                AssistTrophyEntry.COLUMN_DESCRIPTION,
+                AssistTrophyEntry._ID
+        };
+
+        // Create an order by field for sorting purposes.
+        String trophyOrderBy = AssistTrophyEntry.COLUMN_NAME;
+
+        // Populate our cursor with the results of the query.
+        final Cursor trophyCursor = db.query(AssistTrophyEntry.TABLE_NAME,
+                trophyColumns,
+                null, null, null, null,
+                trophyOrderBy);
+
+        // Call the method to load our array list
+        loadTrophiesFromDatabase(trophyCursor);
     }
 }

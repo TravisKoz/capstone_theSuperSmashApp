@@ -188,6 +188,7 @@
     <string name="trophy_name_text">Trophy Name</string>
     <string name="description_text">Description</string>
     <string name="image_of_assist_trophy">Image of Assist Trophy</string>
+    <string name="view_assist_trophies_text">View Assist Trophies</string>
 
 
 </resources>

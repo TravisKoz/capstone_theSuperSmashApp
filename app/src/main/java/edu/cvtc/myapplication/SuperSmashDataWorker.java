@@ -1453,7 +1453,7 @@ public class SuperSmashDataWorker {
                 "Andross, the main villain from the Star Fox series appears from the Assist Trophy, and, floating in the background of a stage, inhales and spits forth a flurry of harmful polygons that damage characters. His appearance and attack are based on his depiction in the original SNES Star Fox.");
 
         // Arcade Bunny
-        insertAssistTrophy("Arcade Bunny ",
+        insertAssistTrophy("Arcade Bunny",
                 "The Arcade Bunny is the host of the Nintendo 3DS game Nintendo Badge Arcade. After he is summoned, the crane from the original game appears at the top and begins to move left and right, dropping down periodically in an attempt to drag an opponent up, while the Arcade Bunny stands in the background. It can only do this three times, as indicated by the number on the crane which decreases by one after it descends. Once it is depleted, the Arcade Bunny and crane disappear.");
 
         // Ashley
@@ -1465,10 +1465,242 @@ public class SuperSmashDataWorker {
                 "The Black Knight is a recurring antagonist in Fire Emblem: Path of Radiance. The second-in-command to the Mad King Ashnard, this mysterious knight was the man responsible for murdering Ike's father, Greil, for which Ike embarks on a quest of vengeance parallel to the liberation of Tellius.\n\n" +
                 "When summoned, the Black Knight will walk slowly across the stage, striking any fighter that crosses his path. His attacks have a high launching potential, and he is immune to flinching when attacked.");
 
+        // Bomberman
+        insertAssistTrophy("Bomberman",
+                "The main protagonist of the eponymous Bomberman series, Bomberman lays bombs on the stage, which explode in a cross formation and may cause chain reactions, similar to the original games.");
+
+        // Burrowing Snagret
+        insertAssistTrophy("Burrowing Snagret",
+                "An enemy originally from Pikmin, the Burrowing Snagret is a reptilian creature with a bird-like head and a long beak which tunnels underground, only putting its head out to pick out prey.\n\n" +
+                        "When summoned, it repeatedly lunges at opponents from one spot, damaging them. It also occasionally burrows underground and reappears in a different location. It takes its appearance from Pikmin 3, and is the first Assist Trophy from the Pikmin series.\n");
+
+        // Chain Chomp
+        insertAssistTrophy("Chain Chomp",
+                "Chain Chomp attacks players by lunging at them, akin to its mainstream Mario appearances.");
+
+        // Chef Kawasaki
+        insertAssistTrophy("Chef Kawasaki",
+                "Chef Kawasaki is a recurring enemy throughout Kirby Super Star and Kirby Star Allies (he can sometimes be an ally in the latter game), although he appears in a few other Kirby games as well. Defeating and inhaling him will give Kirby the Cook ability.\n\n" +
+                "When summoned, Chef Kawasaki extends his ladle and traps anyone it hits into a boiling pot, then begins to stir and season the pot for a brief period of time. After that, multiple food items and any opponents inside the pot are launched out. Chef Kawasaki then produces another plate of food. The attack functions similar to Kirby's Final Smash in Super Smash Bros. Brawl.");
+
+        // Color TV-Game 15
+        insertAssistTrophy("Color TV-Game 15",
+                "The Color TV-Game 15 was the second model in Nintendo's Japan-only line of Color TV-Game dedicated consoles, some of the earliest video game products released by the company. Released in 1977, the Color TV-Game 15 features two controllers and fifteen variations of \"Light Tennis\".\n\n" +
+                "When summoned as an Assist Trophy, the two paddles appear on both sides of the screen as a game starts. The two paddles proceed to hit the ball back and forth, the ball damaging any opponents in its path that it hits. Players can also attack the ball to send it in a different direction. A score is kept above, though it does not impact the match; clapping can also be heard each time a point is scored. In Super Smash Bros. Ultimate, the background changes color when the paddles appear.");
+
+        // Devil
+        insertAssistTrophy("Devil",
+                "The Devil is the main antagonist of the Nintendo Entertainment System game, Devil World, released only in Japan and Europe.\n\n" +
+                "When summoned, the Devil will first appear as a bat and fly to the top of the screen. Once at the top, the Devil assumes his true form and begins pointing in one of the cardinal directions, causing the camera, which is otherwise fixed in place during this time, to move in the direction he points. As a result of this, the blast zones of the stages change continuously until the Devil disappears.");
+
+        // Dillon
+        insertAssistTrophy("Dillon",
+                "Dillon is an armadillo ranger and the titular main protagonist from the Dillon's Rolling Western series. His job is to defend villages from being raided by creatures called Grocks.\n\n" +
+                "After being summoned as an Assist Trophy, he charges up a rolling attack similar to Sonic's Spin Dash and leaps forward, striking any opponents in his path. After doing this a few times, he charges up a more powerful attack that sends him flying off the stage before disappearing.");
+
+        // Dr. Kawashima
+        insertAssistTrophy("Dr. Kawashima",
+                "Dr. Ryuta Kawashima (Japanese: 川島 隆太) is a Japanese neuroscientist and host of the Brain Age series. In the series, he is represented by a polygonal version of his own face, similar to Andross.\n\n" +
+                "When summoned, Dr. Kawashima immediately disappears, but causes numbers to fly across the screen. If two numbers collide, they add into a larger number, and if the two numbers equal 10 or greater, they explode. The explosion is bigger and lasts longer (similar to that of a Smart Bomb) if the numbers equal exactly 10. Players can also attack the numbers to knock them away. In Super Smash Bros. Ultimate, the white, gridded background from the Brain Age games replaces the stage's background when Dr. Kawashima is summoned.");
+
+        // Dr. Wright
+        insertAssistTrophy("Dr. Wright",
+                "Dr. Wright, the player's assistant from the SNES version of SimCity, appears and attacks opponents by using his pointer stick to pull a skyscraper from the ground, sending them flying upwards. The attack is executed right in front of Dr. Wright and the vertical range is very high, so fighters should run away immediately after he is released. There is a one-in-ten chance that Dr. Wright will summon a particularly large skyscraper for even more range and power.");
+
+        // Flies & Hand
+        insertAssistTrophy("Flies & Hand",
+                "The flies and the hand holding the flyswatter from the Gnat Attack minigame present in Mario Paint. When summoned, the Hand will move about the screen, attempting to swat the flies buzzing about at random. While the flies cannot harm the fighters, the flyswatter can.");
+
+        // Ghirahim
+        insertAssistTrophy("Ghirahim",
+                "Ghirahim is one of the primary antagonists in The Legend of Zelda: Skyward Sword, who sought to revive his master, the Demon King Demise, who once razed the land that lay below Skyloft. In order to do so, he intends to offer Zelda as a sacrifice.\n\n" +
+                "He attacks primarily through his sword and by throwing projectile diamonds when jumping. He constantly moves around while attacking and, if he falls off the stage, teleports to the edge. If enough damage is dealt to him, he will stagger before disappearing; otherwise, he will simply go away after a period of time.");
+
+        // Ghosts
+        insertAssistTrophy("Ghosts",
+                "Blinky, Inky, Pinky, and Clyde appear as an Assist Trophy, taking their appearance from the original Pac-Man arcade game. All four randomly appear on the stage and attack opponents in a similar fashion to their original appearances. After a while, they speed up before leaving the screen. In Super Smash Bros. Ultimate, the stage's background turns navy to replicate the dark background from the original Pac-Man when the ghosts appear.");
+
+        // Gray Fox
+        insertAssistTrophy("Gray Fox",
+                "Gray Fox from the Metal Gear series was originally an operative for the United States Army special forces unit FOXHOUND called Frank Jaeger, before he was subjected to gene experimentation and placed inside an exoskeleton and became a mercenary. Although he fought against Solid Snake and Big Boss several times, he secretly helped them before his death during the Shadow Moses Incident in 2005.\n\n" +
+                "When summoned, he runs and jumps across the screen toward other fighters, slashing them multiple times with his katana. He can deflect projectiles, and is unique among Assist Trophies in that he will return from above should he fall off the stage");
+
+        // Guile
+        insertAssistTrophy("Guile",
+                "Guile is a character from the Street Fighter series. A U.S. Air Force major, Guile holds an intense grudge against M. Bison, the head of Shadaloo, who was responsible for the murder of his best friend Charlie Nash during an operation. He usually works together with other characters like Chun-Li and Cammy, who also have scores to settle with Bison, to bring him down\n\n" +
+                        "When summoned, Guile stays in one spot, crouched. If a character approaches him, he will attack them with the Flash Kick. If he is attacked from a distance, he will block. He may also fire off his Sonic Boom projectile");
+
+        // Hammer Bro
+        insertAssistTrophy("Hammer Bro",
+                "A Hammer Bro appears on the stage and throws hammers at opponents. It can jump up and throw them in midair and it can also throw hammers while on the ground.");
+
+        // Isaac
+        insertAssistTrophy("Isaac",
+                "saac is the main character of the Golden Sun series. He is a Venus Adept who has the power to use psychic energy revolving around either the manipulation of the ground and nature or simple non-combat abilities such as moving objects.\n\n +" +
+                        "When he appears, Isaac summons a giant hand (a utility ability called Move) and sends it to the end of the stage, pushing any opponents along with it. He does this three times before disappearing. The hand does not do any direct damage; its only purpose is to send opponents off of the stage. In Super Smash Bros. Ultimate, however, the hand is also able to attack opponents by slamming into the ground with the Pound move. Isaac can also use Lift to summon a pair of hands to grab an opponent and carry them off-screen.");
+
+        // Jeff
+        insertAssistTrophy("Jeff",
+                "Jeff Andonuts is one of the main heroes in EarthBound and the son of the scientist Dr. Andonuts. In EarthBound, whereas the rest of Ness's party can utilize PSI attacks, Jeff's attacks use guns and other gadgets, such as various types of bottle rockets and stat-altering devices.\n\n" +
+                "As an Assist Trophy, he prepares and launches a set of five bottle rockets, which shoot into the air, homing in on enemies in unpredictable trajectories. There will always be four small bottle rockets followed by a big bottle rocket at the end, but there is a one-in-five chance that he will summon a second wave of rockets before disappearing.");
+
+        // Kapp'n
+        insertAssistTrophy("Kapp'n",
+                "Kapp'n is a character from the Animal Crossing series. Usually depicted as a sailor and speaking with a stereotypical pirate accent, he has driven a number of different vehicles throughout the series, either driving the player to the town where they will be living or ferrying them to the island where multiplayer modes take place.\n\n" +
+                "After being summoned, Kapp'n enters his bus and drives it across the stage. If it runs into any opponents, they are automatically put on the bus and are carried off as Kapp'n drives off-screen. If Kapp'n drives off without picking up any fighter, he will respawn at the center of the screen until his summoning time runs out.");
+
+        // Klaptrap
+        insertAssistTrophy("Klaptrap",
+                "As the Klaptrap walks along the stage, if an opponent is caught in its path, it latches onto them and bites them repeatedly.\n\n" +
+                        "Knuckle Joe is a recurring enemy in the Kirby series. He first appeared in Kirby Super Star, where he grants Kirby the Fighter ability when inhaled and has appeared in numerous games since, still granting Kirby the Fighter ability when inhaled.\n\n" +
+                        "When summoned as an Assist Trophy, Knuckle Joe hops to the nearest opponent and deliver a flurry of Vulcan Jabs. He performs this one more time before finishing off the opponent with either a Rising Break or Smash Punch, both signature moves of the Fighter ability from the Kirby series, then disappears. In Super Smash Bros. for Nintendo 3DS / Wii U and Super Smash Bros. Ultimate, his attacks are weaker, though he can perform two Rising Breaks or Smash Punches before disappearing rather than one like in Super Smash Bros. Brawl.");
+
+        // Knuckles
+        insertAssistTrophy("Knuckles",
+                "Knuckles runs around the stage and uses Homing Attacks similar to Sonic's, and occasionally burrows underground and re-emerges at a different location.");
+
+        // Krystal
+        insertAssistTrophy("Krystal",
+                "Krystal is a character from the Star Fox series who first appears in Star Fox Adventures. A native from the destroyed planet of Cerinia, she was rescued by Fox after being imprisoned during her quest to find the Krazoa Spirits and stop General Scales, the one responsible for the destruction of her homeworld. When the situation is resolved, Krystal joins the Star Fox team in gratitude.\n\n" +
+                "As an Assist Trophy, she uses her staff to cast ice spells as well as to swing at opponents at close range.");
+
+        // Lyn
+        insertAssistTrophy("Lyn",
+                "Lyn, full name Lyndis, is from the GBA Fire Emblem game. Having grown up in a camp of hunters, she finds out she is the granddaughter of the Marquess of Caelin and the next in the line of succession for the throne of her homeland, and sets out to claim her birthright while evading the schemes of her great-uncle Lundgren, who had her grandfather poisoned in a plan to seize the throne for himself.\n\n" +
+                "When she appears, she charges for an attack. She then teleports to an enemy (usually whoever's closest to her) and slashes at them using her signature weapon, the Mani Katti, launching them far. This attack is very powerful and difficult to avoid, capable of hitting enemies that are in the air and even certain characters in their Final Smashes. In games following Super Smash Bros. Brawl, she is able to be damaged. If enough damage is done to her before she attacks, she disappears; otherwise, she simply disappears after attacking.");
+
+        // Metroid
+        insertAssistTrophy("Metroid",
+                "Metroids are the titular species of parasitic aliens from the Metroid series. They were created by the Chozo to combat the X parasites, though they eventually grew out of hand, and are now supposedly extinct thanks to the efforts of Samus Aran.\n\n" +
+                        "When released, the Metroid floats around the stage, latching onto any players it encounters and sucking their health away, similar to what they do in the original games. In Super Smash Bros. for Nintendo 3DS, Metroids also appear as Smash Run enemies.");
+
+        // Midna
+        insertAssistTrophy("Midna",
+                "Midna is a Twili and a central character appearing in The Legend of Zelda: Twilight Princess. Originally the titular Twilight Princess and ruler of the Twilight Realm, she was overthrown by Zant and transformed into an imp form by him. Afterward, she leaves the realm to collect the Fused Shadows to defeat him.\n\n" +
+                "As an Assist Trophy, she attacks by grabbing fighters with her hair and throwing them. If no opponents are near her, she teleports to their location.");
+
+        // Moon
+        insertAssistTrophy("Moon",
+                "The moon from The Legend of Zelda: Majora's Mask appears in the background and slowly approaches the stage (similar to its role in the original game), burning up as it does so. Once it crashes into the stage, the surrounding fire deals repeated fire damage on opponents before disappearing in a white flash.\n\n");
+
+        // Nightmare
+        insertAssistTrophy("Nightmare",
+                "Nightmare (also referred to as Nightmare Wizard) is a major antagonist in the Kirby series, appearing as the final boss of both Kirby's Adventure and its remake, Kirby: Nightmare in Dream Land. In both games, Nightmare tried to plunge the realm of Dream Land into darkness, but was defeated by the combined forces of King Dedede and Kirby wielding the power of the Star Rod.\n\n" +
+                "As an Assist Trophy, he takes on his Kirby: Nightmare in Dream Land appearance. When summoned, Nightmare first appears in his Power Orb form before flying to the top of the screen. After a few seconds, he immediately appears and enlarges himself in the background of the stage while cackling and shrouding the stage in darkness. During this time, the entire screen is black, confusing both players and CPU opponents. Several seconds later, the darkness slowly fades away, along with Nightmare.");
+
+        // Nikki
+        insertAssistTrophy("Nikki" ,
+                "Nikki is a character who first appeared in the form of a Mii as the host of Swapnote. When summoned, she appears at the bottom-left corner of the screen and sketches three different objects, which are drawn on the stage itself and may damage fighters. Some of Nikki's drawings include a Bullet Bill, which flies away and attacks opponents, and a fire-breathing dinosaur.");
+
+        // Nintendog
+        insertAssistTrophy("Nintendog",
+        "A Nintendog from the Nintendogs games briefly appears on the battleground before coming up to the screen and blocking the players' views, causing a great distraction. In Super Smash Bros. Ultimate, it is a Toy Poodle.\n\n");
+
+        // Phosphora
+        insertAssistTrophy("Phosphora",
+                "Phosphora (full title Lightning Flash Phosphora) is a character from Kid Icarus: Uprising. She specializes in lightning-based attacks and is one of the commanders in the Forces of Nature, alongside Arlon the Serene and led by Viridi. She fights Pit in Chapter 14 and later becomes an ally of him, along with the Forces of Nature.\n\n" +
+                "When summoned as an Assist Trophy, she attacks all her opponents with lightning attacks. She either creates three small balls of electricity, one giant sphere of electricity, or three quick strikes of lightning. Attacking Phosphora does not defeat her, but it makes her flinch temporarily. Every time she is hit, she moves away from the stage, making it harder for her to hit. Phosphora's attacks can be absorbed or reflected.");
+
+        // Prince of Sable
+        insertAssistTrophy("Prince of Sable",
+                "The Prince of Sablé is the unnamed main protagonist of the Japan-exclusive Kaeru no Tame ni Kane wa Naru (literally \"The Frog for Whom the Bell Tolls\"), released on the Game Boy.\n\n" +
+                "He attacks players by transforming into a frog and hopping around, then transforming into a snake and slithering across the ground. If he encounters any opponents, he traps them in a smoke cloud and continuously attacks them, similar to battles in his game of origin; other players can also be caught in this. Afterward, he transforms back into his human form.");
+
+        // Rathalos
+        insertAssistTrophy("Rathalos",
+                "When Rathalos is summoned, he flies above the stage and attacks by spitting large fireballs, and emits a loud roar that stuns opponents. He also appears as a boss in the World of Light and Classic Mode.");
+
+        // Riki
+        insertAssistTrophy("Riki",
+                "Riki is one of the seven playable characters in Xenoblade Chronicles. He is a Nopon regarded as the \"Heropon\" of Frontier Village, but this is mostly so that he can repay all of his debts. Though he acts immature, he is still a loyal member of Shulk's group as they fight against the Mechon.\n\n" +
+                "After being summoned as an Assist Trophy, he uses a variety of his Battle Arts: Happy Happy increases the attack and launching power of all fighters, Freezinate temporarily freezes nearby opponents (dealing minor damage as well), Yoink! brings all items closer to him, Bedtime temporarily puts nearby enemies to sleep, You Can Do It slightly heals all fighters, and Roly Poly trips all grounded opponents. Riki also makes an appearance alongside Dunban in Shulk's Final Smash, Chain Attack.");
+
+        // Rodin
+        insertAssistTrophy("Rodin",
+                "Rodin, from the Bayonetta series, is the mysterious bartender of the \"Gates of Hell\" pub, who is also Bayonetta's arms supplier. When summoned, he moves around the stage and summons giant versions of his fists when attacking, similar to Bayonetta's Wicked Weave attacks. He can also attack using his version of Bayonetta's After Burner Kick. Before disappearing, he leaves an item behind.");
+
+        // Samurai Goroh
+        insertAssistTrophy("Samurai Goroh",
+                "Samurai Goroh is a pilot from the F-Zero series. He is a bounty hunter who has a rivalry with Captain Falcon. As an Assist Trophy, he appears and slashes away at the fighters with his katana. He can jump while slashing horizontally.");
+
+        // Shadow
+        insertAssistTrophy("Shadow",
+                "Shadow uses Chaos Control to slow down all opposing fighters. In Super Smash Bros. Ultimate, he freezes opponents in place before he disappears.");
+
+        // Sheriff
+        insertAssistTrophy("Sheriff",
+                "The sheriff is the protagonist of an arcade game also called Sheriff. Designed after a typical Western sheriff, he goes after a group of bandits that have kidnapped Betty. In the upright arcade cabinet's bezel, he is named Mr. Jack. He is also known as the gunman (ガンマン) in the Japanese instructions. He is the first playable human character in any Nintendo video game.\n\n" +
+                        "When spawned as an Assist Trophy, he walks around the screen and shoots bullets towards other enemies (though he sometimes fires in a haphazard direction), emulating his attacks from Sheriff. If enough damage is dealt to him, he displays his \"injured\" sprite from Sheriff before disappearing; otherwise, he disappears after enough time has passed.");
+
+        // Shovel Knight
+        insertAssistTrophy("Shovel Knight",
+                "Shovel Knight is the protagonist of his eponymous game, and also the first indie game character to appear in physical form and as an Assist Trophy in the Super Smash Bros. series. As his name implies, he fights with a shovel, and treks across the land in order to save his beloved Shield Knight and defeat the evil Enchantress and her Order of No Quarter.\n\n" +
+                "Shovel Knight uses similar moves from the original game, digging rocks out of the ground with his shovel and aiming it downward while in mid-air to bounce on opponents, damaging them. The shovel may also damage opponents as he is digging the ground. Occasionally when digging, an item appears out of the ground.");
+
+        // Skull Kid
+        insertAssistTrophy("Skull Kid",
+                "Skull Kid is a major antagonist in The Legend of Zelda: Majora's Mask, being possessed by the titular mask and calling the moon to crash down on Termina in three days if not stopped.\n\n" +
+                "When summoned as an Assist Trophy, he emits a dark aura that either reverses the stage or flips it upside down, both of which reverse the controls.");
+
+        // Spring Man
+        insertAssistTrophy("Spring Man",
+                "Spring Man is one of the fighters from ARMS. He is an enthusiastic 20-year-old youngster who dreams of winning the ARMS Grand Prix and, as his name implies, not only are his arms spring-propelled, he also has an entire spring theme around him (such as his hairstyle, fittingly coiled in the shape of a spring).\n\n" +
+                "When summoned, Spring Man will attack by punching from a distance, but if the opponent gets too close, he will unleash ARMS Rush, a barrage of punches capable of launching them away.");
+
+        // Squid Sisters
+        insertAssistTrophy("Squid Sisters",
+                "The Squid Sisters, Callie and Marie, appear on a small stage and perform \"Ink Me Up\" or \"Calamari Inkantation.\" As they do so, the camera slowly zooms in on them, limiting the amount of space to fight and making it easier for players to be KO'd.");
+
+        // Starfy
+        insertAssistTrophy("Starfy",
+                "Starfy (also known as Stafy) from The Legendary Starfy series performs his spin attack on an opponent if he has the chance. However, fighters can easily attack him and send him flying.");
+
+        // Starman
+        insertAssistTrophy("Starman",
+                "Starmen are an alien race that serve Giygas in EarthBound Beginnings and EarthBound. In EarthBound, Starmen teleport before being engaged in battle and attack by firing beams.\n\n" +
+                "Starmen are an alien race that serve Giygas in EarthBound Beginnings and EarthBound. In EarthBound, Starmen teleport before being engaged in battle and attack by firing beams.\n" +
+                        "Once summoned as an Assist Trophy, the Starman proceeds to teleport around the stage. After it teleports, the Starman stops in its place, glows, and attacks using either PK Beam γ or PK Beam Ω. Getting hit by one of these attacks causes moderate damage and the player is momentarily stunned. The beams act like energy projectiles, so they can be absorbed or reflected. If the opponents cause enough damage to the Starman while it's still active, the Starman is defeated, displaying both the \"SMAAAASH!\" text and sound effect from EarthBound before disappearing prematurely.");
+
+        // Sukapon
+        insertAssistTrophy("Sukapon",
+                "A robot and the main character of the Japan-only Famicom game Joy Mech Fight, Sukapon is a comedian robot designed by Dr. L. Emon, but repurposed as a combat robot in order to stop Dr. Walnuts from taking over the world with seven other robots stolen from Emon.\n\n" +
+                "Sukapon moves around the stage and throws parts of its body at opponents, and can even pick them up and throw them into the air.");
+
+        // Takamaru
+        insertAssistTrophy("Takamaru",
+                "Takamaru is the protagonist of The Mysterious Murasame Castle. Like in his original game, he attacks by quickly slashing with his katana and by throwing shurikens in the four cardinal directions. He constantly moves around while attacking and jumps back to the stage's edge if he starts to fall to a pit. If enough damage is dealt to him, he becomes staggered before disappearing; otherwise, he simply goes away after a period of time.");
+
+        // Thwomp
+        insertAssistTrophy("Thwomp",
+                "When summoned, the Thwomp stays high up on the screen and comes crashing down on top of any character that passes underneath it.");
+
+        // Tiki
+        insertAssistTrophy("Tiki",
+                "Tiki is a character from the Fire Emblem series. The last of the divine dragonkin of Archanea, she originally fought alongside Marth in his quest to reclaim the throne of Archanea, then a thousand years later she was encountered by Chrom, whom she guided in the role of an oracle." +
+                "Tiki's appearance as an Assist Trophy comes from Fire Emblem Awakening. When summoned, Tiki assumes her dragon form, flies just outside the arena and unleashes a massive fire breath capable of launching anyone caught in it.");
+
+        // Vince
+        insertAssistTrophy("Vince",
+                "Vince is the art teacher from the Art Academy games. When summoned, he brings up his easel and starts painting objects such as busts and tomatoes, which manifest themselves over any fighters other than the one or the team that summoned him, damaging them and hampering their visibility in a similar way to a Smoke Ball.\n\n" +
+                "Despite his Training Mode description not saying so like for other Assist Trophies, Vince cannot be defeated.");
+
+        // Waluigi
+        insertAssistTrophy("Waluigi",
+                "Waluigi chases after a selected foe, kicks them onto the ground and finally, he does one final power kick or hits the player with his racket.");
+
+        // Wily Capsule
+        insertAssistTrophy("Wily Capsule",
+                "The Wily Capsule is Dr. Wily's personal escape pod, and usually his last resort in his battles against Mega Man. The model seen in Super Smash Bros. Ultimate comes from Mega Man 7.\n\n" +
+                "When summoned, Dr. Wily will fire red and blue energy balls from the capsule, which will home in on the nearest fighter. If the capsule is destroyed, Dr. Wily will fall to the ground and enter his supplication pose.");
+
+        // Yuri Kozukata
+        insertAssistTrophy("Yuri Kozukata",
+                "Yuri Kozukata is one of the protagonists of Koei Tecmo's Wii U game Fatal Frame: Maiden of Black Water. A descendant of the shrine maidens of Mt. Hikami, psychics who had the ability to guide spirits to a peaceful afterlife, Yuri has the power of repelling the eponymous Black Water, an evil presence which torments spirits and causes them to curse the living.\n\n" +
+                "When Yuri is summoned, she stays in the background as the reticle of her Camera Obscura moves throughout the screen, and any character photographed with it is momentarily paralyzed and afflicted with darkness. She takes a total of three photographs before leaving the stage.");
+
+        // Zero
+        insertAssistTrophy("Zero",
+                "One of the protagonists of the Mega Man X series, Zero is a Maverick Hunter, member of an elite force designated to hunt down and destroy Mavericks, robots that have turned against humankind.\n\n" +
+                "When summoned, Zero slashes opponents directly with his sword, the Z-Saber, and also uses it to fire beams from a distance. After he is done, he shouts, \"Back to base!\" and disappears.");
     }
-
-
-
-
-
 }
