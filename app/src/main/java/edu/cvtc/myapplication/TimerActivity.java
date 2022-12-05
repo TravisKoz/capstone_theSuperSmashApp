@@ -16,6 +16,7 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class TimerActivity extends AppCompatActivity{
+
     private static final long START_TIME_IN_MILLIS = 60000;
 
     // Variables
@@ -60,6 +61,7 @@ public class TimerActivity extends AppCompatActivity{
         mSetTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Local variable that stores the number entered by the user
                 String numberEntered = mEditTimeInput.getText().toString();
 
                 //Check if box is empty
@@ -70,7 +72,7 @@ public class TimerActivity extends AppCompatActivity{
                 }
 
 
-                long inputInMillis = Long.parseLong(numberEntered) * 60000;
+                long inputInMillis = Long.parseLong(numberEntered) * START_TIME_IN_MILLIS;
 
                 // Check if number entered is Zero
                 if(inputInMillis == 0){
@@ -79,8 +81,8 @@ public class TimerActivity extends AppCompatActivity{
                     return;
                 }
 
-                // Check if number entered is Zero
-                if(inputInMillis > 1440 * 60000){
+                // Check if number entered is more that 86.4M milliseconds (24hrs)
+                if(inputInMillis > 1440 * START_TIME_IN_MILLIS){
                     Toast.makeText(TimerActivity.this, "Max time allow is 24 hours",
                             Toast.LENGTH_SHORT).show();
                     return;
@@ -171,9 +173,7 @@ public class TimerActivity extends AppCompatActivity{
         closeKeyboard();
         mSetTimeBtn.setVisibility(View.INVISIBLE);
         mEditTimeInput.setVisibility(View.INVISIBLE);
-
     }
-
 
     // Function that starts the timer
     private void startTimer() {
@@ -202,7 +202,7 @@ public class TimerActivity extends AppCompatActivity{
     // Function that reset the timer
     private void resetTimer() {
         mTimeLeftInMillis = mStartTimeInMillis;
-        Toast.makeText(TimerActivity.this, "Time set to " + mStartTimeInMillis / 60000 + " minute(s)",
+        Toast.makeText(TimerActivity.this, "Time set to " + mStartTimeInMillis / START_TIME_IN_MILLIS + " minute(s)",
                 Toast.LENGTH_SHORT).show();
         updateCountDownText();
         updateButtons();
@@ -276,7 +276,6 @@ public class TimerActivity extends AppCompatActivity{
         mTimerRunning = false;
         updateButtons();
     }
-
 
     // Save the instance state for get device rotate to landscape or portrait mode
     @Override

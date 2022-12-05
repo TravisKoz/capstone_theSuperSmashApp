@@ -20,7 +20,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/game_symbol_img"
+                android:id="@+id/item_symbol_img"
                 android:layout_width="46dp"
                 android:layout_height="52dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +40,8 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:fontFamily="@font/smashfont"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/game_symbol_img"
-                app:layout_constraintTop_toTopOf="@+id/game_symbol_img"/>
+                app:layout_constraintStart_toEndOf="@id/item_symbol_img"
+                app:layout_constraintTop_toTopOf="@+id/item_symbol_img"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

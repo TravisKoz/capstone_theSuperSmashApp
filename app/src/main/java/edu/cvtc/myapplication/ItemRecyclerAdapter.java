@@ -40,8 +40,22 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
         ItemSSB itemSSB = mItem.get(position);
         holder.mItemName.setText(itemSSB.getName());
 
-        holder.mId = itemSSB.getId();
+        String imageNameSRC = itemSSB.getName().replace(" ", "_").replace("!","")
+                .replace("&", "and").replace("-", "_").replace("'", "")
+                .replace(".", "").toLowerCase();
 
+        String imageCategorySRC = itemSSB.getCategory().replace(" ", "_").replace("!","")
+                .replace("&", "and").replace("-", "_").replace("'", "")
+                .replace(".", "").toLowerCase();
+
+        String imageNameFormat = "item_" + imageCategorySRC + "_" + imageNameSRC;
+
+        int imageResourceID =
+                mContext.getResources().getIdentifier(imageNameFormat, "drawable", mContext.getPackageName());
+
+        holder.mItemImage.setImageResource(imageResourceID);
+
+        holder.mId = itemSSB.getId();
     }
 
     @Override
@@ -52,11 +66,13 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
         // Member variables for inner class
         public final TextView mItemName;
+        public final ImageView mItemImage;
         public int mId;
 
         public ViewHolder(View itemView) {
             super(itemView);
             mItemName = (TextView) itemView.findViewById(R.id.item_name);
+            mItemImage = (ImageView) itemView.findViewById(R.id.item_symbol_img);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,8 +82,6 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
                     mContext.startActivity(intent);
                 }
             });
-
         }
-
     }
 }
