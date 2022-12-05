@@ -71,7 +71,6 @@ public class TimerActivity extends AppCompatActivity{
                     return;
                 }
 
-
                 long inputInMillis = Long.parseLong(numberEntered) * START_TIME_IN_MILLIS;
 
                 // Check if number entered is Zero
@@ -91,7 +90,6 @@ public class TimerActivity extends AppCompatActivity{
                 setTime(inputInMillis);
                 // Clear the edit textBox that receives the time entered
                 mEditTimeInput.setText("");
-
             }
         });
 
@@ -235,7 +233,6 @@ public class TimerActivity extends AppCompatActivity{
                 mResetBtn.setVisibility(View.VISIBLE);
                 mPickTimeBtn.setVisibility(View.VISIBLE);
 
-
             } else {
                 mStartPauseBtn.setVisibility(View.VISIBLE);
             }
@@ -301,6 +298,4 @@ public class TimerActivity extends AppCompatActivity{
             startTimer();
         }
     }
-
-
 }

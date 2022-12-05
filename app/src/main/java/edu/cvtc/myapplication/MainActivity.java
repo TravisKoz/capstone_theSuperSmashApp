@@ -11,9 +11,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         constraintLayout = (ConstraintLayout) findViewById(R.id.welcome_page_click);
         mTimer = new Timer();
+
+        ImageView fireLogo = findViewById(R.id.welcomeImage);
+        Glide.with(this).load(R.drawable.smash_logo_fire).into(fireLogo);
 
         mTimer.schedule(new TimerTask() {
             @Override

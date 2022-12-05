@@ -36,25 +36,14 @@
         app:layout_constraintStart_toStartOf="@+id/welcomeImage" />
     <!--        android:text="Click the screen or use the navigation menu in the corner to continue"-->
 
-<!--    <ImageView-->
-<!--        android:id="@+id/welcomeImage"-->
-<!--        android:layout_width="315dp"-->
-<!--        android:layout_height="250dp"-->
-<!--        android:layout_marginTop="80dp"-->
-<!--        android:adjustViewBounds="true"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@drawable/smash_logo_fire" />-->
-
-    <pl.droidsonroids.gif.GifImageView
+    <ImageView
         android:id="@+id/welcomeImage"
-        android:layout_width="360dp"
-        android:layout_height="220dp"
+        android:layout_width="315dp"
+        android:layout_height="250dp"
         android:layout_marginTop="80dp"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/smash_logo_fire"/>
+        app:srcCompat="@drawable/super_smash_white" />
 </androidx.constraintlayout.widget.ConstraintLayout>

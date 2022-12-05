@@ -22,26 +22,14 @@
         app:layout_constraintStart_toStartOf="@+id/welcomeImage"
         app:layout_constraintTop_toBottomOf="@+id/welcomeImage" />
 
-
-<!--    <ImageView-->
-<!--        android:id="@+id/welcomeImage"-->
-<!--        android:layout_width="279dp"-->
-<!--        android:layout_height="222dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:adjustViewBounds="true"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@drawable/super_smash_white" />-->
-    <pl.droidsonroids.gif.GifImageView
+    <ImageView
         android:id="@+id/welcomeImage"
-        android:layout_width="360dp"
-        android:layout_height="220dp"
+        android:layout_width="279dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="8dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/smash_logo_fire"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/super_smash_white" />
 </androidx.constraintlayout.widget.ConstraintLayout>

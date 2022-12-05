@@ -41,129 +41,17 @@ public class FighterRecyclerAdapter extends
         Fighter fighter = mFighters.get(position);
         holder.mFighterName.setText(fighter.getName());
 
-        switch (fighter.getFranchise()) {
+        String symbolResource = fighter.getFranchise().replace(" ", "_").replace("!","")
+                .replace("&", "and").replace("-", "_").replace(".", "").toLowerCase();
 
-            case ("Super Mario"):
-                holder.mFighterFranchise.setImageResource(R.drawable.super_mario_series);
-                break;
-            case ("Donkey Kong"):
-                holder.mFighterFranchise.setImageResource(R.drawable.donkey_kong_series);
-                break;
-            case ("The Legend of Zelda"):
-                holder.mFighterFranchise.setImageResource(R.drawable.the_legend_of_zelda_series);
-                break;
-            case ("Metroid"):
-                holder.mFighterFranchise.setImageResource(R.drawable.metroid_series);
-                break;
-            case ("Yoshi"):
-                holder.mFighterFranchise.setImageResource(R.drawable.yoshi_series);
-                break;
-            case ("Kirby"):
-                holder.mFighterFranchise.setImageResource(R.drawable.kirby_series);
-                break;
-            case ("Star Fox"):
-                holder.mFighterFranchise.setImageResource(R.drawable.star_fox_series);
-                break;
-            case ("Pokemon"):
-                holder.mFighterFranchise.setImageResource(R.drawable.pokemon_series);
-                break;
-            case ("EarthBound"):
-                holder.mFighterFranchise.setImageResource(R.drawable.earthbound_series);
-                break;
-            case ("F-Zero"):
-                holder.mFighterFranchise.setImageResource(R.drawable.f_zero_series);
-                break;
-            case ("Ice Climbers"):
-                holder.mFighterFranchise.setImageResource(R.drawable.ice_climbers_series);
-                break;
-            case ("Fire Emblem"):
-                holder.mFighterFranchise.setImageResource(R.drawable.fire_emblem_series);
-                break;
-            case ("Game & Watch"):
-                holder.mFighterFranchise.setImageResource(R.drawable.game_and_watch_series);
-                break;
-            case ("Kid Icarus"):
-                holder.mFighterFranchise.setImageResource(R.drawable.kid_icarus_series);
-                break;
-            case ("Wario"):
-                holder.mFighterFranchise.setImageResource(R.drawable.wario_series);
-                break;
-            case ("Metal Gear"):
-                holder.mFighterFranchise.setImageResource(R.drawable.metal_gear_series);
-                break;
-            case ("Sonic"):
-                holder.mFighterFranchise.setImageResource(R.drawable.sonic_series);
-                break;
-            case ("Pikmin"):
-                holder.mFighterFranchise.setImageResource(R.drawable.pikmin_series);
-                break;
-            case ("R.O.B."):
-                holder.mFighterFranchise.setImageResource(R.drawable.rob_series);
-                break;
-            case ("Animal Crossing"):
-                holder.mFighterFranchise.setImageResource(R.drawable.animal_crossing_series);
-                break;
-            case ("Mega Man"):
-                holder.mFighterFranchise.setImageResource(R.drawable.mega_man_series);
-                break;
-            case ("Wii Fit"):
-                holder.mFighterFranchise.setImageResource(R.drawable.wii_fit_series);
-                break;
-            case ("Punch-Out!!"):
-                holder.mFighterFranchise.setImageResource(R.drawable.punch_out_series);
-                break;
-            case ("PAC-MAN"):
-                holder.mFighterFranchise.setImageResource(R.drawable.pac_man_series);
-                break;
-            case ("Xenoblade Chronicles"):
-                holder.mFighterFranchise.setImageResource(R.drawable.xenoblade_chronicles_series);
-                break;
-            case ("Duck Hunt"):
-                holder.mFighterFranchise.setImageResource(R.drawable.duck_hunt_series);
-                break;
-            case ("Street Fighter"):
-                holder.mFighterFranchise.setImageResource(R.drawable.street_fighter_series);
-                break;
-            case ("Final Fantasy"):
-                holder.mFighterFranchise.setImageResource(R.drawable.final_fantasy_series);
-                break;
-            case ("Bayonetta"):
-                holder.mFighterFranchise.setImageResource(R.drawable.bayonetta_series);
-                break;
-            case ("Splatoon"):
-                holder.mFighterFranchise.setImageResource(R.drawable.splatoon_series);
-                break;
-            case ("Castlevania"):
-                holder.mFighterFranchise.setImageResource(R.drawable.castlevania_series);
-                break;
-            case ("Persona"):
-                holder.mFighterFranchise.setImageResource(R.drawable.persona_series);
-                break;
-            case ("Fatal Fury"):
-                holder.mFighterFranchise.setImageResource(R.drawable.fatal_fury_series);
-                break;
-            case ("Dragon Quest"):
-                holder.mFighterFranchise.setImageResource(R.drawable.dragon_quest_series);
-                break;
-            case ("Banjo-Kazooie"):
-                holder.mFighterFranchise.setImageResource(R.drawable.banjo_kazooie_series);
-                break;
-            case ("ARMS"):
-                holder.mFighterFranchise.setImageResource(R.drawable.arms_series);
-                break;
-            case ("Minecraft"):
-                holder.mFighterFranchise.setImageResource(R.drawable.minecraft_series);
-                break;
-            case ("Tekken"):
-                holder.mFighterFranchise.setImageResource(R.drawable.tekken_series);
-                break;
-            case ("Kingdom Hearts"):
-                holder.mFighterFranchise.setImageResource(R.drawable.kingdom_hearts_series);
-                break;
-            default:
-                holder.mFighterFranchise.setImageResource(R.drawable.super_smash);
-        }
+        // Formatted string to match the head image naming format.
+        String seriesResource = symbolResource + "_series";
 
+        // Get the resourceID for our fighter's series.
+        int seriesResourceID = mContext.getResources().getIdentifier(seriesResource, "drawable", mContext.getPackageName());
+
+        // Changes the displayed fighter's image and fighter's series image based on our resourceIDs.
+        holder.mFighterFranchise.setImageResource(seriesResourceID);
         holder.mId = fighter.getId();
 
     }

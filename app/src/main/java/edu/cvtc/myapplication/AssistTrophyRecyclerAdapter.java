@@ -40,7 +40,6 @@ public class AssistTrophyRecyclerAdapter extends RecyclerView.Adapter<AssistTrop
         AssistTrophy trophy = mTrophies.get(position);
         holder.mTrophyName.setText(trophy.getName());
 
-
         // Formatted the passed in trophy's name String to match our image names convention.
         // Symbols are replaced with corresponding characters and all letters and converted to lower case.
         String imageResource = "trophy_" + trophy.getName().replace(" ", "_").replace(".","")
