@@ -100,6 +100,7 @@ public class TimerActivity extends AppCompatActivity{
 
                 if (mTimerRunning) {
                     pauseTimer();
+                    mResetBtn.setVisibility(View.VISIBLE);
                 } else {
                     startTimer();
                     mSetTimeBtn.setVisibility(View.INVISIBLE);
@@ -185,14 +186,12 @@ public class TimerActivity extends AppCompatActivity{
                 updateCountDownText();
                 updateButtons();
             }
-
             @Override
             public void onFinish() {
                 mTimerRunning = false;
                 updateButtons();
             }
         }.start();
-
         mTimerRunning = true;
         updateButtons();
     }
@@ -223,8 +222,6 @@ public class TimerActivity extends AppCompatActivity{
             mResetBtn.setVisibility(View.VISIBLE);
             mPickTimeBtn.setVisibility(View.VISIBLE);
 
-            mStartPauseBtn.setText(R.string.start_text);
-
             if (mTimeLeftInMillis < 1000) {
                 mStartPauseBtn.setVisibility(View.INVISIBLE);
                 m5MinBtn.setVisibility(View.VISIBLE);
@@ -241,8 +238,10 @@ public class TimerActivity extends AppCompatActivity{
             // is equal to start time value
             if (mTimeLeftInMillis < mStartTimeInMillis) {
                 mResetBtn.setVisibility(View.VISIBLE);
+                mStartPauseBtn.setText("Resume");
             } else {
                 mResetBtn.setVisibility(View.INVISIBLE);
+                mStartPauseBtn.setText(R.string.start_text);
             }
         }
     }
@@ -272,6 +271,7 @@ public class TimerActivity extends AppCompatActivity{
         mCountDownTimer.cancel();
         mTimerRunning = false;
         updateButtons();
+        mStartPauseBtn.setText("Resume");
     }
 
     // Save the instance state for get device rotate to landscape or portrait mode
@@ -281,6 +281,7 @@ public class TimerActivity extends AppCompatActivity{
         outState.putLong("millisLeft", mTimeLeftInMillis);
         outState.putBoolean("timerRunning", mTimerRunning);
         outState.putLong("endTime", mEndTime);
+        outState.putLong("startTime", mStartTimeInMillis);
     }
 
     // Restore the instance state for get device rotate to landscape or portrait mode
@@ -289,6 +290,7 @@ public class TimerActivity extends AppCompatActivity{
         super.onRestoreInstanceState(savedInstanceState);
         mTimeLeftInMillis = savedInstanceState.getLong("millisLeft");
         mTimerRunning = savedInstanceState.getBoolean("timerRunning");
+        mStartTimeInMillis = savedInstanceState.getLong("startTime");
         updateCountDownText();
         updateButtons();
 
