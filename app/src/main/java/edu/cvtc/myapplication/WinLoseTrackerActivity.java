@@ -161,36 +161,25 @@ public class WinLoseTrackerActivity extends AppCompatActivity implements Adapter
         super.onDestroy();
     }
 
-    // This method handles getting the wins and losses for the currently selected
-    // fighter from the database.
     public Tracker getWinsAndLosses () {
-        // Gets the currently selected fighter's name.
+
         String selectedFighter = mSpinner.getSelectedItem().toString();
 
-        // Create a new Tracker object.
-        Tracker tracker = new Tracker(null, 0, 0);
+        Tracker tracker = new Tracker(selectedFighter, 0, 0);
 
-        // Opens our database in readonly mode.
         SQLiteDatabase db = mDbOpenHelper.getReadableDatabase();
 
-        // Creates a new cursor object based on a select
         Cursor trackerCursor = db.rawQuery("select * from " + TrackerEntry.TABLE_NAME + " where "
                 + TrackerEntry.COLUMN_FIGHTER + " = ?", new String[]{selectedFighter});
 
-        // Get the column index position for wins and losses in the database
-        // not hard coded in case database table structure ever changes.
         int winPosition = trackerCursor.getColumnIndex(TrackerEntry.COLUMN_WINS);
         int lossPosition = trackerCursor.getColumnIndex(TrackerEntry.COLUMN_LOSSES);
 
-        // Moves the cursor to the next instance in the database
-        // There should only be one instance based on the database design.
         if (trackerCursor.moveToNext()) {
-            // Set the tracker objects wins and losses
             tracker.setWins(trackerCursor.getInt(winPosition));
             tracker.setLosses(trackerCursor.getInt(lossPosition));
         }
 
-        // Closes the tracker to prevent memory leaks
         trackerCursor.close();
 
         return tracker;
@@ -266,8 +255,7 @@ public class WinLoseTrackerActivity extends AppCompatActivity implements Adapter
         }
     }
 
-    // This method replaces the displayed fighter with the image of the
-    // fighter passed into it's parameters and the fighter's head image.
+    //  Replaces displayed image and head image with the passed in fighter.
     private void replaceFighterImage (String selectedFighter) {
 
         // Formatted the passed in fighter's name String to match our image names convention.
