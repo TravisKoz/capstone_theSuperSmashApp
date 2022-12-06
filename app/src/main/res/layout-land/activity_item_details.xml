@@ -99,7 +99,9 @@
         android:id="@+id/view_trophies_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/smashfont"
         android:text="@string/view_assist_trophies_text"
@@ -109,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/details_item_category"
         app:layout_constraintTop_toBottomOf="@id/details_item_category"
-        tools:visibility="visible"/>
+        tools:visibility="visible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

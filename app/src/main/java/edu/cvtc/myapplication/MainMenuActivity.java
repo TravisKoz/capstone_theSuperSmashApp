@@ -16,6 +16,13 @@ public class MainMenuActivity extends AppCompatActivity {
     CardView cvLegalStages;
     CardView cvControls;
     CardView cvWinLose;
+    CardView cvTrophies;
+    CardView cvPokemon;
+    CardView cvItems;
+    CardView cvPlayStyle;
+    CardView cvAdvanced;
+    CardView cvLingo;
+    CardView cvInformation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +34,10 @@ public class MainMenuActivity extends AppCompatActivity {
         cvLegalStages = findViewById(R.id.cv_legal_stages);
         cvControls = findViewById(R.id.cv_controls);
         cvWinLose = findViewById(R.id.cv_win_lose);
+        cvTrophies = findViewById(R.id.cv_trophies);
+        cvPokemon = findViewById(R.id.cv_pokemon);
+        cvItems = findViewById(R.id.cv_items);
+        cvPlayStyle = findViewById(R.id.cv_play_style);
         
         cvFighters.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,10 +82,53 @@ public class MainMenuActivity extends AppCompatActivity {
         cvWinLose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(MainMenuActivity.this, "Win/Lose", Toast.LENGTH_SHORT).show();
                 openWinLoseTrackerActivity();
             }
         });
+
+        cvTrophies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTrophiesActivity();
+            }
+        });
+
+        cvPokemon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // openPokemonActivity();
+                Toast.makeText(MainMenuActivity.this, "Show list of pokemon", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        cvItems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openItemsActivity();
+            }
+        });
+
+        cvPlayStyle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openPlayStyleActivity();
+            }
+        });
+    }
+
+    private void openPlayStyleActivity() {
+        Intent intent = new Intent(this, PlayStyleActivity.class);
+        startActivity(intent);
+    }
+
+    private void openItemsActivity() {
+        Intent intent = new Intent(this, ItemsActivity.class);
+        startActivity(intent);
+    }
+
+    private void openTrophiesActivity() {
+        Intent intent = new Intent(this, TrophiesActivity.class);
+        startActivity(intent);
     }
 
     private void openWinLoseTrackerActivity() {
