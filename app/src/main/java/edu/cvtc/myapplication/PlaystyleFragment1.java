@@ -442,10 +442,6 @@ public class PlaystyleFragment1 extends Fragment {
             fightersCategory.add(fighter);
         }
 
-        for (Fighter currentFighter : fightersCategory) {
-            Toast.makeText(getContext().getApplicationContext(), currentFighter.getName(),Toast.LENGTH_SHORT).show();
-        }
-
         return fightersCategory;
 
     }
