@@ -1,61 +1,41 @@
 package edu.cvtc.myapplication;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PlaystyleFragment1#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class PlaystyleFragment1 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    // Member objects
+    private SuperSmashOpenHelper mDbOpenHelper;
+    String listFighter = "";
 
     public PlaystyleFragment1() {
-        // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PlaystyleFragment1.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PlaystyleFragment1 newInstance(String param1, String param2) {
-        PlaystyleFragment1 fragment = new PlaystyleFragment1();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+            mDbOpenHelper = new SuperSmashOpenHelper(getActivity().getApplicationContext());
+
         }
     }
 
@@ -63,10 +43,410 @@ public class PlaystyleFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-//        /* Solution 1 */ ArrayList<Parcelable> fighters = savedInstanceState.getParcelableArrayList("fighterKey");
-//        /* Solution 2 */ List<Fighter> = bundle.getParcelableArrayList("fighterKey", fightersCategory);
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_playstyle1, container, false);
+
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Unpack bundles from activity
+        ArrayList<Fighter> selectedFighters = requireArguments().getParcelableArrayList("fighterKey");
+        boolean closeRangeClick = requireArguments().getBoolean("closeRangeKey");
+        boolean longRangeClick = requireArguments().getBoolean("longRangeKey");
+        boolean hybridClick = requireArguments().getBoolean("hybridKey");
+
+        // Create views from layout
+        Button rushdown = getView().findViewById(R.id.btn_rushdown);
+        Button grappler = getView().findViewById(R.id.btn_grappler);
+        Button spacing = getView().findViewById(R.id.btn_spacing);
+        Button balance = getView().findViewById(R.id.btn_balance);
+        Button zoner = getView().findViewById(R.id.btn_zoner);
+        TextView selectedFightersText = getView().findViewById(R.id.selected_fighter_text);
+
+        // Populate selected fighters from user's choice in the activity
+                for(Fighter currentFighter : selectedFighters) {
+
+                    listFighter += currentFighter.getName() + ", ";
+        }
+        selectedFightersText.setText("Current choices: \n\n" + listFighter.replaceAll(", $", ""));
+
+        rushdown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                ArrayList<Fighter> fightersCategoryArchetype;
+
+                if (closeRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "rushdown");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+                } else if(longRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "rushdown");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+
+                } else if(hybridClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "rushdown");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+                }
+            }
+        });
+
+        grappler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                ArrayList<Fighter> fightersCategoryArchetype;
+
+                if (closeRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Grappler");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+                } else if(longRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Grappler");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+
+                } else if(hybridClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Grappler");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+                }
+            }
+        });
+
+        spacing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                ArrayList<Fighter> fightersCategoryArchetype;
+
+                if (closeRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Spacing");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+                } else if(longRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Spacing");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+
+                } else if(hybridClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Spacing");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+                }
+            }
+        });
+
+        balance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                ArrayList<Fighter> fightersCategoryArchetype;
+
+                if (closeRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Balance");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+                } else if(longRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Balance");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+
+                } else if(hybridClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Balance");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+                }
+            }
+        });
+
+        spacing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                ArrayList<Fighter> fightersCategoryArchetype;
+
+                if (closeRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Spacing");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+                } else if(longRangeClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Spacing");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+
+                } else if(hybridClick) {
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Spacing");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+                }
+            }
+        });
+
+        zoner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                ArrayList<Fighter> fightersCategoryArchetype;
+
+                if (closeRangeClick) {
+
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Zoner");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+                } else if(longRangeClick) {
+
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Zoner");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+
+
+                } else if(hybridClick) {
+
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Zoner");
+
+                    // Send bundle to next fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("filteredKey", fightersCategoryArchetype);
+
+                    // set PlaystyleFragment1 arguments and add fragment
+                    if (savedInstanceState == null) {
+                        getParentFragmentManager().beginTransaction()
+                                .setReorderingAllowed(true)
+                                .replace(R.id.fragment_playstyle_container, PlaystyleFragment2.class, bundle)
+                                .commit();
+                    }
+                }
+            }
+        });
+    }
+
+    private ArrayList<Fighter> loadFinalChoices(String selectedCategory, String selectedArchetype) {
+
+        // Open database connection for reading
+        SQLiteDatabase db = mDbOpenHelper.getReadableDatabase();
+
+        // Gets the currently selected fighter's name.
+        Cursor playstyleCursor = db.rawQuery("select * from " + SuperSmashDatabaseContract.FighterEntry.TABLE_NAME + " where "
+                + SuperSmashDatabaseContract.FighterEntry.COLUMN_CATEGORY + " = ? AND " + SuperSmashDatabaseContract.FighterEntry.COLUMN_ARCHETYPE + " = ?" , new String[]{selectedCategory, selectedArchetype});
+
+        int namePosition = playstyleCursor.getColumnIndex(SuperSmashDatabaseContract.FighterEntry.COLUMN_NAME);
+
+        // Create list of Fighter objects
+        ArrayList<Fighter> fightersCategory = new ArrayList<Fighter>();
+
+        // While there is still a record from the result set that matches our cursor
+        while(playstyleCursor.moveToNext()) {
+
+            // Create a new Fighter object.
+            Fighter fighter = new Fighter(0,null, null, null, null, null,
+                    null, null, null, null,
+                    null, null, null, null, null);
+
+            // Set name value for created fighter object to match the fighter currently selected by cursor
+            fighter.setName(playstyleCursor.getString(namePosition));
+
+            // Add new fighter data to fightersCategory list
+            fightersCategory.add(fighter);
+        }
+
+        return fightersCategory;
+
+//        for(Fighter currentFighter : fightersCategory) {
+//            Toast.makeText(PlayStyleActivity.this, currentFighter.getName(),Toast.LENGTH_LONG).show();
+//        }
+    }
+
 }

@@ -51,5 +51,9 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     implementation "androidx.recyclerview:recyclerview:1.2.0-alpha02"
 
+    def fragment_version = "1.5.4"
+
+    // Java language implementation
+    implementation "androidx.fragment:fragment:$fragment_version"
 
 }

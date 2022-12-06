@@ -1,67 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:id="@+id/fragment_playstyle1"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".PlaystyleFragment1">
 
-    <TextView
-        android:id="@+id/playstyle_q2_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginBottom="400dp"
-        android:textColor="@color/white"
-        android:text="\t\tDo you want a character that relies primarily on their mobility with your dexterity for endless pressure, one that rewards you for outthinking your opponent with well-timed grab options with explosive results, maybe you want to take advantage of disjointed options and masterfully out-space your opponent? \n\nYou might be a jack of all trades, or do you just want to blast your opponent with every tool at your disposal and never look them in the eyes?" />
-    <Button
-        android:id="@+id/btn_rushdown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="300dp"
-        android:text="I want a character that's impossible to shake and tests my movement prowess."/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_grappler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="230dp"
-        android:text="I want to make my opponent regret every choice they've ever made with a single grab." />
+        <TextView
+            android:id="@+id/playstyle_q2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="100dp"
+            android:paddingHorizontal="16dp"
+            android:text="\t\tDo you want a character that relies primarily on their mobility with your dexterity for endless pressure, one that rewards you for outthinking your opponent with well-timed grab options with explosive results, maybe you want to take advantage of disjointed options and masterfully out-space your opponent? \n\nYou might be a jack of all trades, or do you just want to blast your opponent with every tool at your disposal and never look them in the eyes?"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="90dp"
-        android:text="I want to have an answer for anything that my opponent can throw at me." />
+        <Button
+            android:id="@+id/btn_rushdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="I want a character that's impossible to shake and tests my movement prowess."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playstyle_q2_text" />
 
-    <Button
-        android:id="@+id/btn_spacing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="160dp"
-        android:text="I want to finesse my way to victory with my mastery of spacing." />
+        <Button
+            android:id="@+id/btn_grappler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="I want to make my opponent regret every choice they've ever made with a single grab."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_balance" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:text="I want to throw so many projectiles that it becomes a one-player game." />
+        <Button
+            android:id="@+id/btn_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="I want to have an answer for anything that my opponent can throw at me."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_rushdown" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:text="TextView" />
+        <Button
+            android:id="@+id/btn_spacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="I want to finesse my way to victory with my mastery of spacing."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_grappler" />
+
+        <Button
+            android:id="@+id/btn_zoner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="I want to throw so many projectiles that it becomes a one-player game."
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_spacing" />
+
+        <TextView
+            android:id="@+id/selected_fighter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </FrameLayout>
