@@ -81,7 +81,7 @@ public class PlaystyleFragment1 extends Fragment {
                 ArrayList<Fighter> fightersCategoryArchetype;
 
                 if (closeRangeClick) {
-                    fightersCategoryArchetype = loadFinalChoices("Close-range", "rushdown");
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Rushdown");
 
                     // Send bundle to next fragment
                     Bundle bundle = new Bundle();
@@ -96,7 +96,7 @@ public class PlaystyleFragment1 extends Fragment {
                     }
 
                 } else if(longRangeClick) {
-                    fightersCategoryArchetype = loadFinalChoices("Long-range", "rushdown");
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Rushdown");
 
                     // Send bundle to next fragment
                     Bundle bundle = new Bundle();
@@ -112,7 +112,7 @@ public class PlaystyleFragment1 extends Fragment {
 
 
                 } else if(hybridClick) {
-                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "rushdown");
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Rushdown");
 
                     // Send bundle to next fragment
                     Bundle bundle = new Bundle();
@@ -442,11 +442,12 @@ public class PlaystyleFragment1 extends Fragment {
             fightersCategory.add(fighter);
         }
 
+        for (Fighter currentFighter : fightersCategory) {
+            Toast.makeText(getContext().getApplicationContext(), currentFighter.getName(),Toast.LENGTH_SHORT).show();
+        }
+
         return fightersCategory;
 
-//        for(Fighter currentFighter : fightersCategory) {
-//            Toast.makeText(PlayStyleActivity.this, currentFighter.getName(),Toast.LENGTH_LONG).show();
-//        }
     }
 
 }

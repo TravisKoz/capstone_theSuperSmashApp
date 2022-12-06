@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="115dp"
             android:paddingHorizontal="16dp"
             android:text="\t\tDo you want a character that relies primarily on their mobility with your dexterity for endless pressure, one that rewards you for outthinking your opponent with well-timed grab options with explosive results, maybe you want to take advantage of disjointed options and masterfully out-space your opponent? \n\nYou might be a jack of all trades, or do you just want to blast your opponent with every tool at your disposal and never look them in the eyes?"
             android:textColor="@color/white"
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="I want a character that's impossible to shake and tests my movement prowess."
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_balance" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_rushdown" />
 
         <Button
             android:id="@+id/btn_balance"
@@ -60,7 +60,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_rushdown" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_spacing" />
 
         <Button
             android:id="@+id/btn_spacing"
@@ -84,7 +84,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_spacing" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_balance" />
 
         <TextView
             android:id="@+id/selected_fighter_text"
