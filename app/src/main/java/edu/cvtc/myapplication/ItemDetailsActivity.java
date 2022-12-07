@@ -131,8 +131,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
         mItemImage.setImageResource(imageResourceID);
 
-        if (itemName.equals("Assist Trophy")) {
+        if (itemName.equals("Assist Trophy") || itemName.equals("Poke Ball")) {
             mIsAssistTrophy = true;
+        }
+        if (itemName.equals("Poke Ball")) {
+            //mIsAssistTrophy = true;
         }
     }
 

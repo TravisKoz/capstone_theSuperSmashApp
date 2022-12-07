@@ -29,7 +29,6 @@
       android:label="Item Details"
       android:parentActivityName=".ItemsActivity"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.Bridge"/>
-
     <activity
       android:name=".ItemsActivity"
       android:exported="false"

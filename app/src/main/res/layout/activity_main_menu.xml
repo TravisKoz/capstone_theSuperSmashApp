@@ -27,7 +27,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/tv_menu_title">
 
-
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -77,15 +76,15 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--            Stages Card View-->
+            <!--            Items Card View-->
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
-                android:id="@+id/cv_legal_stages"
+                android:id="@+id/cv_items"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_row="6"
+                android:layout_row="0"
                 android:layout_column="1"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
@@ -102,13 +101,13 @@
 
                     <ImageView
                         android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:src="@drawable/iv_stage_image"/>
+                        android:layout_height="80dp"
+                        android:src="@drawable/iv_items_image"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/stages_tx"
-                        android:textSize="14sp"
+                        android:text="Items"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"
                         android:fontFamily="@font/smashfont"/>
@@ -117,15 +116,15 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--            Controls Card View-->
+            <!--            Trophies Card View-->
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
-                android:id="@+id/cv_controls"
+                android:id="@+id/cv_trophies"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_row="6"
+                android:layout_row="1"
                 android:layout_column="0"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
@@ -143,11 +142,51 @@
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/iv_controls_image2"/>
+                        android:src="@drawable/item_helping_assist_trophy"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/controls_tx"
+                        android:text="Trophies"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/smashfont"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--            Pokemon Card View-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:id="@+id/cv_pokemon"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_row="1"
+                android:layout_column="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true"
+                android:backgroundTint="@color/red">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="3dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/item_helping_poke_ball"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pokemon"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"
@@ -277,46 +316,6 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--            Items Card View-->
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="fill"
-                android:id="@+id/cv_items"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_row="0"
-                android:layout_column="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                app:cardUseCompatPadding="true"
-                android:backgroundTint="@color/red">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingVertical="3dp">
-
-                    <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/ic_menu_test"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Items"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/smashfont"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
             <!--            Play Style Card View-->
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -343,7 +342,7 @@
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_menu_test"/>
+                        android:src="@drawable/iv_play_style2_image"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -357,15 +356,15 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--            Trophies Card View-->
+            <!--            Advanced Card View-->
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
-                android:id="@+id/cv_trophies"
+                android:id="@+id/cv_advanced"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_row="1"
+                android:layout_row="4"
                 android:layout_column="0"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
@@ -383,91 +382,11 @@
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/item_helping_assist_trophy"/>
+                        android:src="@drawable/iv_advanced_image"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Trophies"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/smashfont"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!--            Pokemon Card View-->
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="fill"
-                android:id="@+id/cv_pokemon"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_row="1"
-                android:layout_column="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                app:cardUseCompatPadding="true"
-                android:backgroundTint="@color/red">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingVertical="3dp">
-
-                    <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/item_helping_poke_ball"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pokemon"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/smashfont"/>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!--            General Information Card View-->
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="fill"
-                android:id="@+id/cv_gen_information"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_row="7"
-                android:layout_column="0"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                app:cardUseCompatPadding="true"
-                android:backgroundTint="@color/red">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingVertical="3dp">
-
-                    <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/ic_menu_test"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Info"
+                        android:text="Advanced"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"
@@ -503,7 +422,7 @@
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_menu_test"/>
+                        android:src="@drawable/iv_lingo_image"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -517,15 +436,15 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--            Advanced Card View-->
+            <!--            Controls Card View-->
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
-                android:id="@+id/cv_advanced"
+                android:id="@+id/cv_controls"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_row="4"
+                android:layout_row="6"
                 android:layout_column="0"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
@@ -543,11 +462,91 @@
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_menu_test"/>
+                        android:src="@drawable/iv_controls_image2"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Advanced"
+                        android:text="@string/controls_tx"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/smashfont"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--            Stages Card View-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:id="@+id/cv_legal_stages"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_row="6"
+                android:layout_column="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true"
+                android:backgroundTint="@color/red">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="3dp">
+
+                    <ImageView
+                        android:layout_width="102dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/iv_stage_image"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stages_tx"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/smashfont"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--            General Information Card View-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:id="@+id/cv_gen_information"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_row="7"
+                android:layout_column="0"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true"
+                android:backgroundTint="@color/red">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="3dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/iv_information_image"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Info"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"
@@ -560,9 +559,5 @@
         </GridLayout>
 
     </ScrollView>
-
-
-
-
 
 </RelativeLayout>

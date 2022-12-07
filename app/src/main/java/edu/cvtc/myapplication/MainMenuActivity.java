@@ -38,6 +38,9 @@ public class MainMenuActivity extends AppCompatActivity {
         cvPokemon = findViewById(R.id.cv_pokemon);
         cvItems = findViewById(R.id.cv_items);
         cvPlayStyle = findViewById(R.id.cv_play_style);
+        cvAdvanced = findViewById(R.id.cv_advanced);
+        cvLingo = findViewById(R.id.cv_lingo);
+        cvInformation = findViewById(R.id.cv_gen_information);
         
         cvFighters.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +115,30 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openPlayStyleActivity();
+            }
+        });
+
+        cvAdvanced.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //openAdvancedActivity();
+                Toast.makeText(MainMenuActivity.this, "Show Advanced", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        cvLingo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // openLingoActivity();
+                Toast.makeText(MainMenuActivity.this, "Show Lingo", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        cvInformation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //openGeneralInformationActivity();
+                Toast.makeText(MainMenuActivity.this, "Show General Information", Toast.LENGTH_SHORT).show();
             }
         });
     }
