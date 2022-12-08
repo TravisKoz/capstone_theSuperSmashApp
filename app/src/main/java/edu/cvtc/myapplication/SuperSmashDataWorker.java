@@ -9,6 +9,7 @@ import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.TrackerEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.AssistTrophyEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.PokemonEntry;
 
 // The class helps create our database. This class will
 // establish a connection to our database and insert
@@ -1129,8 +1130,7 @@ public class SuperSmashDataWorker {
         long newRowId = mDb.insert(ItemEntry.TABLE_NAME, null, values);
     }
 
-
-    // Method used to populate our database with initial Items data.
+    // Method used to populate our database with initial Item data.
     public void insertItems() {
         //               ----------------- Carrying Items ----------------------
         // Barrel
@@ -1426,6 +1426,134 @@ public class SuperSmashDataWorker {
                 "The blast from this bomb will go in four directions. It can go vertically and horizontally, or diagonally.");
     }
 
+    // Method that inserts a single pokemon into the database
+    public void insertPokemon(String name, String description, String ball) {
+        ContentValues values = new ContentValues();
+        values.put(PokemonEntry.COLUMN_NAME, name);
+        values.put(PokemonEntry.COLUMN_DESCRIPTION, description);
+        values.put(PokemonEntry.COLUMN_BALL, ball);
+        long newRowId = mDb.insert(PokemonEntry.TABLE_NAME, null, values);
+    }
+
+    // Method used to populate our database with initial pokemon data.
+    public void insertPokemon() {
+        //               ----------------- Poke ball ----------------------
+        // Abomasnow
+        insertPokemon("Abomasnow", "Causes a blizzard and freezes opponents. Sometimes it also punches while charging toward fighters.", "Poke ball");
+        // Abra
+        insertPokemon("Abra", "Teleports opponents to different locations on the stage.", "Poke ball");
+        // Alolan Exeggutor
+        insertPokemon("Alolan Exeggutor", "Uses its large body to get in the way of fighters.", "Poke ball");
+        // Alolan Raichu
+        insertPokemon("Alolan Raichu", "Rides its own tail in a surfing attack, dealing electric damage to anyone who gets hit.", "Poke ball");
+        // Alolan Vulpix
+        insertPokemon("Alolan Vulpix", "Breathes out an icy blast that freezes opposing fighters.", "Poke ball");
+        // Bellossom
+        insertPokemon("Bellossom", "Unleashes a sweet scent that makes nearby opponents fall asleep.", "Poke ball");
+        // Bewear
+        insertPokemon("Bewear", "Deals a devastating uppercut to any foe that gets too close.", "Poke ball");
+        // Chespin
+        insertPokemon("Chespin", "Sends out bursts of exploding seeds in the area around itself.", "Poke ball");
+        // Dedenne
+        insertPokemon("Dedenne", "Generates a four-spoked electricity field around itself, which then spins around.", "Poke ball");
+        // Ditto
+        insertPokemon("Ditto", "Transforms into the fighter who threw the Poké Ball, and then attacks enemies. That fighter also gets any KOs it pulls off.", "Poke ball");
+        // Eevee
+        insertPokemon("Eevee", "Tackles nearby opponents with its adorable body.", "Poke ball");
+        // Electrode
+        insertPokemon("Electrode", "Explodes after a short time. It can be thrown before blowing up!", "Poke ball");
+        // Fennekin
+        insertPokemon("Fennekin", "Shoots fireballs and creates a pillar of flame that can hit multiple times.", "Poke ball");
+        // Fletchling
+        insertPokemon("Fletchling", "Pecks at opponents with its surprisingly painful beak.", "Poke ball");
+        // Gardevoir
+        insertPokemon("Gardevoir", "Engulfs itself in a shiny aura and reflects enemy projectiles.", "Poke ball");
+        // Gogoat
+        insertPokemon("Gogoat", "Runs around the stage and launches opponents it hits. Fighters can also hitch a ride on Gogoat!", "Poke ball");
+        // Inkay
+        insertPokemon("Inkay", "Trips nearby opponents that are on the ground. It does nothing to airbone enemies, though.", "Poke ball");
+        // Meowth
+        insertPokemon("Meowth", "Throws tons of coins out in front of itself, hurting enemies.", "Poke ball");
+        // Metagross
+        insertPokemon("Metagross", "Buries opponents in the ground and then causes an earthquake to launch them.", "Poke ball");
+        // Mimikyu
+        insertPokemon("Mimikyu", "Drags the opponent into its body. If the affected fighter has taken significant damage, the attack can be an instant KO.", "Poke ball");
+        // Oshawott
+        insertPokemon("Oshawott", "Surfs on a wave and tries to drag opponents off the stage.", "Poke ball");
+         // Pyukumuku
+        insertPokemon("Pyukumuku", "Punches opponents who step on it, and whoever summoned it can throw it.", "Poke ball");
+        // Scizor
+        insertPokemon("Scizor", "Dashes into the air toward opponents, slashing at them with steel claws.", "Poke ball");
+        // Snivy
+        insertPokemon("Snivy", "Waves its tail and fires crescent-shaped shots at enemies.", "Poke ball");
+        // Snorlax
+        insertPokemon("Snorlax", "Jumps up high and then comes back down in the same spot larger than before.", "Poke ball");
+        // Spewpa
+        insertPokemon("Spewpa", "Releases a powder that stuns, if hit. If not hit, Spewpa releases absolutely nothing.", "Poke ball");
+        // Staryu
+        insertPokemon("Staryu", "Seeks out a target for a few seconds, then launches a barrage of stars.", "Poke ball");
+        // Swirlix
+        insertPokemon("Swirlix", "Shrouds itself in smoke and slows down nearby opponents.", "Poke ball");
+        // Togedemaru
+        insertPokemon("Togedemaru", "Calls down a lightning bolt on itself in order to shoot out sparks from its body.", "Poke ball");
+        // Togepi
+        insertPokemon("Togepi", "Calls forth one of a variety of attacks with a wave of its hand. Which will it be this time?", "Poke ball");
+        // Vulpix
+        insertPokemon("Vulpix", "Shoots out fireballs that create a pillar of fire where they land.", "Poke ball");
+
+
+
+        //               ----------------- Poke ball & Master ball ----------------------
+        // Arceus
+        insertPokemon("Arceus", "Sends any airbone opponents crashing into the ground. Players on the ground are unaffected, but amused.", "Poke ball & Master ball");
+        // Darkrai
+        insertPokemon("Darkrai", "Uses its Dark Void to send affected opponents into a deep sleep.", "Poke ball & Master ball");
+        // Deoxys
+        insertPokemon("Deoxys", "Fires a powerful beam downward. Anyone that touches the beam takes some serious damage.", "Poke ball & Master ball");
+        // Entei
+        insertPokemon("Entei", "Summons a fiery tornado that forces any fighters caught in it up to the top of the screen.", "Poke ball & Master ball");
+        // Genesect
+        insertPokemon("Genesect", "Shoots distant opponents with laser attacks.", "Poke ball & Master ball");
+        // Giratina
+        insertPokemon("Giratina", "Catches fighters in a powerful, damaging tornado.", "Poke ball & Master ball");
+        // Goldeen
+        insertPokemon("Goldeen", "Flops around. That's all. It's a fish out of waterーwhat do you expect?", "Poke ball & Master ball");
+        // Keldeo
+        insertPokemon("Keldeo", "Uses the sacred power of its horn to slash opponents.", "Poke ball & Master ball");
+        // Kyogre
+        insertPokemon("Kyogre", "Washes away enemy fighters with bursts of water.", "Poke ball & Master ball");
+        // Kyurem
+        insertPokemon("Kyurem", "Creates a close-range blizzard that freezes nearby enemies.", "Poke ball & Master ball");
+        // Latias & Latios
+        insertPokemon("Latias & Latios", "Fly back and forth across the stage, damaging and attempting to launch anyone they hit.", "Poke ball & Master ball");
+        // Lugia
+        insertPokemon("Lugia", "Creates great gusts of wind from a distance.", "Poke ball & Master ball");
+        // Lunala
+        insertPokemon("Lunala", "Enters its Full Moon phase and shoots a powerful ray from a distance.", "Poke ball & Master ball");
+        // Marshadow
+        insertPokemon("Marshadow", "Leaps from an opponent's shadow and lets loose with a powerful punch.", "Poke ball & Master ball");
+        // Meloetta
+        insertPokemon("Meloetta", "Sends waves of sound that bounce around the stage.", "Poke ball & Master ball");
+        // Mew
+        insertPokemon("Mew", "Nothing happens except a realization that you're quite lucky to have seen one.", "Poke ball & Master ball");
+        // Moltres
+        insertPokemon("Moltres", "Flies upward into the sky. Any opponent that touches it will take serious damage.", "Poke ball & Master ball");
+        // Palkia
+        insertPokemon("Palkia", "Tears through space, flipping the stage.", "Poke ball & Master ball");
+        // Solgaleo
+        insertPokemon("Solgaleo", "Enters its Radiant Sun phase and will charge at enemies, engulfed in flames.", "Poke ball & Master ball");
+        // Suicune
+        insertPokemon("Suicune", "Uses Aurora Beam to freeze enemy fighters.", "Poke ball & Master ball");
+        // Tapu Koko
+        insertPokemon("Tapu Koko", "Creates an electric field that stuns opponents. It also shoots out electricity.", "Poke ball & Master ball");
+        // Victini
+        insertPokemon("Victini", "Generously gives the fighter who threw its Poké Ball a Final Smash.", "Poke ball & Master ball");
+        // Xerneas
+        insertPokemon("Xerneas", "Turns the user gold and greatly enhances their launching power for a time.", "Poke ball & Master ball");
+        // Zoroark
+        insertPokemon("Zoroark", "Throws a grounded opponent into the air and then slashes them with its claws.", "Poke ball & Master ball");
+    }
+
     // Method that inserts a single fighter into the database.
     private void insertAssistTrophy(String name, String description) {
         ContentValues values = new ContentValues();
@@ -1703,4 +1831,5 @@ public class SuperSmashDataWorker {
                 "One of the protagonists of the Mega Man X series, Zero is a Maverick Hunter, member of an elite force designated to hunt down and destroy Mavericks, robots that have turned against humankind.\n\n" +
                 "When summoned, Zero slashes opponents directly with his sword, the Z-Saber, and also uses it to fire beams from a distance. After he is done, he shouts, \"Back to base!\" and disappears.");
     }
+
 }

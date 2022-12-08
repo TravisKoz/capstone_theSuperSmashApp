@@ -99,8 +99,8 @@ public class MainMenuActivity extends AppCompatActivity {
         cvPokemon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // openPokemonActivity();
-                Toast.makeText(MainMenuActivity.this, "Show list of pokemon", Toast.LENGTH_SHORT).show();
+                openPokemonActivity();
+                //Toast.makeText(MainMenuActivity.this, "Show list of pokemon", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -141,6 +141,11 @@ public class MainMenuActivity extends AppCompatActivity {
                 Toast.makeText(MainMenuActivity.this, "Show General Information", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void openPokemonActivity() {
+        Intent intent = new Intent(this, PokemonActivity.class);
+        startActivity(intent);
     }
 
     private void openPlayStyleActivity() {

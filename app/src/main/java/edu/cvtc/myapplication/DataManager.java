@@ -10,6 +10,7 @@ import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.AssistTrophyEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.PokemonEntry;
 
 // This class is used to communicate with the database.
 // We we use it to load and save information to the database
@@ -21,6 +22,7 @@ public class DataManager {
     private List<Fighter> mFighters = new ArrayList<>();
     private List<ItemSSB> mItems = new ArrayList<>();
     private List<AssistTrophy> mTrophies = new ArrayList<>();
+    private List<Pokemon> mPokemon = new ArrayList<>();
 
     // Set a reference to our new instance.
     public static DataManager getInstance() {
@@ -48,6 +50,11 @@ public class DataManager {
     // Returns a list of our assist trophies()
     public List<AssistTrophy> getTrophies() {
         return mTrophies;
+    }
+
+    // Returns a list of our assist pokemon()
+    public List<Pokemon> getPokemon() {
+        return mPokemon;
     }
 
     private static void loadBattleNotesFromDatabase(Cursor cursor) {
@@ -350,5 +357,68 @@ public class DataManager {
 
         // Call the method to load our array list
         loadTrophiesFromDatabase(trophyCursor);
+    }
+
+    private static void loadPokemonFromDatabase(Cursor cursor) {
+        // Retrieve the field positions in your database.
+        // The positions of fields may change over time as the database grows, so
+        // you want to use your constants to reference where those positions are in
+        // the table.
+        int listNamePosition =
+                cursor.getColumnIndex(PokemonEntry.COLUMN_NAME);
+        int listDescriptionPosition =
+                cursor.getColumnIndex(PokemonEntry.COLUMN_DESCRIPTION);
+        int listBallPosition =
+                cursor.getColumnIndex(PokemonEntry.COLUMN_BALL);
+        int idPosition =
+                cursor.getColumnIndex(PokemonEntry._ID);
+
+        // Create an instance of your DataManager and use the DataManager
+        // to clear any information from the array list.
+        DataManager dm = getInstance();
+        dm.mPokemon.clear();
+
+        // Loop through the cursor rows and add new fighter objects to
+        // our array list.
+        while (cursor.moveToNext()) {
+            String listName =
+                    cursor.getString(listNamePosition);
+            String listDescription =
+                    cursor.getString(listDescriptionPosition);
+            String listBall =
+                    cursor.getString(listBallPosition);
+            int id = cursor.getInt(idPosition);
+
+            Pokemon list = new Pokemon(id, listName, listDescription, listBall);
+            dm.mPokemon.add(list);
+        }
+
+        // Close the cursor (to prevent memory leaks)
+        cursor.close();
+    }
+
+    public static void getPokemonFromDatabase(SuperSmashOpenHelper dbHelper) {
+        // Open our database in read mode.
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        // Create a list columns we want to return.
+        String[] pokemonColumns = {
+                PokemonEntry.COLUMN_NAME,
+                PokemonEntry.COLUMN_DESCRIPTION,
+                PokemonEntry.COLUMN_BALL,
+                PokemonEntry._ID
+        };
+
+        // Create an order by field for sorting purposes.
+        String pokemonOrderBy = PokemonEntry.COLUMN_NAME;
+
+        // Populate our cursor with the results of the query.
+        final Cursor pokemonCursor = db.query(PokemonEntry.TABLE_NAME,
+                pokemonColumns,
+                null, null, null, null,
+                pokemonOrderBy);
+
+        // Call the method to load our array list
+        loadPokemonFromDatabase(pokemonCursor);
     }
 }

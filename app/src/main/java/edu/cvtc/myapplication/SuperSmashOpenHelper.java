@@ -11,6 +11,7 @@ import edu.cvtc.myapplication.SuperSmashDatabaseContract.FighterEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.TrackerEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.ItemEntry;
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.AssistTrophyEntry;
+import edu.cvtc.myapplication.SuperSmashDatabaseContract.PokemonEntry;
 
 // Allows us to crate an update our database
 public class SuperSmashOpenHelper extends SQLiteOpenHelper {
@@ -40,12 +41,16 @@ public class SuperSmashOpenHelper extends SQLiteOpenHelper {
         db.execSQL(AssistTrophyEntry.SQL_CREATE_TABLE);
         db.execSQL(AssistTrophyEntry.SQL_CREATE_INDEX1);
 
+        db.execSQL(PokemonEntry.SQL_CREATE_TABLE);
+        db.execSQL(PokemonEntry.SQL_CREATE_INDEX1);
+
         SuperSmashDataWorker worker = new SuperSmashDataWorker(db);
         worker.insertBattleNotes();
         worker.insertFighters();
         worker.insertTrackers();
         worker.insertItems();
         worker.insertAssistTrophies();
+        worker.insertPokemon();
     }
 
     @Override
