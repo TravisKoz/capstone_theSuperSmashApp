@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".PokemonDetailsActivity"
+    android:padding="8dp">
+
+        <TextView
+            android:id="@+id/dt_pokemon_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/smashfont"
+            android:layout_marginTop="5dp"
+            android:gravity="center|top"
+            android:text="Pokemon Name"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/dt_pokemon_image"
+            android:layout_width="234dp"
+            android:layout_height="234dp"
+            android:layout_marginTop="15dp"
+            android:foregroundGravity="center"
+            android:src="@drawable/super_smash_white"
+            android:contentDescription="Image of a pokemon"
+            app:layout_constraintEnd_toEndOf="@id/dt_pokemon_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dt_pokemon_name" />
+
+        <TextView
+            android:id="@+id/dt_description_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@color/red"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/smashfont"
+            android:gravity="center"
+            android:text="@string/description_text"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dt_pokemon_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dt_pokemon_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="casual"
+            android:text="Pokemon description"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dt_description_text"
+            app:layout_constraintTop_toBottomOf="@id/dt_description_text" />
+
+    <TextView
+        android:id="@+id/dt_ball_type_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/smashfont"
+        android:gravity="center"
+        android:text="Found it in a"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/dt_pokemon_description"
+        app:layout_constraintTop_toBottomOf="@id/dt_pokemon_description" />
+
+    <TextView
+        android:id="@+id/dt_ball_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:layout_marginTop="15dp"
+        android:text="Ball"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/dt_ball_type_text"
+        app:layout_constraintTop_toBottomOf="@id/dt_ball_type_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

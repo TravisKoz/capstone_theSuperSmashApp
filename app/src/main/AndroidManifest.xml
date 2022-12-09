@@ -14,11 +14,16 @@
         android:theme="@style/Theme.Capstone_theSuperSmashApp"
         tools:targetApi="31">
         <activity
+            android:name=".PokemonDetailsActivity"
+            android:exported="false"
+            android:label="Pokemon Info"
+            android:parentActivityName=".PokemonActivity"/>
+        <activity
             android:name=".PokemonActivity"
             android:exported="false"
             android:label="List of Pokemon"
             android:parentActivityName=".MainMenuActivity"
-            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar"/>
+            android:theme="@style/Theme.Capstone_theSuperSmashApp.NoActionBar" />
         <activity
             android:name=".TrophyDetailsActivity"
             android:label="Back Up Has Arrived"
@@ -32,7 +37,7 @@
         <activity
             android:name=".ItemDetailsActivity"
             android:exported="false"
-            android:label="Item Details"
+            android:label="Item Info"
             android:parentActivityName=".ItemsActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" />
         <activity

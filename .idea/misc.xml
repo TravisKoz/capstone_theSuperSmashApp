@@ -26,9 +26,10 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2865" />
         <entry key="app/src/main/res/drawable/military_tech-48px.xml" value="0.1455" />
         <entry key="app/src/main/res/drawables/moves/drawable/ic_menu_test.xml" value="0.2665" />
-        <entry key="app/src/main/res/layout-land/activity_item_details.xml" value="0.335" />
+        <entry key="app/src/main/res/layout-land/activity_item_details.xml" value="0.23543334960937504" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.12682291666666667" />
         <entry key="app/src/main/res/layout-land/activity_main_menu.xml" value="0.26188812255859373" />
+        <entry key="app/src/main/res/layout-land/activity_pokemon_details.xml" value="0.35128987630208336" />
         <entry key="app/src/main/res/layout-land/activity_timer.xml" value="0.27501373291015624" />
         <entry key="app/src/main/res/layout-land/activity_win_lose_tracker.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_battle_note.xml" value="0.25" />
@@ -43,6 +44,7 @@
         <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.31536407470703126" />
         <entry key="app/src/main/res/layout/activity_playstyle.xml" value="0.18888888888888888" />
         <entry key="app/src/main/res/layout/activity_pokemon.xml" value="0.1952789306640625" />
+        <entry key="app/src/main/res/layout/activity_pokemon_details.xml" value="0.24609375" />
         <entry key="app/src/main/res/layout/activity_timer.xml" value="0.2549224853515625" />
         <entry key="app/src/main/res/layout/activity_trophies.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_trophy_details.xml" value="0.22395833333333334" />

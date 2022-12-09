@@ -41,6 +41,15 @@ public class PokemonRecyclerAdapter extends RecyclerView.Adapter<PokemonRecycler
         Pokemon pokemon = mPokemon.get(position);
         holder.mPokemonName.setText(pokemon.getName());
 
+        String imageResource = "pokemon_" + pokemon.getName().replace(" ", "_").replace(".","")
+                .replace("&", "and").replace("-", "_").replace("'", "_").toLowerCase();
+
+        // Gets the resourceID for our selected pokemon's image.
+        int imageResourceID = mContext.getResources().getIdentifier(imageResource, "drawable", mContext.getPackageName());
+
+        // Changes the displayed pokemon's image on our resourceIDs.
+        holder.mPokemonImage.setImageResource(imageResourceID);
+
         holder.mId = pokemon.getId();
     }
 
@@ -52,22 +61,20 @@ public class PokemonRecyclerAdapter extends RecyclerView.Adapter<PokemonRecycler
     public class ViewHolder extends RecyclerView.ViewHolder {
         // Member variables for inner class
         public final TextView mPokemonName;
-        //public final ImageView mPokemonImage;
+        public final ImageView mPokemonImage;
         public int mId;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mPokemonName = (TextView) itemView.findViewById(R.id.pokemon_name);
-            //mPokemonImage = (ImageView) itemView.findViewById(R.id.pokemon_image);
+            mPokemonImage = (ImageView) itemView.findViewById(R.id.pokemon_image);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    Intent intent = new Intent(mContext, PokemonDetailsActivity.class);
-//                    intent.putExtra(PokemonDetailsActivity.POKEMON_ID, mId);
-//                    mContext.startActivity(intent);
-                    //Toast.makeText( mContext, mPokemonName + " was Clicked", Toast.LENGTH_SHORT).show();
-
+                    Intent intent = new Intent(mContext, PokemonDetailsActivity.class);
+                    intent.putExtra(PokemonDetailsActivity.POKEMON_ID, mId);
+                    mContext.startActivity(intent);
                 }
             });
 

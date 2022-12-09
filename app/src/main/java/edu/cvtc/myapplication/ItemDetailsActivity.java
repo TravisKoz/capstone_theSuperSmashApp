@@ -25,6 +25,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private int mItemCategoryPosition;
     private int mItemDescriptionPosition;
     private boolean mIsAssistTrophy = false;
+    private boolean mIsPokeMasterBall = false;
 
     // Member objects
     private TextView mItemName;
@@ -53,24 +54,34 @@ public class ItemDetailsActivity extends AppCompatActivity {
         mItemImage = findViewById(R.id.details_item_image);
         loadItemData();
 
-        if (mIsAssistTrophy) {
+        if (mIsAssistTrophy || mIsPokeMasterBall) {
 
-            Button viewTrophies = findViewById(R.id.view_trophies_button);
-            viewTrophies.setVisibility(View.VISIBLE);
+            Button viewMore = findViewById(R.id.view_quick_access_button);
+            viewMore.setVisibility(View.VISIBLE);
 
+            if(mIsAssistTrophy) {
+                viewMore.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        openTrophiesActivity();
+                    }
+                });
 
-            viewTrophies.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    openTrophiesActivity();
-                }
-            });
-
-
-
+            } else {
+                viewMore.setText("View all Pokemon");
+                viewMore.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        openPokemonActivity();
+                    }
+                });
+            }
         }
+    }
 
-
+    private void openPokemonActivity() {
+        Intent intent = new Intent(this, PokemonActivity.class);
+        startActivity(intent);
     }
 
     private void loadItemData() {
@@ -131,11 +142,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
         mItemImage.setImageResource(imageResourceID);
 
-        if (itemName.equals("Assist Trophy") || itemName.equals("Poke Ball")) {
+        if (itemName.equals("Assist Trophy")) {
             mIsAssistTrophy = true;
         }
-        if (itemName.equals("Poke Ball")) {
-            //mIsAssistTrophy = true;
+        if (itemName.equals("Poke Ball") || itemName.equals("Master Ball")) {
+            mIsPokeMasterBall = true;
         }
     }
 
