@@ -103,6 +103,14 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, ItemsActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.pokemon_access:
+                intent = new Intent(MainActivity.this, PokemonActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.trophies_access:
+                intent = new Intent(MainActivity.this, TrophiesActivity.class);
+                startActivity(intent);
+                return true;
             default:
         }
 

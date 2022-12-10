@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ItemDetailsActivity"
+    android:padding="8dp"
     android:background="@color/black">
 
     <TextView
@@ -60,7 +61,8 @@
         android:fontFamily="casual"
         android:text="Here are all the descriptions"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/details_item_description_title" />
@@ -90,7 +92,8 @@
         android:fontFamily="casual"
         android:text="The category"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/details_item_category_title" />

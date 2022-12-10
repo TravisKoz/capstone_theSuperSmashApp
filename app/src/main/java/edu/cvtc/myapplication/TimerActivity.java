@@ -31,6 +31,7 @@ public class TimerActivity extends AppCompatActivity{
     private Button mSetTimeBtn;
 
     int minute, second;
+    String pickShow = "off";
 
     private boolean mTimerRunning;
     private CountDownTimer mCountDownTimer;
@@ -97,6 +98,7 @@ public class TimerActivity extends AppCompatActivity{
         mStartPauseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                pickShow = "off";
 
                 if (mTimerRunning) {
                     pauseTimer();
@@ -149,8 +151,15 @@ public class TimerActivity extends AppCompatActivity{
         mPickTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mSetTimeBtn.setVisibility(View.VISIBLE);
-                mEditTimeInput.setVisibility(View.VISIBLE);
+                if(pickShow == "off") {
+                    mSetTimeBtn.setVisibility(View.VISIBLE);
+                    mEditTimeInput.setVisibility(View.VISIBLE);
+                    pickShow = "on";
+                } else  {
+                    mSetTimeBtn.setVisibility(View.INVISIBLE);
+                    mEditTimeInput.setVisibility(View.INVISIBLE);
+                    pickShow = "off";
+                }
             }
         });
 

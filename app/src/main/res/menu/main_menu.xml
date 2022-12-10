@@ -7,57 +7,99 @@
     android:title=""
     app:showAsAction="always">
     <menu>
-
+      <!--Timer Icon-->
       <item
         android:id="@+id/timer_access"
         android:icon="@drawable/ic_baseline_timer"
-        android:orderInCategory="30"
+        android:orderInCategory="40"
         android:title="@string/timer_label"
         app:showAsAction="never" />
-
+      <!--Fighter Icon-->
       <item
         android:id="@+id/fighter_access"
         android:icon="@drawable/ic_baseline_boxing_glove"
-        android:orderInCategory="20"
+        android:orderInCategory="10"
         android:title="@string/fighters_label"
         app:showAsAction="never" />
-
+      <!--Notes Icon-->
       <item
         android:id="@+id/notes_access"
         android:icon="@drawable/ic_baseline_note"
-        android:orderInCategory="40"
+        android:orderInCategory="50"
         android:title="@string/notes_label"
         app:showAsAction="never" />
+      <!--Win/Lose Tracker Icon-->
       <item
         android:id="@+id/tracker_access"
         android:icon="@drawable/ic_baseline_tracker"
-        android:orderInCategory="50"
+        android:orderInCategory="60"
         android:title="@string/tracker_label"
         app:showAsAction="never" />
+      <!--Controls Icon-->
       <item
         android:id="@+id/controls_access"
         android:icon="@drawable/ic_baseline_controler"
-        android:orderInCategory="45"
+        android:orderInCategory="80"
         android:title="@string/controls_tx"
         app:showAsAction="never" />
+      <!--Legal Stages Icon-->
       <item
         android:id="@+id/legal_stages_access"
         android:icon="@drawable/ic_baseline_stage"
-        android:orderInCategory="46"
+        android:orderInCategory="90"
         android:title="@string/stages_tx"
         app:showAsAction="never" />
+      <!--Play Style Icon-->
       <item
           android:id="@+id/play_style_access"
           android:icon="@drawable/ic_baseline_style_24"
-          android:orderInCategory="46"
+          android:orderInCategory="70"
           android:title="Play Style"
           app:showAsAction="never"/>
+      <!--Items Icon-->
       <item
           android:id="@+id/items_access"
           android:icon="@drawable/ic_baseline_shield"
-          android:orderInCategory="46"
+          android:orderInCategory="20"
           android:title="Items"
           app:showAsAction="never"/>
+      <!--Pokemon Icon-->
+      <item
+          android:id="@+id/pokemon_access"
+          android:icon="@drawable/ic_baseline_pokeball"
+          android:orderInCategory="40"
+          android:title="Pokemon"
+          app:showAsAction="never"/>
+      <!--Trophies Icon-->
+      <item
+          android:id="@+id/trophies_access"
+          android:icon="@drawable/ic_baseline_trophy"
+          android:orderInCategory="30"
+          android:title="Trophies"
+          app:showAsAction="never"/>
+      <!--Advanced Icon-->
+      <item
+          android:id="@+id/advanced_access"
+          android:icon="@drawable/ic_baseline_advanced"
+          android:orderInCategory="73"
+          android:title="Advanced(Unable)"
+          app:showAsAction="never"/>
+      <!--Lingo Icon-->
+      <item
+          android:id="@+id/lingo_access"
+          android:icon="@drawable/ic_baseline_lingo"
+          android:orderInCategory="77"
+          android:title="Lingo(Unable)"
+          app:showAsAction="never"/>
+      <!--Information Icon-->
+      <item
+          android:id="@+id/info_access"
+          android:icon="@drawable/ic_baseline_info_24"
+          android:orderInCategory="100"
+          android:title="Info(Unable)"
+          app:showAsAction="never"/>
+
+
     </menu>
   </item>
 </menu>

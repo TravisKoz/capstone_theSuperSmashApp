@@ -60,7 +60,8 @@
         android:fontFamily="casual"
         android:text="Here are all the descriptions"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/details_item_description_title"
         app:layout_constraintTop_toBottomOf="@+id/details_item_description_title" />
@@ -90,7 +91,8 @@
         android:fontFamily="casual"
         android:text="The category"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/details_item_category_title"
         app:layout_constraintTop_toBottomOf="@+id/details_item_category_title" />

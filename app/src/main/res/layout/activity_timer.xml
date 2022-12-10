@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bgimageday" />
+        app:srcCompat="@drawable/bgimagenight" />
 
     <Button
         android:id="@+id/btn2min"
