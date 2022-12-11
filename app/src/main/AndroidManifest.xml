@@ -14,10 +14,13 @@
         android:theme="@style/Theme.Capstone_theSuperSmashApp"
         tools:targetApi="31">
         <activity
+            android:name=".AdvancedActivity"
+            android:exported="false" />
+        <activity
             android:name=".PokemonDetailsActivity"
             android:exported="false"
             android:label="Pokemon Info"
-            android:parentActivityName=".PokemonActivity"/>
+            android:parentActivityName=".PokemonActivity" />
         <activity
             android:name=".PokemonActivity"
             android:exported="false"

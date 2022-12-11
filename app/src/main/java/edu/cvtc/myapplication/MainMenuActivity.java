@@ -121,7 +121,7 @@ public class MainMenuActivity extends AppCompatActivity {
         cvAdvanced.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //openAdvancedActivity();
+                openAdvancedActivity();
                 Toast.makeText(MainMenuActivity.this, "Show Advanced", Toast.LENGTH_SHORT).show();
             }
         });
@@ -180,6 +180,11 @@ public class MainMenuActivity extends AppCompatActivity {
 
     private void openNotesActivity() {
         Intent intent = new Intent(this, NotesActivity.class);
+        startActivity(intent);
+    }
+
+    private void openAdvancedActivity() {
+        Intent intent = new Intent(this, AdvancedActivity.class);
         startActivity(intent);
     }
 

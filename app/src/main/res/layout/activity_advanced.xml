@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".AdvancedActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingHorizontal="15dp"
+                android:paddingBottom="10dp"
+                android:text="\t\tHere you will find examples and explanations of concepts that every pro uses to elevate their game. You only should worry about these if you want to get serious as a competitor. But if you just want to beat your friends, you're still welcome here.\n\n\t\tThe most important thing a smasher needs to elevate their play is DI (Directional Influence). This is something you may be using on accident because it feels natural to do. \n\n\t\tIt applies to any hit you take. Any time your opponent knocks you into the air, there's a range of potential angles that you may go as shown in the image below. Smash Ultimate has an incredible training room that will show you the full spectrum on any attack in real-time. Be sure to make use of it."
+                android:textColor="@color/white" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="224dp" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/di_lines" />
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:text="\t\tTo maximize your influence, consider the path you are being launched and hold your control stick in a direction perpendicular to your trajectory as shown below. Consider where the nearest blast zone is. Using that, decide if you have a higher chance to survive if you give yourself a higher or lower trajectory. "
+                android:textColor="@color/white" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:background="#EBFFFFFF">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/di_perpendicular" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="50dp"
+                android:text="It's not just useful for saving your life on the final hit. It can also cut your opponent's combo short while they attempt to juggle you. If you choose a direction they are not expecting you can potentially escape. When being combo'd at low percents and you're not sure what the safest choice is, just remember : &quot;When in doubt, hold out.&quot; \n\nAfter DI, there's SDI(Smash Directional Influence). Think of it as lots of small DI inputs to escape many smaller hits in succession. \n\nLet's say you're DK in the example below. You want to get out of Little Mac's jab combo by going left. Well, you can't just hold left. The game will only move you once if you do that. \n\nSo, to make the game accept multiple inputs to the left, you have to change the direction you're pointing on your stick while still pointing the general direction you want to go. Each time you input a different direction, the game will move you accordingly while you're in hitstun."
+                android:textColor="@color/white" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    app:srcCompat="@drawable/multi_hit_example" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/control_stick_up_left" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/control_stick_left" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/control_stick_down_left" />
+
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
