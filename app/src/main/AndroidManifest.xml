@@ -90,6 +90,11 @@
             android:label="My Battle Note "
             android:parentActivityName=".NotesActivity" />
         <activity
+          android:name=".GeneralInfoActivity"
+          android:exported="false"
+          android:label="Game Info"
+          android:parentActivityName=".MainMenuActivity" />
+        <activity
             android:name=".NotesActivity"
             android:exported="false"
             android:label="Battle Notes"

@@ -50,8 +50,7 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_item_image"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/details_item_image" />
 
     <TextView
         android:id="@+id/details_item_description"
@@ -81,8 +80,7 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_item_description"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/details_item_description" />
 
     <TextView
         android:id="@+id/details_item_category"

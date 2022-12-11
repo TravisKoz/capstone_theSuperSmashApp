@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/black"
+  tools:context=".GeneralInfoActivity">
+
+  <!-- Allows the users to scroll through the a fighter's details  -->
+  <ScrollView
+    android:id="@+id/info_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/info_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/smashfont"
+        android:gravity="center|top"
+        android:text="SUPER SMASH BROS ULTIMATE"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+        android:id="@+id/cover_image"
+        android:layout_width="169dp"
+        android:layout_height="234dp"
+        android:contentDescription="Super Smash Bros Ultimate Cover Image"
+        android:foregroundGravity="center"
+        android:src="@drawable/cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_title" />
+
+      <TextView
+        android:id="@+id/overview_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/smashfont"
+        android:gravity="center"
+        android:text="Overview"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover_image" />
+
+      <TextView
+        android:id="@+id/overview_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Super Smash Bros. Ultimate is a 2018 crossover fighting game developed by Bandai Namco Studios and Sora Ltd. and published by Nintendo for the Nintendo Switch. It is the fifth installment in the Super Smash Bros. series, succeeding Super Smash Bros. for Nintendo 3DS and Wii U. The game follows the series' traditional style of gameplay: controlling one of the various characters, players must use differing attacks to weaken their opponents and knock them out of an arena. It features a wide variety of game modes, including a campaign for single-player and multiplayer versus modes."
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/overview_title" />
+
+      <TextView
+        android:id="@+id/gameplay_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/smashfont"
+        android:gravity="center"
+        android:text="Gameplay"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/overview_text" />
+
+      <TextView
+        android:id="@+id/gameplay_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Super Smash Bros. Ultimate is a platform fighter for up to eight players in which characters from Nintendo games and other third-party franchises must try to knock each other out of an arena. Each player has a percentage meter, which raises when they take damage, thus increasing the knockback they take and making them easier to launch in the air and out of the arena. Standard battles use one of three victory conditions: Timed, where players aim to win the most points by defeating opponents within a time limit; Stock, where players have a set number of lives and must aim to be the last player standing; and Stamina, where players must simply reduce their opponent's health down to zero to defeat them. Players can adjust the rules to their liking and save them as presets for future matches."
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameplay_title" />
+
+      <ImageView
+        android:id="@+id/gameplay_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Super Smash Bros Ultimate Cover Image"
+        android:foregroundGravity="center"
+        android:src="@drawable/gameplay"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameplay_text" />
+
+      <TextView
+        android:id="@+id/fighters_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/red"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/smashfont"
+        android:gravity="center"
+        android:text="Fighters"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameplay_image" />
+
+      <TextView
+        android:id="@+id/fighters_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Super Smash Bros. Ultimate, as with other games in the Super Smash Bros. series, features a crossover cast of fighters from several different Nintendo franchises, as well as fighters from series by third-party developers. The base game features 74 playable fighters, consisting of all 63 previous fighters from past entries and 11 new ones. When starting the game, players only have access to the eight starter characters of the original 1999 Super Smash Bros. game and must unlock the rest by completing the game's Classic mode, playing through World of Light, or fighting a certain amount of battles."
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fighters_title" />
+
+      <ImageView
+        android:id="@+id/fighter_selection_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="Super Smash Bros Ultimate Cover Image"
+        android:foregroundGravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:src="@drawable/fighers_selection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fighters_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
