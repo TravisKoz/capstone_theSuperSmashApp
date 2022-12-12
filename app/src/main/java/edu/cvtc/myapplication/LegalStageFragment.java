@@ -39,10 +39,10 @@ public class LegalStageFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        String stageInfo = requireArguments().getString("stageInfoKey");
-
-        TextView stageInfoText = getView().findViewById(R.id.stage_info);
-        stageInfoText.setText(stageInfo);
+//        String stageInfo = requireArguments().getString("stageInfoKey");
+//
+//        TextView stageInfoText = getView().findViewById(R.id.stage_info);
+//        stageInfoText.setText(stageInfo);
 
     }
 }

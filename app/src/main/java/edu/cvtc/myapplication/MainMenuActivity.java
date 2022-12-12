@@ -121,15 +121,14 @@ public class MainMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openAdvancedActivity();
-                Toast.makeText(MainMenuActivity.this, "Show Advanced", Toast.LENGTH_SHORT).show();
             }
         });
 
         cvLingo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // openLingoActivity();
-                Toast.makeText(MainMenuActivity.this, "Show Lingo", Toast.LENGTH_SHORT).show();
+                openGlossaryActivity();
+//                Toast.makeText(MainMenuActivity.this, "Show Lingo", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -184,6 +183,11 @@ public class MainMenuActivity extends AppCompatActivity {
 
     private void openAdvancedActivity() {
         Intent intent = new Intent(this, AdvancedActivity.class);
+        startActivity(intent);
+    }
+
+    private void openGlossaryActivity() {
+        Intent intent = new Intent(this, GlossaryActivity.class);
         startActivity(intent);
     }
 

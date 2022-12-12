@@ -41,50 +41,50 @@ public class LegalStageActivity extends AppCompatActivity implements View.OnClic
         ImageButton yoshisStory = findViewById(R.id.final_destination);
         yoshisStory.setOnClickListener(this);
 
-        Bundle bundle = new Bundle();
-
-        if (findViewById(R.id.final_destination).isPressed()) {
-
-            bundle.putString("stageInfoKey", "The stage is a single platform and does not disrupt gameplay");
-
-
-        } else if(findViewById(R.id.battlefield).isPressed()) {
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        } else if (findViewById(R.id.smashville).isPressed()) {
-
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }  else if(findViewById(R.id.battlefield).isPressed()) {
-        bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }  else if(findViewById(R.id.battlefield).isPressed()) {
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }  else if(findViewById(R.id.battlefield).isPressed()) {
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }  else if(findViewById(R.id.battlefield).isPressed()) {
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }  else if(findViewById(R.id.battlefield).isPressed()) {
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }  else if(findViewById(R.id.battlefield).isPressed()) {
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }  else if(findViewById(R.id.battlefield).isPressed()) {
-            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
-
-        }
-
-            if (savedInstanceState == null) {
-                getSupportFragmentManager().beginTransaction()
-                        .setReorderingAllowed(true)
-                        .replace(R.id.legal_stage_container_view, LegalStageFragment.class, bundle)
-                        .commit();
-
-        }
+//        Bundle bundle = new Bundle();
+//
+//        if (findViewById(R.id.final_destination).isPressed()) {
+//
+//            bundle.putString("stageInfoKey", "The stage is a single platform and does not disrupt gameplay");
+//
+//
+//        } else if(findViewById(R.id.battlefield).isPressed()) {
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        } else if (findViewById(R.id.smashville).isPressed()) {
+//
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }  else if(findViewById(R.id.battlefield).isPressed()) {
+//        bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }  else if(findViewById(R.id.battlefield).isPressed()) {
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }  else if(findViewById(R.id.battlefield).isPressed()) {
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }  else if(findViewById(R.id.battlefield).isPressed()) {
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }  else if(findViewById(R.id.battlefield).isPressed()) {
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }  else if(findViewById(R.id.battlefield).isPressed()) {
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }  else if(findViewById(R.id.battlefield).isPressed()) {
+//            bundle.putString("stageInfoKey","Same as Final Destination, but with three added platforms");
+//
+//        }
+//
+//            if (savedInstanceState == null) {
+//                getSupportFragmentManager().beginTransaction()
+//                        .setReorderingAllowed(true)
+//                        .replace(R.id.legal_stage_container_view, LegalStageFragment.class, bundle)
+//                        .commit();
+//
+//        }
 
 
     }

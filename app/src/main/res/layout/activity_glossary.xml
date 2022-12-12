@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GlossaryActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <TableLayout
+            android:id="@+id/glossary_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/black">
+
+            <TableRow
+                android:id="@+id/glossary_row1"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc1"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row2"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/glossary_text2"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc2"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row3"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text3"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text3"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc3"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row4"
+                android:layout_width="300dp"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text4"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/glossary_text4"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc4"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row5"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text5"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc5"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row6"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text6"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text6"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc6"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row7"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text7"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text7"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc7"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row8"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text8"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text8"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc8"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row9"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text9"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text9"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc9"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row10"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text10"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text10"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc10"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row11"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text11"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/glossary_text11"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="10dp"
+                    android:text="@string/glossary_text_desc11"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row12"
+                android:layout_width="match_parent"
+                android:layout_height="301dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text12"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text12"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc12"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text13"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text13"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc13"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text14"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text14"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc14"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text15"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text15"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc15"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text16"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text16"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc16"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text17"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text17"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc17"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text18"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text18"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc18"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/glossary_row19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/glossary_text19"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/glossary_text19"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/glossary_text_desc19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/glossary_text_desc19"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/control_text1"
+                    app:layout_constraintStart_toEndOf="@+id/control_text1"
+                    app:layout_constraintTop_toTopOf="@+id/control_text1" />
+
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

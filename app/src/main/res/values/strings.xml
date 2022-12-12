@@ -203,6 +203,44 @@
   <string name="cover_image_description">Super Smash Bros Ultimate Cover Image</string>
   <string name="game_title">SUPER SMASH BROS ULTIMATE</string>
   <string name="fighter_selection_description">Super Smash Bros Ultimate Fighter Selection Image</string>
+    <string name="glossary_text1">Aerial</string>
+    <string name="glossary_text_desc1">any attack that can be performed in the air; usually applied to normal attacks</string>
+    <string name="glossary_text2">Blast Zone</string>
+    <string name="glossary_text_desc2">the boundary where if a character goes beyond that, he/she is KO\'d</string>
+    <string name="glossary_text3">Disjoint</string>
+    <string name="glossary_text_desc3">when the hitbox of a melee attack is not connected to the character.</string>
+    <string name="glossary_text4">Edgeguarding</string>
+    <string name="glossary_text_desc4">using different attacks to prevent the opponent from reaching the ledge and recovering</string>
+    <string name="glossary_text5">Ledgetrump</string>
+    <string name="glossary_text_desc5">Grabbing the ledge when your opponent is occupying it causes them to let go.</string>
+    <string name="glossary_text6">Fast fall</string>
+    <string name="glossary_text_desc6">A technique that increases the speed at which a character falls. activated by pressing down while falling.</string>
+    <string name="glossary_text7">Gimp</string>
+    <string name="glossary_text_desc7">a kill that occurs at a very, very low percentage, usually via an edgeguard</string>
+    <string name="glossary_text8">Freefall</string>
+    <string name="glossary_text_desc8">a state where a character cannot do anything but fall; usually occurs after usage of a special move, especially an up special move</string>
+    <string name="glossary_text9">Hitbox</string>
+    <string name="glossary_text_desc9">invisible boxes that determine whether or not a move hits an opponent.</string>
+    <string name="glossary_text10">I-Frame</string>
+    <string name="glossary_text_desc10">frames where a character cannot get hurt by any sort of attack; mostly seen in dodge rolls, sidesteps and air dodges</string>
+    <string name="glossary_text11">Lag</string>
+    <string name="glossary_text_desc11">a delay of time, associated with attacks; there is start-up lag, which delays the amount of time BEFORE an attack, and ending lag, which delays the amount of time AFTER an attack and before one can do a different action</string>
+    <string name="glossary_text12">Meteor Smash</string>
+    <string name="glossary_text_desc12">any attack that sends the opponent downwards; similar to a spike, but can be recovered fro</string>
+    <string name="glossary_text13">Punish</string>
+    <string name="glossary_text_desc13">when you hit an opponent left vulnerable after an action</string>
+    <string name="glossary_text14">Recovery</string>
+    <string name="glossary_text_desc14">anything you do that gets you back onto the stage after being hit off of it; usually involves your double jump and up special being used</string>
+    <string name="glossary_text15">SD</string>
+    <string name="glossary_text_desc15">when a character is KO\'d without getting hit by an opponent</string>
+    <string name="glossary_text16">Spike</string>
+    <string name="glossary_text_desc16">any Attack that knocks the opponent downwards; somewhat like Meteor Smashes, though they usually knock foes at an angle</string>
+    <string name="glossary_text17">Tech</string>
+    <string name="glossary_text_desc17">when knocked into the air by an opponent, pressing the shield button right before hitting the ground allows the character to get up faster. Players can also tech the walls and ceiling preventing them from bouncing of of the surface.</string>
+    <string name="glossary_text18">Tether</string>
+    <string name="glossary_text_desc18">a type of grab where the character uses some kind of ranged grab</string>
+    <string name="glossary_text19">Zair</string>
+    <string name="glossary_text_desc19">An aerial attack that utilizes a character\'s extended grab implement in the air.</string>
 
 
 </resources>
