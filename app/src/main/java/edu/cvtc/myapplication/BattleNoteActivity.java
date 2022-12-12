@@ -15,6 +15,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import edu.cvtc.myapplication.SuperSmashDatabaseContract.BattleNoteEntry;
@@ -48,8 +50,10 @@ public class BattleNoteActivity extends AppCompatActivity implements
     // Member objects
     private EditText mTextBattleNoteHeading;
     private EditText mTextBattleNoteBody;
+    private Button mDelete;
     private SuperSmashOpenHelper mDbOpenHelper;
     private Cursor mBattleNoteCursor;
+
 
     @Override
     protected void onDestroy() {
@@ -82,10 +86,21 @@ public class BattleNoteActivity extends AppCompatActivity implements
                 findViewById(R.id.text_note_heading);
         mTextBattleNoteBody =
                 findViewById(R.id.text_note_body);
+        mDelete =
+                findViewById(R.id.button_delete);
 
         if (!mIsNewBattleNote) {
             LoaderManager.getInstance(this).initLoader(LOADER_BATTLE_NOTES, null, this);
         }
+
+
+        mDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mTextBattleNoteHeading.setText("");
+                finish();
+            }
+        });
     }
 
     private void displayBattleNote() {

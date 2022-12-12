@@ -47,4 +47,16 @@
     app:layout_constraintEnd_toEndOf="@id/text_note_heading"
     app:layout_constraintStart_toStartOf="@id/text_note_heading"
     app:layout_constraintTop_toBottomOf="@id/text_note_heading" />
+
+  <Button
+    android:id="@+id/button_delete"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/round_button"
+    android:layout_marginEnd="30dp"
+    android:drawableBottom="@drawable/ic_delete"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/text_note_body">
+
+  </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>
