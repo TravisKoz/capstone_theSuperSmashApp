@@ -96,7 +96,7 @@
           android:id="@+id/info_access"
           android:icon="@drawable/ic_baseline_info_24"
           android:orderInCategory="100"
-          android:title="Info(Unable)"
+          android:title="Info"
           app:showAsAction="never"/>
 
 

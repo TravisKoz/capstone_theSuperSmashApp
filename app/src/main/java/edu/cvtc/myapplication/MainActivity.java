@@ -111,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, TrophiesActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.info_access:
+                intent = new Intent(MainActivity.this, GeneralInfoActivity.class);
+                startActivity(intent);
+                return true;
             default:
         }
 
