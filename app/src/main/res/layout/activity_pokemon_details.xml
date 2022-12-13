@@ -73,7 +73,7 @@
         android:backgroundTint="@color/red"
         android:fontFamily="@font/smashfont"
         android:gravity="center"
-        android:text="Found it in a"
+        android:text="Found in a"
         android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"

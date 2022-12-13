@@ -26,7 +26,6 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2865" />
         <entry key="app/src/main/res/drawable/military_tech-48px.xml" value="0.1455" />
         <entry key="app/src/main/res/drawable/round_button.xml" value="0.139" />
-        <entry key="app/src/main/res/drawables/moves/drawable-anydpi/ic_delete.xml" value="0.195" />
         <entry key="app/src/main/res/drawables/moves/drawable/ic_menu_test.xml" value="0.2665" />
         <entry key="app/src/main/res/layout-land/activity_item_details.xml" value="0.23543334960937504" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.12682291666666667" />
@@ -34,13 +33,14 @@
         <entry key="app/src/main/res/layout-land/activity_pokemon_details.xml" value="0.35128987630208336" />
         <entry key="app/src/main/res/layout-land/activity_timer.xml" value="0.27501373291015624" />
         <entry key="app/src/main/res/layout-land/activity_win_lose_tracker.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_advanced.xml" value="0.26666666666666666" />
         <entry key="app/src/main/res/layout/activity_battle_note.xml" value="0.30547790527343754" />
         <entry key="app/src/main/res/layout/activity_controls.xml" value="0.22395833333333334" />
         <entry key="app/src/main/res/layout/activity_fighter.xml" value="0.2859375" />
         <entry key="app/src/main/res/layout/activity_fighter_details.xml" value="0.3395554762620192" />
         <entry key="app/src/main/res/layout/activity_fighters.xml" value="0.15376406938601764" />
         <entry key="app/src/main/res/layout/activity_general_info.xml" value="0.24810791015625003" />
-        <entry key="app/src/main/res/layout/activity_glossary.xml" value="0.232421875" />
+        <entry key="app/src/main/res/layout/activity_glossary.xml" value="0.26666666666666666" />
         <entry key="app/src/main/res/layout/activity_item_details.xml" value="0.26666666666666666" />
         <entry key="app/src/main/res/layout/activity_items.xml" value="0.190936279296875" />
         <entry key="app/src/main/res/layout/activity_legal_stage.xml" value="0.33265940348307294" />
