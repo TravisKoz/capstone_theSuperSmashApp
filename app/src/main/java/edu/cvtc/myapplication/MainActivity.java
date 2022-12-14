@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 openMainMenuActivity();
                 //finish();
             }
-        }, 1500); // Start the MainMenuActivity after 1.5 seconds the app is loaded
+        }, 1800); // Start the MainMenuActivity after 1.8 seconds the app is loaded
 
         mDbOpenHelper = new SuperSmashOpenHelper(this);
 
@@ -113,6 +113,14 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.info_access:
                 intent = new Intent(MainActivity.this, GeneralInfoActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.lingo_access:
+                intent = new Intent(MainActivity.this, GlossaryActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.advanced_access:
+                intent = new Intent(MainActivity.this, AdvancedActivity.class);
                 startActivity(intent);
                 return true;
             default:

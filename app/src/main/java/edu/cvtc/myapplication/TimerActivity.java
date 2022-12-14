@@ -31,7 +31,7 @@ public class TimerActivity extends AppCompatActivity{
     private Button mSetTimeBtn;
 
     int minute, second;
-    String pickShow = "off";
+    String isSetTimerOn = "off";
 
     private boolean mTimerRunning;
     private CountDownTimer mCountDownTimer;
@@ -98,7 +98,7 @@ public class TimerActivity extends AppCompatActivity{
         mStartPauseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pickShow = "off";
+                isSetTimerOn = "off";
 
                 if (mTimerRunning) {
                     pauseTimer();
@@ -111,6 +111,7 @@ public class TimerActivity extends AppCompatActivity{
             }
         });
 
+        // Event listener that Calls the reset method
         mResetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,14 +152,14 @@ public class TimerActivity extends AppCompatActivity{
         mPickTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(pickShow == "off") {
+                if(isSetTimerOn == "off") {
                     mSetTimeBtn.setVisibility(View.VISIBLE);
                     mEditTimeInput.setVisibility(View.VISIBLE);
-                    pickShow = "on";
+                    isSetTimerOn = "on";
                 } else  {
                     mSetTimeBtn.setVisibility(View.INVISIBLE);
                     mEditTimeInput.setVisibility(View.INVISIBLE);
-                    pickShow = "off";
+                    isSetTimerOn = "off";
                 }
             }
         });
@@ -174,6 +175,7 @@ public class TimerActivity extends AppCompatActivity{
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
+
     // Method that sets the time
     private void setTime(long inputInMillis) {
         mStartTimeInMillis = inputInMillis;

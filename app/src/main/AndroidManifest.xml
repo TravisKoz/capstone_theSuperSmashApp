@@ -16,10 +16,12 @@
         <activity
             android:name=".GlossaryActivity"
             android:exported="false"
+            android:label="Glossary"
             android:parentActivityName=".MainMenuActivity" />
         <activity
             android:name=".AdvancedActivity"
             android:exported="false"
+            android:label="Advanced tips"
             android:parentActivityName=".MainMenuActivity"/>
         <activity
             android:name=".PokemonDetailsActivity"
