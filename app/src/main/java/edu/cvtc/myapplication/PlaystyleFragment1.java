@@ -62,7 +62,7 @@ public class PlaystyleFragment1 extends Fragment {
         Button rushdown = getView().findViewById(R.id.btn_rushdown);
         Button grappler = getView().findViewById(R.id.btn_grappler);
         Button spacing = getView().findViewById(R.id.btn_spacing);
-        Button balance = getView().findViewById(R.id.btn_balance);
+        Button balanced = getView().findViewById(R.id.btn_balance);
         Button zoner = getView().findViewById(R.id.btn_zoner);
         TextView selectedFightersText = getView().findViewById(R.id.selected_fighter_text);
 
@@ -72,6 +72,17 @@ public class PlaystyleFragment1 extends Fragment {
                     listFighter += currentFighter.getName() + ", ";
         }
         selectedFightersText.setText("Current choices: \n\n" + listFighter.replaceAll(", $", ""));
+
+        // Remove buttons incompatible with previous choice
+        if (closeRangeClick) {
+            zoner.setVisibility(View.GONE);
+        } else if (longRangeClick) {
+            rushdown.setVisibility(View.GONE);
+            grappler.setVisibility(View.GONE);
+            spacing.setVisibility(View.GONE);
+        } else if (hybridClick) {
+            grappler.setVisibility(View.GONE);
+        }
 
         rushdown.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +107,7 @@ public class PlaystyleFragment1 extends Fragment {
                     }
 
                 } else if(longRangeClick) {
+
                     fightersCategoryArchetype = loadFinalChoices("Long-range", "Rushdown");
 
                     // Send bundle to next fragment
@@ -241,7 +253,7 @@ public class PlaystyleFragment1 extends Fragment {
             }
         });
 
-        balance.setOnClickListener(new View.OnClickListener() {
+        balanced.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -249,7 +261,9 @@ public class PlaystyleFragment1 extends Fragment {
                 ArrayList<Fighter> fightersCategoryArchetype;
 
                 if (closeRangeClick) {
-                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Balance");
+
+
+                    fightersCategoryArchetype = loadFinalChoices("Close-range", "Balanced");
 
                     // Send bundle to next fragment
                     Bundle bundle = new Bundle();
@@ -264,7 +278,7 @@ public class PlaystyleFragment1 extends Fragment {
                     }
 
                 } else if(longRangeClick) {
-                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Balance");
+                    fightersCategoryArchetype = loadFinalChoices("Long-range", "Balanced");
 
                     // Send bundle to next fragment
                     Bundle bundle = new Bundle();
@@ -280,7 +294,7 @@ public class PlaystyleFragment1 extends Fragment {
 
 
                 } else if(hybridClick) {
-                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Balance");
+                    fightersCategoryArchetype = loadFinalChoices("Hybrid", "Balanced");
 
                     // Send bundle to next fragment
                     Bundle bundle = new Bundle();

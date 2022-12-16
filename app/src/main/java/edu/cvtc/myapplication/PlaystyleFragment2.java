@@ -1,5 +1,6 @@
 package edu.cvtc.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -58,5 +60,16 @@ public class PlaystyleFragment2 extends Fragment {
         }
         filteredFightersText.setText("Final choices: \n\n" + listFighterFinal.replaceAll(", $", ""));
 
+
+        // Create restart button
+        Button restart = getView().findViewById(R.id.btn_restart);
+
+        restart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), PlayStyleActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

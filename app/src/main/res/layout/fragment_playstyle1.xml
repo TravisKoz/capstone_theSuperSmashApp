@@ -20,7 +20,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="115dp"
             android:paddingHorizontal="16dp"
-            android:text="\t\tDo you want a character that relies primarily on their mobility with your dexterity for endless pressure, one that rewards you for outthinking your opponent with well-timed grab options with explosive results, maybe you want to take advantage of disjointed options and masterfully out-space your opponent? \n\nYou might be a jack of all trades, or do you just want to blast your opponent with every tool at your disposal and never look them in the eyes?"
+            android:text="Do you want a character that relies primarily on their mobility with your dexterity for endless pressure, one that rewards you for outthinking your opponent with well-timed grab options with explosive results, maybe you want to take advantage of disjointed options and masterfully out-space your opponent? \n\nYou might be a jack of all trades, or do you just want to blast your opponent with every tool at your disposal and never look them in the eyes?"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
