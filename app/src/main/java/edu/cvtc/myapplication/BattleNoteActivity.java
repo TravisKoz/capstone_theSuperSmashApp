@@ -97,6 +97,8 @@ public class BattleNoteActivity extends AppCompatActivity implements
         mDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mTextBattleNoteHeading.setHint("");
+                mTextBattleNoteBody.setHint("");
                 mTextBattleNoteHeading.setText("");
                 finish();
             }
