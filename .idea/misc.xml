@@ -10,8 +10,6 @@
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_main_landscape.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/activity_playstyle.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/fragment_playstyle1.xml" value="0.17916666666666667" />
-        <entry key="..\:/Users/tyler/AndroidStudioProjects/capstone_theSuperSmashApp/app/src/main/res/layout/fragment_playstyle2.xml" value="0.17916666666666667" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2865" />
         <entry key="app/src/main/res/drawable/boxing_glove.xml" value="0.2525" />
         <entry key="app/src/main/res/drawable/button_timer_custom.xml" value="0.1043975830078125" />
@@ -64,6 +62,7 @@
         <entry key="app/src/main/res/layout/content_pokemon.xml" value="0.18958333333333333" />
         <entry key="app/src/main/res/layout/content_trophies.xml" value="0.22395833333333334" />
         <entry key="app/src/main/res/layout/fighter_list.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/layout/fragment_legal_stage.xml" value="0.18888888888888888" />
         <entry key="app/src/main/res/layout/fragment_playstyle1.xml" value="0.232421875" />
         <entry key="app/src/main/res/layout/items_list.xml" value="0.2384550306532118" />
         <entry key="app/src/main/res/layout/note_list.xml" value="0.20677083333333332" />
