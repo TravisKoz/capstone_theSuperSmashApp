@@ -71,8 +71,8 @@
                     android:id="@+id/battlefield"
                     android:layout_width="190dp"
                     android:layout_height="105dp"
-                    android:contentDescription="@string/battlefield_content_desc"
                     android:clickable="true"
+                    android:contentDescription="@string/battlefield_content_desc"
                     app:srcCompat="@drawable/battlefield" />
 
             </TableRow>
@@ -88,11 +88,21 @@
                     android:layout_width="190dp"
                     android:layout_height="105dp"
                     android:layout_marginStart="95dp"
-                    android:contentDescription="@string/smashville_content_desc"
                     android:clickable="true"
+                    android:contentDescription="@string/smashville_content_desc"
                     app:srcCompat="@drawable/smashville" />
 
             </TableRow>
+
+            <TextView
+                android:id="@+id/stage_info_text_starter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="@color/white" />
 
             <TableRow
                 android:layout_width="match_parent"
@@ -121,39 +131,41 @@
                     android:id="@+id/town_and_city"
                     android:layout_width="190dp"
                     android:layout_height="105dp"
-                    android:contentDescription="@string/town_and_city_content_desc"
                     android:clickable="true"
+                    android:contentDescription="@string/town_and_city_content_desc"
                     app:srcCompat="@drawable/town_and_city" />
 
                 <ImageButton
                     android:id="@+id/small_battlefield"
                     android:layout_width="190dp"
                     android:layout_height="105dp"
-                    android:contentDescription="@string/small_battlefield_content_desc"
                     android:clickable="true"
+                    android:contentDescription="@string/small_battlefield_content_desc"
                     app:srcCompat="@drawable/small_battlefield" />
 
             </TableRow>
 
             <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="49dp"
+                android:gravity="center">
 
                 <ImageButton
                     android:id="@+id/lylat_cruise"
-                    android:layout_width="190dp"
-                    android:layout_height="105dp"
-                    android:contentDescription="@string/lylat_cruise_content_desc"
+                    android:layout_width="157dp"
+                    android:layout_height="89dp"
+                    android:layout_gravity="center"
                     android:clickable="true"
+                    android:contentDescription="@string/lylat_cruise_content_desc"
                     app:srcCompat="@drawable/lylat_cruise" />
 
                 <ImageButton
                     android:id="@+id/pokemon_stadium_2"
-                    android:layout_width="190dp"
-                    android:layout_height="105dp"
-                    android:contentDescription="@string/pokemon_stadium_2_content_desc"
+                    android:layout_width="157dp"
+                    android:layout_height="89dp"
                     android:clickable="true"
+                    android:contentDescription="@string/pokemon_stadium_2_content_desc"
                     app:srcCompat="@drawable/pokemon_stadium_2" />
 
             </TableRow>
@@ -167,19 +179,27 @@
                     android:id="@+id/kalos_pokemon_league"
                     android:layout_width="190dp"
                     android:layout_height="105dp"
-                    android:contentDescription="@string/kalos_pokemon_league_content_desc"
                     android:clickable="true"
+                    android:contentDescription="@string/kalos_pokemon_league_content_desc"
                     app:srcCompat="@drawable/kalos_pokemon_league" />
 
                 <ImageButton
                     android:id="@+id/hollow_bastion"
                     android:layout_width="190dp"
                     android:layout_height="105dp"
-                    android:contentDescription="@string/hollow_bastion_content_desc"
                     android:clickable="true"
+                    android:contentDescription="@string/hollow_bastion_content_desc"
                     app:srcCompat="@drawable/hollow_bastion" />
 
             </TableRow>
+
+            <TextView
+                android:id="@+id/stage_info_counterpick_starter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/white" />
 
             <TableRow
                 android:layout_width="match_parent"
@@ -205,25 +225,26 @@
 
                 <ImageButton
                     android:id="@+id/yoshis_story"
-                    android:layout_width="190dp"
-                    android:layout_height="105dp"
-                    android:layout_marginStart="95dp"
+                    android:layout_width="153dp"
+                    android:layout_height="83dp"
+                    android:layout_marginStart="110dp"
                     android:layout_marginBottom="5dp"
-                    android:contentDescription="@string/yoshis_story_content_desc"
                     android:clickable="true"
+                    android:contentDescription="@string/yoshis_story_content_desc"
                     app:srcCompat="@drawable/yoshis_story" />
 
             </TableRow>
 
+            <TextView
+                android:id="@+id/stage_info_text_counterpick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/white" />
+
         </LinearLayout>
     </ScrollView>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/legal_stage_container_view"
-        android:name="edu.cvtc.myapplication.LegalStageFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
